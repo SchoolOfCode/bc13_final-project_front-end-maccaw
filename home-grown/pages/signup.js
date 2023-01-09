@@ -1,16 +1,18 @@
 import React, { useRef, useState } from "react";
-import { useAuth } from '.../contexts/AuthContext'
+import { useAuth } from '../context/AuthContext.js'
+import { useRouter } from "next/router";
 
 export default function SignUp() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup } = useAuth()
+  const { signUp } = useAuth()
   const [err, setErr] = useState('')
+  const [loading, setLoading] = useState(false)
+  const router = useRouter()
  
   async function handleSubmit(e){
     e.preventDefault()
-    signup(email.Ref.current.value, passwordRef.current.value)
 
     if(passwordRef.current.value !== passwordConfirmRef.current.value){
       return setErr('Passwords do not match')
@@ -18,16 +20,20 @@ export default function SignUp() {
 
     try {
       setErr('')
-      await signup(email.Ref.current.value,passwordRef.current.value )
+      setLoading(true)
+      await signUp(emailRef.current.value,passwordRef.current.value )
+      router.push("/dashboard")
     } catch {
       setErr('Failed to create an account')
     }
+    setLoading(false)
   }
 
   return (
     <div>
       <h1>Sign Up</h1>
-      <form>
+      {err && <h2>{err}</h2>}
+      <form onSubmit={handleSubmit}>
         <label>Email</label>
         <input type="email" ref={emailRef} />
 
@@ -37,7 +43,7 @@ export default function SignUp() {
         <label>Confirm your Password</label>
         <input type="password" ref={passwordConfirmRef} />
 
-        <button type="submit">Sign Up</button>
+        <button disabled={loading} type="submit">Sign Up</button>
       </form>
     </div>
   );
