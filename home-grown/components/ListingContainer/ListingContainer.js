@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import ListingCard from "../ListingCard/ListingCard";
 
 function ListingContainer() {
   //fetch data from api
@@ -11,17 +12,26 @@ function ListingContainer() {
     getPostData();
   });
 
+  const [posts, setPosts] = useState(null);
+
   async function getPostData() {
-    const response = await fetch("http://localhost:3000/api/staticdata_posts");
+    const response = await fetch(
+      "http://localhost:3000/api/staticdata_all_tables_joined"
+    );
+   
     const data = await response.json();
-    console.log(data);
+    
+    setPosts(data);
+    console.log(data)
   }
 
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
+  if (!posts) {
+    return <div>...Loading</div>;
+  } else {
+    return (
+     posts.map((element) => <div><ListingCard description={element.description} /></div>) 
+    );
+  }
 }
 
 export default ListingContainer;
