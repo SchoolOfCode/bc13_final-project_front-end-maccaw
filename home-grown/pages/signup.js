@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useAuth } from '.../contexts/AuthContext'
 
 export default function SignUp() {
@@ -6,6 +6,23 @@ export default function SignUp() {
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
   const { signup } = useAuth()
+  const [err, setErr] = useState('')
+ 
+  async function handleSubmit(e){
+    e.preventDefault()
+    signup(email.Ref.current.value, passwordRef.current.value)
+
+    if(passwordRef.current.value !== passwordConfirmRef.current.value){
+      return setErr('Passwords do not match')
+    }
+
+    try {
+      setErr('')
+      await signup(email.Ref.current.value,passwordRef.current.value )
+    } catch {
+      setErr('Failed to create an account')
+    }
+  }
 
   return (
     <div>
