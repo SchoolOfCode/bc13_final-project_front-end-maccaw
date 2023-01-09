@@ -1,4 +1,4 @@
-const users = [{   "firebase_id":"mnopqrstuvwxyz0123456789",
+[{   "firebase_id":"mnopqrstuvwxyz0123456789",
 "profile_picture":"https://cdn-icons-png.flaticon.com/512/714/714029.png",
 "first_name":"John",
 "last_name":"Smit",
@@ -36,6 +36,3 @@ const users = [{   "firebase_id":"mnopqrstuvwxyz0123456789",
 "username":"RBlossom46",
 "rating":3
 }]
-
-
-export default users
