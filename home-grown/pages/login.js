@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import { useAuth } from '../context/AuthContext.js'
+import Link from 'next/link';
+import { useAuth } from '../context/AuthContext.js';
 import { useRouter } from "next/router";
 
 export default function Login() {
@@ -39,6 +40,7 @@ export default function Login() {
 
         <button disabled={loading} type="submit">Log In</button>
       </form>
+      <Link href="/forgotpassword"><p>Forgot Password?</p></Link>
     </div>
   );
 }

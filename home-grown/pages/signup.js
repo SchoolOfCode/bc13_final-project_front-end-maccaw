@@ -10,6 +10,7 @@ export default function SignUp() {
   const [err, setErr] = useState('')
   const [loading, setLoading] = useState(false)
   const router = useRouter()
+
  
   async function handleSubmit(e){
     e.preventDefault()
