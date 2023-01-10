@@ -1,15 +1,33 @@
 .card-container{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto auto;
     width: 100%;
     border:solid;
-    justify-content: center;
-    align-items: center;
+    gap: 50px;
+
 
 }
 
 .card{
-    width:50%;
     border:solid;
     border-color: red;
+}
+
+.one-card{
+    display: flex;
+  
+    height: 100%;
+    width: 100%;
+   
+    justify-content: space-evenly;
+}
+
+
+.post-info{
+   
+    width: 70%;
+    height: 100%;
+}
+.profile-img{
+    height: 10vh;
 }

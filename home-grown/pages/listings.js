@@ -1,5 +1,5 @@
 import ListingContainer from "../components/ListingContainer/ListingContainer";
-import { SearchBar } from "../components/SearchBar";
+import { SearchBar } from "../components/SearchBar/SearchBar";
 import {useState, useEffect} from 'react'
 
 function Listings() {
@@ -26,17 +26,19 @@ function Listings() {
   async function handleClick() {
     console.log("SEARCH INPUT:", search);
     console.log("POSTS", posts)
-
-
-    let newArray = posts.filter( element => element.location === search)
-    setPosts(newArray)
-
+    if(search){
+      let newArray = posts.filter( element => element.location.includes(search.toUpperCase()))
+      setPosts(newArray)
+    } else {
+      alert('please enter a post code');
+    }
   }
 
   return (
     <div>
       <SearchBar handleClick={handleClick} setSearch={setSearch}/>
-      <ListingContainer posts={posts} search={search}/>
+      <button onClick={()=>getPostData()}>CLEAR</button>
+      <ListingContainer posts={posts} search={search}/>    
     </div>
   );
 }
