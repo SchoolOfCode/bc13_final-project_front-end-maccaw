@@ -1,6 +1,7 @@
 import ListingContainer from "../components/ListingContainer/ListingContainer";
 import { SearchBar } from "../components/SearchBar/SearchBar";
 import {useState, useEffect} from 'react'
+import styles from '../styles/ListingContainer.module.css'
 
 function Listings() {
   useEffect(() => {
@@ -35,9 +36,8 @@ function Listings() {
   }
 
   return (
-    <div>
-      <SearchBar handleClick={handleClick} setSearch={setSearch}/>
-      <button onClick={()=>getPostData()}>CLEAR</button>
+    <div className={styles["listing-page-container"]}>
+      <SearchBar handleClick={handleClick} setSearch={setSearch} clear ={()=>getPostData()}/>
       <ListingContainer posts={posts} search={search}/>    
     </div>
   );
