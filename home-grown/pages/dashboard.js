@@ -6,6 +6,24 @@ export default function Dashboard() {
   const [err, setErr] = useState("");
   const { currentUser, logout, isUserAuthenticated } = useAuth();
   const router = useRouter();
+  const [userData, setUserData] = useState()
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    getData()
+  },[]);
+
+
+  async function getData(){
+    const response = await fetch( "http://localhost:3000/api/staticdata_all_tables_joined")
+    const data = await response.json()
+    console.log("DATA", data)
+    console.log("CURRENT USER",currentUser)
+
+    let user = data.filter(element => element.firebase_id === currentUser.uid)
+    setUserData(user)
+    setIsLoading(false)
+  }
+
 
   async function handleLogout() {
     setErr("");
@@ -26,14 +44,21 @@ export default function Dashboard() {
   }
   console.log(currentUser, "here");
 
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      {err && <h2>{err}</h2>}
-      <h3>
-        Profile<strong>Email: {currentUser.email}</strong>
-      </h3>
-      <button onClick={handleLogout}>Log Out</button>
-    </div>
-  );
+  if(isLoading){
+    return <div>Loading...</div>
+  }
+  else{
+    return (
+      <div>
+        <h1>Dashboard</h1>
+        {err && <h2>{err}</h2>}
+        <h3>
+          Profile<strong>Email: {currentUser.email}</strong>
+        </h3>
+        <h1>{userData[0].first_name}</h1>
+        <button onClick={handleLogout}>Log Out</button>
+      </div>
+    );
+  }
+
 }
