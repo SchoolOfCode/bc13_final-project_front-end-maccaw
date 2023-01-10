@@ -1,9 +1,10 @@
 
 
-function ListingCard({ profile_picture, rating, username, location, crop_type, plot_size, description }) {
+function ListingCard({ profile_picture,title, rating, username, location, crop_type, plot_size, description }) {
   return (
     <div>
       <img src={profile_picture} alt="profile"/>
+      <h1>Title: {title}</h1>
       <h3>Username: {username}</h3>
       <p>User Rating: {rating}</p>
       <p>Location:{location}</p>
