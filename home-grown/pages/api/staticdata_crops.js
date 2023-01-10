@@ -6,6 +6,4 @@ export default async function handler(red, res) {
     const fileContents = await fs.readFile(jsonDirectoray + '/crops.json', 'utf8');
     const fileContentsParsed = JSON.parse(fileContents)
   res.status(200).json(fileContentsParsed);
-  
-
 }
