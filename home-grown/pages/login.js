@@ -40,9 +40,8 @@ export default function Login() {
           Log In
         </button>
       </form>
-      <Link href="/forgotpassword">
-        <p>Forgot Password?</p>
-      </Link>
+      <Link href="/forgotpassword">Forgot Password?</Link>
+      <Link href="/signup">Need an account?</Link>
     </div>
   );
 }
