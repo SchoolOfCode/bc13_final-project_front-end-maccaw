@@ -12,7 +12,7 @@ function ListingContainer() {
   //key data for cards = username, location, croptype, plotsize, description, user image, rating
   useEffect(() => {
     getPostData();
-  });
+  },[]);
 
   const [posts, setPosts] = useState(null);
 
