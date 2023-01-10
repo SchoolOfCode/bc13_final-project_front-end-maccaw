@@ -1,8 +1,6 @@
-// import { updateCurrentUser } from "firebase/auth";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
-// import ProtectedRoute from "../components/ProtectedRoute";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -26,6 +24,7 @@ export default function Dashboard() {
     router.push("/login");
     return null;
   }
+  console.log(currentUser, "here");
 
   return (
     <div>

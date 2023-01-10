@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 const ProtectedRoute = ({ children }) => {
   const router = useRouter();
   const { currentUser, user } = useAuth();
-  console.log(currentUser);
+  // console.log(currentUser, "protected route");
   if (!currentUser) {
     router.push("/login");
   } else {
