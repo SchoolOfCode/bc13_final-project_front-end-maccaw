@@ -2,6 +2,7 @@ import { updateCurrentUser } from "firebase/auth";
 import React, { useState } from "react";
 import { useRouter} from "next/router";
 import { useAuth } from "../context/AuthContext";
+import ProtectedRoute from "../components/private";
 
 export default function Dashboard() {
   const [err, setErr] = useState('');
@@ -12,21 +13,23 @@ export default function Dashboard() {
     setErr("");
 
     try {
+      console.log('Im here line 15')
       await logout();
-      router.push("/");
+      console.log('Im here line 17')
+      router.push("/login");
     } catch {
         setErr('failed to log out')
     }
   }
   
   return (
-    <>
-      <h1>Dashboard</h1>
+    <ProtectedRoute>
+        <h1>Dashboard</h1>
       {err && <h2>{err}</h2>}
       <h3>
         Profile<strong>Email: {currentUser.email}</strong>
       </h3>
       <button onClick={handleLogout}>Log Out</button>
-    </>
+    </ProtectedRoute>  
   );
 }

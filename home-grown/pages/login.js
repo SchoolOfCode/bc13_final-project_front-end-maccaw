@@ -1,30 +1,28 @@
 import React, { useRef, useState } from "react";
-import Link from 'next/link';
-import { useAuth } from '../context/AuthContext.js';
+import Link from "next/link";
+import { useAuth } from "../context/AuthContext.js";
 import { useRouter } from "next/router";
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login } = useAuth()
-  const [err, setErr] = useState('')
-  const [loading, setLoading] = useState(false)
-  const router = useRouter()
- 
-  async function handleSubmit(e){
-    e.preventDefault()
+  const { login } = useAuth();
+  const [err, setErr] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-   
+  async function handleSubmit(e) {
+    e.preventDefault();
 
     try {
-      setErr('')
-      setLoading(true)
-      await login(emailRef.current.value,passwordRef.current.value )
-      router.push("/dashboard")
+      setErr("");
+      setLoading(true);
+      await login(emailRef.current.value, passwordRef.current.value);
+      router.push("/dashboard");
     } catch {
-      setErr('Failed to sign in')
+      setErr("Failed to sign in");
     }
-    setLoading(false)
+    setLoading(false);
   }
 
   return (
@@ -38,9 +36,13 @@ export default function Login() {
         <label>Password</label>
         <input type="password" ref={passwordRef} />
 
-        <button disabled={loading} type="submit">Log In</button>
+        <button disabled={loading} type="submit">
+          Log In
+        </button>
       </form>
-      <Link href="/forgotpassword"><p>Forgot Password?</p></Link>
+      <Link href="/forgotpassword">
+        <p>Forgot Password?</p>
+      </Link>
     </div>
   );
 }

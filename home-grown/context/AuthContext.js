@@ -16,6 +16,7 @@ export function AuthProvider({children}) {
     const [loading, setLoading] = useState(true)
 
     function signUp(email, password) {
+        //passing in auth (because it doesnt work otherwise) let's look into it
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
@@ -23,8 +24,8 @@ export function AuthProvider({children}) {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-    function logout(email, password){
-        return signOut()
+    function logout(){
+        return signOut(auth)
     }
 
     useEffect(() => {
