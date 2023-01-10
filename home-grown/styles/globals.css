@@ -76,7 +76,11 @@ p, h2, h3, h4, h5, h6 {
 }
 
  /* header */
-
+.logo{
+  padding-left: 10px;
+  height: 80%;
+  width: auto;
+}
  nav {
   display: flex;
   justify-content: space-between;
@@ -102,11 +106,14 @@ p, h2, h3, h4, h5, h6 {
       padding: 10px;
       padding-right: 80px;
   }
-
+  li{
+    color:#214E0B;
+  }
   li:hover{
     text-decoration:underline;
     color: var(--highLightTwo)
   }
+
 
   
 

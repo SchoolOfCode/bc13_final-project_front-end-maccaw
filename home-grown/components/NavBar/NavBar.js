@@ -1,8 +1,10 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
 export default function NavBar() {
     return (
         <nav>
         <div className="logo">
+        <Image className ="logo"src="/illustrations/logo.png" width={50} height={50}/>
         </div>
         <ul>
             <Link href="/" style={{ textDecoration: 'none' }}><li>Home</li></Link>
