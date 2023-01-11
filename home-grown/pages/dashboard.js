@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
+import { Title } from "../components/Dashboard/Title";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -50,13 +51,9 @@ export default function Dashboard() {
   else{
     return (
       <div>
-        <h1>Dashboard</h1>
-        {err && <h2>{err}</h2>}
-        <h3>
-          Profile<strong>Email: {currentUser.email}</strong>
-        </h3>
-        <h1>{userData[0].first_name}</h1>
-        <button onClick={handleLogout}>Log Out</button>
+        <Title userData={userData} />
+        {/* <button onClick={handleLogout}>Log Out</button> */}
+        
       </div>
     );
   }
