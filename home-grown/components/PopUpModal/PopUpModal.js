@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../../styles/PopUp.module.css'
 import ContactForm from '../ContactForm/contactForm'
+
 function MyPopup() {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
