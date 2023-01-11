@@ -10,22 +10,22 @@ export default function Dashboard() {
   const router = useRouter();
   const [userData, setUserData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  
   useEffect(() => {
     getData();
   }, []);
 
   async function getData() {
+    let firebase_id = currentUser.uid
     const response = await fetch(
-      "http://localhost:3000/api/staticdata_all_tables_joined"
+      ` https://homegrown-backend.onrender.com/api/homegrown/users/${firebase_id}`
     );
     const data = await response.json();
     console.log("DATA", data);
     console.log("CURRENT USER", currentUser);
 
-    let user = data.filter(
-      (element) => element.firebase_id === currentUser.uid
-    );
-    setUserData(user);
+
+    setUserData(data.payload[0]);
     setIsLoading(false);
   }
 
