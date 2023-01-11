@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import { Title } from "../components/Dashboard/Title";
 import Carousel from "../components/Dashboard/Carousel";
 import Profile from "../components/Dashboard/Profile";
+import PlotChart from "../components/Dashboard/PlotChart";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -11,10 +12,23 @@ export default function Dashboard() {
   const router = useRouter();
   const [userData, setUserData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  const [userPosts, setUserPosts] = useState();
 
   useEffect(() => {
     getData();
+    getPosts();
   }, []);
+
+  async function getPosts() {
+    let firebase_id = currentUser.uid;
+    const response = await fetch(
+      ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`
+    );
+    const data = await response.json();
+    setUserPosts(data.payload);
+    console.log("POSTS", data.payload);
+  }
+
 
   async function getData() {
     let firebase_id = currentUser.uid;
@@ -54,6 +68,7 @@ export default function Dashboard() {
         <Title userData={userData} />
         {/* <button onClick={handleLogout}>Log Out</button> */}
         <Carousel userImage={userData["plot_image"]} />
+        <PlotChart userData={userData} />
         <Profile userData={userData}></Profile>
       </div>
     );
