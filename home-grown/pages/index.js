@@ -4,16 +4,10 @@ import ContactForm from "../components/ContactForm/contactForm";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
- 
-  return  (
-<div>  <ContactForm/>  
-
-
-</div>
-
-  )
-
- 
-
-  
+  return (
+    <div>
+      {" "}
+     
+    </div>
+  );
 }

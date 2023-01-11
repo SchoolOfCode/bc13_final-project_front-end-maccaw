@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from '../../styles/PopUp.module.css'
 
 function ContactForm() {
   const [formData, setFormData] = useState({name: '', email: '', message: ''});  // set initial value for formData
@@ -21,9 +22,12 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles["form-container"]} onSubmit={handleSubmit}>
+      <label>Name:</label>
       <input type="text" onChange={handleChangeName} />
+      <label>Email:</label>
       <input type="text" onChange={handleChangeEmail} />
+      <label>Message:</label>
       <textarea type="text" onChange={handleChangeMessage} />
       <button type="submit">Submit</button>
     </form>
