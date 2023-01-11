@@ -18,9 +18,7 @@ function ListingContainer({search, posts}) {
     return (
       <div className={styles["card-container"]}>
         {posts.map((element) => (
-          <div className={styles.card}>
-            <ListingCard profile_picture={element.profile_picture} title={element.title} rating={element.rating} username={element.username} location={element.location} crop_type={element.crop_type} plot_size={element.plot_size} description={element.description} />
-          </div>
+            <ListingCard profile_picture={element.profile_picture} title={element.title} rating={element.rating} username={element.username} location={element.location} crop_name={element.crop_name} description={element.description} />
         ))}
       </div>
     );
