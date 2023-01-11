@@ -1,4 +1,5 @@
 import styles from "../../styles/ListingContainer.module.css";
+import MyPopup from "../PopUpModal/PopUpModal";
 
 function ListingCard({
   profile_picture,
@@ -25,7 +26,7 @@ function ListingCard({
           <p>Crop:{crop_name}</p>
           <p>Description: {description}</p>
         </div>
-    
+    <MyPopup/>
     </div>
   );
 }

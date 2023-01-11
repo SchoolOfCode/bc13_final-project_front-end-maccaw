@@ -1,10 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from "next/router";
+
+
+
+
 export default function NavBar() {
+
+const router = useRouter();
+    
+
+
+ function reloadPage () {
+  router.push("/");
+  }
+
+
     return (
         <nav>
         <div className="logo">
-        <Image className ="logo"src="/illustrations/logo.png" width={50} height={50}/>
+    
+            <Image className ="logo"src="/illustrations/logo.png" width={50} height={50} onClick={() => reloadPage()}/> 
         </div>
         <ul>
             <Link href="/" style={{ textDecoration: 'none' }}><li>Home</li></Link>

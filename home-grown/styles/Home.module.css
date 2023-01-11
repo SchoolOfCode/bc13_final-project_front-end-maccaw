@@ -1,0 +1,82 @@
+.image-container{
+    background-image: url('/illustrations/landing-image.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 95vh;
+    padding: 30px;
+   
+    }
+.cards-container{
+    height: 100vh;
+}
+
+.text-container{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 10%;
+    padding-top: 3%;
+    font-family: var(--textFont);
+}
+
+    .title{
+        font-size: 15vh;
+        letter-spacing: 0.1em;
+        font-family: var(--titleFont);
+        font-weight: 300;
+       
+    }
+    .sub-title{
+        font-size: 4.5vh;
+        letter-spacing: 0.4em;
+        padding-bottom: 40px;
+        font-weight: 50;
+
+    }
+    .p{
+        font-size: 2.5vh;
+        letter-spacing: 0.5;
+        width: 60%;
+        line-height: 1.7;
+    }
+
+    .button-container{
+        display: flex;
+        gap: 40px;
+        width: 60%;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+     
+    }
+
+    .button-one, .button-two {
+        border-radius: 999px;
+        box-sizing: border-box;
+        font-family: var(--textFont);
+        color: #FFFFFF;
+        cursor: pointer;
+        opacity: 1;
+        border: 2px solid;
+        border-color: white;
+        padding: 8px 18px;
+        text-align: center; 
+        font-size: 1.2rem; 
+        height: 55px;
+        width: 30%; 
+      }
+
+      .button-one{
+        background: var(--highLightOne);
+        box-shadow:var(--highLightOne) 0 10px 20px -10px;
+    
+      }
+
+      .button-two{
+        background: var(--highLightTwo);
+        box-shadow:var(--highLightOne) 0 10px 20px -10px;
+      
+      }

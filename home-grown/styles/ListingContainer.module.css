@@ -35,10 +35,10 @@
     border-top-right-radius: 15px 225px;
 }
 
-.one-card:hover{
+/* .one-card:hover{
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
     transform: translate3d(0, 2px, 0);
-}
+} */
 .post-info{
    
     width: 70%;
