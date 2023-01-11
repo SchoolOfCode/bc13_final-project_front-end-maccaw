@@ -1,0 +1,51 @@
+.container{
+  background-color: #84e2845c;
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4%;
+  font-family: var(--titleFont);
+}
+.h1element{
+  font-size: 2.5em;
+  margin-left: 4%; /* --textFont; */
+}
+
+.buttonsContainer{
+  display: flex;
+  gap: 30px;
+  margin-right: 6%;
+  padding: 10px;
+}
+
+.carouselContainer {
+  width: 35%;
+  height: 35%;
+  margin: 5%
+}
+
+.carouselImage {
+  width: 35%;
+  height: 35%;
+}
+
+.profile {
+  width: 35%;
+  height: 35%;
+  margin: 5%;
+}
+
+.pieChart {
+  width: 35%;
+  height: 35%;
+  margin: 5%;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
