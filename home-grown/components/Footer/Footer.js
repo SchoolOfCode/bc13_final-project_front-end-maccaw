@@ -3,12 +3,11 @@ export default function Footer() {
     return (
         <footer>
         <div className="footer">
-        <a>About</a>
-        <a>Logo</a>
-        <a>Logo</a>
-        <a>Logo</a>
-        <a>Logo</a>
-        <a>Contact</a>
+        <img src="/icons/facebook.png"/>
+        <img src="/icons/insta.png"/>
+        <img src = "icons/linkdin.png"/>
+        <img src = "icons/twitter.png"/>
+     
         </div>
         </footer>
     )

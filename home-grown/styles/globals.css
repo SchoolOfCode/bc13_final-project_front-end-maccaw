@@ -82,10 +82,11 @@ p, h2, h3, h4, h5, h6 {
   width: auto;
 }
  nav {
+
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 6vh;
+  height: 20%;
   font-family: var(--textFont);
   
   }
@@ -107,8 +108,11 @@ p, h2, h3, h4, h5, h6 {
       padding-right: 80px;
   }
   li{
-    color:#214E0B;
+    height: 100%;
+    font-size: 100%;
+    color: var(--darkColour);
   }
+  
   li:hover{
     text-decoration:underline;
     color: var(--highLightTwo)
