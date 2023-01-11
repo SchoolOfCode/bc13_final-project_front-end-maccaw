@@ -27,6 +27,9 @@ export default function Dashboard() {
     const data = await response.json();
     setUserPosts(data.payload);
     console.log("POSTS", data.payload);
+
+
+
   }
 
 
@@ -66,9 +69,9 @@ export default function Dashboard() {
     return (
       <div>
         <Title userData={userData} />
-        {/* <button onClick={handleLogout}>Log Out</button> */}
+        <button onClick={handleLogout}>Log Out</button>
         <Carousel userImage={userData["plot_image"]} />
-        <PlotChart userData={userData} />
+        <PlotChart userPosts={userPosts} />
         <Profile userData={userData}></Profile>
       </div>
     );
