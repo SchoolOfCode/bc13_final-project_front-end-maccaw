@@ -9,7 +9,7 @@ function MyPopup() {
 
   return (
     <>
-      <button onClick={handleShow}>Open Popup</button>
+      <img src = "/icons/email-form-icon.png" onClick={handleShow} className = {styles["pop-up-icon"]}/>
       { show && (
         <div className={styles["pop-up-background"]}>
         <div className={styles["pop-up"]}>

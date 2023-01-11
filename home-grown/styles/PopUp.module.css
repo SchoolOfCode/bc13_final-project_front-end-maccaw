@@ -9,13 +9,14 @@
 }
 
 .pop-up {
-  
+  box-shadow: rgba(60, 64, 67, 1) 0px 1px 2px 0px, rgba(60, 64, 67, 1) 0px 2px 6px 2px;
   background-color: #fff;
   padding: 20px;
   width: 50%;
   max-width: 500px;
   min-height: 200px;
 }
+
 
 .pop-up-background{
     position: fixed;
@@ -28,4 +29,9 @@
   align-items: center;
   justify-content: center;
 
+}
+
+.pop-up-icon{
+  width: 30px;
+  height: 30px;
 }

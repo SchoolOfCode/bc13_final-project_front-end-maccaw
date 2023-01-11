@@ -14,10 +14,10 @@ function Listings() {
 
   async function getPostData() {
     const response = await fetch(
-      "http://localhost:3000/api/staticdata_all_tables_joined"
+      "https://homegrown-backend.onrender.com/api/homegrown/posts"
     );
     const data = await response.json();
-    setPosts(data);
+    setPosts(data.payload);
     console.log(data);
   }
 
