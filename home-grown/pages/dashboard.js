@@ -5,6 +5,7 @@ import { Title } from "../components/Dashboard/Title";
 import Carousel from "../components/Dashboard/Carousel";
 import Profile from "../components/Dashboard/Profile";
 import PlotChart from "../components/Dashboard/PlotChart";
+import dashboardStyles from "../styles/DashboardContainer.module.css";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -27,11 +28,7 @@ export default function Dashboard() {
     const data = await response.json();
     setUserPosts(data.payload);
     console.log("POSTS", data.payload);
-
-
-
   }
-
 
   async function getData() {
     let firebase_id = currentUser.uid;
@@ -67,12 +64,12 @@ export default function Dashboard() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className={dashboardStyles.mainContainer}>
         <Title userData={userData} />
         <button onClick={handleLogout}>Log Out</button>
         <Carousel userImage={userData["plot_image"]} />
-        <PlotChart userPosts={userPosts} />
         <Profile userData={userData}></Profile>
+        <PlotChart userPosts={userPosts} />
       </div>
     );
   }

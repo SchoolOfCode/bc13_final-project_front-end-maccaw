@@ -31,3 +31,21 @@
   width: 35%;
   height: 35%;
 }
+
+.profile {
+  width: 35%;
+  height: 35%;
+  margin: 5%;
+}
+
+.pieChart {
+  width: 35%;
+  height: 35%;
+  margin: 5%;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
