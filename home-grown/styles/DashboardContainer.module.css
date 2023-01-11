@@ -21,3 +21,13 @@
   padding: 10px;
 }
 
+.carouselContainer {
+  width: 35%;
+  height: 35%;
+  margin: 5%
+}
+
+.carouselImage {
+  width: 35%;
+  height: 35%;
+}
