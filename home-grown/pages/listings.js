@@ -16,19 +16,18 @@ function Listings() {
     const response = await fetch(
       "http://localhost:3000/api/staticdata_all_tables_joined"
     );
-
     const data = await response.json();
-
     setPosts(data);
     console.log(data);
   }
 
 
+
   async function handleClick() {
     console.log("SEARCH INPUT:", search);
-    console.log("POSTS", posts)
+    console.log("POSTS", posts);
     if(search){
-      let newArray = posts.filter( element => element.location.includes(search.toUpperCase()) || element.crop_name.includes(search))
+      let newArray = posts.filter( element => element.location.includes(search.toUpperCase()) || element.crop_name.toUpperCase().includes(search.toUpperCase()))
       setPosts(newArray)
     } else {
       alert('please enter a post code');
