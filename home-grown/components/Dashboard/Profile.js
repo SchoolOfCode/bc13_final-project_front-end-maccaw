@@ -4,7 +4,7 @@ export default function Profile({ userData }) {
   let ratingString = "";
 
   function generateRating(rating) {
-    while (ratingString.length !== rating) {
+   for(let i=0; i<rating;i++){
       ratingString += "🥕";
     }
   }
