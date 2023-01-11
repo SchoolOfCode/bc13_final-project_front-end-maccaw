@@ -1,10 +1,19 @@
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/Footer";
+import { useAuth } from "../../context/AuthContext";
+import NavBarLogIn from "../NavBar/NavBarLogIn";
+
+
 
 export default function Layout(props) {
-  return (
+    const { currentUser, logout, isUserAuthenticated } = useAuth();
+
+return (
     <div>
-      <NavBar/>
+      { currentUser ? <NavBarLogIn/> : <NavBar/>  
+      }
+      
+
       {props.children}
       <Footer/>
     </div>

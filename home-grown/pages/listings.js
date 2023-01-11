@@ -28,7 +28,7 @@ function Listings() {
     console.log("SEARCH INPUT:", search);
     console.log("POSTS", posts)
     if(search){
-      let newArray = posts.filter( element => element.location.includes(search.toUpperCase()))
+      let newArray = posts.filter( element => element.location.includes(search.toUpperCase()) || element.crop_name.includes(search))
       setPosts(newArray)
     } else {
       alert('please enter a post code');
