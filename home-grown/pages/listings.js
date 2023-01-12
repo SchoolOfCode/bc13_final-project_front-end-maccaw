@@ -22,10 +22,11 @@ function Listings() {
   }
 
 
-
+//search in the backend
   async function handleClick() {
     console.log("SEARCH INPUT:", search);
     console.log("POSTS", posts);
+    //check if the search query has changed and then refetch the data with the search query each time
     if(search){
       let newArray = posts.filter( element => element.location.includes(search.toUpperCase()) || element.crop_name.toUpperCase().includes(search.toUpperCase()))
       setPosts(newArray)
