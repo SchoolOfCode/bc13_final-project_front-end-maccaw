@@ -1,3 +1,9 @@
+@media  ( min-width: 390px) , ( min-height: 844px ){
+
+.landing {
+    position: absolute;
+}
+
 .image-container{
     background-image: url('/illustrations/landing-image.png');
     background-repeat: no-repeat;
@@ -50,6 +56,7 @@
         align-items: center;
         justify-content: flex-start;
         margin-top: 30px;
+        padding-bottom: 60PX;
      
     }
 
@@ -79,4 +86,16 @@
         background: var(--highLightTwo);
         box-shadow:var(--highLightOne) 0 10px 20px -10px;
       
-      }
+      } 
+
+    }
+
+
+          @media (max-width: 390px) , (max-height: 844px ) {
+          .landing {
+             
+            position: absolute;
+          }
+        }
+
+          

@@ -1,11 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from 'next/link';
+import Carousel from "../components/Landing/Carousel";
+
 
 
 export default function Home() {
   return (
-    <div className={styles.landing}>
+    <div className={styles["landing"]}>
       <div className={styles["image-container"]}>
         <div className={styles["text-container"]}>
           <h1 className={styles["title"]}>HOME GROWN</h1>
@@ -28,6 +30,7 @@ export default function Home() {
       <Link href="/listings">
       <button className={styles["button-two"]}>VIEW LISTINGS</button>    
       </Link>
+      
           </div>
         </div>
       </div>
