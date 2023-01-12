@@ -27,7 +27,9 @@ export default function Login() {
   }
 
   return (
+  
     <div className={styles["log-in-container"]}>
+      <div className={styles["glass-container"]}>
       <div className={styles["log-in-card"]}>
         <h1>Log In</h1>
         {err && <h2>{err}</h2>}
@@ -45,10 +47,11 @@ export default function Login() {
           </button>
         </form>
         <div className={styles.links}>
-          <Link href="/forgotpassword">Forgot Password?</Link>
-          <Link href="/signup">Need an account?</Link>
+          <Link style={{ textDecoration: 'none' }} href="/forgotpassword">Forgot Password?</Link>
+          <Link  style={{ textDecoration: 'none' }} href="/signup">Need an account?</Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }
