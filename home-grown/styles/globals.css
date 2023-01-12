@@ -14,8 +14,10 @@
  --highLightOne: #214E0B;
  --highLightTwo: #d34401;
  --highLightThree: #FAA613;
+ --lighterFontColor:rgb(109, 109, 109);
  --titleFont: 'Happy Monkey';
  --textFont: 'Georama';
+ 
 }
 
 #__next{
