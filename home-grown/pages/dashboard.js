@@ -15,9 +15,15 @@ export default function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [userPosts, setUserPosts] = useState();
 
+  if (!currentUser) {
+    router.push("/login");
+  }
+
   useEffect(() => {
-    getData();
-    getPosts();
+    if (currentUser) {
+      getData();
+      getPosts();
+    }
   }, []);
 
   async function getPosts() {
@@ -54,10 +60,6 @@ export default function Dashboard() {
     }
   }
 
-  if (!currentUser) {
-    router.push("/login");
-    return null;
-  }
   console.log(userData, "here");
 
   if (isLoading) {
