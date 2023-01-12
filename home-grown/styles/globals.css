@@ -18,6 +18,9 @@
  --textFont: 'Georama';
 }
 
+#__next{
+  height: 100%;
+}
 
 /* 
   1. Use a more-intuitive box-sizing model.
@@ -82,7 +85,10 @@ p, h2, h3, h4, h5, h6 {
   width: auto;
 }
  nav {
-
+  /* background-color: white; */
+  position: sticky;
+  display: hidden;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -125,7 +131,7 @@ p, h2, h3, h4, h5, h6 {
   /* footer */
   
   footer {
-      position: fixed;
+      position: absolute;
       height: 4vh;
       display: flex;
       justify-content: center;

@@ -1,0 +1,59 @@
+.log-in-container{
+    display: flex;
+    height:calc(100vh - 10vh);
+    max-height: 100vh;
+    background-image: url('../public/illustrations/desktop-wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--textFont);
+}
+
+.log-in-card{
+background-color: white;
+width: 30%;
+height: 60%;
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.form-container, .log-in-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-container{
+    width: 70%;
+    height: 80%;
+    
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.button {
+    border-radius: 999px;
+    box-sizing: border-box;
+    font-family: var(--textFont);
+    color: #FFFFFF;
+    cursor: pointer;
+    opacity: 1;
+    border: 2px solid;
+    border-color: white;
+    padding: 8px 18px;
+    text-align: center; 
+    font-size: 2vmin; 
+    height: 50px;
+    width: 40%; 
+    background-color: var(--highLightTwo);
+    box-shadow:var(--highLightOne) 0 10px 20px -10px;
+
+  }
