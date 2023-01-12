@@ -1,4 +1,3 @@
-import listingStyles from "../../styles/ListingContainer.module.css";
 import dashboardStyles from "../../styles/DashboardContainer.module.css";
 
 export const Title = ({ userData }) => {
@@ -8,8 +7,8 @@ export const Title = ({ userData }) => {
         {userData.first_name}'s Patch
       </h1>
       <div className={dashboardStyles["buttonsContainer"]}>
-        <button className={listingStyles["search-button"]}>Listings</button>
-        <button className={listingStyles["search-button"]}>Messages</button>
+        <button className={dashboardStyles["search-button"]}>Listings</button>
+        <button className={dashboardStyles["search-button"]}>Messages</button>
       </div>
     </div>
   );
