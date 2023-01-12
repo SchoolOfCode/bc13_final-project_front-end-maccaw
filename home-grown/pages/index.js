@@ -7,10 +7,10 @@ import Carousel from "../components/Landing/Carousel";
 
 export default function Home() {
   return (
-    <div className={styles["landing"]}>
+    <div className={styles.landing}>
       <div className={styles["image-container"]}>
         <div className={styles["text-container"]}>
-          <h1 className={styles["title"]}>HOME GROWN</h1>
+          <h1 className={styles["title"]}> HOME GROWN</h1>
           <h3 className={styles["sub-title"]}>GOOD FOOD, GROWN TOGETHER</h3>
           <p className={styles.p}>
             We are a community-driven platform that connects people online to
@@ -25,7 +25,7 @@ export default function Home() {
           </p>
           <div className={styles["button-container"]}>
       <Link href="/post"> 
-      <button className={styles["button-one"]}> POST YOUR PLOT </button> 
+      <button className={styles["button-one"]}> POST PLOT </button> 
       </Link>
       <Link href="/listings">
       <button className={styles["button-two"]}>VIEW LISTINGS</button>    
@@ -33,8 +33,8 @@ export default function Home() {
       
           </div>
         </div>
+         <div className={styles["cards-container"]}></div>
       </div>
-      <div className={styles.cardsContainer}></div>
     </div>
   );
 }
