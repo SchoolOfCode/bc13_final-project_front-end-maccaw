@@ -1,3 +1,50 @@
+@media (max-width: 768px) {
+    .image-container {
+        background-size: cover;
+        height: 100vh;
+    }
+    .text-container {
+        width: 80%;
+        padding-left: 10%;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .sub-title {
+        font-size: 1.5rem;
+    }
+    .p {
+        font-size: 1.2rem;
+    }
+    .button-container {
+        width: 80%;
+    }
+    .button-one,
+    .button-two {
+        width: 40%;
+    }
+}
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .sub-title {
+        font-size: 1.2rem;
+    }
+    .p {
+        font-size: 1rem;
+    }
+    .button-container {
+        flex-direction: column;
+    }
+    .button-one,
+    .button-two {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}
+
+
 .image-container{
     background-image: url('/illustrations/landing-image.png');
     background-repeat: no-repeat;
@@ -78,5 +125,4 @@
       .button-two{
         background: var(--highLightTwo);
         box-shadow:var(--highLightOne) 0 10px 20px -10px;
-      
       }
