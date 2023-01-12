@@ -22,7 +22,7 @@ describe("visit listings page, searches by post-code and then clears search", ()
   });
 });
 
-describe.only("visit homepage, navigates to log-in, inputs details. Then clicks forgot password", () => {
+describe("visit homepage, navigates to log-in, inputs details. Then clicks forgot password", () => {
   it("passes", () => {
     cy.visit("http://localhost:3000/").wait(1000);
     cy.get(":nth-child(4) > li").click().wait(1000);
