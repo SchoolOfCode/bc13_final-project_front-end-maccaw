@@ -22,8 +22,8 @@
 }
 
 .carouselContainer {
-  width: 35%;
-  height: 35%;
+  width: 30%;
+  height: 30%;
   margin: 5%
 }
 
@@ -39,9 +39,11 @@
 }
 
 .pieChart {
-  width: 35%;
-  height: 35%;
+  width: 25%;
+  height: 25%;
   margin: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .mainContainer {
@@ -49,3 +51,152 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.search-button, .clear-button {
+  align-self: center;
+  background-color: #fff;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: var(--highLightTwo) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: var(--darkColour);
+  cursor: pointer;
+  font-family: var(--textFont);
+  font-size: 1rem;
+  line-height: 23px;
+  padding: .35rem;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  
+}
+
+.search-button:hover, .clear-button:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+ @media screen and (max-width: 1024px) {
+  .imageProfile{
+    width: 29%;
+    float : right;
+    margin-left: 2rem;
+  }
+  .profile{
+    
+    float : right;
+  }
+  .h2UserDetails{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .h4UserInfo{
+    font-size: 1.2rem;
+  }
+  .container{
+    margin-top: 2%;
+    width: 83%;
+    height: 50px;
+  }
+
+  .h1element{
+    font-size: 2em;
+  }
+  .search-button{
+    line-height: 11px;
+  }
+  .logo{
+    width: 0;
+  }
+  .pieChart{
+    width: 17rem;
+    height: 17rem;
+    margin-top: 0;
+  } 
+   
+ } 
+
+@media screen and (max-width: 375px) {
+
+  .container{
+    margin-top: 2%;
+    width: 83%;
+    height: 50px;
+    flex-direction: column;
+  }
+
+  .h1element{
+    font-size: 2em;
+  }
+  .search-button{
+    line-height: 11px;
+  }
+
+  .carouselContainer {
+    width: 90%;
+    height: 30%;
+    
+  }
+  .userPlotImage{
+    width: 100%;
+    height: 100%;
+  }
+
+  .logOutButton{
+    margin-top: 2rem;
+    margin-left: auto;
+    border: none;
+    font-size: 0.9rem;
+
+  }
+
+  .buttonsContainer{  
+    margin: auto;
+    margin-top: 2rem;
+  }
+
+  .mainContainer{
+    flex-direction: column;
+  }
+
+  .profileContainer{
+    display: flex;
+
+  }
+
+  .profile{
+    min-width: 72%;
+    height: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .profileInformation{
+    margin-top: 2rem;
+  }
+
+  .h2UserDetails{
+    padding: 8rem 0;
+  }
+
+  .pieChart {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .imageProfile{
+    /* margin: auto;
+    margin-top: 2rem; */
+    width: 4rem;
+    height: 4rem;
+  }
+}  
