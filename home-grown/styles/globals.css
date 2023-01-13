@@ -41,7 +41,7 @@
   3. Allow percentage-based heights in the application
 */
  html, body, #__next {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
 } 
