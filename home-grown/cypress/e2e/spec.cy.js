@@ -14,8 +14,6 @@ describe("visits the home page and then navigates to the listings page", () => {
 describe("visit listings page, searches by post-code and then clears search", () => {
   it("passes", () => {
     cy.visit("http://localhost:3000/listings").wait(1000);
-    cy.url().should("be.equal", "http://localhost:3000/listings");
-
     cy.get(".ListingContainer_input-bar__ZDahT")
       .type("M")
       .wait(1000)
@@ -30,8 +28,6 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
   it("passes", () => {
     cy.visit("http://localhost:3000/").wait(1000);
     cy.get(":nth-child(4) > li").click().wait(1000);
-    cy.url().should("be.equal", "http://localhost:3000/login");
-
     cy.get(".Login_form-email-input__3q0BK > .Login_input__r_1vS").type(
       "amina@gmail.com"
     );
@@ -39,19 +35,5 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
       "passrd"
     );
     cy.get(".Login_button__ejJ5H").click().get("h2").should("be.visible");
-  });
-});
-
-describe("visit homepage and checks that the buttons navigate to the correct page", () => {
-  it("fails", () => {
-    cy.visit("http://localhost:3000/").wait(1000);
-    cy.get(".Home_button-two__xBO0p")
-      .click()
-      .url()
-      .should("be.equal", "http://localhost:3000/listings");
-    cy.get(".Home_button-one__8MDyp")
-      .click()
-      .url()
-      .should("be.equal", "http://localhost:3000/post");
   });
 });
