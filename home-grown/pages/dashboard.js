@@ -68,8 +68,10 @@ export default function Dashboard() {
     return (
       <div className={dashboardStyles.mainContainer}>
         <Title userData={userData} />
-        <button className={dashboardStyles.logOutButton} onClick={handleLogout}>Log Out</button>
-        <Carousel className={dashboardStyles.userPlotImage} userImage={userData["plot_image"]} />
+        <Carousel
+          className={dashboardStyles.userPlotImage}
+          userImage={userData["plot_image"]}
+        />
         <Profile userData={userData}></Profile>
         <PlotChart userPosts={userPosts} />
       </div>
