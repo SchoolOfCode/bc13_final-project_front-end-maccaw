@@ -1,7 +1,7 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from 'next/link';
-import Carousel from "../components/Landing/Carousel";
+import { Carousel } from "../components/Landing/Carousel";
+
 
 
 
@@ -33,7 +33,10 @@ export default function Home() {
       
           </div>
         </div>
-         <div className={styles["cards-container"]}></div>
+         <div className={styles["cards-container"]}>
+         <Carousel/>
+         
+         </div>
       </div>
     </div>
   );
