@@ -33,9 +33,22 @@
 }
 
 .profile {
-  width: 35%;
+  width: 38%;
   height: 35%;
   margin: 5%;
+}
+
+.h2UserDetails{
+  font-size: 2.5rem;
+  margin-top: 4rem;
+}
+
+.imageProfile{
+  /* margin: auto;
+  margin-top: 2rem; */
+  width: 14rem;
+  height: 14rem;
+  
 }
 
 .pieChart {
@@ -119,55 +132,150 @@
   } 
    
  } 
+ /* ////////////////// */
+/* Breakpoint @ 768px */
+@media screen and (max-width: 768px){
+  .container{
+    margin-top: 4%;
+    width: 95%;
+    height: 70px;
+    flex-direction: row;
+  }
+  .h1element{
+    font-size: 2rem;
+    margin: auto;
+    line-height: 40px;
+  }
+  .imageProfile{
+    /* margin: auto;
+    margin-top: 2rem; */
+    width: 5rem;
+    height: 5rem;
+    margin-top: 2rem;
+  }
+  .carouselContainer {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .h4UserInfo{
+    font-size: 1rem;
+    width: 200px;
+  }
 
-@media screen and (max-width: 375px) {
+}
+/* /////////////////// */
+/* Breakpoint @ 425px */
+@media screen and (max-width: 425px) {
 
   .container{
-    margin-top: 2%;
-    width: 83%;
+    margin-top: 12%;
+    width: 90%;
     height: 50px;
     flex-direction: column;
+   
   }
-
   .h1element{
-    font-size: 2em;
-  }
-  .search-button{
-    line-height: 11px;
+    font-size: 2.1em;
+    margin: auto;
+    line-height: 40px;
   }
 
+  .buttonsContainer{  
+    margin: auto;
+    margin-top: 1.5rem;
+  }
   .carouselContainer {
     width: 90%;
     height: 30%;
-    
+    margin-top: 23%;
   }
   .userPlotImage{
     width: 100%;
     height: 100%;
   }
-
-  .logOutButton{
-    margin-top: 2rem;
-    margin-left: auto;
-    border: none;
-    font-size: 0.9rem;
-
+  
+  .mainContainer{
+    flex-direction: column;
   }
+  .profileContainer{
+    display: flex;
+    margin-bottom: 2rem;
+    line-height: 1px;
+    justify-content: space-between;
+  }
+  .profile{
+    min-width: 70%;
+    height: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+  }
+  .profileInformation{
+    margin-top: 2rem;
+  }
+  .h2UserDetails{
+    font-size: 1.5rem;
+   
+  }
+  .h4UserInfo{
+    font-size: 1rem;
+  }
+  .imageProfile{
+    /* margin: auto;
+    margin-top: 2rem; */
+    width: 4rem;
+    height: 4rem;
+    margin-top: 2rem;
+  }
+  .pieChart {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }  
+}  
 
+
+
+
+/* //////////////////// */
+/* Breakpoint @ 375px */
+@media screen and (max-width: 375px) {
+
+  .container{
+    margin-top: 12%;
+    width: 83%;
+    height: 50px;
+    flex-direction: column;
+  }
+  .h1element{
+    font-size: 2em;
+    margin-top: 2%;;
+  }
+  .carouselContainer {
+    width: 90%;
+    height: 30%;
+    margin-top: 28%;
+  }
+  .userPlotImage{
+    width: 100%;
+    height: 100%;
+  }
   .buttonsContainer{  
     margin: auto;
     margin-top: 2rem;
   }
-
   .mainContainer{
     flex-direction: column;
   }
-
   .profileContainer{
     display: flex;
-
+    margin-bottom: 2rem;
+    line-height: 1px;
   }
-
   .profile{
     min-width: 72%;
     height: 100%;
@@ -175,28 +283,32 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-
   .profileInformation{
     margin-top: 2rem;
   }
-
   .h2UserDetails{
-    padding: 8rem 0;
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-top: 4rem;
   }
 
+  .h4UserInfo{
+    font-size: 1rem;
+  }
+
+  .imageProfile{
+    margin: auto;
+    margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
   .pieChart {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  
+} 
 
-
-  .imageProfile{
-    /* margin: auto;
-    margin-top: 2rem; */
-    width: 4rem;
-    height: 4rem;
-  }
-}  
