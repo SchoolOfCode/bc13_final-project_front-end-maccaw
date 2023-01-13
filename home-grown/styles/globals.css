@@ -19,11 +19,10 @@
  --textFont: 'Georama';
  
 }
-
-#__next{
+ #__next{
   height: 100%;
   width: 100%;
-}
+} 
 
 /* 
   1. Use a more-intuitive box-sizing model.
@@ -41,14 +40,16 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
-  height: 100%;
-}
-/*
-  Typographic tweaks!
+ html, body, #__next {
+  height: 100vh;
+  width: 100vw;
+
+} 
+  /* Typographic tweaks!
   4. Add accessible line-height
   5. Improve text rendering
-*/
+*/ 
+
 body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--mainWhite);
@@ -136,7 +137,7 @@ p, h2, h3, h4, h5, h6 {
   /* footer */
   
   footer {
-      position: absolute;
+      position: relative;
       height: 4vh;
       display: flex;
       justify-content: center;
@@ -144,6 +145,7 @@ p, h2, h3, h4, h5, h6 {
       background-color: var(--highLightOne);
       color:var(--mainWhite);
       bottom: 0;
+
       }
 
 

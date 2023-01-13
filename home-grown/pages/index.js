@@ -33,11 +33,12 @@ export default function Home() {
       
           </div>
         </div>
-         <div className={styles["cards-container"]}>
+         
+      </div>
+      <div className={styles["cards-container"]}>
          <Carousel/>
          
          </div>
-      </div>
     </div>
   );
 }
