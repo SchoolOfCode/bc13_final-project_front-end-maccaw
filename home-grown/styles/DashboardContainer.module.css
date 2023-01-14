@@ -154,9 +154,14 @@
     margin-top: 2rem;
   }
   .carouselContainer {
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 2rem;
+  }
+
+  .userPlotImage{
+    margin: auto;
+    
   }
   .h4UserInfo{
     font-size: 1rem;
@@ -193,6 +198,7 @@
   .userPlotImage{
     width: 100%;
     height: 100%;
+    
   }
   
   .mainContainer{
@@ -227,7 +233,7 @@
     margin-top: 2rem; */
     width: 4rem;
     height: 4rem;
-    margin-top: 2rem;
+    margin-top: 0;
   }
   .pieChart {
     width: 80%;
