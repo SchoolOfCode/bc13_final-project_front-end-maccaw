@@ -6,6 +6,7 @@ import Carousel from "../components/Dashboard/Carousel";
 import Profile from "../components/Dashboard/Profile";
 import PlotChart from "../components/Dashboard/PlotChart";
 import dashboardStyles from "../styles/DashboardContainer.module.css";
+import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -76,6 +77,7 @@ export default function Dashboard() {
 
         <Profile userData={userData}></Profile>
         <PlotChart userPosts={userPosts} />
+        <CropTableContainer userPosts={userPosts}/>
       </div>
     );
   }
