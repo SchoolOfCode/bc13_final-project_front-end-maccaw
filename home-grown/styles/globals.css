@@ -137,7 +137,9 @@ p, h2, h3, h4, h5, h6 {
   /* footer */
   
   footer {
+
       position: relative;
+
       height: 4vh;
       display: flex;
       justify-content: center;
