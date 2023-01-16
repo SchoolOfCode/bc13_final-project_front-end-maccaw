@@ -85,10 +85,10 @@ p, h2, h3, h4, h5, h6 {
 
  /* header */
 .logo{
-  padding-left: 10px;
+  margin-left: 2.3rem;
   height: 80%;
   width: auto;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
  nav {
   /* background-color: white; */
@@ -98,7 +98,7 @@ p, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 20%;
+  height: 50%;
   font-family: var(--textFont);
   
   }
@@ -124,12 +124,19 @@ p, h2, h3, h4, h5, h6 {
     height: 100%;
     font-size: 100%;
     color: var(--darkColour);
+    transition-duration: 1s;
   }
   
   li:hover{
-    text-decoration:underline;
-    color: var(--highLightTwo)
+    font-size: 1.3rem;
+    border: 1px solid var(--darkColour);
+    border-radius: 25px;
+    padding: 4px 8px;
+    background-color: var(--darkColour);
+    color: #fbfbf9;
   }
+
+  
 
   #hamburgerButton{
     display: none;
@@ -152,13 +159,29 @@ p, h2, h3, h4, h5, h6 {
       display: block;
       text-align: center;
       position: relative;
-      margin-bottom: 2.5rem;
-      
+      margin-bottom: 3.5rem;
+    }
+    .logo{
+      margin-left: 1rem;
     }
 
     nav{
       width: 77%; 
     }
+    li{
+      
+      transition:none;
+    }
+
+    li:hover{
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      background-color: #fbfbf9;
+      color: var(--darkColour);
+    }
+
     #hamburgerButton{
       display: block;
       position: absolute;
@@ -190,16 +213,12 @@ p, h2, h3, h4, h5, h6 {
       }
     }
 
-
     li{
       height: 50%;
       font-size: 1.4rem;
     }
     
   }
-
-
-
   /* footer */
   
   footer {
@@ -215,8 +234,6 @@ p, h2, h3, h4, h5, h6 {
       bottom: 0;
 
       }
-
-
   .footer{
       display: flex;
       gap:20px;

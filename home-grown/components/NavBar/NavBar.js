@@ -9,7 +9,12 @@ export default function NavBar() {
 
 const router = useRouter();
     
-
+const Dropdown = () => {
+    const dropdown = document.querySelector("ul");
+    const hamburgerButton = document.querySelector("#hamburgerButton");
+    dropdown.classList.toggle("show");
+    hamburgerButton.classList.toggle("show");
+  }
 
  function reloadPage () {
   router.push("/");
@@ -30,6 +35,7 @@ const router = useRouter();
             <Link href="/login" style={{ textDecoration: 'none' }}><li>Post</li></Link>
             <Link href="/dashboard" style={{ textDecoration: 'none' }}><li>Dashboard</li></Link>
         </ul>
+            <button id="hamburgerButton" onClick={ Dropdown }>MENU</button>
         </nav>
     )
   }

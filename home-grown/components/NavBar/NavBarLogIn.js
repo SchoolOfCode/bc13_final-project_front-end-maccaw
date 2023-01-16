@@ -22,28 +22,21 @@ export default function NavBarLogIn() {
     
     <nav className="mainNav">
       <div className="logo">
+        <Link href="/" style={{ textDecoration: "none" }}>
         <Image
           className="logo"
           src="/illustrations/logo.png"
           width={50}
           height={50}
         />
+        </Link>
       </div>
       <ul>
-        <Link href="/listings" style={{ textDecoration: "none" }}>
-          <li>Listings</li>
-        </Link>
+        <Link href="/listings" style={{ textDecoration: "none" }}><li className="menuBarButton">Listings</li></Link>
         <Link href="/" style={{ textDecoration: "none" }} legacyBehavior>
-          <a onClick={handleClick} style={{ textDecoration: "none" }}>
-            <li>Log Out</li>
-          </a>
-        </Link>
-        <Link href="/dashboard" style={{ textDecoration: "none" }}>
-          <li>Dashboard</li>
-        </Link>
-        <Link href="/post" style={{ textDecoration: "none" }}>
-          <li>Post</li>
-        </Link>
+          <a onClick={handleClick} style={{ textDecoration: "none" }}><li>Log Out</li></a></Link>
+        <Link href="/dashboard" style={{ textDecoration: "none" }}><li>Dashboard</li></Link>
+        <Link href="/post" style={{ textDecoration: "none" }}><li>Post</li></Link>
       </ul>
       <button id="hamburgerButton" onClick={ Dropdown }>MENU</button>
     </nav>
