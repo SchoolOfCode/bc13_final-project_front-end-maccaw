@@ -1,5 +1,5 @@
 .listing-page-container{
-    
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 20vh;
+    height: 20%;
  
 
 }
@@ -110,4 +110,99 @@
 .search-button:hover, .clear-button:hover {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
+}
+
+@media only screen and (max-width: 390px) {
+    .card-container {
+        display: grid;
+        padding: 20px;
+        grid-template-columns: auto auto;
+        width: 100%;
+        gap: 150px;
+        padding-left: 35px;
+    }
+
+    .one-card {
+        background-color: #ffff;
+        display: flex;
+        height: 100%;
+        width: 140%;
+        justify-content: space-evenly;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 5px;
+        box-sizing: border-box;
+        border-color: rgba(31, 24, 17, 0.282);
+        cursor: pointer;
+        font-family: var(--textFont);
+        font-size: 1rem;
+        padding: .35rem;
+        border-bottom-left-radius: 25px 25px;
+        border-bottom-right-radius: 25px 25px;
+        border-top-left-radius: 25px 25px;
+        border-top-right-radius: 25px 25px;
+    }
+
+    .profile-img {
+        height: 7vh;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 300%;
+        height: 20vh;
+        padding-left: 45vh;
+    }
+
+    .input-bar {
+        width: 60%;
+        height: 20%;
+        margin-bottom: 20px;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-sizing: border-box;
+        color: var(--darkColour);
+        cursor: pointer;
+        font-family: var(--textFont);
+        font-size: 1rem;
+        padding: .35rem;
+        border-bottom-left-radius: 50px 50px;
+        border-bottom-right-radius: 50px 50px;
+        border-top-left-radius: 50px 50px;
+        border-top-right-radius: 50px 50px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .search-button,
+    .clear-button {
+        align-self: center;
+        background-color: #fff;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-shadow: var(--highLightTwo) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: var(--darkColour);
+        cursor: pointer;
+        font-family: var(--textFont);
+        font-size: 1rem;
+        line-height: 23px;
+        padding: .35rem;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 50px 50px;
+        border-bottom-right-radius: 50px 50px;
+        border-top-left-radius: 50px 50px;
+        border-top-right-radius: 50px 50px;
+    }
 }
