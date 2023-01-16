@@ -88,6 +88,7 @@ p, h2, h3, h4, h5, h6 {
   padding-left: 10px;
   height: 80%;
   width: auto;
+  margin-top: 0.5rem;
 }
  nav {
   /* background-color: white; */
@@ -130,10 +131,75 @@ p, h2, h3, h4, h5, h6 {
     color: var(--highLightTwo)
   }
 
+  #hamburgerButton{
+    display: none;
+  }
 
-  
 
- 
+  /*Responsiveness for the navBar*/
+
+  @media screen and (max-width: 425px){
+    ul{
+      flex-direction: column;
+      margin-top: 3rem;
+      display: none;
+    }
+
+    ul.show{
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+      display: block;
+      text-align: center;
+      position: relative;
+      margin-bottom: 2.5rem;
+      
+    }
+
+    nav{
+      width: 77%; 
+    }
+    #hamburgerButton{
+      display: block;
+      position: absolute;
+      cursor: pointer; 
+      align-items: center;
+      justify-content: center;
+      float: right;
+      margin-left: 20rem;
+      font-size: 1rem;
+      width: 70px;
+      height: 25px;
+      margin-top: 2rem;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      color: #214E0B;
+    }
+
+    @media screen and (max-width: 375px){
+      #hamburgerButton{
+        margin-left: 17rem;
+      }
+      nav{
+        width: 83%;
+      }
+      ul.show{
+        margin-top: 2rem;
+      }
+    }
+
+
+    li{
+      height: 50%;
+      font-size: 1.4rem;
+    }
+    
+  }
+
+
+
   /* footer */
   
   footer {
