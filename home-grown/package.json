@@ -10,9 +10,9 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@next/font": "13.1.1",
     "chart.js": "^4.1.2",
-    "emailjs-com": "^3.2.0",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "firebase": "^9.15.0",

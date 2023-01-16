@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import styles from "../../styles/PopUp.module.css";
 import ContactForm from "../ContactForm/ContactForm";
 
-function MyPopup() {
+function MyPopup({user_email}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   return (
     <>
@@ -17,7 +18,7 @@ function MyPopup() {
       {show && (
         <div className={styles["pop-up-background"]}>
           <div className={styles["pop-up"]}>
-            <ContactForm />
+            <ContactForm handleClose={handleClose} user_email={user_email}/>
             <button onClick={handleClose}>Close</button>
           </div>
         </div>

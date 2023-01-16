@@ -10,6 +10,7 @@ function ListingCard({
   crop_name,
   plot_size,
   description,
+  user_email
 }) {
   return (
     <div className={styles["one-card"]}>
@@ -26,7 +27,7 @@ function ListingCard({
           <p>Crop:{crop_name}</p>
           <p>Description: {description}</p>
         </div>
-    <MyPopup/>
+    <MyPopup user_email={user_email}/>
     </div>
   );
 }
