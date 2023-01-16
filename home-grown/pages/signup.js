@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext.js";
 import { useRouter } from "next/router";
 import styles from "../styles/Signup.module.css";
 
- //object of icon urls, so that the url can be saved in the database -> set icon to be animalIcons[e.target.name]
+//object of icon urls, so that the url can be saved in the database -> set icon to be animalIcons[e.target.name]
 const animalIcons = {
   bunny: "https://cdn-icons-png.flaticon.com/512/4775/4775505.png",
   duck: "https://cdn-icons-png.flaticon.com/512/1326/1326405.png",
@@ -23,11 +23,13 @@ export default function SignUp() {
   const [show, setShow] = useState(false);
   const [iconLabel, setIconLabel] = useState("SELECT ICON")
   const [signUpForm, setSignUpFrom] = useState({
-    firstName: " ",
-    lastName: "",
+    firebase_id: "",
+    last_name: " ",
+    last_name: "",
     email: "",
     username: "",
-    icon: "",
+    profile_picture: "",
+    rating: 5
   });
 
   const router = useRouter();
@@ -41,7 +43,7 @@ export default function SignUp() {
   function iconSelect(e){
     setSignUpFrom({
       ...signUpForm,
-      icon: animalIcons[e.target.alt],
+      profile_picture: animalIcons[e.target.alt],
     });
     setIconLabel(e.target.alt)
     setShow(false)
@@ -58,7 +60,7 @@ export default function SignUp() {
 
     //firebase registery of the user - submits the email and password to firbase
   async function handleSubmit(e) {
-    console.log(signUpForm);
+   
     e.preventDefault();
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -68,7 +70,22 @@ export default function SignUp() {
     try {
       setErr("");
       setLoading(true);
-      await signUp(emailRef.current.value, passwordRef.current.value);
+      const user = await signUp(emailRef.current.value, passwordRef.current.value);
+
+      await fetch('https://homegrown-backend.onrender.com/api/homegrown/users', {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          ...signUpForm,
+          firebase_id: user.user.uid,
+        }),
+      })
+        .then((response) => response.json())
+        .then((response) => console.log(JSON.stringify(response)));
+  
       router.push("/dashboard");
     } catch {
       setErr("Failed to create an account");
@@ -87,7 +104,7 @@ export default function SignUp() {
                 <label className={styles["label"]}>Your First-Name:</label>
                 <input
                   onChange={formData}
-                  name="firstName"
+                  name="first_name"
                   className={styles["input"]}
                   placeholder="First-Name"
                   type="text"
@@ -97,7 +114,7 @@ export default function SignUp() {
                 <label className={styles["label"]}>Your Last-Name:</label>
                 <input
                   onChange={formData}
-                  name="lastName"
+                  name="last_name"
                   className={styles["input"]}
                   placeholder="Last-Name"
                   type="text"
