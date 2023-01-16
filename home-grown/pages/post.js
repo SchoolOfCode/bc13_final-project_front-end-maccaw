@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "../styles/NewPost.module.css";
+import styles from "../styles/Posts.module.css";
 import { useRouter } from "next/router";
 import PostForm from "../components/PostForm/PostForm";
 import UserListingCard from "../components/UserListingCard/UserListingCard";
@@ -25,6 +25,36 @@ export default function NewPost() {
   useEffect(() => {
     getPostData();
   }, []);
+
+  async function handleDelete(posts_id) {
+    await fetch(
+      `https://homegrown-backend.onrender.com/api/homegrown/posts/${posts_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          accept: "application/json",
+          "content-type": "application/json",
+        },
+      }
+    );
+    let index = 0;
+    for (let i = 0; i < userPosts.length; i++) {
+      if (userPosts[i].posts_id === posts_id) {
+        index = i;
+      }
+    }
+    const filteredUserPosts = [
+      ...userPosts.slice(0, index),
+      ...userPosts.slice(index + 1),
+    ];
+    console.log(filteredUserPosts);
+    setUserPosts(filteredUserPosts);
+  }
+
+  async function handleEdit() {
+    console.log("edit");
+  }
+
   return (
     <div>
       <PostForm></PostForm>
@@ -32,7 +62,12 @@ export default function NewPost() {
         {userPosts.map((userPost, index) => {
           console.log(userPost);
           return (
-            <UserListingCard key={index} userPost={userPost}></UserListingCard>
+            <UserListingCard
+              key={index}
+              userPost={userPost}
+              handleDelete={handleDelete}
+              handleEdit={handleEdit}
+            ></UserListingCard>
           );
         })}
       </div>

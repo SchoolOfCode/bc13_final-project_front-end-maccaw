@@ -1,5 +1,5 @@
 import react, { useState } from "react";
-import styles from "../../styles/NewPost.module.css";
+import styles from "../../styles/Posts.module.css";
 
 export default function PostForm() {
   // post title

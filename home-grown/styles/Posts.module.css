@@ -60,3 +60,37 @@
     font-size: 25px;
     color: blue;
 }
+
+.one-card{
+    background-color: #ffff;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 0.5px;
+    box-sizing: border-box;
+    border-color: rgba(31, 24, 17, 0.282);
+    cursor: pointer;
+    font-family: var(--textFont);
+    font-size: 1rem;
+    padding: .35rem;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+}
+.user-post-icon{
+    width: 30px;
+    height: 30px;
+  }
+
+.post-info{
+   
+    width: 70%;
+    height: 100%;
+}
+.profile-img{
+    height: 10vh;
+}

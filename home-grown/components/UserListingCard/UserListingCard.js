@@ -1,4 +1,4 @@
-import styles from "../../styles/ListingContainer.module.css";
+import styles from "../../styles/Posts.module.css";
 
 // needs to contain relevant info for user
 // title
@@ -11,7 +11,11 @@ import styles from "../../styles/ListingContainer.module.css";
 // needs delete functionality
 //
 
-export default function UserListingCard({ userPost }) {
+export default function UserListingCard({
+  userPost,
+  handleDelete,
+  handleEdit,
+}) {
   const {
     profile_picture,
     title,
@@ -21,29 +25,36 @@ export default function UserListingCard({ userPost }) {
     crop_name,
     percentage_of_plot,
     description,
+    posts_id,
   } = userPost;
+
+  console.log(userPost);
+
   return (
     <div className={styles["one-card"]}>
-      {/* <h3>{title}</h3> */}
-      <div className={styles["user-info"]}>
-        <img
-          className={styles["profile-img"]}
-          src={profile_picture}
-          alt="profile"
-        />
-        <p>{username}</p>
-        <p>{rating}</p>
-      </div>
+      <div className={styles["user-info"]}></div>
       <div className={styles["post-info"]}>
         <h3>{title}</h3>
 
-        <p>Location:{location}</p>
-        <p>Crop:{crop_name}</p>
+        <p>Location: {location}</p>
+        <p>Crop: {crop_name}</p>
         <p>Description: {description}</p>
-        <p>Percentage of Plot used: {percentage_of_plot} </p>
+        <p>Plot % used: {percentage_of_plot} </p>
       </div>
-      <button>Edit</button>
-      <button>Delete</button>
+      <img
+        src="/icons/icons8-edit-26.png"
+        alt="edit button"
+        className={styles["user-post-icon"]}
+        onClick={handleEdit}
+      ></img>
+      <img
+        src="/icons/icons8-composting-64.png"
+        alt="delete button"
+        className={styles["user-post-icon"]}
+        onClick={() => {
+          handleDelete(posts_id);
+        }}
+      ></img>
     </div>
   );
 }
