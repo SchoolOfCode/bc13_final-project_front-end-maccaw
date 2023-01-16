@@ -28,8 +28,8 @@ function ContactForm({ user_email, handleClose }) {
       );
 
       setSuccess(true)
-      form.reset()
-      setTimeout(TimerHandler, 1000)
+        form.current.reset()
+      setTimeout(TimerHandler, 2000)
   };
 
   function TimerHandler(){
