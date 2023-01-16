@@ -69,9 +69,6 @@ export default function Dashboard() {
       <div className={dashboardStyles.mainContainer}>
         <Title userData={userData} />
 
-        {/* <button className={dashboardStyles.logOutButton} onClick={handleLogout}>Log Out</button> */}
-        <Carousel className={dashboardStyles.userPlotImage} userImage={userData["plot_image"]} />
-
         <Carousel
           className={dashboardStyles.userPlotImage}
           userImage={userData["plot_image"]}

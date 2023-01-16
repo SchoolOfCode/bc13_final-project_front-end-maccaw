@@ -25,8 +25,7 @@
     "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
-    "cypress": "^12.3.0"
-
+    "cypress": "^12.3.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
