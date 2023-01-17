@@ -28,6 +28,6 @@ jobs:
       - run: npm ci
       #- run: npm run build --if-present
       #- run: npm run dev
-      #- run: npm run cypress:headless
-      - name: Cypress run
-        uses: cypress-io/github-action@v5
+      - run: npm run cypress:headless
+        with:
+          start: npm run dev
