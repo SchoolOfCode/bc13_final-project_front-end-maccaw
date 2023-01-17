@@ -28,9 +28,8 @@ jobs:
       - run: npm ci
 
       - name: Cypress run
-       
         uses: cypress-io/github-action@v5 # use the explicit version number
         with:
-          working-directory: home-grown
+          working-directory: ./home-grown
           build: npm run build
           start: npm start
