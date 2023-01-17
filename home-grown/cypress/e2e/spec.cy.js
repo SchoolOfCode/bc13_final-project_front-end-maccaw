@@ -27,7 +27,7 @@ describe("visit listings page, searches by post-code and then clears search", ()
 describe("visit homepage, navigates to log-in, inputs details. Then clicks forgot password", () => {
   it("passes", () => {
     cy.visit("http://localhost:3000/").wait(1000);
-    cy.get(":nth-child(4) > li").click().wait(1000);
+    cy.get("ul > :nth-child(4) > li").click().wait(1000);
     cy.get(".Login_form-email-input__3q0BK > .Login_input__r_1vS").type(
       "amina@gmail.com"
     );
