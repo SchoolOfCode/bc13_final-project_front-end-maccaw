@@ -6,7 +6,7 @@ function ListingContainer({search, posts}) {
   //fetch data from api
   //save the data in a state
   //map each entry of the array (in state) to a card
-  // add search bar
+  // add search ba
   //create dropdown to search by location and onClick
 
   //key data for cards = username, location, croptype, plotsize, description, user image, rating
