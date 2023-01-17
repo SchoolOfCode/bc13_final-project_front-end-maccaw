@@ -38,11 +38,17 @@ export default function Dashboard() {
 
   async function getPosts() {
     let firebase_id = currentUser.uid;
-    
+    let token = await currentUser.getIdToken();
+
     const response = await fetch(
-      ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`
+      ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`,
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      }
     );
-  
+
     const data = await response.json();
 
     setUserPosts(data.payload);
@@ -50,9 +56,15 @@ export default function Dashboard() {
   }
 
   async function getData() {
+    let token = await currentUser.getIdToken();
     let firebase_id = currentUser.uid;
     const response = await fetch(
-      ` https://homegrown-backend.onrender.com/api/homegrown/users/${firebase_id}`
+      ` https://homegrown-backend.onrender.com/api/homegrown/users/${firebase_id}`,
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      }
     );
 
     const data = await response.json();
