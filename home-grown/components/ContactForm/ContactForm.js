@@ -39,7 +39,7 @@ function ContactForm({ user_email, handleClose }) {
 
   return (
     <div className={styles["form-container"]}>
-    <div className={styles["header-container"]}> <h2>Contact Form</h2> <img onClick={handleClose} className={styles["close-icon"]}src="/illustrations/close-icon.png"/></div>
+    <div className={styles["header-container"]}> <h2 className={styles.heading}>Contact Form</h2> <img onClick={handleClose} className={styles["close-icon"]}src="/illustrations/close-icon.png"/></div>
    
       <form
         ref={form}
