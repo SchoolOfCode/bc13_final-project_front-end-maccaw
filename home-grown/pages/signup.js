@@ -71,12 +71,13 @@ export default function SignUp() {
       setErr("");
       setLoading(true);
       const user = await signUp(emailRef.current.value, passwordRef.current.value);
-
+      let token = await currentUser.getIdToken();
       await fetch('https://homegrown-backend.onrender.com/api/homegrown/users', {
         method: "POST",
         headers: {
           accept: "application/json",
           "content-type": "application/json",
+          Authorization: "Bearer " + token,
         },
         body: JSON.stringify({
           ...signUpForm,
