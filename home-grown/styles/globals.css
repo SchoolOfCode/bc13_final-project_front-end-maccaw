@@ -85,19 +85,20 @@ p, h2, h3, h4, h5, h6 {
 
  /* header */
 .logo{
-  padding-left: 10px;
+  margin-left: 2.3rem;
   height: 80%;
   width: auto;
+  margin-top: 1rem;
 }
  nav {
   /* background-color: white; */
   position: sticky;
-  display: hidden;
+  /* display: hidden; */
   /* z-index: 10; */
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 20%;
+  height: 50%;
   font-family: var(--textFont);
   
   }
@@ -123,17 +124,101 @@ p, h2, h3, h4, h5, h6 {
     height: 100%;
     font-size: 100%;
     color: var(--darkColour);
+    transition-duration: 1s;
   }
   
   li:hover{
-    text-decoration:underline;
-    color: var(--highLightTwo)
+    font-size: 1.3rem;
+    border: 1px solid var(--darkColour);
+    border-radius: 25px;
+    padding: 2px 10px;
+    background-color: var(--darkColour);
+    color: #fbfbf9;
   }
-
 
   
 
- 
+  #hamburgerButton{
+    display: none;
+  }
+
+
+  /*Responsiveness for the navBar*/
+
+  @media screen and (max-width: 425px){
+    ul{
+      flex-direction: column;
+      margin-top: 3rem;
+      display: none;
+    }
+
+    ul.show{
+      display: flex;
+      flex-direction: column;
+      margin-top: 6rem;
+      display: block;
+      text-align: center;
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+    .logo{
+      margin-left: 1rem;
+    }
+
+    nav{
+      width: 77%; 
+    }
+    li{
+      
+      transition:none;
+    }
+
+    li:hover{
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      background-color: #fbfbf9;
+      color: var(--darkColour);
+    }
+
+    #hamburgerButton{
+      display: block;
+      position: absolute;
+      cursor: pointer; 
+      align-items: center;
+      justify-content: center;
+      float: right;
+      margin-left: 20rem;
+      font-size: 1rem;
+      width: 70px;
+      height: 25px;
+      margin-top: 2rem;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      color: #214E0B;
+    }
+
+    @media screen and (max-width: 375px){
+      #hamburgerButton{
+        margin-left: 17rem;
+      }
+      nav{
+        width: 83%;
+      }
+      ul.show{
+        margin-top: 5rem;
+      }
+    }
+
+    li{
+      height: 50%;
+      font-size: 1.4rem;
+    }
+    
+  }
   /* footer */
   
   footer {
@@ -149,8 +234,6 @@ p, h2, h3, h4, h5, h6 {
       bottom: 0;
 
       }
-
-
   .footer{
       display: flex;
       gap:20px;
