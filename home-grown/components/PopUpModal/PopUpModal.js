@@ -18,8 +18,9 @@ function MyPopup({user_email}) {
       {show && (
         <div className={styles["pop-up-background"]}>
           <div className={styles["pop-up"]}>
+         
             <ContactForm handleClose={handleClose} user_email={user_email}/>
-            <button onClick={handleClose}>Close</button>
+          
           </div>
         </div>
       )}

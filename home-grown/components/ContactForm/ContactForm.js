@@ -38,20 +38,22 @@ function ContactForm({ user_email, handleClose }) {
 
 
   return (
-    <div>
+    <div className={styles["form-container"]}>
+    <div className={styles["header-container"]}> <h2>Contact Form</h2> <img onClick={handleClose} className={styles["close-icon"]}src="/illustrations/close-icon.png"/></div>
+   
       <form
         ref={form}
-        className={styles["form-container"]}
+        className={styles["form"]}
         onSubmit={handleSubmit}
       >
-        <label>Name:</label>
-        <input type="text" name="name" />
+        <label className={styles["label"]}>Name:</label>
+        <input className={styles["input"]} type="text" name="name" />
         <input hidden="true" type="text" name="email" value={user_email} />
-        <label>Email:</label>
-        <input type="text" name="sender_email" />
-        <label>Message:</label>
-        <textarea type="text" name="message" />
-        <button type="submit">Submit</button>
+        <label className={styles["label"]}>Email:</label>
+        <input className={styles["input"]} type="text" name="sender_email" />
+        <label className={styles["label"]}>Message:</label>
+        <textarea className={styles["input-textarea"]}  type="text" name="message" />
+        <button  className={styles.button}type="submit">Submit</button>
       </form>
       <p hidden={!success}>Email Successfully Sent</p>
     </div>
