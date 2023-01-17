@@ -24,6 +24,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - name: Cypress run
-        uses: cypress-io/github-action@v5.2.0
+        uses: cypress-io/github-action@v3
         with:
           install: false
