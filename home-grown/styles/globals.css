@@ -93,7 +93,7 @@ p, h2, h3, h4, h5, h6 {
  nav {
   /* background-color: white; */
   position: sticky;
-  display: hidden;
+  /* display: hidden; */
   /* z-index: 10; */
   display: flex;
   justify-content: space-between;
@@ -131,7 +131,7 @@ p, h2, h3, h4, h5, h6 {
     font-size: 1.3rem;
     border: 1px solid var(--darkColour);
     border-radius: 25px;
-    padding: 4px 8px;
+    padding: 2px 10px;
     background-color: var(--darkColour);
     color: #fbfbf9;
   }
@@ -155,7 +155,7 @@ p, h2, h3, h4, h5, h6 {
     ul.show{
       display: flex;
       flex-direction: column;
-      margin-top: 3rem;
+      margin-top: 6rem;
       display: block;
       text-align: center;
       position: relative;
@@ -209,7 +209,7 @@ p, h2, h3, h4, h5, h6 {
         width: 83%;
       }
       ul.show{
-        margin-top: 2rem;
+        margin-top: 5rem;
       }
     }
 
