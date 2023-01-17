@@ -1,15 +1,15 @@
-/* describe("visits the home page and then navigates to the listings page", () => {
+describe("visits the home page and then navigates to the listings page", () => {
   it("passes", () => {
     cy.visit("http://localhost:3000");
-    cy.get('[href="/listings"] > li').click().wait(1000);
+    cy.get('[href="/listings"] > li', { timeout: 10000 }).click();
 
     cy.url().should("be.equal", "http://localhost:3000/listings");
     cy.get(".ListingContainer_input-bar__ZDahT")
       .type("strawberries")
-      .get(".ListingContainer_search-button__IcPHz")
+      .get(".ListingContainer_search-button__IcPHz",{ timeout: 10000 })
       .click();
   });
-}); */
+});
 
 describe("visit listings page, searches by post-code and then clears search", () => {
   it("passes", () => {
