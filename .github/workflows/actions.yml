@@ -7,24 +7,16 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  cypress-run:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./home-grown
-
-    strategy:
-      matrix:
-        node-version: [15.x]
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v5.2.0
+        uses: cypress-io/github-action@v3
         with:
-          install: false
+          build: npm run build
+          start: npm start
 
