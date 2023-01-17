@@ -27,3 +27,4 @@ jobs:
         uses: cypress-io/github-action@v3
         with:
           install: false
+
