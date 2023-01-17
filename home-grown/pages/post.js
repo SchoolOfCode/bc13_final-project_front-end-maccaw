@@ -16,8 +16,14 @@ export default function NewPost() {
 
   async function getPostData() {
     const id = currentUser.uid;
+    let token = await currentUser.getIdToken();
     const response = await fetch(
-      `https://homegrown-backend.onrender.com/api/homegrown/posts/${id}`
+      `https://homegrown-backend.onrender.com/api/homegrown/posts/${id}`,
+      {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      }
     );
     const data = await response.json();
     setUserPosts(data.payload);
@@ -34,6 +40,7 @@ export default function NewPost() {
         headers: {
           accept: "application/json",
           "content-type": "application/json",
+          Authorization: "Bearer " + token,
         },
       }
     );
