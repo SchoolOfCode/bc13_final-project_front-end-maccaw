@@ -16,12 +16,21 @@ export default function Dashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [userPosts, setUserPosts] = useState();
 
+  const newUserImages = {
+    plot_image: "https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556011_PlbhKss0alfFmzNuqXdE3L0OfkHQ1rHH.jpg"
+
+
+
+  }
+
   if (!currentUser) {
     router.push("/login");
   }
 
   useEffect(() => {
+   
     if (currentUser) {
+ 
       getData();
       getPosts();
     }
@@ -30,6 +39,7 @@ export default function Dashboard() {
   async function getPosts() {
     let firebase_id = currentUser.uid;
     let token = await currentUser.getIdToken();
+
     const response = await fetch(
       ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`,
       {
@@ -40,8 +50,9 @@ export default function Dashboard() {
     );
 
     const data = await response.json();
+
     setUserPosts(data.payload);
-    console.log("POSTS", data.payload);
+    
   }
 
   async function getData() {
@@ -55,10 +66,9 @@ export default function Dashboard() {
         },
       }
     );
-    const data = await response.json();
-    console.log("DATA", data);
-    console.log("CURRENT USER", currentUser);
 
+    const data = await response.json();
+    console.log(data)
     setUserData(data.payload[0]);
     setIsLoading(false);
   }
@@ -74,7 +84,7 @@ export default function Dashboard() {
     }
   }
 
-  console.log(userData, "here");
+
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -82,11 +92,15 @@ export default function Dashboard() {
     return (
       <div className={dashboardStyles.mainContainer}>
         <Title userData={userData} />
-
-        <Carousel
+       
+       {userData.plot_image ? <Carousel
           className={dashboardStyles.userPlotImage}
           userImage={userData["plot_image"]}
-        />
+        /> :  <Carousel
+          className={dashboardStyles.userPlotImage}
+          userImage={newUserImages["plot_image"]}
+        /> }
+       
 
         <Profile userData={userData}></Profile>
         <PlotChart userPosts={userPosts} />
