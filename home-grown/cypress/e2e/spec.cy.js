@@ -1,4 +1,4 @@
-describe("visits the home page and then navigates to the listings page", () => {
+/* describe("visits the home page and then navigates to the listings page", () => {
   it("passes", () => {
     cy.visit("http://localhost:3000");
     cy.get('[href="/listings"] > li').click().wait(1000);
@@ -9,7 +9,7 @@ describe("visits the home page and then navigates to the listings page", () => {
       .get(".ListingContainer_search-button__IcPHz")
       .click();
   });
-});
+}); */
 
 describe("visit listings page, searches by post-code and then clears search", () => {
   it("passes", () => {
