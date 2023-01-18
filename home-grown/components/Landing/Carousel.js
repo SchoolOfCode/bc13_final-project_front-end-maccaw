@@ -32,22 +32,31 @@ export const Carousel = () => {
       adaptiveHeight: true,
       responsive: [
         {
-        breakpoint: 390,
+        breakpoint: 440,
          settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-           vertical: true,
-          verticalSwiping: true,
-          arrows: false,
-          speed: 400,
-        
-         }
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         vertical: true,
+         verticalSwiping: true,
+         arrows: false,
+         speed: 400,
+                  }
+                },
+        {
+          breakpoint: 920,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: false,
+         speed: 400
+          }
         }
-        ]
       
-    }
+          
+        
+      ]
     
-    
+  }
   
 //  fade: true, 
 
@@ -73,7 +82,7 @@ export const Carousel = () => {
        <div className={styles["card"]}>
           <div className={styles["top"]}>
             <Image src={crop} width={100} height={95} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> MARWA'S STRAWBERRY PATCH </p>
+            <p className={styles["username"]}> ALEX'S STRAWBERRY PATCH </p>
           </div>
           <div className={styles["middle"]}>
             <p className={styles["description"]}>I recently started a home strawberry garden and have been having some difficulties getting my plants to thrive. I would love any tips or advice from experienced gardeners on how to improve the health of my strawberry plants.</p>
@@ -123,7 +132,7 @@ export const Carousel = () => {
     <div className={styles["card"]}>
           <div className={styles["top"]}>
             <Image src={crop5} width={100} height={95} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> ALEX'S LETTUCE PATCH </p>
+            <p className={styles["username"]}> MARWA'S LETTUCE PATCH </p>
           </div>
           <div className={styles["middle"]}>
             <p className={styles["description"]}>Calling all green thumbed friends! I'm having trouble getting my lettuce to thrive in my garden. Any advice on how to keep the leaves crisp and the plants healthy? Thanks in advance for any suggestions!</p>

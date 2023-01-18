@@ -1,5 +1,4 @@
-
-.image-container{
+.image-container {
     background-image: url('/illustrations/landing-image.png');
     background-repeat: no-repeat;
     background-position: center right;
@@ -7,57 +6,63 @@
     height: 95vh;
     padding: 30px;
     position: relative;
-   
-    }
+                }
 
-.cards-container{
-    height: 80vh;
-    width: 100%;
-}
 
-.text-container{
-    display: flex;
-    width: 70%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-left: 10%;
-    padding-top: 3%;
-    font-family: var(--textFont);
-    position: relative;
-}
+.cards-container {
+      height: 80vh;
+      width: 100%;
+                 }
 
-    .title{
+
+.text-container {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      align-items:flex-start;
+      justify-content: flex-start;
+      padding-left: 6vh;
+      padding-top: 3%;
+      font-family: var(--textFont);
+      position: relative;
+     
+     
+                }
+
+    .title {
         font-size: 15vh;
         letter-spacing: 0.1em;
         font-family: var(--titleFont);
         font-weight: 300;
-       
-    }
-    .sub-title{
+        margin-left: -1vh;
+           }
+
+
+    .sub-title {
         font-size: 4.5vh;
         letter-spacing: 0.em;
         padding-bottom: 40px;
         font-weight: 50;
+              }
 
-    }
-    .p{
-        font-size: 2.5vh;
-        letter-spacing: 0.5;
-        width: 60%;
-        line-height: 1.7;
-    }
+    .p {
+      font-size: 2.5vh;
+      letter-spacing: 0.5;
+      width: 60%;
+      line-height: 1.7;
+       }
 
-    .button-container{
+
+    .button-container {
         display: flex;
         gap: 40px;
         width: 60%;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 30px;
-       
-     
-    }
+        margin-top: 8vh;
+        margin-left: 8vh;
+                      }
+
 
     .button-one, .button-two {
         border-radius: 999px;
@@ -70,79 +75,147 @@
         border-color: white;
         padding: 8px 18px;
         text-align: center; 
-        font-size: 1.2rem; 
-        height: 55px;
-        
-      }
+        font-size: 1.8rem;
+        font-weight: 600; 
+        height: 7vh;
+        width: 20vh;
+                            }
 
-      .button-one{
-        background: var(--highLightOne);
-        box-shadow:var(--highLightOne) 0 10px 20px -10px;
+      .button-one {
+          background: var(--highLightOne);
+          box-shadow:var(--highLightOne) 0 10px 20px -10px;
+                  }
+
+      .button-two {
+          background: var(--highLightTwo);
+          box-shadow:var(--highLightOne) 0 10px 20px -10px;
+                  }
     
+
+
+    /* Ipad   */
+        @media only screen and (max-width: 920px),(max-height: 1370px) {
+
+.landing {
+    position: absolute;
+    height: 190vh;
+    width: 120vh;
+         }
+
+.p {
+  display: none;
+   }
+
+.title {
+   font-size: 9vh;
+   font-weight: 700;
+   margin-left: -3vh;
+   margin-top: 4vh;
       }
 
-      .button-two{
-        background: var(--highLightTwo);
-        box-shadow:var(--highLightOne) 0 10px 20px -10px;
-      
-      }
+.sub-title {
+    font-size: 3vh;
+    margin-left: 5vh;
+           }
+
+.button-container {
+     margin-top: 5vh;
+     margin-left: 4.5vh;
+                  }
+
+.button-one,.button-two {
+      font-size: 1.5rem;
+      font-weight: 600;
+}
 
 
 
+
+       
+  
+  
+  
+  
+  }
 
 
 
     
     /*  mobile   */
-  @media only screen and ( max-width: 390px ), ( max-height: 840px ) {
+@media only screen and ( max-width: 440px ), ( max-height: 900px ) {
 
 .landing {
+    background-image: url('/illustrations/desktop-wallpaper-landing.png'); 
+    background-repeat: repeat;
+    background-size: contain;
+    background-size: 200vh 150vh;
+    position: absolute;
+    height: 280vh;
+    width: 140vh;
+    justify-content: center;
+        }
 
-
-background-image: url('/illustrations/desktop-wallpaper-landing.png'); 
-background-repeat: repeat;
-background-size:contain;
-background-size: 100% 45%;
-position: absolute;
-height: 400%;
-width: 500%;
-justify-content: center;
-
-
-}
 
 .image-container {
-  position: absolute;
- 
-width: 500%;
-  
-  }
+        background-image: none;
+                 }
+
+.p {
+  display: none;
+   }
 
 
-  .p {
-       display: none;
-    }
+
+.text-container {
+        margin-top: 25vh;
+        margin-left: -3vh;
+        width: 130vh;
+                }
+
+ .title {
+    font-size: 15vh;
+    font-weight: 700;
+    opacity: 0.8;
+    background-color: #fbfbf9;
+    margin-left: 5vh;
+        }
+
+
+  .sub-title {
+      font-size: 5vh;
+      margin-left: 24.5vh;
+      opacity: 0.8;
+      background-color: #fbfbf9;
+      padding: 0vh; 
+             }
+    
+
+.button-container {
+          margin-top: 15vh;
+          margin-left: 17vh;
+                  }
+
+
+.button-one,.button-two {
+            background: var(--highLightOne);
+            box-sizing: content-box;
+            border: 1vh var(--highLightOne) solid;
+            padding: 10px 45px;
+            text-align: center;
+            font-size: 2.4rem;
+            height: 10vh;
+            width: 30vh;
+            font-weight: 600;
+                        }
 
 .cards-container {
-
-  margin: 1100px 400px 0px 0px;
-  width: 65%;
-  height: 40%;
-  padding: 10px;
- 
-
-}
-.text-container {
+          margin-top: -5vh;
+          margin-left: 12vh;
+          width: 115vh;
+          height: 150vh;
+          padding: 10px;
+                }
 
 
- 
- 
-  padding-left: 10%;
-  padding-top: 3%;
- 
-  position: relative;
-}
-
-
-  }
+                }
   
