@@ -14,7 +14,7 @@ function Listings() {
 
   async function getPostData() {
     const response = await fetch(
-      "https://homegrown-backend.onrender.com/api/homegrown/posts"
+      "https://homegrown-backend.onrender.com/api/homegrown/public/posts"
     );
     const data = await response.json();
     setPosts(data.payload);

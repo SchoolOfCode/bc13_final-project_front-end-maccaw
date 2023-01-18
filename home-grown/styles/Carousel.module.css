@@ -5,18 +5,21 @@
     padding-top: 80px;
     padding-bottom: 80px;
     margin-top: 70px;
-    
+
 
 }
 
 
 
 .card {
+
     height: 48vh;
     border: 20px #fbfbf9 solid;
     border-radius: 33px;
     background-color :white;
     padding: 30px;
+
+
 
 
 }
@@ -32,9 +35,11 @@
    
 .top {
     background-color: var(--highLightOne);
+
     margin-top: -15px;
     border-radius: 25px;
     width: 54.5vh;
+
     display: flex;
     height: 10vh;
     align-items: center;
@@ -46,6 +51,7 @@ background-color: white;
 display: flex;
 margin-top: 10px;
 height: 23vh;
+
 
 
 }
@@ -194,3 +200,4 @@ height: 23vh;
 }
 
   }
+
