@@ -100,9 +100,7 @@ export default function Dashboard() {
           className={dashboardStyles.userPlotImage}
           userImage={newUserImages["plot_image"]}
         /> }
-       
-
-        <Profile userData={userData}></Profile>
+              <Profile userData={userData}></Profile>
         <PlotChart userPosts={userPosts} />
         <CropTableContainer userPosts={userPosts}/>
       </div>
