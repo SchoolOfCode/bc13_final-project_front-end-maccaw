@@ -6,13 +6,17 @@ import UserListingCard from "../components/UserListingCard/UserListingCard";
 import { useAuth } from "../context/AuthContext";
 
 export default function NewPost() {
-  const [userPosts, setUserPosts] = useState([]);
+  const [userPosts, setUserPosts] = useState();
   const { currentUser } = useAuth();
   const router = useRouter();
 
   if (!currentUser) {
     router.push("/login");
   }
+
+  useEffect(() => {
+    getPostData();
+  }, []);
 
   async function getPostData() {
     const id = currentUser.uid;
@@ -28,9 +32,7 @@ export default function NewPost() {
     const data = await response.json();
     setUserPosts(data.payload);
   }
-  useEffect(() => {
-    getPostData();
-  }, []);
+
 
   async function handleDelete(posts_id) {
     await fetch(
@@ -61,23 +63,29 @@ export default function NewPost() {
   async function handleEdit() {
     console.log("edit");
   }
-
-  return (
-    <div>
-      <PostForm></PostForm>
+ 
+  if(currentUser && userPosts){
+    return (
       <div>
-        {userPosts.map((userPost, index) => {
-          console.log(userPost);
-          return (
-            <UserListingCard
-              key={index}
-              userPost={userPost}
-              handleDelete={handleDelete}
-              handleEdit={handleEdit}
-            ></UserListingCard>
-          );
-        })}
+        <PostForm currentUser = {currentUser}  userPosts={userPosts}/>
+        <div>
+          {userPosts.map((userPost, index) => {
+            console.log(userPost);
+            return (
+              <UserListingCard
+                key={index}
+                userPost={userPost}
+                handleDelete={handleDelete}
+                handleEdit={handleEdit}
+              ></UserListingCard>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  else{
+    return (<h1>...Loading</h1>)
+  }
+
 }
