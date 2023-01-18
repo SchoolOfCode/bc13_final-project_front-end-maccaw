@@ -5,7 +5,7 @@ import { Title } from "../components/Dashboard/Title";
 import Carousel from "../components/Dashboard/Carousel";
 import Profile from "../components/Dashboard/Profile";
 import PlotChart from "../components/Dashboard/PlotChart";
-import dashboardStyles from "../styles/DashboardContainer.module.css";
+import styles from "../styles/DashboardContainer.module.css";
 import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
 
 export default function Dashboard() {
@@ -90,21 +90,23 @@ export default function Dashboard() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className={dashboardStyles.mainContainer}>
+      <div className={styles.mainContainer}>
         <Title userData={userData} />
        
        {userData.plot_image ? <Carousel
-          className={dashboardStyles.userPlotImage}
+          className={styles.userPlotImage}
           userImage={userData["plot_image"]}
         /> :  <Carousel
-          className={dashboardStyles.userPlotImage}
+          className={styles.userPlotImage}
           userImage={newUserImages["plot_image"]}
         /> }
        
 
         <Profile userData={userData}></Profile>
         <PlotChart userPosts={userPosts} />
+        <div className={styles["crop-table-container"]}> 
         <CropTableContainer userPosts={userPosts}/>
+      </div>
       </div>
     );
   }

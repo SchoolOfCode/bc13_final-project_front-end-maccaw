@@ -1,5 +1,10 @@
 import dashboardStyles from "../../styles/DashboardContainer.module.css";
 
+
+//  <button className={dashboardStyles["search-button"]}>Messages</button>
+
+
+
 export const Title = ({ userData }) => {
   return (
     <div className={dashboardStyles["container"]}>
@@ -7,8 +12,8 @@ export const Title = ({ userData }) => {
         {userData.first_name}'s Patch
       </h1>
       <div className={dashboardStyles["buttonsContainer"]}>
-        <button className={dashboardStyles["search-button"]}>Listings</button>
-        <button className={dashboardStyles["search-button"]}>Messages</button>
+        <button className={dashboardStyles["search-button"]}> My Listings</button>
+       
       </div>
     </div>
   );

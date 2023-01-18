@@ -1,14 +1,30 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-color: red;
+}
+
+
 .container{
-  background-color: #84e2845c;
+  background-color: yellow;
   display: flex;
   margin: auto;
   width: 90%;
-  height: 100px;
+  height: 10%;
   align-items: center;
   justify-content: space-between;
   margin-top: 4%;
   font-family: var(--titleFont);
 }
+
+.crop-table-container {
+  background-color: pink;
+  height: 50%;
+}
+
+
 .h1element{
   font-size: 2.5em;
   margin-left: 4%; /* --textFont; */
@@ -60,12 +76,6 @@
   margin: 5%;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.mainContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .search-button, .clear-button {
