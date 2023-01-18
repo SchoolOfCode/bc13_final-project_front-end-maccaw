@@ -6,46 +6,198 @@
     padding-bottom: 80px;
     margin-top: 70px;
 
+
 }
 
 
 
 .card {
-    height: 50vh;
+
+    height: 48vh;
     border: 20px #fbfbf9 solid;
     border-radius: 33px;
-    ;
-    background-color: white;
+    background-color :white;
     padding: 30px;
 
 
+
+
 }
 
-.p {
+.description {
     font-family: var(--textFont);
-
+    margin-top: 40px;
+    font-size: 38.5px;
+    margin-left: 20px;
+    display: flex;
+    
 }
-
-.username {
-    font-family: var(--titleFont);
-    text-align: center;
-    font-size: 23px;
-    background-color: var(--highLightOne);
-    color: white;
-    font-weight: 600;
-    padding-left: 17px;
-}
-
-
+   
 .top {
     background-color: var(--highLightOne);
-    margin-top: -5px;
+
+    margin-top: -15px;
     border-radius: 25px;
-    width: 53vh;
+    width: 54.5vh;
+
     display: flex;
     height: 10vh;
     align-items: center;
 
 }
 
+.middle {
+background-color: white;
+display: flex;
+margin-top: 10px;
+height: 23vh;
+
+
+
+}
+
+
+.username {
+    font-family: var(--titleFont);
+    text-align: center;
+    font-size: 45px;
+    background-color: var(--highLightOne);
+    color: white;
+    font-weight: 600;
+    padding-left: 40px;
+}
+
+
+.profile-picture {
+    margin-top: 40px;
+    padding: 0px;
+    margin-left: 15px;
+    width: 15vh;
+    height: 15vh;
+}
+
+
+.crop-picture {
+    margin-top: 8px;
+    margin-left: 30px;
+
+  
+}
+
+.bottom {
+    height: 8vh;
+    background-color: white;
+
+}
+
+.ratings {
+    margin-top: -40px;
+    margin-right: 40px;
+    font-size: 45px;
+    display: flex;
+    justify-content: right;
+   
+}
+
+
+
+/* Ipad */
+
+@media only screen and (max-width: 920px),(max-height: 1370px) {
+
+.card {
+        height: 55vh;
+        border: 15px #fbfbf9 solid;
+        padding: 30px;
+      }
+
+.top {
+
+    width: 52.5vh;
+    height: 11vh;
+    padding: 7px;
+
+}
+
+.username {
+    font-size: 33px;
+    padding-left: 2vh;
+}
+
+.description {
+    font-size: 28px;
+}
+
+.profile-picture {
+   height: 105h;
+    width: 15vh;
+                 }
+
+.ratings {
+    margin-top: -2.5vh;
+    font-size: 3.5vh;
+    margin-right: 0.5vh;
+}
+
+
+
+
+}
+
+/* mobile */
+
+  @media only screen and (max-width: 440px),
+  (max-height: 900px) {
+
+.card {
+        height: 110vh;
+        border: 10px var(--highLightOne) solid;
+        border-radius: 30px;
+        background-color: white;
+        padding: 10px;
+
+
+    }
+
+.top {
+
+    margin-top: 15px;
+    width: 107.5vh;
+    height: 20vh;
+    padding: 10px;
+
+}
+.username {
+    font-size: 48.5px;
+    padding-left: 3.2vh;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 50px;
+         }
+
+
+.crop-picture {
+   margin-top: -5px;
+   height: 18vh;
+   width: 18vh;
+
+}
+
+.profile-picture {
+    padding: 0px;
+    margin-top: 5vh;
+    height: 30vh;
+    width: 30vh;
+   
+}
+
+.ratings {
+    margin-top: 18vh;
+    font-size: 6vh;
+    margin-right: 4vh;
+}
+
+  }
 
