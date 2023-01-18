@@ -15,7 +15,6 @@ export default function Profile({ userData }) {
     <div className={dashboardStyles.profile}>
       <div className={dashboardStyles.profileContainer}>
       <h2 className={dashboardStyles.h2UserDetails}>User Profile</h2>
-      <img src={userData["profile_picture"]} className={dashboardStyles.imageProfile} />
       </div>
       <div className="profileInformation">
         <h4 className={dashboardStyles.h4UserInfo}>

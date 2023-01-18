@@ -92,22 +92,23 @@ export default function Dashboard() {
     return (
       <div className={styles.mainContainer}>
         <Title userData={userData} />
-       
+        <div className="image+profile">       
        {userData.plot_image ? <Carousel
           className={styles.userPlotImage}
-          userImage={userData["plot_image"]}
-        /> :  <Carousel
+          userImage={userData["plot_image"]}/> :  
+          
+          <Carousel
           className={styles.userPlotImage}
           userImage={newUserImages["plot_image"]}
         /> }
        
-
-        <Profile userData={userData}></Profile>
+          <Profile userData={userData}></Profile>
+        </div>
+        <div className="char+table">
         <PlotChart userPosts={userPosts} />
-        <div className={styles["crop-table-container"]}> 
         <CropTableContainer userPosts={userPosts}/>
-      </div>
-      </div>
+          </div>
+        </div>
     );
   }
 }

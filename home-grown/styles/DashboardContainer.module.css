@@ -14,9 +14,8 @@
   width: 90%;
   height: 10%;
   align-items: center;
-  justify-content: space-between;
   margin-top: 4%;
-  font-family: var(--titleFont);
+  font-family: var(--textFont);
 }
 
 .crop-table-container {
@@ -27,13 +26,13 @@
 
 .h1element{
   font-size: 2.5em;
-  margin-left: 4%; /* --textFont; */
+margin-left: 4%;/* --textFont; */
 }
 
 .buttonsContainer{
   display: flex;
   gap: 30px;
-  margin-right: 6%;
+  margin-left: 55%;
   padding: 10px;
 }
 
@@ -60,13 +59,18 @@
 .h2UserDetails{
   font-size: 2.5rem;
   margin-top: 4rem;
+  font-family: var(--textFont);
+}
+
+.h4UserInfo{
+  font-size: 1.2rem;
+  font-family: var(--textFont);
 }
 
 .imageProfile{
-  /* margin: auto;
-  margin-top: 2rem; */
-  width: 14rem;
-  height: 14rem;
+  margin-left: 2rem;
+  width: 3rem;
+  height: 3rem;
   
 }
 
