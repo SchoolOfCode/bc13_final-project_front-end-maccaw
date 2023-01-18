@@ -1,7 +1,8 @@
 import react, { useState, useRef } from "react";
 import styles from "../../styles/Posts.module.css";
+import { useRouter } from 'next/router'
 
-export default function PostForm({currentUser, userPosts}) {
+export default function PostForm({currentUser, userPosts, setUserPosts}) {
   const title = useRef();
   const postcode = useRef();
   const crop = useRef();
@@ -9,12 +10,13 @@ export default function PostForm({currentUser, userPosts}) {
   const description = useRef();
   const date = useRef();
   const form=useRef()
+  const router = useRouter()
 
   async function onClick(e) {
     e.preventDefault();
 
     let postData = {
-      plot_id: Number(userPosts.plot_id),
+      plot_id: Number(userPosts[0].plot_id),
       firebase_id: currentUser.uid,
       title: title.current.value,
       crop_id: Number(crop.current.value),
@@ -22,6 +24,8 @@ export default function PostForm({currentUser, userPosts}) {
       percentage_of_plot: Number(percentage.current.value),
       description: description.current.value,
     }; 
+
+   
 
     let token = await currentUser.getIdToken();
     await fetch('https://homegrown-backend.onrender.com/api/homegrown/posts', {
@@ -35,8 +39,27 @@ export default function PostForm({currentUser, userPosts}) {
         postData
         ),
       })
-      form.current.reset()
+      router.reload(window.location.pathname)
+
+
   }
+
+let percentageTotal = 0
+console.log("USER POSTS", userPosts)
+for(let i= 0; i<userPosts.length; i++){
+  percentageTotal += Number(userPosts[i].percentage_of_plot)
+}
+
+let percentageLeft= 1-percentageTotal
+let percentageArray = []
+let percent = 0
+
+while(percent<=percentageLeft){
+  percentageArray.push(Math.round(percent*10)/10)
+  percent+= 0.1
+}
+
+console.log("PERCENTAGE ARRAY", percentageArray)
 
 if(userPosts && currentUser){
   return (
@@ -97,10 +120,7 @@ if(userPosts && currentUser){
             required
             ref={percentage}
           >
-            <option value="0.25">25%</option>
-            <option value="0.5">50%</option>
-            <option value="0.75">75%</option>
-            <option value="1">100%</option>
+           {percentageArray.map((element)=> <option value={element}>{element*100}%</option>)}
           </select>
 
           <label> Describe your project: </label>

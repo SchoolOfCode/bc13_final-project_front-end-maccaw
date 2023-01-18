@@ -21,6 +21,7 @@ export default function NewPost() {
   async function getPostData() {
     const id = currentUser.uid;
     let token = await currentUser.getIdToken();
+    console.log(token)
     const response = await fetch(
       `https://homegrown-backend.onrender.com/api/homegrown/posts/${id}`,
       {
@@ -35,6 +36,7 @@ export default function NewPost() {
 
 
   async function handleDelete(posts_id) {
+    let token = await currentUser.getIdToken();
     await fetch(
       `https://homegrown-backend.onrender.com/api/homegrown/posts/${posts_id}`,
       {
@@ -56,7 +58,7 @@ export default function NewPost() {
       ...userPosts.slice(0, index),
       ...userPosts.slice(index + 1),
     ];
-    console.log(filteredUserPosts);
+    console.log("FILTERED", filteredUserPosts);
     setUserPosts(filteredUserPosts);
   }
 
@@ -67,10 +69,9 @@ export default function NewPost() {
   if(currentUser && userPosts){
     return (
       <div>
-        <PostForm currentUser = {currentUser}  userPosts={userPosts}/>
+        <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/>
         <div>
           {userPosts.map((userPost, index) => {
-            console.log(userPost);
             return (
               <UserListingCard
                 key={index}

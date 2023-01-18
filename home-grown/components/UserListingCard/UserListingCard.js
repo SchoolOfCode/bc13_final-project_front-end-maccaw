@@ -28,7 +28,7 @@ export default function UserListingCard({
     posts_id,
   } = userPost;
 
-  console.log(userPost);
+
 
   return (
     <div className={styles["one-card"]}>
