@@ -1,5 +1,5 @@
 describe("visits the home page and then navigates to the listings page", () => {
-  it.only("passes", () => {
+  it("passes", () => {
     cy.visit("http://localhost:3000");
     cy.get('[href="/listings"] > li', { timeout: 10000 }).click();
 
