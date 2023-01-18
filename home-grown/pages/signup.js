@@ -22,6 +22,7 @@ export default function SignUp() {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [iconLabel, setIconLabel] = useState("SELECT ICON")
+  
   const [signUpForm, setSignUpFrom] = useState({
     firebase_id: "",
     last_name: " ",
