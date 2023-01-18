@@ -1,5 +1,5 @@
 describe("visits the home page and then navigates to the listings page", () => {
-  it("passes", () => {
+  it.only("passes", () => {
     cy.visit("http://localhost:3000");
     cy.get('[href="/listings"] > li', { timeout: 10000 }).click();
 
@@ -7,10 +7,14 @@ describe("visits the home page and then navigates to the listings page", () => {
       "be.equal",
       "http://localhost:3000/listings"
     );
+    cy.get(".ListingContainer_card-container__ZcLXt", { timeout: 10000 });
     cy.get(".ListingContainer_input-bar__ZDahT")
       .type("strawberries")
-      .get(".ListingContainer_search-button__IcPHz", { timeout: 10000 })
-      .click({ timeout: 10000 });
+      .get(".ListingContainer_search-button__IcPHz")
+      .click();
+    cy.get(".ListingContainer_card-container__ZcLXt > :nth-child(1)").contains(
+      "Strawberries"
+    );
   });
 });
 
@@ -41,7 +45,7 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
   });
 });
 
-describe.only("logged in user flow", () => {
+describe("logged in user flow", () => {
   it("visit homepage, navigates to log-in, inputs details. and checke if logs in", () => {
     // cy.session('login', ()=>{
     cy.visit("http://localhost:3000/", { timeout: 10000 });
@@ -56,7 +60,7 @@ describe.only("logged in user flow", () => {
     cy.url().should("be.equal", "http://localhost:3000/dashboard");
     // });
   });
-  it.only("checking correct user data in dashboard", () => {
+  it("checking correct user data in dashboard", () => {
     cy.visit("http://localhost:3000/dashboard", { timeout: 10000 });
     cy.get(".DashboardContainer_h1element__GkbFV").contains("Amina's Patch");
     cy.get(".profileInformation > :nth-child(3)").contains(
