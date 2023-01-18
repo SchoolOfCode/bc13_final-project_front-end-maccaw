@@ -87,7 +87,8 @@
   }
 
 .post-info{
-   
+    display:flex;
+    flex-direction: column;
     width: 70%;
     height: 100%;
 }

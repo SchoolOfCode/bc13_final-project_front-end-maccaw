@@ -45,7 +45,6 @@ export default function PostForm({currentUser, userPosts, setUserPosts}) {
   }
 
 let percentageTotal = 0
-console.log("USER POSTS", userPosts)
 for(let i= 0; i<userPosts.length; i++){
   percentageTotal += Number(userPosts[i].percentage_of_plot)
 }
@@ -59,7 +58,6 @@ while(percent<=percentageLeft){
   percent+= 0.1
 }
 
-console.log("PERCENTAGE ARRAY", percentageArray)
 
 if(userPosts && currentUser){
   return (

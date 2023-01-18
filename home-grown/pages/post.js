@@ -62,9 +62,6 @@ export default function NewPost() {
     setUserPosts(filteredUserPosts);
   }
 
-  async function handleEdit() {
-    console.log("edit");
-  }
  
   if(currentUser && userPosts){
     return (
@@ -77,7 +74,6 @@ export default function NewPost() {
                 key={index}
                 userPost={userPost}
                 handleDelete={handleDelete}
-                handleEdit={handleEdit}
               ></UserListingCard>
             );
           })}
