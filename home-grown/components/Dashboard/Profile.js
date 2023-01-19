@@ -14,20 +14,20 @@ export default function Profile({ userData }) {
   return (
     <div className={styles["profile-container"]}>
 
-       <h1 className={styles["profile-user-name"]}>
-       {userData.first_name}'s Patch
-       </h1>
-     
-    <div className={styles["profile-user-info"]}>
-       
-       <h4> Name: {userData["first_name"]} 
+       <div className={styles["profile-user-name"]}>
+       <h1> {userData.first_name}'s Plot </h1>
+       </div>
+
+       <div className={styles["profile-user-info"]}>
+       <h4> Name:  {userData["first_name"]} 
        {userData["last_name"]}</h4>
        <h4>Email: {userData.email}</h4>
        <h4>Location: {userData.location}</h4>
-       <h4 >Rating:{ratingString}</h4>
+       <h4 >Rating: {ratingString}</h4>
+       </div>
 
     </div>
-    </div>
+   
    
   );
 }

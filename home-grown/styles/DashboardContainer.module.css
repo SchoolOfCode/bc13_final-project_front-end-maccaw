@@ -97,32 +97,45 @@ color: rgb(109, 109, 109);
 }
 
 
-/* user details */
+/* profile details */
 
 .profile-container {
-  box-sizing: border-box;
-  height: 100vh;
-  
- 
+  background-color: #fbfbf9;
+  border: 3px #D0D5DD solid;
+  border-radius: 15px;
+  box-sizing: content-box;
+  width: 80%;
+  height: 45%;
+  align-items: center;
+  margin-top: 4%;
+  margin-left: 10%;
+  font-family: var(--textFont);
  
 }
 
 .profile-user-name {
-  background-color: aqua;
-  
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+
+.profile-user-info {
+  display: block;
+  margin-top: 6%;
+  text-align: left;
+  line-height: 35px;
+  font-size: 20px;
+  margin-left: 5%;
 
  
 }
 
-
-
 /* plot image */
-
 
 .plot-picture {
   display: flex;
   margin-top: 5%;
-  ;
   margin-left: 10%;
   width: 80%;
   height: 45%;
@@ -130,22 +143,18 @@ color: rgb(109, 109, 109);
 
 }
 
-.profile-user-info {
-  font-size: 1.2rem;
-  font-family: var(--textFont);
-  background-color: pink;
-}
-
 
 /* pie chart */
 
 .plot-chart {
-  width: 40%;
-  height: 40%;
-  margin: 5%;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: deeppink;
+  display: flex;
+  justify-content: center;
+  background-color: #fbfbf9;
+  margin-top: 2%;
+  margin-left: 25%;
+  width: 50%;
+  height: 95%;
+ 
 }
 
 
@@ -153,7 +162,7 @@ color: rgb(109, 109, 109);
 
 .crop-table-container {
   background-color: pink;
-  
+
 }
 
 

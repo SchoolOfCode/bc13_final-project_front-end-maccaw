@@ -1,15 +1,23 @@
 .crop-table-container{
+   background-color: blue;
+   width: 90%;
+   margin-left: 5%;
    
-    background-color: blue;
+
    
 }
 
 .crop-card{
-    display:flex;
-    margin: 1rem;
-    background-color: var(--mainWhite);
-    border-radius: 10px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+   
+
+    
 }   
+/*var(--mainWhite)*/
 
 .crop-name>img{
     height:40%;
