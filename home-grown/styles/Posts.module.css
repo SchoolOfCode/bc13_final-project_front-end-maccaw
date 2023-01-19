@@ -2,23 +2,31 @@
     background-color: aquamarine;
     gap: 30px;
     min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    padding: 20px;
+
 }
 
 .post-container{
     background-color: antiquewhite;
     display: grid;
     grid-template-columns: auto auto;
-    width: 90%; 
+    width: 90%;
+    height: 40%; 
+    padding: 20px;
+    gap: 20px;
 }
 
 .header-container{
     display: flex;
-    height: 30%;
+    height: 10%;
+    width: 90%;
     background-color: aqua;
+    justify-content: center;
+    align-items: center;
 }
 /* .newPost-container {
     font-family: var( --textFont);
@@ -72,8 +80,10 @@
 .one-card{
     background-color: #ffff;
     display: flex;
-    height: 70%;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
+    align-items: center;
     justify-content: space-evenly;
     border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
     border-style: solid;
@@ -81,13 +91,27 @@
     box-sizing: border-box;
     border-color: rgba(31, 24, 17, 0.282);
     cursor: pointer;
-    font-family: var(--textFont);
+    /* font-family: var(--textFont); */
     font-size: 1rem;
-    padding: .35rem;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
+    /* padding: .35rem; */
+}
+.post-card-header{
+    background-color:var(--highLightOne);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    color: white;
+}
+.post-card-buttons{
+    display: flex;
+}
+.location-crop-plot-banner{
+    display: flex;
+    justify-content: space-between;
+}
+.post-card-description{
+    width: 100%;
 }
 .user-post-icon{
     width: 30px;
@@ -97,8 +121,10 @@
 .post-info{
     display:flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     height: 100%;
+    padding: 10px;
+    gap: 10px
 }
 .profile-img{
     height: 10vh;
