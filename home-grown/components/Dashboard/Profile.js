@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import dashboardStyles from "../../styles/DashboardContainer.module.css";
+import styles from "../../styles/DashboardContainer.module.css";
 
 export default function Profile({ userData }) {
   let ratingString = "";
@@ -12,18 +12,22 @@ export default function Profile({ userData }) {
   generateRating(userData.rating);
 
   return (
-    <div className={dashboardStyles.profile}>
-      <div className={dashboardStyles.profileContainer}>
-      <h2 className={dashboardStyles.h2UserDetails}>User Profile</h2>
-      </div>
-      <div className="profileInformation">
-        <h4 className={dashboardStyles.h4UserInfo}>
-          Name: {userData["first_name"]} {userData["last_name"]}
-        </h4>
-        <h4 className={dashboardStyles.h4UserInfo}>Email: {userData.email}</h4>
-        <h4 className={dashboardStyles.h4UserInfo}>Location: {userData.location}</h4>
-        <h4 className={dashboardStyles.h4UserInfo}>Rating:{ratingString}</h4>
-      </div>
+    <div className={styles["profile-container"]}>
+
+       <h1 className={styles["profile-user-name"]}>
+       {userData.first_name}'s Patch
+       </h1>
+     
+    <div className={styles["profile-user-info"]}>
+       
+       <h4> Name: {userData["first_name"]} 
+       {userData["last_name"]}</h4>
+       <h4>Email: {userData.email}</h4>
+       <h4>Location: {userData.location}</h4>
+       <h4 >Rating:{ratingString}</h4>
+
     </div>
+    </div>
+   
   );
 }

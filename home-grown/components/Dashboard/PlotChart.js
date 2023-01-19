@@ -1,7 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import dashboardStyles from "../../styles/DashboardContainer.module.css";
+import styles from "../../styles/DashboardContainer.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -39,7 +39,7 @@ export default function PlotChart({ userPosts }) {
     };
 
     return (
-      <div className={dashboardStyles.pieChart}>
+      <div className={styles["plot-chart"]}>
         <Pie data={data} />;
       </div>
     );

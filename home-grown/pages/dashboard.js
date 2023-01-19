@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
 import { Title } from "../components/Dashboard/Title";
-import Carousel from "../components/Dashboard/Carousel";
 import Profile from "../components/Dashboard/Profile";
+import Image from 'next/image'
 import PlotChart from "../components/Dashboard/PlotChart";
 import styles from "../styles/DashboardContainer.module.css";
 import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
+import plot from "../public/illustrations/plot.jpg"
+
+
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -90,25 +93,35 @@ export default function Dashboard() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className={styles.mainContainer}>
+      <div className={styles["main-container"]}>
+
         <Title userData={userData} />
-        <div className="image+profile">       
-       {userData.plot_image ? <Carousel
-          className={styles.userPlotImage}
-          userImage={userData["plot_image"]}/> :  
-          
-          <Carousel
-          className={styles.userPlotImage}
-          userImage={newUserImages["plot_image"]}
-        /> }
        
-          <Profile userData={userData}></Profile>
+       <div className={styles["left-container"]}>
+         <Image src={plot} className={styles["plot-picture"]} />
+       
+      </div>
+
+     
+
+      <div className={styles["right-container"]}>
+        <div className={styles["right-container-top"]}>
+           
         </div>
-        <div className="char+table">
-        <PlotChart userPosts={userPosts} />
-        <CropTableContainer userPosts={userPosts}/>
-          </div>
+
+        <div className={styles["right-container-bottom"]}>
+        
         </div>
+
+
+    </div>
+
+
+    </div>
+        
     );
   }
 }
+//  <Profile className={styles["profile-container"]} userData={userData}/>
+// <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
+//  <PlotChart userPosts={userPosts}/>
