@@ -79,13 +79,13 @@ export default function UserListingCard({ userPost, handleDelete }) {
         {edit ? (
           <div className={styles["post-card-buttons"]}>
             <img
-              src="https://www.pngfind.com/pngs/m/220-2201567_png-file-save-icon-vector-png-transparent-png.png"
+              src="icons/save.png"
               alt="save button"
               className={styles["user-post-icon"]}
               onClick={handleSave}
             ></img>
             <img
-              src="https://w7.pngwing.com/pngs/52/84/png-transparent-no-symbol-icon-cancel-s-angle-text-symmetry-thumbnail.png"
+              src="icons/cancel.png"
               alt="cancel button"
               className={styles["user-post-icon"]}
               onClick={handleEdit}

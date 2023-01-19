@@ -69,7 +69,10 @@ export default function NewPost() {
         {/* <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/> */}
         <div className={styles["header-container"]}>
           <h2>MY LISTINGS</h2>
-          <button>POST LISTING</button>
+          <div className={styles["new-post-icon-container"]}>
+          <label>new post:</label>
+          <img className={styles["new-post-icon"]} src='icons/create-new-post.png' alt="post new plot, image of pencil hovering over a whiteboard"/>
+          </div>
         </div>
         <div className={styles["post-container"]}>
           {userPosts.map((userPost, index) => {

@@ -1,5 +1,4 @@
 .post-page-container{
-    background-color: aquamarine;
     gap: 30px;
     min-height: 100vh;
     height: 100vh;
@@ -11,22 +10,29 @@
 }
 
 .post-container{
-    background-color: antiquewhite;
     display: grid;
     grid-template-columns: auto auto;
     width: 90%;
-    height: 40%; 
     padding: 20px;
     gap: 20px;
 }
 
 .header-container{
     display: flex;
-    height: 10%;
-    width: 90%;
-    background-color: aqua;
-    justify-content: center;
+    height: 8%;
+    width: 88%;
+    font-family: var(--titleFont);
+    background-color: #086a0633;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+}
+
+.new-post-icon, .new-post-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
 }
 /* .newPost-container {
     font-family: var( --textFont);
@@ -85,26 +91,34 @@
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
     border-style: solid;
     border-width: 0.5px;
     box-sizing: border-box;
-    border-color: rgba(31, 24, 17, 0.282);
-    cursor: pointer;
-    /* font-family: var(--textFont); */
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: rgb(0, 0, 0, 0.5) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    font-family: var(--textFont);
     font-size: 1rem;
-    /* padding: .35rem; */
+
 }
 .post-card-header{
     background-color:var(--highLightOne);
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 40%;
+    height: 50px;
+    font-family: var(--titleFont);
+    font-weight: lighter;
     color: white;
 }
 .post-card-buttons{
     display: flex;
+    justify-self: flex-end;
+    justify-content: space-between;
+    gap:10px;
+    height: 20px;
 }
 .location-crop-plot-banner{
     display: flex;
@@ -113,10 +127,7 @@
 .post-card-description{
     width: 100%;
 }
-.user-post-icon{
-    width: 30px;
-    height: 30px;
-  }
+
 
 .post-info{
     display:flex;
@@ -125,7 +136,4 @@
     height: 100%;
     padding: 10px;
     gap: 10px
-}
-.profile-img{
-    height: 10vh;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/PopUp.module.css";
 
-function MyPopup() {
+function BoilerPlatePopup({image, alt, children, className}) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -9,14 +9,15 @@ function MyPopup() {
   return (
     <>
       <img
-        src="/icons/email-form-icon.png"
+        src={image}
+        alt={alt}
         onClick={handleShow}
-        className={styles["pop-up-icon"]}
+        className={className}
       />
       {show && (
         <div className={styles["pop-up-background"]}>
           <div className={styles["pop-up"]}>
-      
+           {children}
           
           </div>
         </div>
@@ -25,4 +26,4 @@ function MyPopup() {
   );
 }
 
-export default MyPopup;
+export default BoilerPlatePopup;
