@@ -1,7 +1,6 @@
 .post-page-container{
     gap: 30px;
     min-height: 100vh;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +8,7 @@
     background-image: url('../public//illustrations/background-lady-yoga.png');
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-size: cover;
+    background-size: contain;
 
 }
 
@@ -32,6 +31,15 @@
     padding: 10px;
 }
 
+.post-card-header-title{
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width:90%;
+} 
+
 .pop-up{
     height: 100%;
     width: 100%;
@@ -40,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 40px;
 }
 
 .form-container, .form {
@@ -197,4 +205,29 @@
     height: 100%;
     padding: 10px;
     gap: 10px
+}
+
+
+@media screen and (max-width: 820px) {
+    .post-container{
+        grid-template-columns: auto;
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .post-container{
+        padding: 0px;
+        
+    }
+.post-card-header-title{
+  font-size: 16px;
+}
+    .post-card-buttons{
+      gap: 0px;
+    }
+    .location-crop-plot-banner{
+      font-size: 14px;
+    }
+ 
 }

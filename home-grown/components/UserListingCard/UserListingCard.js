@@ -68,7 +68,7 @@ export default function UserListingCard({ userPost, handleDelete }) {
     <div className={styles["one-card"]}>
       {/* <div className={styles["user-info"]}></div> */}
       <div className={styles["post-card-header"]}>
-        <h3 hidden={edit}>{title}</h3>
+        <h3 className={styles["post-card-header-title"]} hidden={edit}>{title}</h3>
         <label hidden={!edit}>
           <h3>Title:</h3>
         </label>
