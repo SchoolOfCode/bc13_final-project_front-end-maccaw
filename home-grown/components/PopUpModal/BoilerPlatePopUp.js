@@ -18,8 +18,10 @@ function BoilerPlatePopup({image, alt, children, className}) {
         <div className={styles["pop-up-background"]}>
           <div className={styles["pop-up"]}>
            {children}
-          
+           <button onClick={handleClose}>close</button>
           </div>
+       
+
         </div>
       )}
     </>

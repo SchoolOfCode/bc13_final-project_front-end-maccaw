@@ -34,55 +34,21 @@
     justify-content: center;
     height: 80%;
 }
-/* .newPost-container {
-    font-family: var( --textFont);
-    border-radius: 5px;
-    background-color: var(--secondHighlight);
-    padding: 50px 40px 50px 40px;
-    max-width: 1500px;
-    margin: auto;
+
+.form-container, .form {
     display: flex;
-    align-items: center;
-    border-radius: 15px;
-} */
-
-/* .newPost-title {
-    color: var(--darkColor);
-    font-family: var( --titleFont2);
-    margin-top: 30px;
-    margin-bottom: 60px;
-    text-align: center;
-    justify-content: center;
-    font-size: 5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    font-weight: 900;
-} */
-
-.input {
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
     width: 100%;
-    min-width: 200px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-size: 20px;
-    color: purple;
-}
+  }
 
-
-.textarea {
-    height: 250px;
-}
-
-.label {
-    font-size: 25px;
-    color: blue;
-}
-
+  .input, .input-textarea{
+    border-radius: 5px;
+    padding-left: 1vmin;
+    border: 1px solid #e6e6e6;
+  }
+  
 .one-card{
     background-color: #ffff;
     display: flex;

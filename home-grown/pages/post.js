@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import PostForm from "../components/PostForm/PostForm";
 import UserListingCard from "../components/UserListingCard/UserListingCard";
 import { useAuth } from "../context/AuthContext";
-
+import BoilerPlatePopup from "../components/PopUpModal/BoilerPlatePopUp";
+import ContactForm from "../components/ContactForm/ContactForm";
 export default function NewPost() {
   const [userPosts, setUserPosts] = useState();
   const { currentUser } = useAuth();
@@ -68,10 +69,13 @@ export default function NewPost() {
       <div className={styles["post-page-container"]}>
         {/* <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/> */}
         <div className={styles["header-container"]}>
+        <div></div>
           <h2>MY LISTINGS</h2>
           <div className={styles["new-post-icon-container"]}>
           <label>new post:</label>
-          <img className={styles["new-post-icon"]} src='icons/create-new-post.png' alt="post new plot, image of pencil hovering over a whiteboard"/>
+          <BoilerPlatePopup className={styles["new-post-icon"]} image='icons/create-new-post.png' alt="post new plot, image of pencil hovering over a whiteboard">
+            <PostForm userPosts={userPosts} currentUser={currentUser}/>
+          </BoilerPlatePopup>
           </div>
         </div>
         <div className={styles["post-container"]}>

@@ -2,7 +2,7 @@ import react, { useState, useRef } from "react";
 import styles from "../../styles/Posts.module.css";
 import { useRouter } from 'next/router'
 
-export default function PostForm({currentUser, userPosts, setUserPosts}) {
+export default function PostForm({currentUser, userPosts, setUserPosts, handleClose}) {
   const title = useRef();
   const postcode = useRef();
   const crop = useRef();
@@ -11,6 +11,7 @@ export default function PostForm({currentUser, userPosts, setUserPosts}) {
   const date = useRef();
   const form=useRef()
   const router = useRouter()
+
 
   async function onClick(e) {
     e.preventDefault();
@@ -61,14 +62,13 @@ while(percent<=percentageLeft){
 
 if(userPosts && currentUser){
   return (
-    <div className={styles.newPost}>
+    <div className={styles["form-container"]}>
       <h2 className={styles["newPost-title"]}>Create a new post...</h2>
-
-      <div className={styles["newPost-container"]}>
+      <div className={styles["form"]}>
         {/* <img className="newPostImage" src={newPost} alt="logo" /> */}
 
         <form ref={form}>
-          <label> Post Title: </label>
+          <label className={styles.label}> Post Title: </label>
           <input
             type="text"
             className={styles.input}
@@ -77,8 +77,8 @@ if(userPosts && currentUser){
             required
             ref={title}
           />
-
-          <label> Postcode: </label>
+          <div className={styles["date-postcode-container"]}>
+          <label className={styles.label}> Postcode: </label>
           <input
             type="text"
             className={styles.input}
@@ -88,8 +88,11 @@ if(userPosts && currentUser){
             value={userPosts[0].location}
             ref={postcode}
           />
-
-          <label> Crop: </label>
+<label className={styles.label}>Date</label>
+          <input    className={styles.input} type="text" value={new Intl.DateTimeFormat('en-US').format(new Date())} ref={date}/>
+          </div>
+          <div className={styles["crop-percentage-container"]}>
+          <label className={styles.label}> Crop: </label>
           <select
             className={styles.input}
             name="crop"
@@ -108,10 +111,8 @@ if(userPosts && currentUser){
             <option value="10">Raspberries</option>
           </select>
 
-          <label>Date</label>
-          <input    className={styles.input} type="text" value={new Intl.DateTimeFormat('en-US').format(new Date())} ref={date}/>
-
-          <label> Percentage of Plot to be used: </label>
+          
+          <label className={styles.label}> Percentage of Plot to be used: </label>
           <select
             className={styles.input}
             name="percentage of plot"
@@ -120,10 +121,10 @@ if(userPosts && currentUser){
           >
            {percentageArray.map((element)=> <option value={element}>{element*100}%</option>)}
           </select>
-
-          <label> Describe your project: </label>
+          </div>
+          <label className={styles.label}> Describe your project: </label>
           <textarea
-            className={styles.textarea}
+            className={styles["input-textarea"]}
             placeholder="Description..."
             maxLength="200"
             required
