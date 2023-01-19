@@ -68,6 +68,8 @@ if(userPosts && currentUser){
         {/* <img className="newPostImage" src={newPost} alt="logo" /> */}
 
         <form ref={form}>
+        <div className={styles["title"]}>
+
           <label className={styles.label}> Post Title: </label>
           <input
             type="text"
@@ -77,7 +79,9 @@ if(userPosts && currentUser){
             required
             ref={title}
           />
+          </div>
           <div className={styles["date-postcode-container"]}>
+          <div className={styles["postcode"]}>
           <label className={styles.label}> Postcode: </label>
           <input
             type="text"
@@ -88,10 +92,16 @@ if(userPosts && currentUser){
             value={userPosts[0].location}
             ref={postcode}
           />
-<label className={styles.label}>Date</label>
+          </div>
+          <div className={styles["date"]}>
+          <label className={styles.label}>Date</label>
           <input    className={styles.input} type="text" value={new Intl.DateTimeFormat('en-US').format(new Date())} ref={date}/>
           </div>
+          </div>
           <div className={styles["crop-percentage-container"]}>
+
+          <div className={styles["crop"]}>
+
           <label className={styles.label}> Crop: </label>
           <select
             className={styles.input}
@@ -110,9 +120,9 @@ if(userPosts && currentUser){
             <option value="9">Strawberries</option>
             <option value="10">Raspberries</option>
           </select>
-
-          
-          <label className={styles.label}> Percentage of Plot to be used: </label>
+          </div>
+          <div className={styles["percentage"]}>
+          <label className={styles.label}> % of plot to be used: </label>
           <select
             className={styles.input}
             name="percentage of plot"
@@ -122,6 +132,9 @@ if(userPosts && currentUser){
            {percentageArray.map((element)=> <option value={element}>{element*100}%</option>)}
           </select>
           </div>
+         </div>
+          <div className={styles["description"]}>
+
           <label className={styles.label}> Describe your project: </label>
           <textarea
             className={styles["input-textarea"]}
@@ -130,7 +143,7 @@ if(userPosts && currentUser){
             required
             ref={description}
           ></textarea>
-
+          </div>
           <button className={styles.button} onClick={onClick}>
             Create Post
           </button>
