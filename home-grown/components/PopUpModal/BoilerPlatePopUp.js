@@ -1,27 +1,22 @@
 import React, { useState } from "react";
 import styles from "../../styles/PopUp.module.css";
+import PostForm from "../PostForm/PostForm";
 
-function BoilerPlatePopup({image, alt, children, className}) {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+function BoilerPlatePopup({
+  image,
+  alt,
+  children,
+  className,
+  handleShow,
+  handleClose,
+  show,
+}) {
   return (
     <>
-      <img
-        src={image}
-        alt={alt}
-        onClick={handleShow}
-        className={className}
-      />
+      <img src={image} alt={alt} onClick={handleShow} className={className} />
       {show && (
         <div className={styles["pop-up-background"]}>
-          <div className={styles["pop-up"]}>
-           {children}
-           <button onClick={handleClose}>close</button>
-          </div>
-       
-
+          <div className={styles["pop-up"]}>{children}</div>
         </div>
       )}
     </>

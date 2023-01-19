@@ -69,8 +69,11 @@ export default function UserListingCard({ userPost, handleDelete }) {
       {/* <div className={styles["user-info"]}></div> */}
       <div className={styles["post-card-header"]}>
         <h3 hidden={edit}>{title}</h3>
-        <label hidden={!edit}>Title:</label>
+        <label hidden={!edit}>
+          <h3>Title:</h3>
+        </label>
         <input
+          className={styles["edit-input"]}
           ref={newTitle}
           hidden={!edit}
           type="text"
@@ -117,6 +120,7 @@ export default function UserListingCard({ userPost, handleDelete }) {
           <p hidden={edit}>Crop: {crop_name}</p>
 
           <select
+            className={styles["edit-crop-dropdown"]}
             hidden={!edit}
             name="crop"
             required
@@ -138,12 +142,13 @@ export default function UserListingCard({ userPost, handleDelete }) {
         </div>
         <div className={styles["post-card-description"]}>
           <p hidden={edit}>Description: {description}</p>
-          <input
+          <textarea
+            className={styles["edit-input-description"]}
             ref={newDescription}
             hidden={!edit}
             type="text"
             defaultValue={description}
-          ></input>
+          ></textarea>
         </div>
       </div>
     </div>
