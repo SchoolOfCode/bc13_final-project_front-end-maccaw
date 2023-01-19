@@ -8,7 +8,7 @@
   background-color: #fbfbf9;
   margin-left: 5.2%;
   margin-top: 2%;
-  width: 42%;
+  width: 35%;
   height: 80%;
   border: 3px #D0D5DD solid;
   border-radius: 5px;
@@ -19,25 +19,25 @@
 
 .right-container-top {
   background-color:#fbfbf9;
-  margin-left: 0.5%;
+  margin-left: 0%;
   margin-top: 2%;
-  width: 42%;
+  width: 49.5%;
   border: 3px #D0D5DD solid;
   border-radius: 5px;
   float: left;
-  height: 39%;
+  height: 290px;
     
 }
 
 .right-container-bottom {
   background-color: #fbfbf9;
-  margin-left: 0.5%;
-  width: 42%;
+  margin-left: 0%;
+  width: 49.5%;
   border: 3px #D0D5DD solid;
   float: left;
-  height: 35%;
+  height: 330px;
   border-radius: 5px;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 
@@ -100,22 +100,35 @@ color: rgb(109, 109, 109);
 /* user details */
 
 .profile-container {
-  display: flex;
-  width: 80%;
-  height: 40%;
-  margin-top: 58%;
+  box-sizing: border-box;
+  height: 100vh;
+  
  
  
 }
 
 .profile-user-name {
   background-color: aqua;
-
-  display: flex;
- 
   
+
+ 
 }
 
+
+
+/* plot image */
+
+
+.plot-picture {
+  display: flex;
+  margin-top: 5%;
+  ;
+  margin-left: 10%;
+  width: 80%;
+  height: 45%;
+  border-radius: 3px;
+
+}
 
 .profile-user-info {
   font-size: 1.2rem;
@@ -144,18 +157,6 @@ color: rgb(109, 109, 109);
 }
 
 
-/* plot image */
-
-
-.plot-picture {
-  display: flex;
-  margin-top: 5%;;
-  margin-left: 10%;
-  width: 80%;
-  height: 45%;
-  border-radius: 3px;
-
-}
 
 
 
