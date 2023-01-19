@@ -99,18 +99,19 @@ export default function Dashboard() {
        
        <div className={styles["left-container"]}>
          <Image src={plot} className={styles["plot-picture"]} />
-       
+         <Profile className={styles["profile-container"]} userData={userData}/>
+
       </div>
 
      
 
       <div className={styles["right-container"]}>
         <div className={styles["right-container-top"]}>
-           
+           <PlotChart userPosts={userPosts}/>
         </div>
 
         <div className={styles["right-container-bottom"]}>
-        
+           <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
         </div>
 
 
