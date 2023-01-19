@@ -54,7 +54,9 @@
   background-color: #fff;
   padding: 20px;
   width: 30%;
- height: 55%;
+  min-width: 30%;
+ height: 60%;
+ min-height: 60%;
 }
 
 .pop-up-image{

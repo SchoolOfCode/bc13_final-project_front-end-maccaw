@@ -6,6 +6,10 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    background-image: url('../public//illustrations/background-lady-yoga.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
 
 }
 
@@ -44,32 +48,53 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    background-color: orange;
     height: 100%;
     width: 100%;
+    font-family: var(--textFont);
   }
 
+  .real-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
   .form-title-banner{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-  .postcode, .date, .crop, .percentage, .description, .title{
+  .postcode, .date, .crop, .percentage,  .title{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .description{
     display: flex;
     flex-direction: column;
   }
-
   .postcode, .date, .crop, .percentage{
     width: 48%;
   }
-
-  .input, .input-textarea{
+.close-icon{
+    height:30px;
+}
+  .input{
     border-radius: 5px;
     height: 5vmin;
     margin-top: 0.6vmin;
     padding-left: 1vmin;
     border: 1px solid #e6e6e6;
+  }
+  .input-textarea{
+    border-radius: 5px;
+    height: 15vmin;
+    margin-top: 0.6vmin;
+    padding-left: 1vmin;
+    border: 1px solid #e6e6e6;
+
   }
 
   .edit-input{
@@ -102,6 +127,7 @@
   .button {
     border-radius: 999px;
     margin-top: 20px;
+    align-self: center;
     box-sizing: border-box;
     font-family: var(--textFont);
     color: #FFFFFF;

@@ -62,13 +62,13 @@ export default function PostForm({
       <div className={styles["form-container"]}>
         <div className={styles["form-title-banner"]}>
           <div></div>
-          <h2 className={styles["newPost-title"]}>Create a new post...</h2>
-          <button onClick={handleClose}>close</button>
+          <h2 className={styles["newPost-title"]}>NEW LISTING</h2>
+          <img className={styles["close-icon"]}src="/illustrations/close-icon.png" alt="cross for closing pop up" onClick={handleClose}/>
         </div>
         <div className={styles["form"]}>
           {/* <img className="newPostImage" src={newPost} alt="logo" /> */}
 
-          <form ref={form}>
+          <form className={styles["real-form"]} ref={form}>
             <div className={styles["title"]}>
               <label className={styles.label}> Post Title: </label>
               <input
@@ -125,7 +125,7 @@ export default function PostForm({
                 </select>
               </div>
               <div className={styles["percentage"]}>
-                <label className={styles.label}> % of plot to be used: </label>
+                <label className={styles.label}> % of plot: </label>
                 <select
                   className={styles.input}
                   name="percentage of plot"
