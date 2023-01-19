@@ -9,7 +9,7 @@
   margin-left: 5.2%;
   margin-top: 2%;
   width: 35%;
-  height: 80%;
+  height: 86%;
   border: 3px #D0D5DD solid;
   border-radius: 5px;
   margin-right: 5%;
@@ -35,7 +35,7 @@
   width: 49.5%;
   border: 3px #D0D5DD solid;
   float: left;
-  height: 330px;
+  height: 370px;
   border-radius: 5px;
   margin-top: 1%;
 }
@@ -73,11 +73,12 @@ color: rgb(109, 109, 109);
 }
 
 .title-buttons-container {
-  margin-left: 35%;
+  margin-left: 19%;
+
   
 }
 
-.title-mylistings-button {
+.title-myListings-button {
   background-color:white;
   border-radius: 15px;
   opacity: 0.8;
@@ -90,8 +91,22 @@ color: rgb(109, 109, 109);
 
 }
 
+.title-myMessages-button {
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0.8;
+  border-style: 2px #D0D5DD solid;
+  width: 200px;
+  cursor: pointer;
+  font-family: var(--textFont);
+  font-size: 1.5rem;
+  padding: .35rem;
+  margin-left: 10px;
 
-.title-mylistings-button:hover{
+}
+
+
+.title-myListings-button:hover, .title-myMessages-button:hover{
   box-shadow: var(--highLightTwo) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
@@ -160,10 +175,9 @@ color: rgb(109, 109, 109);
 
 /* crop table */
 
-.crop-table-container {
-  background-color: pink;
+/* in a different file - CropTable.module.css */
 
-}
+
 
 
 
