@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/Carousel.module.css" 
 import Image from 'next/image'
+import Link from 'next/link'
 import profile from "../../public/illustrations/bunny.png"
 import profile2 from "../../public/illustrations/sheep.png"
 import profile3 from "../../public/illustrations/chicken.png"
@@ -18,7 +19,7 @@ import crop6 from "../../public/illustrations/tomato.png"
 
 
 
-// 1024 - 600 - 480
+
 
 
 export const Carousel = () => {
@@ -43,15 +44,23 @@ export const Carousel = () => {
                   }
                 },
         {
-          breakpoint: 920,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
             arrows: false,
          speed: 400
           }
-        }
-      
+        },
+      {
+        breakpoint: 2000,
+         settings: {
+         slidesToShow: 3,
+         slidesToScroll: 2,
+         arrows: false,
+         speed: 400,
+                  }
+                },
           
         
       ]
@@ -61,27 +70,32 @@ export const Carousel = () => {
 //  fade: true, 
 
     return (
-   
+  
     <Slider {...settings} className={styles["carousel"]}>
 
+      
       <div className={styles["card"]}>
+      
           <div className={styles["top"]}>
-            <Image src={crop2} width={100} height={95} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> WILL'S MUSHROOM PATCH </p>
+            <Image src={crop2} width={60} height={60} className={styles["crop-picture"]} />
+            <p className={styles["username"]}> WILL'S MUSHROOM PATCH </p> 
           </div>
+    
           <div className={styles["middle"]}>
             <p className={styles["description"]}>Calling all mushroom enthusiasts! I'm trying to grow white mushrooms at home, but I'm having some trouble getting them to grow. Does anyone have any tips or tricks for successful mushroom cultivation?</p>
             <Image src={profile2} width={180} height={180} className={styles["profile-picture"]} />
-          </div>    
+          </div> 
+          
           <div className={styles["bottom"]}>
             <p className={styles["ratings"]}> 🥕🥕🥕🥕 </p>
           </div>
       </div>
+       
 
 
        <div className={styles["card"]}>
           <div className={styles["top"]}>
-            <Image src={crop} width={100} height={95} className={styles["crop-picture"]} />
+            <Image src={crop} width={60} height={60} className={styles["crop-picture"]} />
             <p className={styles["username"]}> ALEX'S STRAWBERRY PATCH </p>
           </div>
           <div className={styles["middle"]}>
@@ -97,7 +111,7 @@ export const Carousel = () => {
 
        <div className={styles["card"]}>
           <div className={styles["top"]}>
-            <Image src={crop3} width={100} height={95} className={styles["crop-picture"]} />
+            <Image src={crop3} width={60} height={60} className={styles["crop-picture"]} />
             <p className={styles["username"]}> AMINA'S RASPBERRY PATCH </p>
           </div>
           <div className={styles["middle"]}>
@@ -113,7 +127,7 @@ export const Carousel = () => {
 
       <div className={styles["card"]}>
           <div className={styles["top"]}>
-            <Image src={crop4} width={100} height={95} className={styles["crop-picture"]} />
+            <Image src={crop4} width={60} height={60} className={styles["crop-picture"]} />
             <p className={styles["username"]}> JULIO'S ONION PATCH </p>
           </div>
           <div className={styles["middle"]}>
@@ -131,7 +145,7 @@ export const Carousel = () => {
       
     <div className={styles["card"]}>
           <div className={styles["top"]}>
-            <Image src={crop5} width={100} height={95} className={styles["crop-picture"]} />
+            <Image src={crop5} width={60} height={60} className={styles["crop-picture"]} />
             <p className={styles["username"]}> MARWA'S LETTUCE PATCH </p>
           </div>
           <div className={styles["middle"]}>
@@ -148,7 +162,7 @@ export const Carousel = () => {
 
        <div className={styles["card"]}>
           <div className={styles["top"]}>
-            <Image src={crop6} width={100} height={95} className={styles["crop-picture"]} />
+            <Image src={crop6} width={60} height={60} className={styles["crop-picture"]} />
             <p className={styles["username"]}> CHET'S TOMATO PATCH </p>
           </div>
           <div className={styles["middle"]}>
@@ -160,10 +174,8 @@ export const Carousel = () => {
           </div>
       </div>
    
- 
-         
-
-       </Slider> 
+       </Slider>
+    
         )
        }  
    
