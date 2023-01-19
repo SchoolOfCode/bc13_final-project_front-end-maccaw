@@ -1,18 +1,26 @@
-.addPostsContainer{
-    background-color: var(--backgroundColor1);
-    height: 100vh;
+.post-page-container{
+    background-color: aquamarine;
+    gap: 30px;
+    min-height: 100vh;
     display: flex;
-    align-content: center;
-    justify-content: center;
-}
- .newPost {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  
-
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
 }
 
-.newPost-container {
+.post-container{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 90%; 
+}
+
+.header-container{
+    display: flex;
+    height: 30%;
+    background-color: aqua;
+}
+/* .newPost-container {
     font-family: var( --textFont);
     border-radius: 5px;
     background-color: var(--secondHighlight);
@@ -22,9 +30,9 @@
     display: flex;
     align-items: center;
     border-radius: 15px;
-}
+} */
 
-.newPost-title {
+/* .newPost-title {
     color: var(--darkColor);
     font-family: var( --titleFont2);
     margin-top: 30px;
@@ -35,7 +43,7 @@
     margin-left: 1rem;
     margin-right: 1rem;
     font-weight: 900;
-}
+} */
 
 .input {
     width: 100%;
@@ -64,7 +72,7 @@
 .one-card{
     background-color: #ffff;
     display: flex;
-    height: 100%;
+    height: 70%;
     width: 100%;
     justify-content: space-evenly;
     border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
