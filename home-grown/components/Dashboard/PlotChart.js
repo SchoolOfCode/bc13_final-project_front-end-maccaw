@@ -40,7 +40,7 @@ export default function PlotChart({ userPosts }) {
 
     return (
       <div className={styles["plot-chart"]}>
-        <Pie data={data} />;
+        <Pie data={data} />
       </div>
     );
   }
