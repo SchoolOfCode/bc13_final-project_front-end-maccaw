@@ -21,6 +21,7 @@ function ListingCard({
   }
   generateRating(rating);
 
+  const postCode = location.split(" ")
   return (
     <div className={styles["one-card"]}>
       <div className={styles["user-info"]}>
@@ -29,15 +30,15 @@ function ListingCard({
           src={profile_picture}
           alt="profile"
         />
-        <p>{username}</p>
+        <p className={styles.username}>{username}</p>
         <p>{ratingString}</p>
       </div>
       <div className={styles["post-info"]}>
-        <h3>{title}</h3>
+        <h3 className={styles.title}>{title}</h3>
         <div className={styles["location-crop"]}>
           <p className={styles["location-key-value"]}>
             <span className={styles.key}>Location:</span>
-            {location}
+            {postCode[0]}
           </p>
           <p className={styles["location-key-value"]}>
             <span className={styles.key}>Crop:</span>
@@ -45,8 +46,12 @@ function ListingCard({
           </p>
         </div>
         <p className={styles.description}>Description: {description}</p>
+        <div className={styles["message-container"]}>
+          Message: <MyPopup user_email={user_email} />
+        </div>
+        
+
       </div>
-      <MyPopup user_email={user_email} />
     </div>
   );
 }
