@@ -45,8 +45,8 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
   });
 });
 
-describe("logged in user flow", () => {
-  it("visit homepage, navigates to log-in, inputs details. and checke if logs in", () => {
+describe.only("logged in user flow", () => {
+  it("visit homepage, navigates to log-in, inputs details. and check if logs in", () => {
     // cy.session('login', ()=>{
     cy.visit("http://localhost:3000/", { timeout: 10000 });
     cy.get("ul > :nth-child(4) > li").click({ timeout: 10000 });
@@ -62,11 +62,13 @@ describe("logged in user flow", () => {
   });
   it("checking correct user data in dashboard", () => {
     cy.visit("http://localhost:3000/dashboard", { timeout: 10000 });
-    cy.get(".DashboardContainer_h1element__GkbFV").contains("Amina's Patch");
-    cy.get(".profileInformation > :nth-child(3)").contains(
-      "Location: TS26 8JA"
+    cy.get(".DashboardContainer_title-user-name__wtPDy").contains("Amina");
+    cy.get(
+      ".DashboardContainer_profile-user-info__NJo7g > :nth-child(3)"
+    ).contains("Location: TS26 8JA");
+    cy.get(".CropTable_crop-table-container__2n_9F").contains(
+      "White Mushrooms"
     );
-    cy.get(".CropTable_crop-table__Lyqem").contains("White Mushrooms");
     cy.get('[href="/"] > li').click({ timeout: 10000 });
   });
 });
