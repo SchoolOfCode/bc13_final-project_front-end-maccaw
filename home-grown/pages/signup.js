@@ -107,7 +107,7 @@ export default function SignUp() {
           <div className={styles["form-container"]}>
             <div className={styles["name-container"]}>
               <div className={styles["first-name"]}>
-                <label className={styles["label"]}>Your First Name:</label>
+                <label className={styles["label"]}>First Name:</label>
                 <input
                   onChange={formData}
                   name="first_name"
@@ -117,7 +117,7 @@ export default function SignUp() {
                 />
               </div>
               <div className={styles["last-name"]}>
-                <label className={styles["label"]}>Your Last Name:</label>
+                <label className={styles["label"]}>Last Name:</label>
                 <input
                   onChange={formData}
                   name="last_name"
