@@ -32,11 +32,6 @@
 }
 
 .post-card-header-title{
-    display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
   width:90%;
 } 
 
@@ -121,7 +116,6 @@
   .edit-crop-dropdown{
     border-radius: 5px;
     height: 3vmin;
-    margin-top: 0.6vmin;
     padding-left: 1vmin;
     border: 1px solid #e6e6e6;
   }
@@ -182,6 +176,8 @@
     font-weight: lighter;
     color: white;
 }
+
+
 .post-card-buttons{
     display: flex;
     justify-self: flex-end;
@@ -229,5 +225,14 @@
     .location-crop-plot-banner{
       font-size: 14px;
     }
- 
+    .post-card-header-title{
+      display: -webkit-box;
+      display: hidden;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width:90%;
+    } 
+    
 }
