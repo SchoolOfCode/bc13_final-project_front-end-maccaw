@@ -33,7 +33,7 @@ const Dropdown = () => {
             <Link href="/signup" style={{ textDecoration: 'none' }}><li>Register</li></Link>
             <Link href="/login" style={{ textDecoration: 'none' }}><li>Log In</li></Link>
             <Link href="/login" style={{ textDecoration: 'none' }}><li>Post</li></Link>
-            <Link href="/dashboard" style={{ textDecoration: 'none' }}><li>Dashboard</li></Link>
+            <Link href="/dashboard" className='dashboardButton' style={{ textDecoration: 'none' }}><li>Dashboard</li></Link>
         </ul>
             <button id="hamburgerButton" onClick={ Dropdown }>MENU</button>
         </nav>

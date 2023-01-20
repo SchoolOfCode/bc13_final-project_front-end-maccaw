@@ -35,7 +35,7 @@ export default function NavBarLogIn() {
         <Link href="/listings" style={{ textDecoration: "none" }}><li className="menuBarButton">Listings</li></Link>
         <Link href="/" style={{ textDecoration: "none" }} legacyBehavior>
           <a onClick={handleClick} style={{ textDecoration: "none" }}><li>Log Out</li></a></Link>
-        <Link href="/dashboard" style={{ textDecoration: "none" }}><li>Dashboard</li></Link>
+        <Link href="/dashboard" className="dashboardButton" style={{ textDecoration: "none" }}><li>Dashboard</li></Link>
         <Link href="/post" style={{ textDecoration: "none" }}><li>Post</li></Link>
       </ul>
       <button id="hamburgerButton" onClick={ Dropdown }>MENU</button>
