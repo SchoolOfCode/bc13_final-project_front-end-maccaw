@@ -45,13 +45,15 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
  
     
 }
-
+.title{
+  font-size: 6vmin;
+}
 .links{
     display: flex;
     justify-content: space-between;
     width: 80%;
     color: var(--darkColour);
-
+    font-size: 3vmin;
 }
 
 .button {
@@ -66,8 +68,8 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
     border-color: white;
     padding: 8px 18px;
     text-align: center; 
-    font-size: 2vmin; 
-    height: 45px;
+    font-size: 3vmin; 
+    height: 15%;
     width: 40%; 
     background-color: var(--highLightTwo);
     box-shadow:var(--highLightTwo) 0 10px 20px -10px;
@@ -86,10 +88,11 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
     margin-top: 0.6vmin;
     padding-left: 1vmin;
     border: 1px solid #e6e6e6;
+    font-size: 3vmin;
   }
 
   .label{
-    font-weight:lighter;
+    font-weight: 200;
     color: var(--lighterFontColor)
   }
 
