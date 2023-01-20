@@ -45,7 +45,7 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
   });
 });
 
-describe.only("logged in user flow", () => {
+describe("logged in user flow", () => {
   it("visit homepage, navigates to log-in, inputs details. and check if logs in", () => {
     // cy.session('login', ()=>{
     cy.visit("http://localhost:3000/", { timeout: 10000 });
@@ -69,6 +69,29 @@ describe.only("logged in user flow", () => {
     cy.get(".CropTable_crop-table-container__2n_9F").contains(
       "White Mushrooms"
     );
-    cy.get('[href="/"] > li').click({ timeout: 10000 });
+  });
+  it("Post page loads, displays relevant logged in user posts", () => {
+    cy.visit("http://localhost:3000/post", { timeout: 10000 });
+    cy.get(
+      ":nth-child(1) > .Posts_post-card-header__wDYS1 > .Posts_post-card-header-title__qZpUW"
+    ).should("contain", "Tomatoes");
+    cy.get(
+      ":nth-child(1) > .Posts_post-info__mXvMe > .Posts_location-crop-plot-banner__Jp6Iu > :nth-child(2)"
+    ).should("contain", "Crop: Tomatoes");
+  });
+  it("Clicks edit button and inputs & buttons render", () => {
+    cy.visit("http://localhost:3000/post", { timeout: 10000 });
+    cy.get(
+      ':nth-child(1) > .Posts_post-card-header__wDYS1 > .Posts_post-card-buttons__S8Dlz > [src="/icons/icons8-edit-26.png"]'
+    ).click();
+    cy.get('[src="icons/save.png"]').should("exist");
+    cy.get(
+      ":nth-child(1) > .Posts_post-info__mXvMe > .Posts_location-crop-plot-banner__Jp6Iu > .Posts_edit-crop-dropdown__h5E3_"
+    )
+      .select("Courgettes")
+      .invoke("val")
+      .should("eq", "7");
+    //logs user out to reset for next tests
+    cy.get('[href="/"] > li').click();
   });
 });
