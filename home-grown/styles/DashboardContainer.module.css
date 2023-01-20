@@ -1,6 +1,6 @@
 .main-container {
   box-sizing: border-box;
-  height: 100vh;
+  height: 120vh;
 
 }
 
@@ -9,7 +9,7 @@
   margin-left: 5.2%;
   margin-top: 2%;
   width: 35%;
-  height: 83.5%;
+  height: 80%;
   border: 3px #D0D5DD solid;
   border-radius: 5px;
   margin-right: 5%;
@@ -22,10 +22,10 @@
   margin-left: 0%;
   margin-top: 2%;
   width: 49.5%;
-  border: 3px #D0D5DD solid;
+  
   border-radius: 5px;
   float: left;
-  height: 290px;
+  height: 320px;
     
 }
 
@@ -33,11 +33,11 @@
   background-color: #fbfbf9;
   margin-left: 0%;
   width: 49.5%;
-  border: 3px #D0D5DD solid;
+  
   float: left;
-  height: 354px;
+  height: 410px;
   border-radius: 5px;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 
@@ -134,7 +134,6 @@ color: rgb(109, 109, 109);
   padding-top: 5%;
 }
 
-
 .profile-user-info {
   display: block;
   margin-top: 6%;
@@ -151,10 +150,10 @@ color: rgb(109, 109, 109);
 .plot-picture {
   display: flex;
   margin-top: 5%;
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 5%;
+  width: 90%;
   height: 45%;
-  border-radius: 3px;
+  border-radius: 10px;
 
 }
 
