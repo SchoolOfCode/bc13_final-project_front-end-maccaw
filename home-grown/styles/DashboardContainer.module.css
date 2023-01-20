@@ -1,6 +1,6 @@
 .main-container {
   box-sizing: border-box;
-  height: 100vh;
+  height: 120vh;
 
 }
 
@@ -8,7 +8,7 @@
   background-color: #fbfbf9;
   margin-left: 5.2%;
   margin-top: 2%;
-  width: 42%;
+  width: 35%;
   height: 80%;
   border: 3px #D0D5DD solid;
   border-radius: 5px;
@@ -19,23 +19,23 @@
 
 .right-container-top {
   background-color:#fbfbf9;
-  margin-left: 0.5%;
+  margin-left: 0%;
   margin-top: 2%;
-  width: 42%;
-  border: 3px #D0D5DD solid;
+  width: 49.5%;
+  
   border-radius: 5px;
   float: left;
-  height: 39%;
+  height: 320px;
     
 }
 
 .right-container-bottom {
   background-color: #fbfbf9;
-  margin-left: 0.5%;
-  width: 42%;
-  border: 3px #D0D5DD solid;
+  margin-left: 0%;
+  width: 49.5%;
+  
   float: left;
-  height: 35%;
+  height: 410px;
   border-radius: 5px;
   margin-top: 2%;
 }
@@ -73,11 +73,12 @@ color: rgb(109, 109, 109);
 }
 
 .title-buttons-container {
-  margin-left: 35%;
+  margin-left: 19%;
+
   
 }
 
-.title-mylistings-button {
+.title-myListings-button {
   background-color:white;
   border-radius: 15px;
   opacity: 0.8;
@@ -90,69 +91,97 @@ color: rgb(109, 109, 109);
 
 }
 
+.title-myMessages-button {
+  background-color: white;
+  border-radius: 15px;
+  opacity: 0.8;
+  border-style: 2px #D0D5DD solid;
+  width: 200px;
+  cursor: pointer;
+  font-family: var(--textFont);
+  font-size: 1.5rem;
+  padding: .35rem;
+  margin-left: 10px;
 
-.title-mylistings-button:hover{
+}
+
+
+.title-myListings-button:hover, .title-myMessages-button:hover{
   box-shadow: var(--highLightTwo) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
 
-/* user details */
+/* profile details */
 
 .profile-container {
-  display: flex;
+  background-color: #fbfbf9;
+  border: 3px #D0D5DD solid;
+  border-radius: 15px;
+  box-sizing: content-box;
   width: 80%;
-  height: 40%;
-  margin-top: 58%;
- 
+  height: 45%;
+  align-items: center;
+  margin-top: 4%;
+  margin-left: 10%;
+  font-family: var(--textFont);
  
 }
 
 .profile-user-name {
-  background-color: aqua;
+
   display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.profile-user-info {
+  display: block;
+  margin-top: 6%;
+  text-align: left;
+  line-height: 35px;
+  font-size: 20px;
+  margin-left: 5%;
+
  
 }
 
+/* plot image */
 
-.profile-user-info {
-  font-size: 1.2rem;
-  font-family: var(--textFont);
-  background-color: pink;
+.plot-picture {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  height: 45%;
+  border-radius: 10px;
+
 }
 
 
 /* pie chart */
 
 .plot-chart {
-  width: 40%;
-  height: 40%;
-  margin: 5%;
-  margin-top: 0;
-  margin-bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  background-color: #fbfbf9;
+  margin-top: 2%;
+  margin-left: 25%;
+  width: 50%;
+  height: 95%;
+ 
+
 }
 
 
 /* crop table */
 
-.crop-table-container {
-  background-color: pink;
-  
-}
+/* in a different file - CropTable.module.css */
 
 
-/* plot image */
 
 
-.plot-picture {
-  display: flex;
-  margin-top: 5%;;
-  margin-left: 10%;
-  width: 80%;
-  height: 45%;
-  border-radius: 3px;
-
-}
 
 
 

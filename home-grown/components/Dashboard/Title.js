@@ -1,7 +1,7 @@
 import styles from "../../styles/DashboardContainer.module.css";
+import Link from 'next/link';
 
 
-//  <button className={dashboardStyles["search-button"]}>Messages</button>
 
 
 
@@ -13,9 +13,15 @@ export const Title = ({ userData }) => {
       <h1 className={styles["title-user-name"]}> {userData.first_name}'s Dashboard </h1>
       
       <div className={styles["title-buttons-container"]}>
-
-      <button className={styles["title-mylistings-button"]}> My Listings</button>
        
+      <Link href="/post"> 
+      <button className={styles["title-myListings-button"]}> My Listings</button>
+      </Link>
+
+      <a href="https://gmail.com">
+      <button className={styles["title-myMessages-button"]}> My Messages</button>
+      </a>
+
     </div>
     </div>
     

@@ -1,23 +1,24 @@
+  @media only screen and (max-width: 2000px) {
+
 /* cards */
 
 
 .carousel {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-top: 70px;
-
-
+    height: 85%;
+    margin-top: 10%;
+   
+  
 }
 
 
 
 .card {
+    border: 10px #fbfbf9 solid;
+    border-radius: 20px;
+    background-color:white;
+    padding: 15px;
+    height: 450px;
 
-    height: 48vh;
-    border: 20px #fbfbf9 solid;
-    border-radius: 33px;
-    background-color :white;
-    padding: 30px;
 
 
 
@@ -26,8 +27,8 @@
 
 .description {
     font-family: var(--textFont);
-    margin-top: 40px;
-    font-size: 38.5px;
+    margin-top: 20px;
+    font-size: 22px;
     margin-left: 20px;
     display: flex;
     
@@ -35,13 +36,10 @@
    
 .top {
     background-color: var(--highLightOne);
-
-    margin-top: -15px;
+    height: 70px;
     border-radius: 25px;
-    width: 54.5vh;
-
+    width: 430px;
     display: flex;
-    height: 10vh;
     align-items: center;
 
 }
@@ -50,7 +48,7 @@
 background-color: white;
 display: flex;
 margin-top: 10px;
-height: 23vh;
+height: 300px;
 
 
 
@@ -60,50 +58,46 @@ height: 23vh;
 .username {
     font-family: var(--titleFont);
     text-align: center;
-    font-size: 45px;
-    background-color: var(--highLightOne);
+    font-size: 24px;
     color: white;
     font-weight: 600;
-    padding-left: 40px;
+    padding-left: 10px;
 }
 
 
 .profile-picture {
-    margin-top: 40px;
-    padding: 0px;
-    margin-left: 15px;
+    margin-top: 100px;
+    margin-right: 8px;
     width: 15vh;
     height: 15vh;
 }
 
 
 .crop-picture {
-    margin-top: 8px;
-    margin-left: 30px;
+   margin-left: 20px;
 
   
 }
 
 .bottom {
-    height: 8vh;
-    background-color: white;
+    height: 50px;
+   
 
 }
 
 .ratings {
-    margin-top: -40px;
-    margin-right: 40px;
-    font-size: 45px;
+    margin-top: -70px;
+    margin-right: 23px;
+    font-size: 25px;
     display: flex;
     justify-content: right;
-   
+}   
 }
-
 
 
 /* Ipad */
 
-@media only screen and (max-width: 920px),(max-height: 1370px) {
+@media only screen and (max-width: 1200px) {
 
 .card {
         height: 55vh;
@@ -146,8 +140,8 @@ height: 23vh;
 
 /* mobile */
 
-  @media only screen and (max-width: 440px),
-  (max-height: 900px) {
+  @media only screen and (max-width: 440px)
+  {
 
 .card {
         height: 110vh;
