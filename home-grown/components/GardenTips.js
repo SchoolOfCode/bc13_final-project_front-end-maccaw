@@ -14,10 +14,10 @@ function GardenTips() {
       setGardenTips(0);
     }
   }, []);
-  console.log(garden_tips[gardenTips].tip)
+  console.log(garden_tips[0].tip)
   return (
     <div>
-      <p>{garden_tips[gardenTips].tip}</p>
+      <p key={garden_tips[0].tip_id}>{garden_tips[0].tip}</p>
     </div>
   );
   
