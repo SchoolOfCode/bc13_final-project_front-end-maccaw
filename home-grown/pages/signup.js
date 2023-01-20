@@ -10,7 +10,7 @@ const animalIcons = {
   cow: "https://cdn-icons-png.flaticon.com/512/2523/2523618.png",
   sheep: "https://cdn-icons-png.flaticon.com/512/9308/9308986.png",
   fox: "https://cdn-icons-png.flaticon.com/512/4322/4322992.png",
-  goat: "https://cdn-icons-png.flaticon.com/512/6525/6525852.png"
+  goat: "https://cdn-icons-png.flaticon.com/512/6525/6525852.png",
 };
 
 export default function SignUp() {
@@ -21,8 +21,8 @@ export default function SignUp() {
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
-  const [iconLabel, setIconLabel] = useState("SELECT ICON")
-  
+  const [iconLabel, setIconLabel] = useState("SELECT ICON");
+
   const [signUpForm, setSignUpFrom] = useState({
     firebase_id: "",
     last_name: " ",
@@ -30,38 +30,36 @@ export default function SignUp() {
     email: "",
     username: "",
     profile_picture: "",
-    rating: 5
+    rating: 5,
   });
 
   const router = useRouter();
 
   //function that conditionally shows the drop-down icons
-  function dropDown(){
-    setShow(!show)
+  function dropDown() {
+    setShow(!show);
   }
 
   //function that sets the selected icon to be in the form (as the image url) and then unshows the drop down
-  function iconSelect(e){
+  function iconSelect(e) {
     setSignUpFrom({
       ...signUpForm,
       profile_picture: animalIcons[e.target.alt],
     });
-    setIconLabel(e.target.alt)
-    setShow(false)
+    setIconLabel(e.target.alt);
+    setShow(false);
   }
 
   //function that sets the form data (apart from the profile icon)
   function formData(e) {
-  
     setSignUpFrom({
       ...signUpForm,
       [e.target.name]: e.target.value,
     });
   }
 
-    //firebase registery of the user - submits the email and password to firbase
+  //firebase registery of the user - submits the email and password to firbase
   async function handleSubmit(e) {
-   
     e.preventDefault();
 
     if (passwordRef.current.value !== passwordConfirmRef.current.value) {
@@ -69,25 +67,31 @@ export default function SignUp() {
     }
 
     try {
-      console.log("HELLO")
+      console.log("HELLO");
       setErr("");
       setLoading(true);
-      const user = await signUp(emailRef.current.value, passwordRef.current.value);
-  
-      await fetch('https://homegrown-backend.onrender.com/api/homegrown/public/users', {
-        method: "POST",
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          ...signUpForm,
-          firebase_id: user.user.uid,
-        }),
-      })
+      const user = await signUp(
+        emailRef.current.value,
+        passwordRef.current.value
+      );
+
+      await fetch(
+        "https://homegrown-backend.onrender.com/api/homegrown/public/users",
+        {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({
+            ...signUpForm,
+            firebase_id: user.user.uid,
+          }),
+        }
+      )
         .then((response) => response.json())
         .then((response) => console.log(JSON.stringify(response)));
-  
+
       router.push("/dashboard");
     } catch {
       setErr("Failed to create an account");
@@ -103,7 +107,7 @@ export default function SignUp() {
           <div className={styles["form-container"]}>
             <div className={styles["name-container"]}>
               <div className={styles["first-name"]}>
-                <label className={styles["label"]}>Your First-Name:</label>
+                <label className={styles["label"]}>First Name:</label>
                 <input
                   onChange={formData}
                   name="first_name"
@@ -113,7 +117,7 @@ export default function SignUp() {
                 />
               </div>
               <div className={styles["last-name"]}>
-                <label className={styles["label"]}>Your Last-Name:</label>
+                <label className={styles["label"]}>Last Name:</label>
                 <input
                   onChange={formData}
                   name="last_name"
@@ -124,50 +128,51 @@ export default function SignUp() {
               </div>
             </div>
             <div className={styles["icon-username-container"]}>
-         
               <div className={styles["dropdown"]}>
-              <label className={styles["label"]}>Profile Icon:</label>
+                <label className={styles["label"]}>Profile Icon:</label>
                 <button onClick={dropDown} className={styles["dropbtn"]}>
-                {iconLabel.toUpperCase()}
+                  {iconLabel.toUpperCase()}
                 </button>
-                {show && <div id="myDropdown" className={styles["dropdown-content"]}>
-                  <img
-                  onClick={iconSelect}
-                    id="bunny"
-                    src="https://cdn-icons-png.flaticon.com/512/4775/4775505.png"
-                    alt="bunny"
-                  />
-                  <img
-                  onClick={iconSelect}
-                    id="duck"
-                    src="https://cdn-icons-png.flaticon.com/512/1326/1326405.png"
-                    alt="duck"
-                  />
-                  <img
-                  onClick={iconSelect}
-                    id="cow"
-                    src="https://cdn-icons-png.flaticon.com/512/2523/2523618.png"
-                    alt="cow"
-                  />
-                  <img
-                  onClick={iconSelect}
-                    id="sheep"
-                    src="https://cdn-icons-png.flaticon.com/512/7923/7923884.png"
-                    alt="sheep"
-                  />
-                  <img
-                  onClick={iconSelect}
-                    id="fox"
-                    src="https://cdn-icons-png.flaticon.com/512/4322/4322992.png"
-                    alt="fox"
-                  />
-                  <img
-                  onClick={iconSelect}
-                    id="goat"
-                    src="https://cdn-icons-png.flaticon.com/512/6525/6525852.png"
-                    alt="goat"
-                  />
-                </div> }
+                {show && (
+                  <div id="myDropdown" className={styles["dropdown-content"]}>
+                    <img
+                      onClick={iconSelect}
+                      id="bunny"
+                      src="https://cdn-icons-png.flaticon.com/512/4775/4775505.png"
+                      alt="bunny"
+                    />
+                    <img
+                      onClick={iconSelect}
+                      id="duck"
+                      src="https://cdn-icons-png.flaticon.com/512/1326/1326405.png"
+                      alt="duck"
+                    />
+                    <img
+                      onClick={iconSelect}
+                      id="cow"
+                      src="https://cdn-icons-png.flaticon.com/512/2523/2523618.png"
+                      alt="cow"
+                    />
+                    <img
+                      onClick={iconSelect}
+                      id="sheep"
+                      src="https://cdn-icons-png.flaticon.com/512/7923/7923884.png"
+                      alt="sheep"
+                    />
+                    <img
+                      onClick={iconSelect}
+                      id="fox"
+                      src="https://cdn-icons-png.flaticon.com/512/4322/4322992.png"
+                      alt="fox"
+                    />
+                    <img
+                      onClick={iconSelect}
+                      id="goat"
+                      src="https://cdn-icons-png.flaticon.com/512/6525/6525852.png"
+                      alt="goat"
+                    />
+                  </div>
+                )}
               </div>
               <div className={styles["user-name"]}>
                 <label className={styles["label"]}>User-Name:</label>
@@ -209,7 +214,12 @@ export default function SignUp() {
                 ref={passwordConfirmRef}
               />
             </div>
-            <button onClick={handleSubmit} className={styles.button} disabled={loading} type="submit">
+            <button
+              onClick={handleSubmit}
+              className={styles.button}
+              disabled={loading}
+              type="submit"
+            >
               Sign Up
             </button>
           </div>

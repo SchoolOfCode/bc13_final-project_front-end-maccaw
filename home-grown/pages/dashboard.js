@@ -9,6 +9,7 @@ import styles from "../styles/DashboardContainer.module.css";
 import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
 import plot from "../public/illustrations/plot.jpg";
 
+
 export default function Dashboard() {
   const [err, setErr] = useState("");
   const { currentUser, logout, isUserAuthenticated } = useAuth();
@@ -120,3 +121,31 @@ export default function Dashboard() {
 //  <Profile className={styles["profile-container"]} userData={userData}/>
 // <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
 //  <PlotChart userPosts={userPosts}/>
+
+       <div className={styles["left-container"]}>
+         {userData.plot_image ? <Image src={plot} className={styles["plot-picture"]} /> :
+         <Image src={userData["plot_image"]} className={styles["plot-picture"]} />
+         }
+         <Profile className={styles["profile-container"]} userData={userData}/>
+      </div>
+
+     
+
+      <div className={styles["right-container"]}>
+           <PlotChart userPosts={userPosts}/>
+           <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
+        </div>
+
+       <div className={styles["image"]}>
+      
+       </div>
+
+
+    </div>
+
+
+  
+        
+    );
+  }
+}
