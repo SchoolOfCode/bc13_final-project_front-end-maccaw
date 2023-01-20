@@ -1,0 +1,41 @@
+{
+  "name": "home-grown",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --watch",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test start http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test start http://localhost:3000 cypress:headless"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@next/font": "13.1.1",
+    "chart.js": "^4.1.2",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "firebase": "^9.15.0",
+    "fslightbox-react": "^1.6.2-2",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
+    "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "cypress": "^12.3.0",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

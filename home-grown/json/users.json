@@ -1,0 +1,102 @@
+[
+  {
+    "user_id": 1,
+    "firebase_id": "eaokLEjhvlfydbhEBhfmIrJSly12",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/4775/4775505.png",
+    "first_name": "Chetan",
+    "last_name": "Jogia",
+    "email": "Chetan@Jogia.com",
+    "username": "CJogia298",
+    "rating": 3
+  },
+  {
+    "user_id": 2,
+    "firebase_id": "cHkL8LufB6ef9Xk95DCQ2s3GjMv2",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/1326/1326405.png",
+    "first_name": "Marwa",
+    "last_name": "Dawood",
+    "email": "Marwa@Dawood.com",
+    "username": "MDawood28",
+    "rating": 4
+  },
+  {
+    "user_id": 3,
+    "firebase_id": "IJKLMNOPQRSTUVWXYZabcde",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/2523/2523618.png",
+    "first_name": "Will",
+    "last_name": "Byrne",
+    "email": "Will@Byrne.com",
+    "username": "WByrne2",
+    "rating": 5
+  },
+  {
+    "user_id": 4,
+    "firebase_id": "fghijklmnopqrstuvwxyz01",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/9308/9308986.png",
+    "first_name": "Alex",
+    "last_name": "Chappell",
+    "email": "Alex@Chappell.com",
+    "username": "AChappell115",
+    "rating": 4
+  },
+  {
+    "user_id": 5,
+    "firebase_id": "23456789ABCDEFGHIJKLMNO",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/4322/4322992.png",
+    "first_name": "Amina",
+    "last_name": "Edmunds",
+    "email": "Amina@Edmunds.com",
+    "username": "AEdmunds299",
+    "rating": 4
+  },
+  {
+    "user_id": 6,
+    "firebase_id": "PQRSTUVWXYZabcdefghijkl",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/9308/9308985.png",
+    "first_name": "Julio",
+    "last_name": "Camargo",
+    "email": "Julio@Camargo.com",
+    "username": "JCarmago227",
+    "rating": 5
+  },
+  {
+    "user_id": "7",
+    "firebase_id": "mnopqrstuvwxyz0123456789",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/714/714029.png",
+    "first_name": "John",
+    "last_name": "Smit",
+    "email": "John@Smit.com",
+    "username": "JSmit2",
+    "rating": "2"
+  },
+  {
+    "user_id": 8,
+    "firebase_id": "ABCDEFGHIJKLMNOPQRSTUVW",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/9308/9308963.png",
+    "first_name": "Alice",
+    "last_name": "Underhill",
+    "email": "Alice@Underhill.com",
+    "username": "AUnderhill269",
+    "rating": 3
+  },
+  {
+    "user_id": 9,
+    "firebase_id": "XYZabcdefghijklmnopqrst",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/9308/9308978.png",
+    "first_name": "Sean",
+    "last_name": "Lane",
+    "email": "Sean@Lane.com",
+    "username": "SLane76",
+    "rating": 4
+  },
+  {
+    "user_id": 10,
+    "firebase_id": "uvwxyz0123456789ABCDEFG",
+    "profile_picture": "https://cdn-icons-png.flaticon.com/512/8425/8425559.png",
+    "first_name": "Ruby",
+    "last_name": "Blossom",
+    "email": "Ruby@Blossom.com",
+    "username": "RBlossom46",
+    "rating": 3
+  }
+]

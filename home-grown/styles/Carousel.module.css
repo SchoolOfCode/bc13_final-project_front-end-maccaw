@@ -1,0 +1,197 @@
+  @media only screen and (max-width: 2000px) {
+
+/* cards */
+
+
+.carousel {
+    height: 85%;
+    margin-top: 10%;
+   
+  
+}
+
+
+
+.card {
+    border: 10px #fbfbf9 solid;
+    border-radius: 20px;
+    background-color:white;
+    padding: 15px;
+    height: 450px;
+
+
+
+
+
+}
+
+.description {
+    font-family: var(--textFont);
+    margin-top: 20px;
+    font-size: 22px;
+    margin-left: 20px;
+    display: flex;
+    
+}
+   
+.top {
+    background-color: var(--highLightOne);
+    height: 70px;
+    border-radius: 25px;
+    width: 430px;
+    display: flex;
+    align-items: center;
+
+}
+
+.middle {
+background-color: white;
+display: flex;
+margin-top: 10px;
+height: 300px;
+
+
+
+}
+
+
+.username {
+    font-family: var(--titleFont);
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+
+.profile-picture {
+    margin-top: 100px;
+    margin-right: 8px;
+    width: 15vh;
+    height: 15vh;
+}
+
+
+.crop-picture {
+   margin-left: 20px;
+
+  
+}
+
+.bottom {
+    height: 50px;
+   
+
+}
+
+.ratings {
+    margin-top: -70px;
+    margin-right: 23px;
+    font-size: 25px;
+    display: flex;
+    justify-content: right;
+}   
+}
+
+
+/* Ipad */
+
+@media only screen and (max-width: 1200px) {
+
+.card {
+        height: 55vh;
+        border: 15px #fbfbf9 solid;
+        padding: 30px;
+      }
+
+.top {
+
+    width: 52.5vh;
+    height: 11vh;
+    padding: 7px;
+
+}
+
+.username {
+    font-size: 33px;
+    padding-left: 2vh;
+}
+
+.description {
+    font-size: 28px;
+}
+
+.profile-picture {
+   height: 105h;
+    width: 15vh;
+                 }
+
+.ratings {
+    margin-top: -2.5vh;
+    font-size: 3.5vh;
+    margin-right: 0.5vh;
+}
+
+
+
+
+}
+
+/* mobile */
+
+  @media only screen and (max-width: 440px)
+  {
+
+.card {
+        height: 110vh;
+        border: 10px var(--highLightOne) solid;
+        border-radius: 30px;
+        background-color: white;
+        padding: 10px;
+
+
+    }
+
+.top {
+
+    margin-top: 15px;
+    width: 107.5vh;
+    height: 20vh;
+    padding: 10px;
+
+}
+.username {
+    font-size: 48.5px;
+    padding-left: 3.2vh;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 50px;
+         }
+
+
+.crop-picture {
+   margin-top: -5px;
+   height: 18vh;
+   width: 18vh;
+
+}
+
+.profile-picture {
+    padding: 0px;
+    margin-top: 5vh;
+    height: 30vh;
+    width: 30vh;
+   
+}
+
+.ratings {
+    margin-top: 18vh;
+    font-size: 6vh;
+    margin-right: 4vh;
+}
+
+  }
+

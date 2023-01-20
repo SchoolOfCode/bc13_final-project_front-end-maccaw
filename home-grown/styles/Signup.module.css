@@ -1,0 +1,205 @@
+.log-in-container{
+    vertical-align: bottom;
+      display: flex;
+      overflow: hidden;
+      height:calc(100vh - 9vh);
+      max-height: 100vh;
+      background-image: url('../public/illustrations/desktop-wallpaper.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--textFont);
+  }
+
+
+  
+  .glass-container{
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.66);
+  border-radius: 16px;
+  backdrop-filter: blur(6.3px);
+      width: 40%;
+      height: 90%;
+  }
+  
+  .log-in-card{
+  background-color: white;
+  width: 85%;
+  height: 85%;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  }
+  
+  .form-container, .log-in-card, .glass-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+  }
+  
+  .form-container{
+      width: 80%;
+      height: 70%;
+      gap: 2vmin;
+   
+      
+  }
+  
+  .links{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      color: var(--darkColour);
+  
+  }
+  
+  .button {
+      border-radius: 999px;
+      margin-top: 20px;
+      box-sizing: border-box;
+      font-family: var(--textFont);
+      color: #FFFFFF;
+      cursor: pointer;
+      opacity: 1;
+      border: 2px solid;
+      border-color: white;
+      padding: 8px 18px;
+      text-align: center; 
+      font-size: 3vmin; 
+      height: 15%;
+      width: 40%; 
+      background-color: var(--highLightTwo);
+      box-shadow:var(--highLightTwo) 0 10px 20px -10px;
+  
+    }
+  
+    .form-email-input, .form-password-input{
+      display:flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .icon-container{
+        display:flex;
+      flex-direction: column;
+      width: 48%;
+    }
+
+   .name-container, .icon-username-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+   }
+
+    .user-name, .first-name, .last-name, .dropdown{
+        display:flex;
+        flex-direction: column;
+        width: 48%;
+    }
+
+  
+    .input{
+      border-radius: 5px;
+      height: 5vmin;
+      margin-top: 0.6vmin;
+      padding-left: 1vmin;
+      border: 1px solid #e6e6e6;
+      font-size: 2vmin;
+    }
+  
+    .label{
+      font-weight: 200;
+      color: var(--lighterFontColor);
+      /* margin-bottom: 5%; */
+    }
+
+    /* Dropdown Button */
+.dropbtn {
+    border-radius: 5px;
+      height: 5vmin;
+      margin-top: 0.6vmin;
+      padding-left: 1vmin;
+      border: 1px solid #e6e6e6;
+      width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 2vmin;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    color: white;
+    background-color:var(--highLightTwo);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    border-radius: 5%;
+
+    background-color: var(--mainWhite);
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content img {
+    height: 100%;
+    padding: 5px;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content img:hover {
+    background-color: #ddd;
+}
+  
+
+  
+    /* media query for  ipad (small screen size) */
+  
+    @media screen and (max-width: 820px) {
+      .glass-container{
+         
+              width: 70%;
+              height: 90%;
+          }
+          .log-in-container{
+              background-image: url('../public/illustrations/phone-wallpaper.png');
+          }
+               
+    }
+
+     /* media query for small ipad (small screen size) */
+  
+     @media screen and (max-width: 375px) {
+      .glass-container{
+         
+              width: 90%;
+              max-height: 70%;
+
+          }
+          .label, .input, .dropbtn{
+            font-size: 14px;
+          }
+
+          .input, .dropbtn{
+            height: 7vmin;
+          }
+          .log-in-container{
+              background-image: url('../public/illustrations/phone-wallpaper.png');
+          }
+               
+    }

@@ -1,0 +1,150 @@
+.form-container, .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.header-container{
+  height: 12%;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ border-bottom: 1px solid #aaa;
+ padding: 10px;
+}
+
+.input, .input-textarea{
+  border-radius: 5px;
+  padding-left: 1vmin;
+  border: 1px solid #e6e6e6;
+}
+
+.input:focus, .input-textarea:focus {
+  outline: none;
+}
+
+
+.close-icon{
+  height: 100%;
+}
+.input{
+  height: 5vmin;
+}
+
+.input-textarea{
+  height: 15vmin;
+}
+
+.label{
+  font-weight:200;
+  color: var(--lighterFontColor)
+}
+
+
+.pop-up {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0, 0.5) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  min-width: 30%;
+ height: 60%;
+ 
+}
+
+.pop-up-image{
+  height: 80%;
+  width: auto;
+
+}
+
+.button {
+  align-self: center;
+  border-radius: 999px;
+  box-sizing: border-box;
+  font-family: var(--textFont);
+  color: #FFFFFF;
+  cursor: pointer;
+  opacity: 1;
+  border: 2px solid;
+  border-color: white;
+  padding: 8px 18px;
+  text-align: center; 
+  font-size: 2vmin; 
+  height: 45px;
+  width: 40%; 
+  background-color: var(--highLightTwo);
+
+}
+
+.pop-up-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.one-card{
+  background-color: #ffff;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 0.5px;
+  box-sizing: border-box;
+  border-color: rgba(31, 24, 17, 0.282);
+  cursor: pointer;
+  font-family: var(--textFont);
+  font-size: 1rem;
+  padding: .35rem;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+}
+.pop-up-icon{
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .pop-up{
+    width: 60%;
+    height: 70%;
+
+  }
+ 
+}
+
+@media screen and (max-width: 820px) {
+  .pop-up{
+    height: 60%;
+    width: 70%;
+  
+  }
+ 
+}
+
+@media screen and (max-width: 375px) {
+  .pop-up{
+    width: 70%;
+    height: 50%;
+  }
+ 
+}
+
