@@ -1,7 +1,7 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import dashboardStyles from "../../styles/DashboardContainer.module.css";
+import styles from "../../styles/DashboardContainer.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -22,16 +22,17 @@ export default function PlotChart({ userPosts }) {
           label: "Percentage of Plot",
           data: dataArray,
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(75, 192, 192, 0.2)",
+            "rgba(234, 246, 237, 1)",
+            "rgba(201, 234, 212, 1)",
+            "rgba(169, 222, 186, 1)",
+            "rgba(103, 197, 135, 1)",
+        
           ],
           borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
+            "rgba(234, 246, 237, 1)",
+            "rgba(201, 234, 212, 1)",
+            "rgba(169, 222, 186, 1)",
+            "rgba(103, 197, 135, 1)",
           ],
           borderWidth: 1,
         },
@@ -39,8 +40,8 @@ export default function PlotChart({ userPosts }) {
     };
 
     return (
-      <div className={dashboardStyles.pieChart}>
-        <Pie data={data} />;
+      <div className={styles["plot-chart"]}>
+        <Pie data={data} />
       </div>
     );
   }

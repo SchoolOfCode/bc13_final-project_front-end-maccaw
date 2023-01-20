@@ -1,18 +1,35 @@
-.crop-table{
-    width:40%;
-    background-color: 	hsl(19 99% 42% / 10%);
-    border-radius: 10px;
+.crop-table-container{
+
+   background-color:  #D0D5DD;
+   
+
+  width: 100%; 
+
 }
 
 .crop-card{
-    display:flex;
-    margin: 1rem;
-    background-color: var(--mainWhite);
+    font-family: var(--textFont);
+    margin-top: 2%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(211, 64, 1, 0.1); 
+    color:black;
     border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    
+    
+   
+
+    
 }   
+/*var(--mainWhite)*/
 
 .crop-name>img{
     height:40%;
+    
 }
 
 .crop-name , .crop-season, .crop-harvest-time, .crop-difficulty{
@@ -21,7 +38,8 @@
     align-items: center;
     justify-content: center;
     width:25%;
-    height: 6rem;
+    height: 5.1rem;
+   
 }
 
 .crop-name>p{

@@ -6,9 +6,11 @@ function CropTableContainer({userPosts}) {
    
    
    if(userPosts){
-    return (  <div className={styles["crop-table"]}>
+    return ( 
+         <div className={styles["crop-table-container"]}>
         {userPosts.map((element)=><CropTableCard cropName={element.crop_name} cropSeason = {element.crop_season} cropHarvestTime = {element.crop_harvest_time} cropImage={element.crop_image} cropType = {element.crop_type} cropDifficulty={element.crop_difficulty}/>)}
-    </div>);
+         </div>);
+         
    }
    else{
     return(<h1>...Loading</h1>)
