@@ -11,6 +11,7 @@ import plot from "../public/illustrations/plot.jpg"
 
 
 
+
 export default function Dashboard() {
   const [err, setErr] = useState("");
   const { currentUser, logout, isUserAuthenticated } = useAuth();
@@ -108,23 +109,22 @@ export default function Dashboard() {
      
 
       <div className={styles["right-container"]}>
-        <div className={styles["right-container-top"]}>
            <PlotChart userPosts={userPosts}/>
-        </div>
-
-        <div className={styles["right-container-bottom"]}>
            <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
         </div>
 
+       <div className={styles["image"]}>
+      
+       </div>
+
 
     </div>
 
 
-    </div>
+  
         
     );
   }
 }
-//  <Profile className={styles["profile-container"]} userData={userData}/>
-// <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
-//  <PlotChart userPosts={userPosts}/>
+
+

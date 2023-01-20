@@ -1,113 +1,127 @@
 .main-container {
   box-sizing: border-box;
-  height: 120vh;
-
+  height: 100vh;
+  background-image: url('/illustrations/dashboard-image.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
 }
+
+
+.left-container,
+.right-container {
+  position: relative;
+  z-index: 1;
+}
+
+
 
 .left-container {
-  background-color: #fbfbf9;
-  margin-left: 5.2%;
-  margin-top: 2%;
+  float: left;
+  margin-left: 7.5%;
+  align-items: center;
   width: 35%;
-  height: 80%;
-  border: 3px #D0D5DD solid;
-  border-radius: 5px;
-  margin-right: 5%;
-  float: left;
-}
-
-
-.right-container-top {
-  background-color:#fbfbf9;
-  margin-left: 0%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
   margin-top: 2%;
-  width: 49.5%;
-  
-  border-radius: 5px;
-  float: left;
-  height: 320px;
-    
+  margin-right: 2.5%;
 }
 
-.right-container-bottom {
-  background-color: #fbfbf9;
-  margin-left: 0%;
-  width: 49.5%;
-  
-  float: left;
-  height: 410px;
-  border-radius: 5px;
+
+.right-container {
+  display: grid;
+  grid-template-columns: max-content(2, 1fr);
+  align-items: center;
+  width: 47.5%;
+  height: 50%;
   margin-top: 2%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: #fff;
+  padding: 20px;
+
+
+
 }
-
-
 
 /* title details */
 
-.title-container{
-  background-color: #fbfbf9;
-  border: 5px #D0D5DD solid;
-  border-radius: 15px;
+.title-container {
   display: flex;
-  margin: auto;
-  width: 90%;
-  height: 13%;
   align-items: center;
-  margin-top: 4%;
-  
+  padding: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 3%;
+  width: 85%;
+  height: 10%;
+  border-radius: 20px;
+
 }
 
 .title-user-img {
-width: 5.5%;
-margin-left: 4.5%;
+  width: 4.5%;
+
 
 }
 
 
 .title-user-name {
-font-family: var(--textFont);
-font-size: 35px;
-margin-left: 3%;
-color: rgb(109, 109, 109);
-  
+  font-family: var(--titleFont);
+  font-size: 25px;
+  margin-left: 3%;
+  color: black;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+
+
+
 }
 
 .title-buttons-container {
-  margin-left: 19%;
+  margin-left: 42%;
 
-  
 }
 
+
 .title-myListings-button {
-  background-color:white;
-  border-radius: 15px;
+  background-color: var(--highLightOne);
+  border-radius: 150px;
   opacity: 0.8;
-  border-style: 2px #D0D5DD solid;
-  width: 200px;
+  border: 2px white solid;
+  width: 160px;
   cursor: pointer;
-  font-family: var(--textFont);
-  font-size: 1.5rem;
+  font-family: var(--titleFont);
+  font-size: 1.3rem;
   padding: .35rem;
+  color: white;
+
+
 
 }
 
 .title-myMessages-button {
-  background-color: white;
-  border-radius: 15px;
+  background-color: var(--highLightTwo);
+  border-radius: 150px;
   opacity: 0.8;
-  border-style: 2px #D0D5DD solid;
-  width: 200px;
+  border: 2px white solid;
+  width: 160px;
   cursor: pointer;
   font-family: var(--textFont);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: .35rem;
   margin-left: 10px;
+  color: white;
 
 }
 
 
-.title-myListings-button:hover, .title-myMessages-button:hover{
-  box-shadow: var(--highLightTwo) 2px 8px 8px -5px;
+.title-myListings-button:hover,
+.title-myMessages-button:hover {
   transform: translate3d(0, 2px, 0);
 }
 
@@ -115,25 +129,21 @@ color: rgb(109, 109, 109);
 /* profile details */
 
 .profile-container {
-  background-color: #fbfbf9;
-  border: 3px #D0D5DD solid;
-  border-radius: 15px;
-  box-sizing: content-box;
-  width: 80%;
-  height: 45%;
-  align-items: center;
-  margin-top: 4%;
-  margin-left: 10%;
-  font-family: var(--textFont);
- 
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+
 }
 
 .profile-user-name {
-
   display: flex;
   justify-content: center;
   padding-top: 5%;
 }
+
+
 
 .profile-user-info {
   display: block;
@@ -143,7 +153,7 @@ color: rgb(109, 109, 109);
   font-size: 20px;
   margin-left: 5%;
 
- 
+
 }
 
 /* plot image */
@@ -162,15 +172,14 @@ color: rgb(109, 109, 109);
 /* pie chart */
 
 .plot-chart {
-
   display: flex;
-  justify-content: center;
-  background-color: #fbfbf9;
-  margin-top: 2%;
-  margin-left: 25%;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: 5%;
   width: 50%;
-  height: 95%;
- 
+  height: 90%;
+  margin-left: 50%;
 
 }
 
@@ -181,309 +190,280 @@ color: rgb(109, 109, 109);
 
 
 
-
-
-
-
-
- @media screen and (max-width: 1024px) {
-  .title-user-img{
+@media screen and (max-width: 1024px) {
+  .imageProfile {
     width: 30%;
     height: auto;
-    float : right;
+    float: right;
     margin-left: 2rem;
   }
-  .profile-container{
-    
-    float : right;
+
+  .profile {
+
+    float: right;
   }
-  .profile-user-info{
+
+  .h2UserDetails {
     margin-top: 2rem;
     font-size: 1.5rem;
   }
 
-  .profile-user-info{
+  .h4UserInfo {
     font-size: 1.2rem;
   }
-  .container{
+
+  .container {
     margin-top: 2%;
     width: 85%;
     height: 70px;
   }
 
-  .h1element{
+  .h1element {
     font-size: 2em;
   }
-  .search-button{
+
+  .search-button {
     line-height: 11px;
   }
-  .logo{
+
+  .logo {
     width: 0;
   }
-  .pieChart{
+
+  .pieChart {
     width: 17rem;
     height: 17rem;
     margin-top: 0;
     margin-left: 4.5rem;
     margin-bottom: 5rem;
-  } 
-   
- } 
- /* ////////////////// */
+  }
+
+}
+
+/* ////////////////// */
 /* Breakpoint @ 768px */
-@media screen and (max-width: 768px){
-  .container{
+@media screen and (max-width: 768px) {
+  .container {
     margin-top: 4%;
     width: 95%;
     height: 70px;
     flex-direction: row;
   }
-  .h1element{
+
+  .h1element {
     font-size: 2rem;
     margin: auto;
     line-height: 40px;
   }
-  .imageProfile{
+
+  .imageProfile {
     /* margin: auto;
     margin-top: 2rem; */
     width: 5rem;
     height: 5rem;
     margin-top: 2rem;
   }
+
   .carouselContainer {
     width: 46%;
     margin: auto;
     margin-top: 2rem;
   }
-  .userPlotImage{
+
+  .userPlotImage {
     width: 100%;
     height: 100%;
-    
+
   }
-  .h4UserInfo{
+
+  .h4UserInfo {
     font-size: 1rem;
     width: 200px;
   }
-  .imageProfile{
+
+  .imageProfile {
     /* margin: auto;
     margin-top: 2rem; */
     width: 3.5rem;
     height: 3.5rem;
     margin-top: -2rem;
   }
+
   .pieChart {
     width: 40%;
     height: 40%;
     margin-top: 3rem;
     margin-bottom: 2rem;
-  }  
+  }
 
 }
+
 /* /////////////////// */
 /* Breakpoint @ 425px */
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 425px) {
 
-  .container{
+  .container {
     margin-top: 12%;
     width: 90%;
     height: 50px;
     flex-direction: column;
-   
+
   }
-  .h1element{
+
+  .h1element {
     font-size: 2.1em;
     margin: auto;
     line-height: 40px;
   }
 
-  .buttonsContainer{  
+  .buttonsContainer {
     margin: auto;
     margin-top: 1.5rem;
   }
+
   .carouselContainer {
     width: 90%;
     height: 30%;
     margin-top: 23%;
   }
-  .userPlotImage{
+
+  .userPlotImage {
     width: 100%;
     height: 100%;
-    
+
   }
-  
-  .mainContainer{
+
+  .mainContainer {
     flex-direction: column;
   }
-  .profileContainer{
+
+  .profileContainer {
     display: flex;
     margin-bottom: 2rem;
     line-height: 1px;
     justify-content: space-between;
   }
-  .profile{
+
+  .profile {
     min-width: 70%;
     height: 100%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
+
   }
-  .profileInformation{
+
+  .profileInformation {
     margin-top: 2rem;
   }
-  .h2UserDetails{
+
+  .h2UserDetails {
     font-size: 1.5rem;
-   
+
   }
-  .h4UserInfo{
+
+  .h4UserInfo {
     font-size: 1rem;
   }
-  .imageProfile{
+
+  .imageProfile {
     /* margin: auto;
     margin-top: 2rem; */
     width: 4rem;
     height: 4rem;
     margin-top: 0;
   }
+
   .pieChart {
     width: 80%;
     height: 80%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }  
-}  
+  }
+}
 
 
 
 
 /* //////////////////// */
-/* Breakpoint @ 390px */
-@media screen and (max-width: 390px) {
+/* Breakpoint @ 375px */
+@media screen and (max-width: 375px) {
 
-  .main-container {
-    justify-items: center;
-   flex-direction: column;
-
+  .container {
+    margin-top: 12%;
+    width: 83%;
+    height: 50px;
+    flex-direction: column;
   }
 
-  .title-container{
-    border-radius: 15px;
+  .h1element {
+    font-size: 2em;
+    margin-top: 2%;
+    ;
+  }
+
+  .carouselContainer {
     width: 90%;
-    height: 13%;
-    align-items: center;
-    margin-top: 4%;
-
+    height: 30%;
+    margin-top: 28%;
   }
 
-  .title-mylistings-button {
-    opacity: 0.8;
-    cursor: pointer;
-    font-family: var(--textFont);
-    font-size: 1.5rem;
-  }
-
-  .left-container {
-    margin-top: 2%;
-    margin-left: 18%;
-    border: 3px #D0D5DD solid;
-    border-radius: 5px;
-    max-height: 20%;
+  .userPlotImage {
     width: 100%;
-    flex-direction: column;
-
-    
-  }
-  
-  .right-container-top {
-    margin-top: 2%;
-    border-radius: 5px;
-    width: 100%;
-    margin-left: 18%;
-    flex-direction: column;
-
-
-  }
-  
-  .right-container-bottom {
-    border-radius: 5px;
-    margin-top: 2%;
-    width: 100%;
-    margin-left: 18%;
-
-  }
-  
-  .title-container{
-    margin-top: 2%;
-    border-width: 3px;
-    margin-left: 18%;
-    width: 100%;
+    height: 100%;
   }
 
-  .title-user-img{
-    width: 20%;
-    margin-left: 5%;
-
-  }
-
-  .title-user-name{
-    width: 100%;
-    height: 25%;
-    font-size: 1em;
-  }
-
-  .title-buttons-container{  
+  .buttonsContainer {
     margin: auto;
     margin-top: 2rem;
-    width: 5%;
-    height: 5%;
-    background-color: green;
-    justify-content: center;
   }
 
-  .title-mylistings-button {
-    border-radius: 15px;
-    opacity: 0.8;
-    width: 80px;
-    cursor: pointer;
-    font-family: var(--textFont);
-    font-size: 1.5rem;
-    background-color: blue;
-    justify-items: center;
-
-  
+  .mainContainer {
+    flex-direction: column;
   }
- 
-  .profile-container{
+
+  .profileContainer {
     display: flex;
-    margin-top: 0%;
-    background-color: green;
+    margin-bottom: 2rem;
+    line-height: 1px;
   }
 
-  .profile{
+  .profile {
     min-width: 72%;
     height: 100%;
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background-color: ;
   }
 
-  
-
-
-  .plot-picture{
+  .profileInformation {
     margin-top: 2rem;
-    width: 10rem;
+  }
+
+  .h2UserDetails {
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-top: 4rem;
+  }
+
+  .h4UserInfo {
+    font-size: 1rem;
+  }
+
+  .imageProfile {
+    margin: auto;
+    margin-top: 2rem;
+    width: 4rem;
     height: 4rem;
   }
 
-  .plot-chart {
+  .pieChart {
     width: 100%;
     height: 100%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  
-} 
 
+}
