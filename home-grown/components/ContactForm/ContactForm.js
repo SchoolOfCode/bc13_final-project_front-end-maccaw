@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 function ContactForm({ user_email, handleClose }) {
   const form = useRef();
   const [success, setSuccess] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -55,6 +54,7 @@ function ContactForm({ user_email, handleClose }) {
         <textarea className={styles["input-textarea"]}  type="text" name="message" />
         <button  className={styles.button}type="submit">Submit</button>
       </form>
+   
       <p hidden={!success}>Email Successfully Sent</p>
     </div>
   );

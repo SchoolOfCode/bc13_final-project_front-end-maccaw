@@ -4,7 +4,11 @@ import {useState, useEffect} from 'react'
 import styles from '../styles/ListingContainer.module.css'
 
 function Listings() {
+
+
+  
   useEffect(() => {
+    console.log("use effect")
     getPostData();
   },[]);
 
@@ -13,12 +17,13 @@ function Listings() {
   const [posts, setPosts] = useState(null);
 
   async function getPostData() {
+    console.log("The post Data");
     const response = await fetch(
       "https://homegrown-backend.onrender.com/api/homegrown/public/posts"
     );
     const data = await response.json();
     setPosts(data.payload);
-    console.log(data);
+   
   }
 
 
