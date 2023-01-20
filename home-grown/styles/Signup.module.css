@@ -68,7 +68,7 @@
       border-color: white;
       padding: 8px 18px;
       text-align: center; 
-      font-size: 2vmin; 
+      font-size: 3vmin; 
       height: 45px;
       width: 40%; 
       background-color: var(--highLightTwo);
@@ -107,11 +107,13 @@
       margin-top: 0.6vmin;
       padding-left: 1vmin;
       border: 1px solid #e6e6e6;
+      font-size: 3vmin;
     }
   
     .label{
       font-weight:lighter;
-      color: var(--lighterFontColor)
+      color: var(--lighterFontColor);
+      /* margin-bottom: 5%; */
     }
 
     /* Dropdown Button */
@@ -124,6 +126,7 @@
       width: 100%;
     border: none;
     cursor: pointer;
+    font-size: 3vmin;
   }
   
   /* Dropdown button on hover & focus */
@@ -179,7 +182,7 @@
       .glass-container{
          
               min-width: 80%;
-              height: 60%;
+              height: 65%;
           }
           .log-in-container{
               background-image: url('../public/illustrations/phone-wallpaper.png');
