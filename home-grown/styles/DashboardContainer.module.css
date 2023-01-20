@@ -359,7 +359,7 @@ color: rgb(109, 109, 109);
 
 /* //////////////////// */
 /* Breakpoint @ 390px */
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
 
   .main-container {
     justify-items: center;
@@ -370,8 +370,9 @@ color: rgb(109, 109, 109);
   .title-container{
     border-radius: 15px;
     width: 90%;
-    height: 13%;
+    height: 100px;
     align-items: center;
+    margin: auto;
     margin-top: 4%;
 
   }
@@ -384,11 +385,11 @@ color: rgb(109, 109, 109);
   }
 
   .left-container {
-    margin-top: 2%;
-    margin-left: 18%;
+    margin-top: 30%;
+    
     border: 3px #D0D5DD solid;
     border-radius: 5px;
-    max-height: 20%;
+   
     width: 100%;
     flex-direction: column;
 
@@ -396,10 +397,10 @@ color: rgb(109, 109, 109);
   }
   
   .right-container-top {
-    margin-top: 2%;
+    margin-top: 22%;
     border-radius: 5px;
     width: 100%;
-    margin-left: 18%;
+    
     flex-direction: column;
 
 
@@ -407,10 +408,9 @@ color: rgb(109, 109, 109);
   
   .right-container-bottom {
     border-radius: 5px;
-    margin-top: 2%;
+    margin-top: 14%;
     width: 100%;
-    margin-left: 18%;
-
+    margin-bottom: 10rem;
   }
   
   .title-container{
@@ -435,10 +435,9 @@ color: rgb(109, 109, 109);
   .title-buttons-container{  
     margin: auto;
     margin-top: 2rem;
-    width: 5%;
-    height: 5%;
-    background-color: green;
-    justify-content: center;
+    /* width: 5%;
+    height: 5%; */
+    display: none;
   }
 
   .title-mylistings-button {
@@ -450,6 +449,7 @@ color: rgb(109, 109, 109);
     font-size: 1.5rem;
     background-color: blue;
     justify-items: center;
+    display: none;
 
   
   }
@@ -457,7 +457,10 @@ color: rgb(109, 109, 109);
   .profile-container{
     display: flex;
     margin-top: 0%;
-    background-color: green;
+    flex-direction: column;
+    /* background-color: green; */
+    width: 100%;
+    height: auto;
   }
 
   .profile{
@@ -473,8 +476,7 @@ color: rgb(109, 109, 109);
 
   .plot-picture{
     margin-top: 2rem;
-    width: 10rem;
-    height: 4rem;
+    
   }
 
   .plot-chart {
@@ -483,6 +485,14 @@ color: rgb(109, 109, 109);
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .crop-table-container{
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    
   }
   
 } 
