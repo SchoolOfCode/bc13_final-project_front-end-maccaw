@@ -363,7 +363,8 @@ color: rgb(109, 109, 109);
 
   .main-container {
     justify-items: center;
-   flex-direction: column;
+    flex-direction: column;
+    margin: auto;
 
   }
 
@@ -385,14 +386,15 @@ color: rgb(109, 109, 109);
   }
 
   .left-container {
-    margin-top: 30%;
     
-    border: 3px #D0D5DD solid;
+    
+    border:none;
     border-radius: 5px;
    
     width: 100%;
     flex-direction: column;
-
+    margin:auto;
+    margin-top: 3rem;
     
   }
   
@@ -410,19 +412,20 @@ color: rgb(109, 109, 109);
     border-radius: 5px;
     margin-top: 14%;
     width: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
   
   .title-container{
-    margin-top: 2%;
     border-width: 3px;
-    margin-left: 18%;
     width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-left: .6rem;
   }
 
   .title-user-img{
-    width: 20%;
-    margin-left: 5%;
+    width: 15%;
+    margin-left: 15%;
 
   }
 
@@ -430,6 +433,7 @@ color: rgb(109, 109, 109);
     width: 100%;
     height: 25%;
     font-size: 1em;
+    margin-left: 2rem;
   }
 
   .title-buttons-container{  
@@ -450,8 +454,6 @@ color: rgb(109, 109, 109);
     background-color: blue;
     justify-items: center;
     display: none;
-
-  
   }
  
   .profile-container{
@@ -461,19 +463,16 @@ color: rgb(109, 109, 109);
     /* background-color: green; */
     width: 100%;
     height: auto;
+    border:none;
   }
+ 
 
   .profile{
     min-width: 72%;
     height: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background-color: ;
   }
-
-  
-
-
   .plot-picture{
     margin-top: 2rem;
     
@@ -483,17 +482,19 @@ color: rgb(109, 109, 109);
     width: 100%;
     height: 100%;
     margin: auto;
-    margin-top: 2rem;
+    margin-top: 0rem;
     margin-bottom: 2rem;
   }
 
   .crop-table-container{
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     margin-top: 2rem;
     width: 100%;
     height: 100%;
     
   }
-  
+  .logo{
+    width: 2rem;
+  }
 } 
 

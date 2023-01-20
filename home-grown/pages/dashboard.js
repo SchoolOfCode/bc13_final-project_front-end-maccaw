@@ -98,7 +98,7 @@ export default function Dashboard() {
           )}
           <Profile
             className={styles["profile-container"]}
-            userData={userData}
+            userData= {userData}
           />
         </div>
         <div className={styles["right-container"]}>
