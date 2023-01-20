@@ -55,4 +55,19 @@
     line-height: 2rem;
  
 }
+@media screen and (max-width: 768px){
+    .crop-table{
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    .crop-table{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+}
+
+
 

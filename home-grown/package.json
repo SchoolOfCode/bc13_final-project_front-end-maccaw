@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "jest --watch",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -28,7 +29,11 @@
     "save": "^2.9.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "cypress": "^12.3.0",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"

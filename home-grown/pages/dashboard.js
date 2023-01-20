@@ -97,10 +97,12 @@ export default function Dashboard() {
 
         <Title userData={userData} />
        
-       <div className={styles["left-container"]}>
-         <Image src={plot} className={styles["plot-picture"]} />
-         <Profile className={styles["profile-container"]} userData={userData}/>
 
+       <div className={styles["left-container"]}>
+         {userData.plot_image ? <Image src={plot} className={styles["plot-picture"]} /> :
+         <Image src={userData["plot_image"]} className={styles["plot-picture"]} />
+         }
+         <Profile className={styles["profile-container"]} userData={userData}/>
       </div>
 
      
