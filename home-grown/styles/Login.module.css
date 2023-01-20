@@ -51,7 +51,7 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
     justify-content: space-between;
     width: 80%;
     color: var(--darkColour);
-
+    font-size: 3vmin;
 }
 
 .button {
@@ -66,7 +66,7 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
     border-color: white;
     padding: 8px 18px;
     text-align: center; 
-    font-size: 2vmin; 
+    font-size: 3vmin; 
     height: 45px;
     width: 40%; 
     background-color: var(--highLightTwo);
@@ -86,6 +86,7 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
     margin-top: 0.6vmin;
     padding-left: 1vmin;
     border: 1px solid #e6e6e6;
+    font-size: 3vmin;
   }
 
   .label{
