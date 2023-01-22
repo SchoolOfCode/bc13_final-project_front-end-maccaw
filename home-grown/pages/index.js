@@ -1,7 +1,8 @@
 import styles from "../styles/Home.module.css";
+import styles_tips from "../styles/GardenTips.module.css";
 import Link from "next/link";
 import { Carousel } from "../components/Landing/Carousel";
-import GardenTips from "../components/GardenTips";
+import GardenTips from "../components/Garden-Tips/GardenTips";
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
       <div className={styles["cards-container"]}>
         <Carousel />
       </div>
-      <div className="garden-tips"><GardenTips /></div>
+      <div className={styles_tips["garden_tips"]}><GardenTips /></div>
     </div>
   );
 }
