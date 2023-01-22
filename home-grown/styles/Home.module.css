@@ -1,106 +1,184 @@
-  @media only screen and (max-width: 2000px) {
-
 .image-container {
-    background-image: url('/illustrations/landing-image.png');
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-size: contain;
-    height: 95vh;
-    padding: 30px;
-    position: relative;
-                }
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/illustrations/landing-image.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  height: 100vh;
+  
+}
 
 .cards-container {
-      height: 80vh;
-      width: 100%;
-    
-                 }
-
+  height: 80vh;
+  width: 100%;
+}
 
 .text-container {
-      display: flex;
-      width: 70%;
-      flex-direction: column;
-      align-items:flex-start;
-      justify-content: flex-start;
-      padding-left: 6vh;
-      padding-top: 3%;
-      font-family: var(--textFont);
-      position: relative;
-     
-     
-                }
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 1.1;
+  margin-right: 4%;
+  font-family: var(--textFont);
+}
+.title {
+  font-size: 17vh;
+  letter-spacing: 0.1em;
+  font-family: var(--titleFont);
+  font-weight: 300;
+}
 
-    .title {
-        font-size: 15vh;
-        letter-spacing: 0.1em;
-        font-family: var(--titleFont);
-        font-weight: 300;
-        margin-left: -1vh;
-           }
+.sub-title {
+  font-size: 4.5vh;
+  letter-spacing: 0.4em;
+  font-weight: 200;
+  padding-bottom: 20px;
+}
 
+.p {
+  font-family: var(--textFont);
+  font-size: 1.7rem;
+  font-weight: 200;
+  width: 50%;
+  line-height: 1.4;
+}
 
-    .sub-title {
-        font-size: 4.5vh;
-        letter-spacing: 0.em;
-        padding-bottom: 40px;
-        font-weight: 50;
-              }
+.button-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
 
-    .p {
-      font-size: 2.5vh;
-      letter-spacing: 0.5;
-      width: 60%;
-      line-height: 1.7;
-       }
+.button-one,
+.button-two {
+  border-radius: 999px;
+  box-sizing: border-box;
+  font-family: var(--textFont);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+  border: 2px solid;
+  border-color: white;
+  padding: 8px 18px;
+  text-align: center;
+  font-size: 0.94rem;
+  font-weight: 600;
+  height: 55px;
+  width: 160px;
+}
 
+.button-one {
+  background: var(--highLightOne);
+  box-shadow: var(--highLightOne) 0 10px 20px -10px;
+}
 
-    .button-container {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 8vh;
-        margin-left: 8vh;
-                      }
+.button-two {
+  background: var(--highLightTwo);
+  box-shadow: var(--highLightOne) 0 10px 20px -10px;
+}
 
+.our-mission-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(206, 204, 110, 0.3);
+}
 
-    .button-one, .button-two {
-        border-radius: 999px;
-        box-sizing: border-box;
-        font-family: var(--textFont);
-        color: #FFFFFF;
-        cursor: pointer;
-        opacity: 1;
-        border: 2px solid;
-        border-color: white;
-        padding: 8px 18px;
-        text-align: center; 
-        font-size: 0.94rem;
-        font-weight: 600; 
-        height: 55px;
-        width: 160px;
-                            }
+.statement-container {
+  display: flex;
+  padding: 50px;
+  gap: 20px;
+}
 
-      .button-one {
-          background: var(--highLightOne);
-          box-shadow:var(--highLightOne) 0 10px 20px -10px;
-                  }
+.statement-heading {
+  width: 80%;
+  font-family: var(--titleFont);
+  font-size: 2rem;
+}
 
-      .button-two {
-          background: var(--highLightTwo);
-          box-shadow:var(--highLightOne) 0 10px 20px -10px;
-                  }
-       
-       
-       
-       
-                }
+.statement-paragraph {
+  font-family: var(--textFont);
+  font-size: 1.4rem;
+}
+
+.mission-container-bottom{
+  display: flex;
+  width: 100%;
+  height: 90%;
+
+}
+
+.mission-container-image{
+  background-image: url('../public/illustrations/girl-pumpkin.png');
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: fill;
+
+}
+
+.mission-container-cards{
+
+  width: 50%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 1900px) {
+  .text-container {
+    display: flex;
+    width: 70%;
+    margin-right: 200px;
+    padding-bottom: 1%;
+  }
+  .sub-title {
+    padding-bottom: 40px;
+  }
+
+  .p {
+    font-size: 1.9rem;
+    width: 50%;
+    line-height: 1.5;
+  }
+}
 
 /* ipad */
-    
-        @media only screen and (max-width: 1200px) {
+
+@media only screen and (max-width: 1200px) {
+  .image-container {
+    background-image: none;
+  }
+
+  .p {
+    width: 90%;
+    font-size: 4vh;
+    text-align: center;
+  }
+
+  .sub-title {
+    font-size: 4.2vh;
+  }
+
+  .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1%;
+  }
+
+  .title {
+    font-size: 14vh;
+  }
+}
+
+/* @media only screen and (max-width: 1200px) {
 
 .landing {
     position: absolute;
@@ -136,11 +214,10 @@
   
   }
 
-  
+   */
 
-    
-    /*  mobile   */
-@media only screen and ( max-width: 440px ) {
+/*  mobile   */
+/* @media only screen and ( max-width: 440px ) {
 
 .landing {
     background-image: url('/illustrations/desktop-wallpaper-landing.png'); 
@@ -214,4 +291,4 @@
           padding: 10px;
                 }
                 }
-  
+   */
