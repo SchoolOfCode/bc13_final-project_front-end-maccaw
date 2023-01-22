@@ -90,8 +90,7 @@
 
 .title-myListings-button {
   background-color: var(--highLightOne);
-  border-radius: 150px;
-  opacity: 0.8;
+  border-radius: 5px;
   border: 2px white solid;
   width: 160px;
   cursor: pointer;
@@ -106,8 +105,7 @@
 
 .title-myMessages-button {
   background-color: var(--highLightTwo);
-  border-radius: 150px;
-  opacity: 0.8;
+  border-radius: 5px;
   border: 2px white solid;
   width: 160px;
   cursor: pointer;
