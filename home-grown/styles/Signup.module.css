@@ -20,7 +20,7 @@
   background: rgba(255, 255, 255, 0.66);
   border-radius: 16px;
   backdrop-filter: blur(6.3px);
-      min-width: 40%;
+      width: 40%;
       height: 90%;
   }
   
@@ -68,8 +68,8 @@
       border-color: white;
       padding: 8px 18px;
       text-align: center; 
-      font-size: 2vmin; 
-      height: 45px;
+      font-size: 3vmin; 
+      height: 15%;
       width: 40%; 
       background-color: var(--highLightTwo);
       box-shadow:var(--highLightTwo) 0 10px 20px -10px;
@@ -91,6 +91,7 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
    }
 
@@ -107,11 +108,13 @@
       margin-top: 0.6vmin;
       padding-left: 1vmin;
       border: 1px solid #e6e6e6;
+      font-size: 2vmin;
     }
   
     .label{
-      font-weight:lighter;
-      color: var(--lighterFontColor)
+      font-weight: 200;
+      color: var(--lighterFontColor);
+      /* margin-bottom: 5%; */
     }
 
     /* Dropdown Button */
@@ -124,6 +127,7 @@
       width: 100%;
     border: none;
     cursor: pointer;
+    font-size: 2vmin;
   }
   
   /* Dropdown button on hover & focus */
@@ -163,23 +167,36 @@
 }
   
 
-  /* media query for ipad(medium screen size) */
   
-    @media (max-width: 1200px) {
+    /* media query for  ipad (small screen size) */
+  
+    @media screen and (max-width: 820px) {
       .glass-container{
          
-              min-width: 50%;
-              height: 80%;
-          }     
+              width: 70%;
+              height: 90%;
+          }
+          .log-in-container{
+              background-image: url('../public/illustrations/phone-wallpaper.png');
+          }
+               
     }
+
+     /* media query for small ipad (small screen size) */
   
-    /* media query for mobile (small screen size) */
-  
-    @media (max-width: 820px) {
+     @media screen and (max-width: 375px) {
       .glass-container{
          
-              min-width: 80%;
-              height: 60%;
+              width: 90%;
+              max-height: 70%;
+
+          }
+          .label, .input, .dropbtn{
+            font-size: 14px;
+          }
+
+          .input, .dropbtn{
+            height: 7vmin;
           }
           .log-in-container{
               background-image: url('../public/illustrations/phone-wallpaper.png');

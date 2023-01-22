@@ -1,25 +1,91 @@
-.form-container {
-  background-color: aliceblue;
+.form-container, .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 40px;
-  height: 70%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
 }
+
+.header-container{
+  height: 12%;
+  display: flex;
+  align-items: center;
+ justify-content: space-between;
+ border-bottom: 1px solid #aaa;
+ padding: 10px;
+}
+
+.input, .input-textarea{
+  border-radius: 5px;
+  padding-left: 1vmin;
+  border: 1px solid #e6e6e6;
+}
+
+.input:focus, .input-textarea:focus {
+  outline: none;
+}
+
+
+.close-icon{
+  height: 100%;
+}
+.input{
+  height: 5vmin;
+}
+
+.input-textarea{
+  height: 15vmin;
+}
+
+.label{
+  font-weight:200;
+  color: var(--lighterFontColor)
+}
+
 
 .pop-up {
-  box-shadow: rgba(60, 64, 67, 1) 0px 1px 2px 0px, rgba(60, 64, 67, 1) 0px 2px 6px 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0, 0.5) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-color: #fff;
   padding: 20px;
-  width: 50%;
-  max-width: 500px;
-  min-height: 200px;
+  width: 30%;
+  min-width: 30%;
+ height: 60%;
+ 
 }
 
+.pop-up-image{
+  height: 80%;
+  width: auto;
+
+}
+
+.button {
+  align-self: center;
+  border-radius: 999px;
+  box-sizing: border-box;
+  font-family: var(--textFont);
+  color: #FFFFFF;
+  cursor: pointer;
+  opacity: 1;
+  border: 2px solid;
+  border-color: white;
+  padding: 8px 18px;
+  text-align: center; 
+  font-size: 2vmin; 
+  height: 45px;
+  width: 40%; 
+  background-color: var(--highLightTwo);
+
+}
 
 .pop-up-background{
-    position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -55,3 +121,30 @@
   width: 30px;
   height: 30px;
 }
+
+@media screen and (max-width: 1024px) {
+  .pop-up{
+    width: 60%;
+    height: 70%;
+
+  }
+ 
+}
+
+@media screen and (max-width: 820px) {
+  .pop-up{
+    height: 60%;
+    width: 70%;
+  
+  }
+ 
+}
+
+@media screen and (max-width: 375px) {
+  .pop-up{
+    width: 70%;
+    height: 50%;
+  }
+ 
+}
+

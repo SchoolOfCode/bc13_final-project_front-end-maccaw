@@ -1,3 +1,5 @@
+  @media only screen and (max-width: 2000px) {
+
 .image-container {
     background-image: url('/illustrations/landing-image.png');
     background-repeat: no-repeat;
@@ -12,6 +14,7 @@
 .cards-container {
       height: 80vh;
       width: 100%;
+    
                  }
 
 
@@ -56,7 +59,6 @@
     .button-container {
         display: flex;
         gap: 40px;
-        width: 60%;
         align-items: center;
         justify-content: flex-start;
         margin-top: 8vh;
@@ -75,10 +77,10 @@
         border-color: white;
         padding: 8px 18px;
         text-align: center; 
-        font-size: 1.8rem;
+        font-size: 0.94rem;
         font-weight: 600; 
-        height: 7vh;
-        width: 20vh;
+        height: 55px;
+        width: 160px;
                             }
 
       .button-one {
@@ -90,11 +92,15 @@
           background: var(--highLightTwo);
           box-shadow:var(--highLightOne) 0 10px 20px -10px;
                   }
+       
+       
+       
+       
+                }
+
+/* ipad */
     
-
-
-    /* Ipad   */
-        @media only screen and (max-width: 920px),(max-height: 1370px) {
+        @media only screen and (max-width: 1200px) {
 
 .landing {
     position: absolute;
@@ -127,22 +133,14 @@
       font-size: 1.5rem;
       font-weight: 600;
 }
-
-
-
-
-       
-  
-  
-  
   
   }
 
-
+  
 
     
     /*  mobile   */
-@media only screen and ( max-width: 440px ), ( max-height: 900px ) {
+@media only screen and ( max-width: 440px ) {
 
 .landing {
     background-image: url('/illustrations/desktop-wallpaper-landing.png'); 
@@ -215,7 +213,5 @@
           height: 150vh;
           padding: 10px;
                 }
-
-
                 }
   

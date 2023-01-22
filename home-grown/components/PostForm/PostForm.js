@@ -1,129 +1,161 @@
-import react, { useState } from "react";
+import react, { useState, useRef } from "react";
 import styles from "../../styles/Posts.module.css";
+import { useRouter } from "next/router";
 
-export default function PostForm() {
-  // post title
-  // location (postcode)
-  // crop
-  // description
-  // combines in the listing with user profile info - picture, rating, username etc...
-  // list of current posts below the form
-  const [payload, setPayload] = useState({
-    title: null,
-    postcode: null,
-    crop: null,
-    percentage_of_plot: null,
-    description: null,
-  });
-
-  function onChangeTitle(e) {
-    let text = e.target.value;
-    setPayload({ ...payload, title: text });
-  }
-  function onChangeDes(e) {
-    let text = e.target.value;
-    setPayload({ ...payload, description: text });
-  }
-  function onChangePostcode(e) {
-    let text = e.target.value;
-    setPayload({ ...payload, postcode: text });
-  }
-  function onChangeCrop(e) {
-    let text = e.target.value;
-    setPayload({ ...payload, crop: text });
-  }
-  function onChangeSize(e) {
-    let text = e.target.value;
-    setPayload({ ...payload, percentage_of_plot: text });
-  }
+export default function PostForm({
+  currentUser,
+  userPosts,
+  setUserPosts,
+  handleClose,
+}) {
+  const title = useRef();
+  const postcode = useRef();
+  const crop = useRef();
+  const percentage = useRef();
+  const description = useRef();
+  const date = useRef();
+  const form = useRef();
+  const router = useRouter();
 
   async function onClick(e) {
     e.preventDefault();
-    let obj = {
-      title: payload.title,
-      postcode: payload.postcode,
-      description: payload.description,
-      percentage_of_plot: payload.percentage_of_plot,
-      crop: payload.crop,
+
+    let postData = {
+      plot_id: Number(userPosts[0].plot_id),
+      firebase_id: currentUser.uid,
+      title: title.current.value,
+      crop_id: Number(crop.current.value),
+      date: date.current.value,
+      percentage_of_plot: Number(percentage.current.value),
+      description: description.current.value,
     };
-    console.log("button clicked", obj);
-    // await fetch("http://localhost:3001/api/post", {
-    //   method: "POST",
-    //   headers: {
-    //     accept: "application/json",
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(obj),
-    // })
-    //   .then((response) => response.json())
-    //   .then((response) => console.log(JSON.stringify(response)));
+
+    let token = await currentUser.getIdToken();
+    await fetch("https://homegrown-backend.onrender.com/api/homegrown/posts", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+      body: JSON.stringify(postData),
+    });
+    router.reload(window.location.pathname);
   }
-  function clearInput() {}
-  return (
-    <div className={styles.newPost}>
-      <h2 className={styles["newPost-title"]}>Create a new post...</h2>
 
-      <div className={styles["newPost-container"]}>
-        {/* <img className="newPostImage" src={newPost} alt="logo" /> */}
+  let percentageTotal = 0;
+  for (let i = 0; i < userPosts.length; i++) {
+    percentageTotal += Number(userPosts[i].percentage_of_plot);
+  }
 
-        <form onSubmit={clearInput}>
-          <label> Post Title: </label>
-          <input
-            type="text"
-            className={styles.input}
-            placeholder="Post Title"
-            maxLength="75"
-            required
-            onChange={onChangeTitle}
-          />
+  let percentageLeft = 1 - percentageTotal;
+  let percentageArray = [];
+  let percent = 0;
 
-          <label> Postcode: </label>
-          <input
-            type="text"
-            className={styles.input}
-            placeholder="Postcode"
-            maxLength="8"
-            required
-            onChange={onChangePostcode}
-          />
+  while (percent <= percentageLeft) {
+    percentageArray.push(Math.round(percent * 10) / 10);
+    percent += 0.1;
+  }
 
-          <label> Crop: </label>
-          <input
-            type="text"
-            className={styles.input}
-            placeholder="Crop"
-            maxLength="20"
-            required
-            onChange={onChangeCrop}
-          />
+  if (userPosts && currentUser) {
+    return (
+      <div className={styles["form-container"]}>
+        <div className={styles["form-title-banner"]}>
+          <div></div>
+          <h2 className={styles["newPost-title"]}>NEW LISTING</h2>
+          <img className={styles["close-icon"]}src="/illustrations/close-icon.png" alt="cross for closing pop up" onClick={handleClose}/>
+        </div>
+        <div className={styles["form"]}>
+          {/* <img className="newPostImage" src={newPost} alt="logo" /> */}
 
-          <label> Percentage of Plot to be used: </label>
-          <select
-            className={styles.input}
-            name="percentage of plot"
-            required
-            onChange={onChangeSize}
-          >
-            <option value="25%">25%</option>
-            <option value="50%">50%</option>
-            <option value="75%">75%</option>
-            <option value="100%">100%</option>
-          </select>
-
-          <label> Describe your project: </label>
-          <textarea
-            className={styles.textarea}
-            placeholder="Description..."
-            maxLength="200"
-            required
-            onChange={onChangeDes}
-          ></textarea>
-
-          <button className={styles.button} onClick={onClick}>
-            Create Post
-          </button>
-        </form>
+          <form className={styles["real-form"]} ref={form}>
+            <div className={styles["title"]}>
+              <label className={styles.label}> Post Title: </label>
+              <input
+                type="text"
+                className={styles.input}
+                placeholder="Post Title"
+                maxLength="75"
+                required
+                ref={title}
+              />
+            </div>
+            <div className={styles["date-postcode-container"]}>
+              <div className={styles["postcode"]}>
+                <label className={styles.label}> Postcode: </label>
+                <input
+                  type="text"
+                  className={styles.input}
+                  placeholder="Postcode"
+                  maxLength="8"
+                  required
+                  value={userPosts[0].location}
+                  ref={postcode}
+                />
+              </div>
+              <div className={styles["date"]}>
+                <label className={styles.label}>Date</label>
+                <input
+                  className={styles.input}
+                  type="text"
+                  value={new Intl.DateTimeFormat("en-US").format(new Date())}
+                  ref={date}
+                />
+              </div>
+            </div>
+            <div className={styles["crop-percentage-container"]}>
+              <div className={styles["crop"]}>
+                <label className={styles.label}> Crop: </label>
+                <select
+                  className={styles.input}
+                  name="crop"
+                  required
+                  ref={crop}
+                >
+                  <option value="1">White Potatoes</option>
+                  <option value="2">Carrots</option>
+                  <option value="3">White Mushrooms</option>
+                  <option value="4">White Onions</option>
+                  <option value="5">Tomatoes</option>
+                  <option value="6">Lettuce</option>
+                  <option value="7">Courgettes</option>
+                  <option value="8">Blackberries</option>
+                  <option value="9">Strawberries</option>
+                  <option value="10">Raspberries</option>
+                </select>
+              </div>
+              <div className={styles["percentage"]}>
+                <label className={styles.label}> % of plot: </label>
+                <select
+                  className={styles.input}
+                  name="percentage of plot"
+                  required
+                  ref={percentage}
+                >
+                  {percentageArray.map((element) => (
+                    <option value={element}>{element * 100}%</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className={styles["description"]}>
+              <label className={styles.label}> Describe your project: </label>
+              <textarea
+                className={styles["input-textarea"]}
+                placeholder="Description..."
+                maxLength="200"
+                required
+                ref={description}
+              ></textarea>
+            </div>
+            <button className={styles.button} onClick={onClick}>
+              Create Post
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <h1>...loading</h1>;
+  }
 }

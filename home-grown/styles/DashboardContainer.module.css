@@ -1,267 +1,387 @@
-.container{
-  background-color: #84e2845c;
-  display: flex;
-  margin: auto;
-  width: 90%;
-  height: 100px;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 4%;
-  font-family: var(--titleFont);
-}
-.h1element{
-  font-size: 2.5em;
-  margin-left: 4%; /* --textFont; */
-}
-
-.buttonsContainer{
-  display: flex;
-  gap: 30px;
-  margin-right: 6%;
-  padding: 10px;
-}
-
-.carouselContainer {
-  width: 45%;
-  height: 30%;
-  margin-top: 8%;
-  margin-left: 8%;
-  margin-bottom: 3rem;
-}
-
-.carouselImage {
-  width: 40%;
-  height: 35%;
-}
-
-.profile {
-  width: 34%;
-  height: 35%;
-  margin: 5%;
-  
-}
-
-.h2UserDetails{
-  font-size: 2.5rem;
-  margin-top: 4rem;
-}
-
-.imageProfile{
-  /* margin: auto;
-  margin-top: 2rem; */
-  width: 14rem;
-  height: 14rem;
-  
-}
-
-.pieChart {
-  width: 25%;
-  height: 25%;
-  margin: 5%;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.mainContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.search-button, .clear-button {
-  align-self: center;
-  background-color: #fff;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: var(--highLightTwo) 15px 28px 25px -18px;
+.main-container {
   box-sizing: border-box;
-  color: var(--darkColour);
+  height: 100vh;
+  background-image: url('/illustrations/dashboard-image.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+
+.left-container,
+.right-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.left-container {
+  float: left;
+  margin-left: 7.5%;
+  align-items: center;
+  width: 35%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+  margin-top: 2%;
+  margin-right: 2.5%;
+}
+
+
+.right-container {
+  display: grid;
+  grid-template-columns: max-content(2, 1fr);
+  align-items: center;
+  width: 47.5%;
+  height: 50%;
+  margin-top: 2%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: #fff;
+  padding: 20px;
+
+
+
+}
+
+/* title details */
+
+.title-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 3%;
+  width: 85%;
+  height: 10%;
+  border-radius: 20px;
+
+}
+
+.title-user-img {
+  width: 4.5%;
+
+
+}
+
+
+.title-user-name {
+  font-family: var(--titleFont);
+  font-size: 25px;
+  margin-left: 3%;
+  color: black;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+
+
+
+}
+
+.title-buttons-container {
+  margin-left: 42%;
+
+}
+
+
+.title-myListings-button {
+  background-color: var(--highLightOne);
+  border-radius: 150px;
+  opacity: 0.8;
+  border: 2px white solid;
+  width: 160px;
+  cursor: pointer;
+  font-family: var(--titleFont);
+  font-size: 1.3rem;
+  padding: .35rem;
+  color: white;
+
+
+
+}
+
+.title-myMessages-button {
+  background-color: var(--highLightTwo);
+  border-radius: 150px;
+  opacity: 0.8;
+  border: 2px white solid;
+  width: 160px;
   cursor: pointer;
   font-family: var(--textFont);
-  font-size: 1rem;
-  line-height: 23px;
+  font-size: 1.3rem;
   padding: .35rem;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  
+  margin-left: 10px;
+  color: white;
+
 }
 
-.search-button:hover, .clear-button:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+
+.title-myListings-button:hover,
+.title-myMessages-button:hover {
   transform: translate3d(0, 2px, 0);
 }
 
- @media screen and (max-width: 1024px) {
-  .imageProfile{
+
+/* profile details */
+
+.profile-container {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+
+}
+
+.profile-user-name {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+
+
+.profile-user-info {
+  display: block;
+  margin-top: 6%;
+  text-align: left;
+  line-height: 35px;
+  font-size: 20px;
+  margin-left: 5%;
+
+
+}
+
+/* plot image */
+
+.plot-picture {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  height: 45%;
+  border-radius: 10px;
+
+}
+
+
+/* pie chart */
+
+.plot-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: 5%;
+  width: 50%;
+  height: 90%;
+  margin-left: 50%;
+
+}
+
+
+/* crop table */
+
+/* in a different file - CropTable.module.css */
+
+
+
+@media screen and (max-width: 1024px) {
+  .imageProfile {
     width: 30%;
     height: auto;
-    float : right;
+    float: right;
     margin-left: 2rem;
   }
-  .profile{
-    
-    float : right;
+
+  .profile {
+
+    float: right;
   }
-  .h2UserDetails{
+
+  .h2UserDetails {
     margin-top: 2rem;
     font-size: 1.5rem;
   }
 
-  .h4UserInfo{
+  .h4UserInfo {
     font-size: 1.2rem;
   }
-  .container{
+
+  .container {
     margin-top: 2%;
     width: 85%;
     height: 70px;
   }
 
-  .h1element{
+  .h1element {
     font-size: 2em;
   }
-  .search-button{
+
+  .search-button {
     line-height: 11px;
   }
-  .logo{
+
+  .logo {
     width: 0;
   }
-  .pieChart{
+
+  .pieChart {
     width: 17rem;
     height: 17rem;
     margin-top: 0;
     margin-left: 4.5rem;
     margin-bottom: 5rem;
-  } 
-   
- } 
- /* ////////////////// */
+  }
+
+}
+
+/* ////////////////// */
 /* Breakpoint @ 768px */
-@media screen and (max-width: 768px){
-  .container{
+@media screen and (max-width: 768px) {
+  .container {
     margin-top: 4%;
     width: 95%;
     height: 70px;
     flex-direction: row;
   }
-  .h1element{
+
+  .h1element {
     font-size: 2rem;
     margin: auto;
     line-height: 40px;
   }
-  .imageProfile{
+
+  .imageProfile {
     /* margin: auto;
     margin-top: 2rem; */
     width: 5rem;
     height: 5rem;
     margin-top: 2rem;
   }
+
   .carouselContainer {
     width: 46%;
     margin: auto;
     margin-top: 2rem;
   }
-  .userPlotImage{
+
+  .userPlotImage {
     width: 100%;
     height: 100%;
-    
+
   }
-  .h4UserInfo{
+
+  .h4UserInfo {
     font-size: 1rem;
     width: 200px;
   }
-  .imageProfile{
+
+  .imageProfile {
     /* margin: auto;
     margin-top: 2rem; */
     width: 3.5rem;
     height: 3.5rem;
     margin-top: -2rem;
   }
+
   .pieChart {
     width: 40%;
     height: 40%;
     margin-top: 3rem;
     margin-bottom: 2rem;
-  }  
+  }
 
 }
+
 /* /////////////////// */
 /* Breakpoint @ 425px */
 @media screen and (max-width: 425px) {
 
-  .container{
+  .container {
     margin-top: 12%;
     width: 90%;
     height: 50px;
     flex-direction: column;
-   
+
   }
-  .h1element{
+
+  .h1element {
     font-size: 2.1em;
     margin: auto;
     line-height: 40px;
   }
 
-  .buttonsContainer{  
+  .buttonsContainer {
     margin: auto;
     margin-top: 1.5rem;
   }
+
   .carouselContainer {
     width: 90%;
     height: 30%;
     margin-top: 23%;
   }
-  .userPlotImage{
+
+  .userPlotImage {
     width: 100%;
     height: 100%;
-    
+
   }
-  
-  .mainContainer{
+
+  .mainContainer {
     flex-direction: column;
   }
-  .profileContainer{
+
+  .profileContainer {
     display: flex;
     margin-bottom: 2rem;
     line-height: 1px;
     justify-content: space-between;
   }
-  .profile{
+
+  .profile {
     min-width: 70%;
     height: 100%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
+
   }
-  .profileInformation{
+
+  .profileInformation {
     margin-top: 2rem;
   }
-  .h2UserDetails{
+
+  .h2UserDetails {
     font-size: 1.5rem;
-   
+
   }
-  .h4UserInfo{
+
+  .h4UserInfo {
     font-size: 1rem;
   }
-  .imageProfile{
+
+  .imageProfile {
     /* margin: auto;
     margin-top: 2rem; */
     width: 4rem;
     height: 4rem;
     margin-top: 0;
   }
+
   .pieChart {
     width: 80%;
     height: 80%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }  
-}  
+  }
+}
 
 
 
@@ -270,63 +390,74 @@
 /* Breakpoint @ 375px */
 @media screen and (max-width: 375px) {
 
-  .container{
+  .container {
     margin-top: 12%;
     width: 83%;
     height: 50px;
     flex-direction: column;
   }
-  .h1element{
+
+  .h1element {
     font-size: 2em;
-    margin-top: 2%;;
+    margin-top: 2%;
+    ;
   }
+
   .carouselContainer {
     width: 90%;
     height: 30%;
     margin-top: 28%;
   }
-  .userPlotImage{
+
+  .userPlotImage {
     width: 100%;
     height: 100%;
   }
-  .buttonsContainer{  
+
+  .buttonsContainer {
     margin: auto;
     margin-top: 2rem;
   }
-  .mainContainer{
+
+  .mainContainer {
     flex-direction: column;
   }
-  .profileContainer{
+
+  .profileContainer {
     display: flex;
     margin-bottom: 2rem;
     line-height: 1px;
   }
-  .profile{
+
+  .profile {
     min-width: 72%;
     height: 100%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  .profileInformation{
+
+  .profileInformation {
     margin-top: 2rem;
   }
-  .h2UserDetails{
+
+  .h2UserDetails {
     font-size: 1.5rem;
     margin-right: 0;
     margin-top: 4rem;
   }
 
-  .h4UserInfo{
+  .h4UserInfo {
     font-size: 1rem;
   }
 
-  .imageProfile{
+  .imageProfile {
     margin: auto;
     margin-top: 2rem;
     width: 4rem;
     height: 4rem;
   }
+
   .pieChart {
     width: 100%;
     height: 100%;
@@ -334,6 +465,5 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  
-} 
 
+}

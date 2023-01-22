@@ -1,55 +1,81 @@
-.crop-table{
-    width:40%;
-    background-color: 	hsl(19 99% 42% / 10%);
-    border-radius: 10px;
+.crop-table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 55%;
+    margin-top: -51%;
+
+
+
 }
 
-.crop-card{
-    display:flex;
-    margin: 1rem;
-    background-color: var(--mainWhite);
+.crop-card {
+    font-family: var(--textFont);
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(211, 64, 1, 0.1);
+    color: black;
     border-radius: 10px;
-}   
+    width: 90%;
+    font-size: 10px;
 
-.crop-name>img{
-    height:40%;
 }
 
-.crop-name , .crop-season, .crop-harvest-time, .crop-difficulty{
-    display:flex;
+.crop-card:hover {
+
+    transform: translate3d(0, 2px, 0);
+}
+
+
+/*var(--mainWhite)*/
+
+.crop-name>img {
+    height: 40%;
+
+
+}
+
+.crop-name,
+.crop-season,
+.crop-harvest-time,
+.crop-difficulty {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:25%;
-    height: 6rem;
+    width: 25%;
+    height: 5.5rem;
+
+
 }
 
-.crop-name>p{
+.crop-name>p {
     width: 100%;
     text-align: center;
 }
 
 
-.crop-season>p:last-child, .crop-harvest-time>p:last-child, .crop-difficulty>p:last-child{
+.crop-season>p:last-child,
+.crop-harvest-time>p:last-child,
+.crop-difficulty>p:last-child {
 
     height: 40%;
     text-align: center;
     line-height: 2rem;
- 
+
 }
-@media screen and (max-width: 768px){
-    .crop-table{
+
+@media screen and (max-width: 768px) {
+    .crop-table {
         width: 45%;
     }
 }
 
 
-@media screen and (max-width: 425px){
-    .crop-table{
+@media screen and (max-width: 425px) {
+    .crop-table {
         width: 100%;
         margin-bottom: 3rem;
     }
 }
-
-
-

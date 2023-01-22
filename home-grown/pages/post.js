@@ -4,19 +4,28 @@ import { useRouter } from "next/router";
 import PostForm from "../components/PostForm/PostForm";
 import UserListingCard from "../components/UserListingCard/UserListingCard";
 import { useAuth } from "../context/AuthContext";
-
+import BoilerPlatePopup from "../components/PopUpModal/BoilerPlatePopUp";
+import ContactForm from "../components/ContactForm/ContactForm";
 export default function NewPost() {
-  const [userPosts, setUserPosts] = useState([]);
+  const [userPosts, setUserPosts] = useState();
   const { currentUser } = useAuth();
   const router = useRouter();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   if (!currentUser) {
     router.push("/login");
   }
 
+  useEffect(() => {
+    getPostData();
+  }, []);
+
   async function getPostData() {
     const id = currentUser.uid;
     let token = await currentUser.getIdToken();
+    console.log(token);
     const response = await fetch(
       `https://homegrown-backend.onrender.com/api/homegrown/posts/${id}`,
       {
@@ -28,11 +37,9 @@ export default function NewPost() {
     const data = await response.json();
     setUserPosts(data.payload);
   }
-  useEffect(() => {
-    getPostData();
-  }, []);
 
   async function handleDelete(posts_id) {
+    let token = await currentUser.getIdToken();
     await fetch(
       `https://homegrown-backend.onrender.com/api/homegrown/posts/${posts_id}`,
       {
@@ -54,30 +61,50 @@ export default function NewPost() {
       ...userPosts.slice(0, index),
       ...userPosts.slice(index + 1),
     ];
-    console.log(filteredUserPosts);
+    console.log("FILTERED", filteredUserPosts);
     setUserPosts(filteredUserPosts);
   }
 
-  async function handleEdit() {
-    console.log("edit");
-  }
-
-  return (
-    <div>
-      <PostForm></PostForm>
-      <div>
-        {userPosts.map((userPost, index) => {
-          console.log(userPost);
-          return (
-            <UserListingCard
-              key={index}
-              userPost={userPost}
-              handleDelete={handleDelete}
-              handleEdit={handleEdit}
-            ></UserListingCard>
-          );
-        })}
+  if (currentUser && userPosts) {
+    return (
+      <div className={styles["post-page-container"]}>
+        {/* <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/> */}
+        <div className={styles["header-container"]}>
+          <div></div>
+          <h2>MY LISTINGS</h2>
+          <div className={styles["new-post-icon-container"]}>
+            <label>new post:</label>
+            <BoilerPlatePopup
+              className={styles["new-post-icon"]}
+              image="icons/create-new-post.png"
+              alt="post new plot, image of pencil hovering over a whiteboard"
+              handleShow={handleShow}
+              handleClose={handleClose}
+              show={show}
+            >
+              <PostForm
+                userPosts={userPosts}
+                currentUser={currentUser}
+                handleClose={handleClose}
+                show={show}
+              />
+            </BoilerPlatePopup>
+          </div>
+        </div>
+        <div className={styles["post-container"]}>
+          {userPosts.map((userPost, index) => {
+            return (
+              <UserListingCard
+                key={index}
+                userPost={userPost}
+                handleDelete={handleDelete}
+              ></UserListingCard>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <h1>...Loading</h1>;
+  }
 }
