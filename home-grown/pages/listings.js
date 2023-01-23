@@ -2,6 +2,7 @@ import ListingContainer from "../components/ListingContainer/ListingContainer";
 import { SearchBar } from "../components/SearchBar/SearchBar";
 import { useState, useEffect, useRef } from "react";
 import styles from "../styles/ListingContainer.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 function Listings() {
   useEffect(() => {
@@ -41,8 +42,13 @@ function Listings() {
     getPostData();
   }
 
+  function showEmailToast() {
+    toast.success("Email sent!");
+  }
+
   return (
     <div className={styles["listing-page-container"]}>
+      <Toaster />
       <SearchBar
         handleClick={handleClick}
         search={search}
@@ -50,7 +56,11 @@ function Listings() {
         handleClear={handleClear}
         searchRef={searchRef}
       />
-      <ListingContainer posts={posts} search={search} />
+      <ListingContainer
+        posts={posts}
+        search={search}
+        showEmailToast={showEmailToast}
+      />
     </div>
   );
 }

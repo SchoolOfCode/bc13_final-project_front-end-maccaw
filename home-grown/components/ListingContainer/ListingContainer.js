@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ListingCard from "../ListingCard/ListingCard";
 import styles from "../../styles/ListingContainer.module.css";
 
-function ListingContainer({ search, posts }) {
+function ListingContainer({ search, posts, showEmailToast }) {
   //fetch data from api
   //save the data in a state
   //map each entry of the array (in state) to a card
@@ -27,6 +27,7 @@ function ListingContainer({ search, posts }) {
             location={element.location}
             crop_name={element.crop_name}
             description={element.description}
+            showEmailToast={showEmailToast}
           />
         ))}
       </div>
