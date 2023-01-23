@@ -1,6 +1,8 @@
 import styles from '../../../styles/CropTable.module.css'
 
 function CropTableCard({cropName, cropSeason, cropHarvestTime, cropImage, cropType, cropDifficulty}) {
+    
+    
     return ( 
     
     <div className={styles["crop-card"]}>
