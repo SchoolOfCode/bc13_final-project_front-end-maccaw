@@ -117,35 +117,4 @@ export default function Dashboard() {
       </div>
     );
   }
-}
-//  <Profile className={styles["profile-container"]} userData={userData}/>
-// <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
-//  <PlotChart userPosts={userPosts}/>
-
-       <div className={styles["left-container"]}>
-         {userData.plot_image ? <Image src={plot} className={styles["plot-picture"]} /> :
-         <Image src={userData["plot_image"]} className={styles["plot-picture"]} />
-         }
-         <Profile className={styles["profile-container"]} userData={userData}/>
-      </div>
-
-     
-
-      <div className={styles["right-container"]}>
-           <PlotChart userPosts={userPosts}/>
-           <CropTableContainer className={styles["crop-table-container"]} userPosts={userPosts}/>
-        </div>
-
-       <div className={styles["image"]}>
-      
-       </div>
-
-
-    </div>
-
-
-  
-        
-    );
-  }
-}
+};
