@@ -29,7 +29,7 @@ export default function NavBar() {
   if (currentUser) {
     return (
       <nav className="navbar">
-        <img className="logo" src="icons/logo.png"/>
+        <img className="logo" src="icons/logo_white.png"/>
         <ul
           className={
             active ? "list-container active" : "list-container notactive"
