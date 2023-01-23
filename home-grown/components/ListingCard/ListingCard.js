@@ -11,6 +11,7 @@ function ListingCard({
   plot_size,
   description,
   user_email,
+  showEmailToast,
 }) {
   let ratingString = "";
 
@@ -21,7 +22,7 @@ function ListingCard({
   }
   generateRating(rating);
 
-  const postCode = location.split(" ")
+  const postCode = location.split(" ");
   return (
     <div className={styles["one-card"]}>
       <div className={styles["user-info"]}>
@@ -47,10 +48,9 @@ function ListingCard({
         </div>
         <p className={styles.description}>Description: {description}</p>
         <div className={styles["message-container"]}>
-          Message: <MyPopup user_email={user_email} />
+          Message:{" "}
+          <MyPopup user_email={user_email} showEmailToast={showEmailToast} />
         </div>
-        
-
       </div>
     </div>
   );
