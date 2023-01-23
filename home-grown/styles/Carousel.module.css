@@ -1,11 +1,12 @@
-  @media only screen and (max-width: 2000px) {
-
+ 
 /* cards */
 
 
 .carousel {
-    height: 85%;
-    margin-top: 10%;
+
+    height: 80%;
+    margin-top: 5%;
+    gap: 50px;
    
   
 }
@@ -13,22 +14,21 @@
 
 
 .card {
-    border: 10px #fbfbf9 solid;
-    border-radius: 20px;
-    background-color:white;
-    padding: 15px;
-    height: 450px;
-
-
-
-
+    border: 40px #fbfbf9 solid;
+    padding: 20px;    
+    border-radius: 10% ;
+    background-color:rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.06) 2px 2px 4px 2px inset;
+    height: 350px;
 
 }
 
 .description {
     font-family: var(--textFont);
+    font-style: italic;
+
     margin-top: 20px;
-    font-size: 22px;
+    font-size: 1.1rem;
     margin-left: 20px;
     display: flex;
     
@@ -44,17 +44,6 @@
 
 }
 
-.middle {
-background-color: white;
-display: flex;
-margin-top: 10px;
-height: 300px;
-
-
-
-}
-
-
 .username {
     font-family: var(--titleFont);
     text-align: center;
@@ -64,17 +53,25 @@ height: 300px;
     padding-left: 10px;
 }
 
+.reviewer-container{
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+
+.reviewer-name{
+    font-size: 1.1rem;
+    font-family: var(--titleFont);
+    color: var(--subtitleColor);
+}
 
 .profile-picture {
-    margin-top: 100px;
-    margin-right: 8px;
-    width: 15vh;
-    height: 15vh;
+    height: 80px;
 }
 
 
 .crop-picture {
-   margin-left: 20px;
+   margin-left: 10%;
 
   
 }
@@ -92,8 +89,6 @@ height: 300px;
     display: flex;
     justify-content: right;
 }   
-}
-
 
 /* Ipad */
 
