@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 import styles from "../../styles/Carousel.module.css" 
 import Image from 'next/image'
-import Link from 'next/link'
 import profile from "../../public/illustrations/bunny.png"
 import profile2 from "../../public/illustrations/sheep.png"
 import profile3 from "../../public/illustrations/chicken.png"
