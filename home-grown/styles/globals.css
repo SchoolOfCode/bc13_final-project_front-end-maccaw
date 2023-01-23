@@ -4,21 +4,25 @@
 }
 
 @font-face {
-  font-family: "Happy Monkey";
-  src: url("../public/fonts/HappyMonkey-Regular.ttf");
+
+  font-family: 'Happy Monkey';
+  src: url('../public/fonts/HappyMonkey-Regular.ttf');
 }
 
-:root {
-  --mainWhite: #fbfbf9;
-  --darkColour: #081402;
-  --highLightOne: #214e0b;
-  --highLightTwo: #d34401;
-  --highLightThree: #faa613;
-  --lighterFontColor: rgb(109, 109, 109);
-  --titleFont: "Happy Monkey";
-  --textFont: "Georama";
+:root{
+ --mainWhite: #fbfbf9;
+ --darkColour: #081402;
+ --highLightOne: #214E0B;
+ --subtitleColor: #3F5416;
+ --highLightTwo: #d34401;
+ --highLightThree: #FAA613;
+ --lighterFontColor:rgb(109, 109, 109);
+ --titleFont: 'Happy Monkey';
+ --textFont: 'Georama';
+ 
 }
-#__next {
+ #__next{
+
   height: 100%;
   width: 100%;
 }
