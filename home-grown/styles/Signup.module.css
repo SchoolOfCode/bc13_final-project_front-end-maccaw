@@ -70,7 +70,7 @@
       text-align: center; 
       font-size: 3vmin; 
       height: 15%;
-      width: 40%; 
+      width: 45%; 
       background-color: var(--highLightTwo);
       box-shadow:var(--highLightTwo) 0 10px 20px -10px;
   
@@ -180,8 +180,8 @@
             background-image: url('../public/illustrations/phone-wallpaper.png');
         }
         .button{
-          width:50%;
-          height: 10%;
+          width:45%;
+          height: 12.5%;
         }
                
     }
