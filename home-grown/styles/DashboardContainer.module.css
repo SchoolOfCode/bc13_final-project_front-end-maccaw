@@ -165,9 +165,16 @@ color: rgb(109, 109, 109);
 
   display: flex;
   justify-content: center;
-  background-color: #fbfbf9;
+
+  background-color: #ffffff;
   margin-top: 2%;
   margin-left: 25%;
+
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: 5%;
+
   width: 50%;
   height: 95%;
  
@@ -232,7 +239,30 @@ color: rgb(109, 109, 109);
  /* ////////////////// */
 /* Breakpoint @ 768px */
 @media screen and (max-width: 768px){
-  .container{
+ 
+.title-user-img{
+  width: 15%
+}
+
+.title-myListings-button, .title-myMessages-button {
+  width: 150px;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border-radius: 50px;
+  margin-left: 0rem;
+  margin-bottom: 1rem;
+  
+ }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
     margin-top: 4%;
     width: 95%;
     height: 70px;
@@ -276,8 +306,7 @@ color: rgb(109, 109, 109);
     height: 40%;
     margin-top: 3rem;
     margin-bottom: 2rem;
-  }  
-
+  }
 }
 /* /////////////////// */
 /* Breakpoint @ 425px */
@@ -359,6 +388,50 @@ color: rgb(109, 109, 109);
 
 /* //////////////////// */
 /* Breakpoint @ 390px */
+@media screen and (max-width: 375px) {
+
+  .main-container {
+    justify-items: center;
+    flex-direction: column;
+    margin: auto;
+
+
+  }
+}
+
+
+  .title-container{
+    border-radius: 15px;
+    width: 90%;
+    height: 100px;
+    align-items: center;
+    margin: auto;
+    margin-top: 4%;
+  }
+
+
+
+  .left-container {
+    
+    
+    border:none;
+    border-radius: 5px;
+   
+    width: 100%;
+    flex-direction: column;
+    margin:auto;
+    margin-top: 3rem;
+    
+  }
+  
+  .right-container-top {
+    margin-top: 22%;
+    border-radius: 5px;
+    width: 100%;
+    
+
+/* //////////////////// */
+/* Breakpoint @ 390px */
 @media screen and (max-width: 390px) {
 
   .main-container {
@@ -395,12 +468,36 @@ color: rgb(109, 109, 109);
     
   }
   
+
+  .right-container-bottom {
+    border-radius: 5px;
+    margin-top: 14%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .title-container{
+    border-width: 3px;
+    width: 95%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: .6rem;
+    height: 10%;
+  }
+
+  .title-user-img{
+    width: 15%;
+    margin-left: 3%;
+
+
+
   .right-container-top {
     margin-top: 2%;
     border-radius: 5px;
     width: 100%;
     margin-left: 18%;
     flex-direction: column;
+
 
 
   }
@@ -430,15 +527,17 @@ color: rgb(109, 109, 109);
     width: 100%;
     height: 25%;
     font-size: 1em;
+    margin-left: 2rem;
+    height: 100%;
+
   }
 
   .title-buttons-container{  
     margin: auto;
     margin-top: 2rem;
-    width: 5%;
-    height: 5%;
-    background-color: green;
-    justify-content: center;
+    /* width: 5%;
+    height: 5%; */
+    display: none;
   }
 
   .title-mylistings-button {
@@ -450,6 +549,9 @@ color: rgb(109, 109, 109);
     font-size: 1.5rem;
     background-color: blue;
     justify-items: center;
+    display: none;
+
+  }
 
   
   }
@@ -457,13 +559,26 @@ color: rgb(109, 109, 109);
   .profile-container{
     display: flex;
     margin-top: 0%;
-    background-color: green;
+    flex-direction: column;
+    /* background-color: green; */
+    width: 100%;
+    height: auto;
+    border:none;
+    margin-bottom: 2rem;
+    line-height: 1px;
   }
+ 
 
   .profile{
     min-width: 72%;
     height: 100%;
     margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+  .plot-picture{
+    margin-top: 0rem;
+    
+
     margin-bottom: 2rem;
     background-color: ;
   }
@@ -481,9 +596,20 @@ color: rgb(109, 109, 109);
     width: 100%;
     height: 100%;
     margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 0rem;
   }
   
 } 
+
+  .crop-table-container{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .logo{
+    width: 2rem;
+  }
+}
 
