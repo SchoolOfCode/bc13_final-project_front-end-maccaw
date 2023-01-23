@@ -70,7 +70,7 @@ export default function NewPost() {
       <div className={styles["post-page-container"]}>
         {/* <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/> */}
         <p className={styles["post-page-description"]}>
-              Welcome to your listings page. Here you can add a new post, ammend an existing post, or delete a current post.
+              Welcome to your listings page. Here you can add a new post, amend an existing post, or delete a current post.
 
             </p>
         <div className={styles["header-container"]}>
