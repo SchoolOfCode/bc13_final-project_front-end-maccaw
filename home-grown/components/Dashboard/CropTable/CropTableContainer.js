@@ -1,6 +1,7 @@
 import CropTableCard from "./CropTableCard";
 import styles from '../../../styles/CropTable.module.css'
 
+
 function CropTableContainer({userPosts}) {
     console.log("Users CROPS", userPosts )
    

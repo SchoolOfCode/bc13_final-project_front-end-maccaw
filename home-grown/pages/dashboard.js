@@ -13,6 +13,7 @@ import plot from "../public/illustrations/plot.jpg"
 
 
 
+
 export default function Dashboard() {
   const [err, setErr] = useState("");
   const { currentUser, logout, isUserAuthenticated } = useAuth();

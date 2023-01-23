@@ -16,13 +16,13 @@
     margin-top: 2%;
     display: flex;
     align-items: center;
-background-color: transparent;
+    background-color: transparent;
     color: black;
     border-radius: 10px;
     width: 80%;
     font-size: 13px;
     margin-left: 5%;
-    border: 3px solid var(--highLightTwo);
+    border: 3px solid #F6873D;
 
 }
 
