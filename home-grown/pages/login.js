@@ -40,6 +40,7 @@ export default function Login() {
                 placeholder="Email"
                 type="email"
                 ref={emailRef}
+                data-cy="login-email-input"
               />
             </div>
             <div className={styles["form-password-input"]}>
@@ -49,6 +50,7 @@ export default function Login() {
                 placeholder="Password"
                 type="password"
                 ref={passwordRef}
+                data-cy="login-password-input"
               />
             </div>
             <button className={styles.button} disabled={loading} type="submit">
