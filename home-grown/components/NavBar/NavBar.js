@@ -25,7 +25,7 @@ const Dropdown = () => {
         <nav>
         <div className="logo">
     
-            <Image className ="logo"src="/illustrations/logo.png" width={50} height={50} onClick={() => reloadPage()}/> 
+            <Image className ="logo"src="/illustrations/logo2.png" width={50} height={50} onClick={() => reloadPage()}/> 
         </div>
         <ul>
             <Link href="/" style={{ textDecoration: 'none' }}><li>Home</li></Link>

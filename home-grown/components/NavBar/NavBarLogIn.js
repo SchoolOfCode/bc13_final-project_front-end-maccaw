@@ -25,7 +25,7 @@ export default function NavBarLogIn() {
         <Link href="/" style={{ textDecoration: "none" }}>
         <Image
           className="logo"
-          src="/illustrations/logo.png"
+          src="/illustrations/logo2.png"
           width={50}
           height={50}
         />

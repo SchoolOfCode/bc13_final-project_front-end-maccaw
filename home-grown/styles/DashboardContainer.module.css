@@ -601,7 +601,7 @@ color: rgb(109, 109, 109);
   
 } 
 
-  .crop-table-container{
+  /* .crop-table-container{
     margin-bottom: 2rem;
     margin-top: 2rem;
     width: 100%;
@@ -610,6 +610,6 @@ color: rgb(109, 109, 109);
   }
   .logo{
     width: 2rem;
-  }
+  } */
 }
 
