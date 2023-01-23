@@ -1,41 +1,59 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
-
-
-
+import { useState } from "react";
+import styles from "../../styles/Navbar.module.css";
 
 export default function NavBar() {
+  const router = useRouter();
 
-const router = useRouter();
-    
-const Dropdown = () => {
-    const dropdown = document.querySelector("ul");
-    const hamburgerButton = document.querySelector("#hamburgerButton");
-    dropdown.classList.toggle("show");
-    hamburgerButton.classList.toggle("show");
+  function reloadPage() {
+    router.push("/");
   }
 
- function reloadPage () {
-  router.push("/");
+  const [active, setActive] = useState(false)
+
+  function burgerHandler(){
+    setActive(!active)
   }
 
+  return (
+    <nav className="navbar">
+      <div className="logo">
+     
+      </div>
+      <ul className={active ? "list-container active"  : "list-container notactive"}>
+        <Link href="/" className="text">
+          <li>Home</li>
+        </Link>
+        <Link href="/listings" className="text" >
+          <li>Listings</li>
+        </Link>
+        <Link href="/signup" className="text">
+          <li>Register</li>
+        </Link>
+        <Link href="/login" className="text">
+          <li>Log In</li>
+        </Link>
+        <Link href="/login" className="text">
+          <li>Post</li>
+        </Link>
+        <Link href="/dashboard" className="text">
+          <li>Dashboard</li>
+        </Link>
+      </ul>
 
-    return (
-        <nav>
-        <div className="logo">
-    
-            <Image className ="logo"src="/illustrations/logo.png" width={50} height={50} onClick={() => reloadPage()}/> 
-        </div>
-        <ul>
-            <Link href="/" style={{ textDecoration: 'none' }}><li>Home</li></Link>
-            <Link href="/listings" style={{ textDecoration: 'none' }}><li>Listings</li></Link>
-            <Link href="/signup" style={{ textDecoration: 'none' }}><li>Register</li></Link>
-            <Link href="/login" style={{ textDecoration: 'none' }}><li>Log In</li></Link>
-            <Link href="/login" style={{ textDecoration: 'none' }}><li>Post</li></Link>
-            <Link href="/dashboard" style={{ textDecoration: 'none' }}><li>Dashboard</li></Link>
-        </ul>
-            <button id="hamburgerButton" onClick={ Dropdown }>MENU</button>
-        </nav>
-    )
-  }
+      <div onClick={burgerHandler} className={active ? "hamburger active":"hamburger notactive"}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+
+
+    </nav>
+
+
+
+
+  );
+}
