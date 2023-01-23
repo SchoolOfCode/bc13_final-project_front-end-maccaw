@@ -21,9 +21,9 @@ export default function ForgotPassword() {
       setMessage("");
       setLoading(true);
       await resetPassword(emailRef.current.value);
-      setMessage("Check your inbox for further instructions");
+      setMessage("Check your email inbox for further instructions.");
     } catch {
-      setErr("Failed to reset Password");
+      setErr("This email has not been registered.");
     }
     setLoading(false);
   }
@@ -33,10 +33,11 @@ export default function ForgotPassword() {
       <div className={styles["glass-container"]}>
         <div className={styles["main-card"]}>
           <h1 className={styles.title}>Reset your password</h1>
-          {err && <h2>{err}</h2>}
-          {message && <h2>{message}</h2>}
-
           <form className={styles["form-container"]} onSubmit={handleSubmit}>
+            <div className={styles["reset-message"]}>
+              {err && <p>{err}</p>}
+              {message && <p>{message}</p>}
+            </div>
             <label className={styles.label}>
               Enter your login email to receive a reset password email:
             </label>
