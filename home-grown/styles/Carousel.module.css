@@ -46,6 +46,36 @@
     height: 80px;
 }
 
+/* Ipad */
+
+@media only screen and (max-width: 820px) {
+    .reviewer-name{
+        font-size: 1.2rem;
+
+    }
+    
+    .profile-picture {
+        height: 60px;
+    }
+    
+    .description {
+
+        font-size: 1rem;
+        margin-left: 20px;
+        display: flex;
+        
+    }
+
+    
+.card {
+
+    height: 450px;
+
+}
+}
+
+
+
 
 /* Mobile */
 
@@ -65,6 +95,11 @@
         margin-left: 20px;
         display: flex;
         
+    }
+    .card {
+
+        height: 350px;
+    
     }
 }
 
