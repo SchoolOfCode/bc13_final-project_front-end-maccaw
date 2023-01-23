@@ -11,7 +11,7 @@
 }
 
 .cards-container {
-  height: 80vh;
+  height: 60vh;
   width: 100%;
 }
 
@@ -86,47 +86,76 @@
 .our-mission-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  height: 90vh;
   background-color: rgb(206, 204, 110, 0.3);
 }
 
-.statement-container {
-  display: flex;
-  padding: 50px;
-  gap: 20px;
-}
-
-.statement-heading {
-  width: 80%;
-  font-family: var(--titleFont);
-  font-size: 2rem;
-}
-
-.statement-paragraph {
-  font-family: var(--textFont);
-  font-size: 1.4rem;
-}
 
 .mission-container-bottom{
+  align-items: flex-end;
+  justify-content: space-between;
   display: flex;
   width: 100%;
-  height: 90%;
+  height: 100%;
 
 }
 
-.mission-container-image{
+.mission-image-container{
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url('../public/illustrations/girl-pumpkin.png');
   width: 50%;
+  height: 90%;
+}
+
+
+.mission-cards-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: fill;
+}
+
+.cards-grid{
+  height: 90%;
+  width: 90%;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns:  minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) ;
+ 
+}
+.mission-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.mission-card-icon{
+  height: 40%;
+}
+
+.mission-paragraph{
+  width: 90%;
+  text-align: center;
+  font-family: var(--textFont);
+  font-size: 100%;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
 
 }
 
-.mission-container-cards{
-
-  width: 50%;
-  height: 100%;
+.mission-card-heading{
+  font-size: 150%;
+  font-family: var(--titleFont);
+  color: var(--subtitleColor);
+  line-height: 1.8;
 }
 
 @media only screen and (min-width: 1900px) {
@@ -149,17 +178,15 @@
 
 /* ipad */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   .image-container {
     background-image: none;
   }
-
   .p {
     width: 90%;
     font-size: 4vh;
     text-align: center;
   }
-
   .sub-title {
     font-size: 4.2vh;
   }

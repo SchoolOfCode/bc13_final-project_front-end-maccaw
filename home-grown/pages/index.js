@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import { Carousel } from "../components/Landing/Carousel";
+import LandingCard from "../components/LandingCard/LandingCard";
 
 export default function Home() {
   return (
@@ -30,19 +31,20 @@ export default function Home() {
       <br></br>
       <br></br>
       <div className={styles["our-mission-container"]}>
-      <div className={styles["statement-container"]}>
-        <h3 className={styles["statement-heading"]}>We help you Connect with others in a shared Goal</h3>
-        <p className={styles["statement-paragraph"]}>Whether you’re a seasoned green,thumb or just starting out, our platform has something for everyone. Home-grown will help you find people to share seeds, plants, and gardening tips with, as well as learn new skills and techniques.</p>
-      </div>
-      <div className={styles["mission-container-bottom"]}>
-      <div className={styles["mission-container-image"]}>
     
-      </div>
-      <div className={styles["mission-container-cards"]}>
-      
+        <div className={styles["mission-container-bottom"]}>
+          <div className={styles["mission-image-container"]}>
+
+          </div>
+          <div className={styles["mission-cards-container"]}>
+          <div className={styles["cards-grid"]}>
+          <LandingCard  src="/icons/sustainability.png" alt="sustainability" heading="Sustainability" paragraph="Diversity in our cities green spaces promotes a healthy ecosystem for animal and reduce the need for imported foods"/>
+          <LandingCard  src="/icons/community.png" alt="community" heading="Community" paragraph="We help you build a community around you that helps, supports and teaches each-other."/>
+          <LandingCard src="/icons/money.png" alt="money saving" heading="Money Saving" paragraph="Growing your own food, and learning how to eat seasonally can save you money! Helping you during these trying times!"/>
+          <LandingCard  src="/icons/new-skill.png" alt="learn a new skill" heading="Learn A New Skill" paragraph="Learn a new skill, an app that encourages people to start growing their own food and become self sufficient!"/>
+          </div>
+          </div>
         </div>
-  
-</div>
       </div>
       <div className={styles["cards-container"]}>
         <Carousel />
