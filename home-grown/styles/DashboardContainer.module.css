@@ -20,13 +20,13 @@
   float: left;
   margin-left: 7.5%;
   align-items: center;
-  width: 35%;
-  background-color: #fff;
-  padding: 20px;
+  width: 25%;
+  background-color: transparent;
   border-radius: 20px;
   box-shadow: 0px 0px 10px #ccc;
   margin-top: 2%;
   margin-right: 2.5%;
+  height: 60%;
 }
 
 
@@ -34,12 +34,12 @@
   display: grid;
   grid-template-columns: max-content(2, 1fr);
   align-items: center;
-  width: 47.5%;
-  height: 50%;
+  width: 57.5%;
+  height: 60%;
   margin-top: 2%;
   border-radius: 20px;
+  background-color: transparent;
   box-shadow: 0px 0px 10px #ccc;
-  background-color: #fff;
   padding: 20px;
 
 
@@ -51,19 +51,20 @@
 .title-container {
   display: flex;
   align-items: center;
+  justify-content: left;
   padding: 20px;
   box-shadow: 0px 0px 10px #ccc;
   background-color: #fff;
-  margin: auto;
+  margin-left: 7.5%;
   margin-top: 3%;
-  width: 85%;
+  width: 25%;
   height: 10%;
   border-radius: 20px;
 
 }
 
 .title-user-img {
-  width: 4.5%;
+  width: 15%;
 
 
 }
@@ -71,19 +72,27 @@
 
 .title-user-name {
   font-family: var(--titleFont);
-  font-size: 25px;
-  margin-left: 3%;
+  font-size: 22px;
+  margin-left: 8%;
   color: black;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
+  
 
 
 
 }
 
 .title-buttons-container {
-  margin-left: 42%;
+  margin-left: 7.5%;
+  width: 40%;
+  background-color: yellow;
+  margin-top: -15%;
+  display: flex;
+  flex-direction: column;
+
+
 
 }
 
@@ -98,10 +107,9 @@
   font-size: 1.3rem;
   padding: .35rem;
   color: white;
-
-
-
 }
+
+
 
 .title-myMessages-button {
   background-color: var(--highLightTwo);
@@ -114,6 +122,7 @@
   padding: .35rem;
   margin-left: 10px;
   color: white;
+  margin-left: -1%;
 
 }
 
@@ -131,34 +140,37 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 20px;
+  background-color: transparent;
   box-shadow: 0px 0px 10px #ccc;
+  margin: 3%;
+  border-radius: 10px;
+  height: 40%;
+  width: 80%;
+  margin-left: 10%;
 
 }
 
 .profile-user-name {
   display: flex;
   justify-content: center;
-  padding-top: 5%;
+  font-size: 15px;
 
+  
 }
 
 
 
 .profile-user-info {
   display: block;
-  margin-top: 6%;
   text-align: left;
-  line-height: 35px;
-  font-size: 20px;
-  margin-left: 5%;
-
-
-
+  line-height: 22px;
+  font-size: 15px;
+  height: 30%;
+  margin-bottom: 15%;
+ 
+ 
 }
+
 
 /* plot image */
 
@@ -167,7 +179,7 @@
   margin-top: 5%;
   margin-left: 5%;
   width: 90%;
-  height: 45%;
+  height: 50%;
   border-radius: 10px;
 
 }
@@ -179,10 +191,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  margin-top: 5%;
+background-color: transparent;
+  margin-top: 1%;
   width: 50%;
-  height: 90%;
+  height: 100%;
   margin-left: 50%;
 
 }

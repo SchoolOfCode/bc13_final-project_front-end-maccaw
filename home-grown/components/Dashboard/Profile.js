@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "../../styles/DashboardContainer.module.css";
+import Link from 'next/link';
 
 export default function Profile({ userData }) {
   let ratingString = "";
@@ -13,11 +14,32 @@ export default function Profile({ userData }) {
 
   return (
     <div className={styles["profile-container"]}>
+      <h4>Location: {userData.location}</h4>
+       <h4 >Rating: {ratingString}</h4>
 
-       <div className={styles["profile-user-name"]}>
-       <h1> {userData.first_name}'s Plot </h1>
-       </div>
+      <div className={styles["title-buttons-container"]}>
+       
+      <Link href="/post"> 
+      <button className={styles["title-myListings-button"]}> My Listings</button>
+      </Link>
 
+      <a href="https://gmail.com">
+      <button className={styles["title-myMessages-button"]}> My Messages</button>
+      </a>
+
+    </div>
+         
+    
+
+    </div>
+   
+   
+  );
+}
+
+
+
+/* 
        <div className={styles["profile-user-info"]}>
        <h4> Name:  {userData["first_name"]} 
        {userData["last_name"]}</h4>
@@ -26,8 +48,4 @@ export default function Profile({ userData }) {
        <h4 >Rating: {ratingString}</h4>
        </div>
 
-    </div>
-   
-   
-  );
-}
+*/
