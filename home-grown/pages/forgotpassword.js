@@ -34,9 +34,9 @@ export default function ForgotPassword() {
         <div className={styles["main-card"]}>
           <h1 className={styles.title}>Reset your password</h1>
           <form className={styles["form-container"]} onSubmit={handleSubmit}>
-            <div className={styles["reset-message"]}>
-              {err && <p>{err}</p>}
-              {message && <p>{message}</p>}
+            <div className={styles["reset-message-container"]}>
+              {err && <p className={styles["reset-message"]}>{err}</p>}
+              {message && <p className={styles["reset-message"]}>{message}</p>}
             </div>
             <label className={styles.label}>
               Enter your login email to receive a reset password email:
