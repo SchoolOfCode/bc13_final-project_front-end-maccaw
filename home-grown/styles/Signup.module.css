@@ -174,11 +174,15 @@
       .glass-container{
          
               width: 70%;
-              height: 90%;
+              height: 80%;
           }
-          .log-in-container{
-              background-image: url('../public/illustrations/phone-wallpaper.png');
-          }
+        .log-in-container{
+            background-image: url('../public/illustrations/phone-wallpaper.png');
+        }
+        .button{
+          width:50%;
+          height: 10%;
+        }
                
     }
 
