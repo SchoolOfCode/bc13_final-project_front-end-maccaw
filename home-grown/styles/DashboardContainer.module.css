@@ -1,6 +1,16 @@
 .main-container {
   box-sizing: border-box;
+<<<<<<< HEAD
   height: 120vh;
+=======
+  height: 100vh;
+  background-image: url('/illustrations/dashboard-background.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+}
+
+>>>>>>> 4817885258a67446bbd35488a1af3c86ddeaa8a8
 
 }
 
@@ -79,11 +89,18 @@ color: rgb(109, 109, 109);
 }
 
 .title-myListings-button {
+<<<<<<< HEAD
   background-color:white;
   border-radius: 15px;
   opacity: 0.8;
   border-style: 2px #D0D5DD solid;
   width: 200px;
+=======
+  background-color: var(--highLightOne);
+  border-radius: 5px;
+  border: 2px white solid;
+  width: 160px;
+>>>>>>> 4817885258a67446bbd35488a1af3c86ddeaa8a8
   cursor: pointer;
   font-family: var(--textFont);
   font-size: 1.5rem;
@@ -92,11 +109,18 @@ color: rgb(109, 109, 109);
 }
 
 .title-myMessages-button {
+<<<<<<< HEAD
   background-color: white;
   border-radius: 15px;
   opacity: 0.8;
   border-style: 2px #D0D5DD solid;
   width: 200px;
+=======
+  background-color: var(--highLightTwo);
+  border-radius: 5px;
+  border: 2px white solid;
+  width: 160px;
+>>>>>>> 4817885258a67446bbd35488a1af3c86ddeaa8a8
   cursor: pointer;
   font-family: var(--textFont);
   font-size: 1.5rem;
@@ -115,6 +139,7 @@ color: rgb(109, 109, 109);
 /* profile details */
 
 .profile-container {
+<<<<<<< HEAD
   background-color: #fbfbf9;
   border: 3px #D0D5DD solid;
   border-radius: 15px;
@@ -126,6 +151,18 @@ color: rgb(109, 109, 109);
   margin-left: 10%;
   font-family: var(--textFont);
  
+=======
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+
+>>>>>>> 4817885258a67446bbd35488a1af3c86ddeaa8a8
 }
 
 .profile-user-name {
@@ -133,6 +170,7 @@ color: rgb(109, 109, 109);
   display: flex;
   justify-content: center;
   padding-top: 5%;
+
 }
 
 .profile-user-info {
@@ -143,7 +181,12 @@ color: rgb(109, 109, 109);
   font-size: 20px;
   margin-left: 5%;
 
+<<<<<<< HEAD
  
+=======
+
+
+>>>>>>> 4817885258a67446bbd35488a1af3c86ddeaa8a8
 }
 
 /* plot image */
