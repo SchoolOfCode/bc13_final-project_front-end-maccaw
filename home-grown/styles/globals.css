@@ -4,25 +4,22 @@
 }
 
 @font-face {
-
-  font-family: 'Happy Monkey';
-  src: url('../public/fonts/HappyMonkey-Regular.ttf');
+  font-family: "Happy Monkey";
+  src: url("../public/fonts/HappyMonkey-Regular.ttf");
 }
 
-:root{
- --mainWhite: #fbfbf9;
- --darkColour: #081402;
- --highLightOne: #214E0B;
- --subtitleColor: #3F5416;
- --highLightTwo: #d34401;
- --highLightThree: #FAA613;
- --lighterFontColor:rgb(109, 109, 109);
- --titleFont: 'Happy Monkey';
- --textFont: 'Georama';
- 
+:root {
+  --mainWhite: #fbfbf9;
+  --darkColour: #081402;
+  --highLightOne: #214e0b;
+  --subtitleColor: #3f5416;
+  --highLightTwo: #d34401;
+  --highLightThree: #faa613;
+  --lighterFontColor: rgb(109, 109, 109);
+  --titleFont: "Happy Monkey";
+  --textFont: "Georama";
 }
- #__next{
-
+#__next {
   height: 100%;
   width: 100%;
 }
@@ -59,6 +56,8 @@ body,
 body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--mainWhite);
+  overflow: hidden;
+  overflow-x: hidden;
 }
 /*
   6. Improve media defaults
@@ -102,7 +101,6 @@ h6 {
 
 /* header */
 
-
 /* footer */
 
 footer {
@@ -121,31 +119,33 @@ footer {
   gap: 20px;
 }
 
-
-
 /* header */
 .navbar {
-  height: 3rem;
+  height: 4rem;
   display: flex;
-
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 1rem;
-  background-color: var(  --highLightOne);
+  background-color: var(--highLightOne);
   z-index: 100;
+  overflow-x: hidden;
 }
 
 .list-container {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   list-style-type: none;
   text-decoration: none;
-  width: 60%;
+  width: 50%;
   justify-content: center;
+  justify-content: flex-end;
+  margin-right: 5%;
   color: var(--mainWhite);
   gap: 5%;
   z-index: 100;
 }
-
 
 .bar {
   display: block;
@@ -153,7 +153,7 @@ footer {
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background-color: var(  --mainWhite);
+  background-color: var(--mainWhite);
 }
 
 .hamburger {
@@ -161,39 +161,40 @@ footer {
   cursor: pointer;
 }
 
-.text{
-  color:var(--mainWhite);
+.text {
+  color: var(--mainWhite);
   text-decoration: none;
 }
 
-@media(max-width: 768px){
+.logo {
+
+  height: 100%;
+  margin-left: 5%;
+}
+
+@media (max-width: 768px) {
   .list-container {
     margin: 0;
-    position: fixed;
+    position: absolute;
     right: 0;
-    top: 3rem;
+    top: 4rem;
     display: flex;
     flex-direction: column;
     height: 60%;
-    width: 30%;
+    width: 40%;
+    padding: 0;
     justify-content: center;
     align-items: center;
-    background-color: var(  --highLightOne);
+    background-color: var(--highLightOne);
     gap: 10%;
-
   }
 
-
   .list-container.active {
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
     transform: translateX(0);
   }
 
   .list-container.notactive {
-    display: flex;
-    flex-direction: column;
+    display: none;
     transform: translateX(100%);
   }
 
@@ -215,8 +216,4 @@ footer {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  }
-
-
-
-  
+}
