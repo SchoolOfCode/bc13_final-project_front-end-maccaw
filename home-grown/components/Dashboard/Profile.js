@@ -15,7 +15,7 @@ export default function Profile({ userData }) {
     <div className={styles["profile-container"]}>
 
        <div className={styles["profile-user-name"]}>
-       <h1> {userData.first_name}'s Plot </h1>
+       <h1 className="profile-h1-name"> {userData.first_name}'s Plot </h1>
        </div>
 
        <div className={styles["profile-user-info"]}>
