@@ -2,8 +2,9 @@
 export default function Footer() {
     return (
         <footer>
-        <p>Follow us on Linkedin:</p>
+        <p className="followUs">Follow us on Linkedin:</p>
 
+        <div className="team-members">
         <div className="team-member">
         <a className="icon-link" href="http://www.linkedin.com/in/alex-chappell-developer/">Alex</a>
         </div>
@@ -27,6 +28,7 @@ export default function Footer() {
         <div className="team-member">
         <a className="icon-link" href="http://www.linkedin.com/in/will-byrne-developer"><p>Will</p></a>
         </div>
-        </footer>
+        </div>
+    </footer>
     )
   }

@@ -108,6 +108,7 @@ footer {
 
   height: 7vh;
   display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: var(--highLightOne);
   color: var(--mainWhite);
@@ -116,18 +117,42 @@ footer {
 }
 .footer {
   display: flex;
+  
   gap: 20px;
 }
 
 
 
 .team-member{
-  height: 40px;
-  width: 80px;
+  height: 30px;
+  width: auto;
 }
 a{
   text-decoration: none;
   color: #fbfbf9;
+}
+
+a:hover{
+  cursor: pointer;
+}
+.followUs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  
+  
+}
+.team-members{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  gap: 10px;
+  margin: auto;
+  
 }
 
 .linkdin-icon{
