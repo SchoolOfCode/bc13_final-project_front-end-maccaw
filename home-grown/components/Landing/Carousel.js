@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 import styles from "../../styles/Carousel.module.css" 
 import Image from 'next/image'
-import Link from 'next/link'
 import profile from "../../public/illustrations/bunny.png"
 import profile2 from "../../public/illustrations/sheep.png"
 import profile3 from "../../public/illustrations/chicken.png"
@@ -75,105 +75,65 @@ export const Carousel = () => {
 
       
       <div className={styles["card"]}>
-      
-          <div className={styles["top"]}>
-            <Image src={crop2} width={60} height={60} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> WILL'S MUSHROOM PATCH </p> 
-          </div>
-    
+      <div className={styles["reviewer-container"]}>
+      <img src="/illustrations/sheep.png" className={styles["profile-picture"]} />
+      <h5 className={styles["reviewer-name"]}>Jessica Sheep</h5>
+      </div>
           <div className={styles["middle"]}>
-            <p className={styles["description"]}>Calling all mushroom enthusiasts! I'm trying to grow white mushrooms at home, but I'm having some trouble getting them to grow. Does anyone have any tips or tricks for successful mushroom cultivation?</p>
-            <Image src={profile2} width={180} height={180} className={styles["profile-picture"]} />
+            <p className={styles["description"]}>"It never seemed possible for me to have my own garden in the city, but this website made it a reality for me. I was able to find a spare plot in my neighborhood and now I have my own vegetable garden and I'm so happy with the fresh produce I get to enjoy!"</p>
           </div> 
-          
-          <div className={styles["bottom"]}>
-            <p className={styles["ratings"]}> 🥕🥕🥕🥕 </p>
-          </div>
       </div>
        
-
-
-       <div className={styles["card"]}>
-          <div className={styles["top"]}>
-            <Image src={crop} width={60} height={60} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> ALEX'S STRAWBERRY PATCH </p>
-          </div>
-          <div className={styles["middle"]}>
-            <p className={styles["description"]}>I recently started a home strawberry garden and have been having some difficulties getting my plants to thrive. I would love any tips or advice from experienced gardeners on how to improve the health of my strawberry plants.</p>
-            <Image src={profile} width={180} height={180} className={styles["profile-picture"]} />
-          </div>    
-          <div className={styles["bottom"]}>
-            <p className={styles["ratings"]}>  🥕🥕🥕 </p>
-          </div>
+      <div className={styles["card"]}>
+      <div className={styles["reviewer-container"]}>
+      <img src="/illustrations/bunny.png" className={styles["profile-picture"]} />
+      <h5 className={styles["reviewer-name"]}>Mabel Babel</h5>
       </div>
-
-
-
-       <div className={styles["card"]}>
-          <div className={styles["top"]}>
-            <Image src={crop3} width={60} height={60} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> AMINA'S RASPBERRY PATCH </p>
-          </div>
           <div className={styles["middle"]}>
-            <p className={styles["description"]}>I am having trouble with my raspberry plants and am seeking advice from experienced gardeners. Any suggestions or tips would be greatly appreciated.</p>
-            <Image src={profile3} width={180} height={180} className={styles["profile-picture"]} />
-          </div>    
-          <div className={styles["bottom"]}>
-            <p className={styles["ratings"]}>  🥕🥕🥕 </p>
-          </div>
+            <p className={styles["description"]}>"I've always been interested in gardening, but I didn't know how to find a plot to start my own. This website made it so easy for me to find a spare garden plot in my community and now I can finally live my dream of growing my own fruits and vegetables."</p>
+          </div> 
       </div>
-
-
 
       <div className={styles["card"]}>
-          <div className={styles["top"]}>
-            <Image src={crop4} width={60} height={60} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> JULIO'S ONION PATCH </p>
-          </div>
+      <div className={styles["reviewer-container"]}>
+      <img src="/illustrations/goat.png" className={styles["profile-picture"]} />
+      <h5 className={styles["reviewer-name"]}>Pippy Longsocks</h5>
+      </div>
           <div className={styles["middle"]}>
-            <p className={styles["description"]}>I am an expert white onion grower with a large crop ready for harvest. I am seeking strong and able-bodied individuals to assist with the physical labor. Please contact me for more details.</p>
-            <Image src={profile4} width={180} height={180} className={styles["profile-picture"]} />
-          </div>    
-          <div className={styles["bottom"]}>
-            <p className={styles["ratings"]}> 🥕🥕🥕🥕 </p>
-          </div>
+            <p className={styles["description"]}>"I was pleasantly surprised at how easy it was to find a spare plot to start my own garden with the help of this website. I never knew that there were so many available plots in my area. It's been a game changer for me, I have a new hobby and fresh produce to enjoy."</p>
+          </div> 
       </div>
 
-
-
-
-      
-    <div className={styles["card"]}>
-          <div className={styles["top"]}>
-            <Image src={crop5} width={60} height={60} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> MARWA'S LETTUCE PATCH </p>
-          </div>
+      <div className={styles["card"]}>
+      <div className={styles["reviewer-container"]}>
+      <img src="/illustrations/fox.png" className={styles["profile-picture"]} />
+      <h5 className={styles["reviewer-name"]}>Jason Bourne</h5>
+      </div>
           <div className={styles["middle"]}>
-            <p className={styles["description"]}>Calling all green thumbed friends! I'm having trouble getting my lettuce to thrive in my garden. Any advice on how to keep the leaves crisp and the plants healthy? Thanks in advance for any suggestions!</p>
-            <Image src={profile5} width={180} height={180} className={styles["profile-picture"]} />
-          </div>    
-          <div className={styles["bottom"]}>
-            <p className={styles["ratings"]}>  🥕🥕🥕 </p>
-          </div>
+            <p className={styles["description"]}>"Very Happy I found this website, it's allowed me to find a spare plot in my community where I can start my own garden. I never knew how easy it could be to have my own vegetable garden, I'm looking forward to seeing it grow and the fresh produce I will be able to enjoy."</p>
+          </div> 
       </div>
 
-
-
-
-       <div className={styles["card"]}>
-          <div className={styles["top"]}>
-            <Image src={crop6} width={60} height={60} className={styles["crop-picture"]} />
-            <p className={styles["username"]}> CHET'S TOMATO PATCH </p>
-          </div>
-          <div className={styles["middle"]}>
-            <p className={styles["description"]}>I'm trying to decide which vegetables to plant in my garden this year and I can't decide if I want to include tomatoes or not. I love the taste of homegrown tomatoes but they can be finicky to grow. Any advice from would be greatly appreciated.</p>
-            <Image src={propfile6} width={180} height={180} className={styles["profile-picture"]} />
-          </div>    
-          <div className={styles["bottom"]}>
-            <p className={styles["ratings"]}>  🥕🥕🥕 </p>
-          </div>
+      <div className={styles["card"]}>
+      <div className={styles["reviewer-container"]}>
+      <img src="/illustrations/cow.png" className={styles["profile-picture"]} />
+      <h5 className={styles["reviewer-name"]}>William Tudor</h5>
       </div>
-   
+          <div className={styles["middle"]}>
+            <p className={styles["description"]}>"I never realized how much I would enjoy having my own garden until I found this website and was able to find a spare plot in my neighborhood. It's been a great way for me to connect with nature and also have fresh produce on my table. Great website."</p>
+          </div> 
+      </div>
+
+      <div className={styles["card"]}>
+      <div className={styles["reviewer-container"]}>
+      <img src="/illustrations/chicken.png" className={styles["profile-picture"]} />
+      <h5 className={styles["reviewer-name"]}>Grace Kelley</h5>
+      </div>
+          <div className={styles["middle"]}>
+            <p className={styles["description"]}>"Who knew how easy it was to find a spare plot to start my own garden! It's been a great resource for me to find a place to grow my own fruits and vegetables. I'm so excited to have my own little farm and enjoy fresh produce all year round."</p>
+          </div> 
+      </div>
+
        </Slider>
     
         )
