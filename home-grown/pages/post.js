@@ -69,11 +69,16 @@ export default function NewPost() {
     return (
       <div className={styles["post-page-container"]}>
         {/* <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/> */}
+        <p className={styles["post-page-description"]}>
+              Welcome to your listings page. Here you can add a new post, amend an existing post, or delete a current post.
+
+            </p>
         <div className={styles["header-container"]}>
           <div></div>
           <h2>MY LISTINGS</h2>
           <div className={styles["new-post-icon-container"]}>
             <label>new post:</label>
+        
             <BoilerPlatePopup
               className={styles["new-post-icon"]}
               image="icons/create-new-post.png"
@@ -103,6 +108,7 @@ export default function NewPost() {
           })}
         </div>
       </div>
+      
     );
   } else {
     return <h1>...Loading</h1>;
