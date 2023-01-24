@@ -42,8 +42,12 @@ function Listings() {
     getPostData();
   }
 
-  function showEmailToast() {
-    toast.success("Email sent!");
+  function showEmailToast(result, error) {
+    if (result) {
+      toast.success("Email sent!");
+    } else if (error) {
+      toast.error("Email failed to send");
+    }
   }
 
   return (

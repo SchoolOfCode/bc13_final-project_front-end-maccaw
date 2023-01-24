@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ListingCard from "../ListingCard/ListingCard";
 import styles from "../../styles/ListingContainer.module.css";
 

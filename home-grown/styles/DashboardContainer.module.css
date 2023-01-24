@@ -1,57 +1,56 @@
 .main-container {
   box-sizing: border-box;
-  height: 120vh;
+  height: 100vh;
+  background-image: url('/illustrations/dashboard-background.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
 
 }
 
 .left-container {
-  background-color: #fbfbf9;
-  margin-left: 5.2%;
-  margin-top: 2%;
-  width: 35%;
-  height: 80%;
-  border: 3px #D0D5DD solid;
-  border-radius: 5px;
-  margin-right: 5%;
-  float: left;
+    float: left;
+      margin-left: 7.5%;
+      align-items: center;
+      width: 25%;
+      background-color: transparent 0.9;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px #ccc;
+      margin-top: -5.5%;
+      margin-right: 2.5%;
+      height: 73.5%;
+      backdrop-filter: blur(3px);
 }
-
-
-.right-container-top {
-  background-color:#fbfbf9;
-  margin-left: 0%;
-  margin-top: 2%;
-  width: 49.5%;
-  
-  border-radius: 5px;
-  float: left;
-  height: 320px;
-    
-}
-
-.right-container-bottom {
-  background-color: #fbfbf9;
-  margin-left: 0%;
-  width: 49.5%;
-  
-  float: left;
-  height: 410px;
-  border-radius: 5px;
-  margin-top: 2%;
+.right-container {
+    display: grid;
+    grid-template-columns: max-content(2, 1fr);
+    align-items: center;
+    width: 57.5%;
+    height: 60%;
+    margin-top: 2%;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px #ccc;
+    padding: 20px;
+    backdrop-filter: blur(3px);
 }
 
 /* title details */
 
 .title-container{
-  background-color: #fbfbf9;
-  border: 5px #D0D5DD solid;
-  border-radius: 15px;
   display: flex;
-  margin: auto;
-  width: 90%;
-  height: 13%;
-  align-items: center;
-  margin-top: 4%;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #ccc;
+    background-color: transparent;
+    margin-left: 35%;
+    margin-top: 3%;
+    width: 57.5%;
+    height: 10%;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+
   
 }
 
@@ -63,49 +62,55 @@ margin-left: 4.5%;
 
 
 .title-user-name {
-font-family: var(--textFont);
-font-size: 35px;
-margin-left: 3%;
-color: rgb(109, 109, 109);
+  font-family: var(--titleFont);
+    font-size: 22px;
+    margin-left: 3%;
+    color: black;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
   
-}
+  }
 
 .title-buttons-container {
-  margin-left: 19%;
+  display: flex;
+  margin-left: 15%;
 
   
 }
 
 .title-myListings-button {
-  background-color:white;
-  border-radius: 15px;
-  opacity: 0.8;
-  border-style: 2px #D0D5DD solid;
-  width: 200px;
-  cursor: pointer;
-  font-family: var(--textFont);
-  font-size: 1.5rem;
-  padding: .35rem;
+ 
+    background-color: rgba(40, 160, 80, 1);
+      border-radius: 10px;
+      border: 2px white solid;
+      width: 160px;
+      cursor: pointer;
+      font-family: var(--textFont);
+      font-size: 1.5rem;
+      padding: .35rem;
+      color: white;
+     
 
 }
 
 .title-myMessages-button {
-  background-color: white;
-  border-radius: 15px;
-  opacity: 0.8;
-  border-style: 2px #D0D5DD solid;
-  width: 200px;
-  cursor: pointer;
-  font-family: var(--textFont);
-  font-size: 1.5rem;
-  padding: .35rem;
-  margin-left: 10px;
+
+    background-color: #F17C2E;
+      border-radius: 10px;
+      border: 2px white solid;
+      width: 160px;
+      cursor: pointer;
+      font-family: var(--textFont);
+      font-size: 1.5rem;
+      padding: .35rem;
+      color: white;
+      margin-left: 5%;
 
 }
 
 
 .title-myListings-button:hover, .title-myMessages-button:hover{
-  box-shadow: var(--highLightTwo) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
@@ -113,35 +118,46 @@ color: rgb(109, 109, 109);
 /* profile details */
 
 .profile-container {
-  background-color: #fbfbf9;
-  border: 3px #D0D5DD solid;
-  border-radius: 15px;
-  box-sizing: content-box;
-  width: 80%;
-  height: 45%;
-  align-items: center;
-  margin-top: 4%;
-  margin-left: 10%;
-  font-family: var(--textFont);
+
+    display: flex;
+    flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      font-family: var(--titleFont);
+      backdrop-filter: blur(2px);
+      box-shadow: 0px 0px 10px #ccc;
+      margin-top: 10%;
+      border-radius: 10px;
+      height: 40%;
+      width: 80%;
+      margin-left: 10%;
  
 }
 
 .profile-user-name {
-
   display: flex;
-  justify-content: center;
-  padding-top: 5%;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
 }
 
 .profile-user-info {
-  display: block;
-  margin-top: 6%;
-  text-align: left;
-  line-height: 35px;
-  font-size: 20px;
-  margin-left: 5%;
+ 
+    display: block;
+      text-align: left;
+      line-height: 27px;
+      font-size: 17px;
+      height: 30%;
+      margin-bottom: 25%;
 
  
+}
+
+.profile-container:hover {
+
+  transform: translate3d(0, 2px, 0);
 }
 
 /* plot image */
@@ -151,7 +167,7 @@ color: rgb(109, 109, 109);
   margin-top: 5%;
   margin-left: 5%;
   width: 90%;
-  height: 45%;
+  height: 40%;
   border-radius: 10px;
 
 }
@@ -161,21 +177,16 @@ color: rgb(109, 109, 109);
 
 .plot-chart {
 
-  display: flex;
-  justify-content: center;
-
-  background-color: #ffffff;
-  margin-top: 2%;
-  margin-left: 25%;
-
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  margin-top: 5%;
-
-  width: 50%;
-  height: 95%;
- 
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    background-color: transparent;
+    width: 50%;
+    margin-left: 50%;
+    width: 50%;
+    height: 50vh;
+    margin-top: -55%;
+    
 
 }
 

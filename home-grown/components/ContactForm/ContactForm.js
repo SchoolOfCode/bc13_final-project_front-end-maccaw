@@ -18,10 +18,13 @@ function ContactForm({ user_email, handleClose, showEmailToast }) {
       .then(
         (result) => {
           console.log(result.text);
+          showEmailToast(result.text, null);
+
           // text is email is sent succsefully?
         },
         (error) => {
           console.log(error.text);
+          showEmailToast(null, error.text);
           //text if email cant be sent
         }
       );
@@ -29,7 +32,6 @@ function ContactForm({ user_email, handleClose, showEmailToast }) {
     setSuccess(true);
     form.current.reset();
     handleClose();
-    showEmailToast();
     // setTimeout(TimerHandler, 2000)
   };
 
@@ -51,7 +53,12 @@ function ContactForm({ user_email, handleClose, showEmailToast }) {
       <form ref={form} className={styles["form"]} onSubmit={handleSubmit}>
         <label className={styles["label"]}>Name:</label>
         <input className={styles["input"]} type="text" name="name" />
-        <input hidden="true" type="text" name="email" value={user_email} />
+        <input
+          hidden={true}
+          type="text"
+          name="email"
+          defaultValue={user_email}
+        />
         <label className={styles["label"]}>Email:</label>
         <input className={styles["input"]} type="text" name="sender_email" />
         <label className={styles["label"]}>Message:</label>
