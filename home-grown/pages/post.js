@@ -6,7 +6,7 @@ import UserListingCard from "../components/UserListingCard/UserListingCard";
 import { useAuth } from "../context/AuthContext";
 import BoilerPlatePopup from "../components/PopUpModal/BoilerPlatePopUp";
 import ContactForm from "../components/ContactForm/ContactForm";
-import Loader from "../components/loader/loader";
+import Loader from "../components/Loader/Loader";
 
 export default function NewPost() {
   const [userPosts, setUserPosts] = useState();

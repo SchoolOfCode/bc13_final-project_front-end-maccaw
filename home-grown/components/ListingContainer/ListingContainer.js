@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import ListingCard from "../ListingCard/ListingCard";
 import styles from "../../styles/ListingContainer.module.css";
-import Loader from "../loader/loader";
+import Loader from "../Loader/Loader"
+
 function ListingContainer({ search, posts, showEmailToast }) {
   //fetch data from api
   //save the data in a state
