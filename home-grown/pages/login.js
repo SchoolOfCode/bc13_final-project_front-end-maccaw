@@ -58,7 +58,7 @@ export default function Login() {
             </button>
           </form>
           <div className={styles.links}>
-            <Link className={styles["link-tag"]} href="/forgotpassword">
+            <Link style={{ textDecoration: "none" }} href="/forgotpassword">
               Forgot Password?
             </Link>
             <Link style={{ textDecoration: "none" }} href="/signup">
