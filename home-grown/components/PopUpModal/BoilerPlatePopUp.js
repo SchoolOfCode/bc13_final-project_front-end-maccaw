@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../../styles/PopUp.module.css";
-import PostForm from "../PostForm/PostForm";
 
 function BoilerPlatePopup({
   image,
