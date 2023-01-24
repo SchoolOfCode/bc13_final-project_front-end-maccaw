@@ -1,4 +1,4 @@
-import Loader from "../components/loader/loader";
+import Loader from "../components/Loader/Loader";
 import styles from '../styles/Loader.module.css'
 
 export default function LoaderTest() {
