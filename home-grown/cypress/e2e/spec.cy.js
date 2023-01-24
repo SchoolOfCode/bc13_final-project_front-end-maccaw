@@ -33,8 +33,8 @@ describe("visit listings page, searches by post-code and then clears search", ()
 
 describe("visit homepage, navigates to log-in, inputs details. Then clicks forgot password", () => {
   it("passes", () => {
-    cy.visit("http://localhost:3000/").wait(1000);
-    cy.get("ul > :nth-child(4) > li").click().wait(1000);
+    cy.visit("http://localhost:3000/login").wait(1000);
+    // cy.get("ul > :nth-child(4) > li").click().wait(1000);
     cy.get(".Login_form-email-input__3q0BK > .Login_input__r_1vS").type(
       "amina@gmail.com"
     );
@@ -48,14 +48,10 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
 describe("logged in user flow", () => {
   it("visit homepage, navigates to log-in, inputs details. and check if logs in", () => {
     // cy.session('login', ()=>{
-    cy.visit("http://localhost:3000/", { timeout: 10000 });
-    cy.get("ul > :nth-child(4) > li").click({ timeout: 10000 });
-    cy.get(".Login_form-email-input__3q0BK > .Login_input__r_1vS").type(
-      "amina@gmail.com"
-    );
-    cy.get(".Login_form-password-input__XOMuN > .Login_input__r_1vS").type(
-      "password"
-    );
+    cy.visit("http://localhost:3000/login", { timeout: 10000 });
+    // cy.get("ul > :nth-child(4) > li").click({ timeout: 10000 });
+    cy.get('[data-cy="login-email-input"]').type("amina@gmail.com");
+    cy.get('[data-cy="login-password-input"]').type("password");
     cy.get(".Login_button__ejJ5H").click({ timeout: 10000 });
     cy.url().should("be.equal", "http://localhost:3000/dashboard");
     // });
