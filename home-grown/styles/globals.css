@@ -106,18 +106,54 @@ h6 {
 footer {
   position: relative;
 
-  height: 4vh;
+  height: 9.3vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
   background-color: var(--highLightOne);
   color: var(--mainWhite);
   bottom: 0;
+  
 }
 .footer {
   display: flex;
+  
   gap: 20px;
 }
+.team-member{
+  height: 30px;
+  width: auto;
+  font-size: 1rem;
+}
+a{
+  text-decoration: none;
+  color: #fbfbf9;
+}
+
+a:hover{
+  cursor: pointer;
+}
+.followUs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  
+  
+}
+.team-members{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 51%;
+  height: 100%;
+  gap: 10px;
+  margin: auto;
+  
+}
+
+
 
 /* header */
 .navbar {
@@ -215,5 +251,9 @@ footer {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  footer{
+    margin-top: 2.6rem;
   }
 }
