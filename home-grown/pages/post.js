@@ -6,6 +6,8 @@ import UserListingCard from "../components/UserListingCard/UserListingCard";
 import { useAuth } from "../context/AuthContext";
 import BoilerPlatePopup from "../components/PopUpModal/BoilerPlatePopUp";
 import ContactForm from "../components/ContactForm/ContactForm";
+import Loader from "../components/Loader/Loader";
+
 export default function NewPost() {
   const [userPosts, setUserPosts] = useState();
   const { currentUser } = useAuth();
@@ -111,6 +113,6 @@ export default function NewPost() {
       
     );
   } else {
-    return <h1>...Loading</h1>;
+    return <Loader/>;
   }
 }
