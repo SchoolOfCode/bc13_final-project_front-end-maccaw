@@ -106,7 +106,7 @@ h6 {
 footer {
   position: relative;
 
-  height: 7vh;
+  height: 9.3vh;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -120,12 +120,10 @@ footer {
   
   gap: 20px;
 }
-
-
-
 .team-member{
   height: 30px;
   width: auto;
+  font-size: 1rem;
 }
 a{
   text-decoration: none;
@@ -148,17 +146,14 @@ a:hover{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 51%;
   height: 100%;
   gap: 10px;
   margin: auto;
   
 }
 
-.linkdin-icon{
-  height: 30px;
-  width: 30px;
-}
+
 
 /* header */
 .navbar {
@@ -256,5 +251,9 @@ a:hover{
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  footer{
+    margin-top: 2.6rem;
   }
 }
