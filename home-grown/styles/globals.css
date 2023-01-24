@@ -106,17 +106,33 @@ h6 {
 footer {
   position: relative;
 
-  height: 4vh;
+  height: 7vh;
   display: flex;
-  justify-content: center;
   width: 100%;
   background-color: var(--highLightOne);
   color: var(--mainWhite);
   bottom: 0;
+  
 }
 .footer {
   display: flex;
   gap: 20px;
+}
+
+
+
+.team-member{
+  height: 40px;
+  width: 80px;
+}
+a{
+  text-decoration: none;
+  color: #fbfbf9;
+}
+
+.linkdin-icon{
+  height: 30px;
+  width: 30px;
 }
 
 /* header */
