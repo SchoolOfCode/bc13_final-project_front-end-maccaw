@@ -8,7 +8,7 @@ import PlotChart from "../components/Dashboard/PlotChart";
 import styles from "../styles/DashboardContainer.module.css";
 import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
 import plot from "../public/illustrations/plot.jpg";
-
+import Loader from "../components/loader/loader";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -82,7 +82,7 @@ export default function Dashboard() {
   }
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   } else {
     return (
       <div className={styles["main-container"]}>

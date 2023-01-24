@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ListingCard from "../ListingCard/ListingCard";
 import styles from "../../styles/ListingContainer.module.css";
-
+import Loader from "../loader/loader";
 function ListingContainer({ search, posts, showEmailToast }) {
   //fetch data from api
   //save the data in a state
@@ -12,7 +12,7 @@ function ListingContainer({ search, posts, showEmailToast }) {
   //key data for cards = username, location, croptype, plotsize, description, user image, rating
 
   if (!posts) {
-    return <div>...Loading</div>;
+    return <Loader/>;
   } else {
     return (
       <div className={styles["card-container"]}>

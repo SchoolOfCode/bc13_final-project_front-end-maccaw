@@ -42,7 +42,7 @@ export default function NavBar() {
             <li>Listings</li>
           </Link>
 
-          <Link href="/login" className="text" onClick={burgerHandler}>
+          <Link href="/login" className="text" onClick={logOut}>
             <li>Log Out</li>
           </Link>
           <Link href="/post" className="text" onClick={burgerHandler}>

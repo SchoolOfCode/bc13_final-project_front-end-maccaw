@@ -18,8 +18,8 @@ const LOADERS = [
 ];
 
 function Loader() {
-  const [loader, setLoader] = useState(LOADERS[0]);
-  const [animate, setAnimate] = useState(true);
+  const [loader, setLoader] = useState(LOADERS[Math.floor(Math.random() * LOADERS.length)]);
+  const [animate, setAnimate] = useState(false);
 
   const [intervalId, setIntervalId] = useState(null);
 
@@ -27,16 +27,16 @@ function Loader() {
     if (animate) {
       setTimeout(() => {
         setAnimate(false);
-      }, 300);
+      }, 1000);
     }
   }, [animate]);
-  
+
   useEffect(() => {
     const id = setInterval(() => {
-        const index = Math.floor(Math.random() * LOADERS.length);
-        setLoader(LOADERS[index]);
-        setAnimate(true);
-    }, 3000);
+      const index = Math.floor(Math.random() * LOADERS.length);
+      setLoader(LOADERS[index]);
+      setAnimate(!animate);
+    }, 1000);
     setIntervalId(id);
 
     return () => {
@@ -45,13 +45,19 @@ function Loader() {
   }, []);
 
   return (
-    <div className={styles["loader"]}>
-     <span className={`${styles["emoji"]} ${animate ? styles["animate"] : ""}`}>
-  {loader[0]}
-</span>
-<span className={`${styles["text"]} ${animate ? styles["animate"] : ""}`}>
-  {loader[1] + "..."}
-</span>
+    <div className={styles["loader-container"]}>
+      <div className={styles["loader"]}>
+        <span
+          className={`${styles["emoji"]} ${animate ? styles["animate"] : ""}`}
+        >
+          {loader[0]}
+        </span>
+        <span
+          className={`${styles["text"]} ${animate ? styles["animate"] : ""}`}
+        >
+          {loader[1] + "..."}
+        </span>
+      </div>
     </div>
   );
 }
