@@ -28,10 +28,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <br></br>
-      <br></br>
+      <h3 className={styles["our-mission-title"]}>Our Mission: Helping You Connect with Others in a Shared Goal!</h3>
+
       <div className={styles["our-mission-container"]}>
-    
         <div className={styles["mission-container-bottom"]}>
           <div className={styles["mission-image-container"]}>
 
@@ -46,6 +45,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <h3 className={styles["testimonies-title"]}>~What Our Customers Say~</h3>
       <div className={styles["cards-container"]}>
         <Carousel />
       </div>
