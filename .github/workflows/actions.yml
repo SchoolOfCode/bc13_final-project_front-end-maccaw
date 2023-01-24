@@ -17,7 +17,7 @@ jobs:
         working-directory: ./home-grown
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.0.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v3
