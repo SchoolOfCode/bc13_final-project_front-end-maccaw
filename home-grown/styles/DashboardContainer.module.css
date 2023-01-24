@@ -120,6 +120,7 @@ margin-left: 4.5%;
 .profile-container {
 
     display: flex;
+    flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
