@@ -154,6 +154,11 @@ margin-left: 4.5%;
  
 }
 
+.profile-container:hover {
+
+  transform: translate3d(0, 2px, 0);
+}
+
 /* plot image */
 
 .plot-picture {
