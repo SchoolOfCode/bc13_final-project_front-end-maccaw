@@ -37,8 +37,8 @@ export const Carousel = () => {
          settings: {
          slidesToShow: 1,
          slidesToScroll: 1,
-         vertical: true,
-         verticalSwiping: true,
+         vertical: false,
+         verticalSwiping: false,
          arrows: false,
          speed: 400,
                   }
