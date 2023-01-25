@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "../../styles/ListingContainer.module.css";
 import MyPopup from "../PopUpModal/PopUpModal";
 
@@ -13,6 +14,7 @@ function ListingCard({
   user_email,
   showEmailToast,
 }) {
+  const [cardGrow, setCardGrow] = useState(false);
   let ratingString = "";
 
   function generateRating(rating) {
@@ -22,9 +24,16 @@ function ListingCard({
   }
   generateRating(rating);
 
+  function handleCardGrow() {
+    setCardGrow(!cardGrow);
+  }
+
   const postCode = location.split(" ");
   return (
-    <div className={styles["one-card"]}>
+    <div
+      className={cardGrow ? styles["one-card-grow"] : styles["one-card"]}
+      onClick={handleCardGrow}
+    >
       <div className={styles["user-info"]}>
         <img
           className={styles["profile-img"]}
@@ -35,7 +44,9 @@ function ListingCard({
         <p>{ratingString}</p>
       </div>
       <div className={styles["post-info"]}>
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={cardGrow ? styles["title-grow"] : styles.title}>
+          {title}
+        </h3>
         <div className={styles["location-crop"]}>
           <p className={styles["location-key-value"]}>
             <span className={styles.key}>Location:</span>
@@ -46,7 +57,11 @@ function ListingCard({
             {crop_name}
           </p>
         </div>
-        <p className={styles.description}>Description: {description}</p>
+        <p
+          className={cardGrow ? styles["description-grow"] : styles.description}
+        >
+          Description: {description}
+        </p>
         <div className={styles["message-container"]}>
           Message:{" "}
           <MyPopup user_email={user_email} showEmailToast={showEmailToast} />
