@@ -10,7 +10,7 @@ export default function Blog() {
 return (
     <>
 <div>
-<Image src={blog} height={500}/>
+<div className={styles["image"]}> </div>
 
 
 <div className={styles["main-container"]}>

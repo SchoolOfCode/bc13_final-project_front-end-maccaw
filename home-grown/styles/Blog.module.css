@@ -1,7 +1,16 @@
 .main-container {
     display: flex;
 } 
-
+.image {
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/illustrations/blog-image.png");
+}
 /* blog post css */
 
 .posts {
@@ -12,7 +21,7 @@
 
 .post {
     width: 500px;
-    margin: 0px 25px 40px 30px;
+    margin: 10px 25px 40px 30px;
     background-color: white;
     padding: 10px 20px 10px 20px;
 }
@@ -68,7 +77,7 @@
 
 .sidebar {
     flex: 2;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-right: 45px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -111,5 +120,97 @@
 
 .sidebar-list:hover {
     transform: translate3d(0, 2px, 0);
+
+}
+
+@media screen and (max-width: 1024px) {
+    .image {
+        height: 30vh;
+       
+    }
+    
+    .sidebar {
+        margin-top: 28px;
+        flex: 4;
+        height: 435px;
+          
+        }
+
+     .sidebar-list {
+        font-size: 13px;
+         }
+
+  .posts {
+    flex: 9;
+    margin-top: 20px;
+  }
+
+  .post {
+    width: 550px;
+  }
+
+@media screen and (max-width: 720px) {
+
+    .image {
+    
+            background-image: url("/illustrations/blog-image-mobile.png");
+            height: 60vh;
+            margin-left: 70px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+    
+    
+        }
+
+    
+
+    .posts {
+            grid-template-columns: auto;
+            width: 100%;
+            margin-top: -40px;
+    
+    
+        }
+    
+        .sidebar {
+            display: none;
+    
+        }
+   
+}
+
+
+@media screen and (max-width: 420px) {
+
+.image {
+   
+   background-image: url("/illustrations/blog-image-mobile.png");
+    height: 40vh;
+    margin-left: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+   
+}
+
+.posts {
+   grid-template-columns: auto;
+   width: 100%;
+
+ 
+}
+
+.sidebar {
+    display: none;
+ 
+}
+
+
+}
+
+
+
 
 }
