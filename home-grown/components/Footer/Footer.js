@@ -1,10 +1,21 @@
+import Link from "next/link";
+import Image from "next/image"
+import img from "../../public/illustrations/youtube.png"
+
 
 export default function Footer() {
     return (
-        <footer>
-        <p className="followUs">Follow us on Linkedin:</p>
+        <footer className="footer">
+        <p>  Copyright © 2023 Home Grown </p> 
+        <Link className="youtube-icon" href="https://www.youtube.com/channel/UClkUASDfMSOhMKJIbe2tl7Q"> <Image src={img} height={25}/>  </Link>
 
-        <div className="team-members">
+        
+    </footer>
+    )
+  }
+
+
+  /* <div className="team-members">
         <div className="team-member">
         <a className="icon-link" href="http://www.linkedin.com/in/alex-chappell-developer/">Alex</a>
         </div>
@@ -29,6 +40,5 @@ export default function Footer() {
         <a className="icon-link" href="http://www.linkedin.com/in/will-byrne-developer"><p>Will</p></a>
         </div>
         </div>
-    </footer>
-    )
-  }
+
+        */

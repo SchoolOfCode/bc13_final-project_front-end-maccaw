@@ -14,7 +14,7 @@
     width: 500px;
     margin: 0px 25px 40px 30px;
     background-color: white;
-    padding: 10px 30px 10px   0px;
+    padding: 10px 20px 10px 20px;
 }
 
 .post-info {
@@ -58,6 +58,7 @@
     margin-top: 15px;
     font-size: 15px;
     line-height: 25px;
+    margin-left: 5px;
    
     
 
