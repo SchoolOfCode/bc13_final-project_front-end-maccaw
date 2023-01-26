@@ -307,288 +307,170 @@ margin-left: 4.5%;
 }  */
  /* ////////////////// */
 /* Breakpoint @ 768px */
- /* @media screen and (max-width: 768px){
- 
-  .title-user-img{
-    width: 10%
+ @media screen and (max-width: 768px){
+  .main-container {
+    justify-items: center;
+    flex-direction: column;
+    margin: auto;
+    height: auto;
   }
-   
-  .title-myListings-button, .title-myMessages-button {
-    width: 100px;
-    font-size: .8rem;
-    height: 2rem;
-    border-radius: 50px;
-    margin-left: 3rem;
-    margin-top:0rem; 
-  }
-  .title-user-name{
-    overflow: visible;
-  }
-
-  .profile-container{
+  .title-container{
+    border-radius: 15px;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+    margin-top: 0%;
     display: flex;
+    flex-direction: column;
+  }
+  .title-container{
     flex-direction: row;
-    width: 62%;
-    margin:auto;
-    margin-top: 2rem;
-    margin-left: 2.8rem;
-    float: left;
-    height: 15rem;
-  }
-  .profile-user-name{
-    font-size: 1rem;
+    margin-top: 0;
   }
 
-  .profile-user-info{
-    margin-top: 1rem;
-    font-size: 1.1rem;
+  .title-user-img{
+    margin: auto;
+    width: 7%;
   }
-
   .title-buttons-container{
     margin: auto;
-  }
-  .right-container{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: inherit;
-    margin-top: 5rem;
-  }
-
-  .left-container{
-    margin: 0;
-    width: 42%;
-    height: auto;
     margin-top: 1rem;
+    width: auto;
     
+  }
+  .title-myListings-button, .title-myMessages-button{
+    width: 90px;
+    font-size: 0.8rem;
+    height: 35px;
+    margin-left: 4rem;
+  }
+  .left-container {
+    border:none;
+    border-radius: 5px;
+    width: 100%;
+    flex-direction: column;
+    margin:auto;
   }
 
   .plot-picture{
-    width: 70%;
-    margin-left: 30px;
-    
-  }
-  .title-container{
-    margin-left: 0;
-  }
-  .plot-chart{
-    margin:0;
-    width: 15rem;
+    width: 42%;
+    margin-left: 8%;
+    top: 0;
+   
   }
 
-  .crop-table-container{
-    margin-left: 0;
-    width: auto;
-    height: 100%;
- 
-  }
-  .crop-card{
-    width: 160%;
-    height: 100%;
-    margin: 0;
-    margin-top: 1rem;
-  }
-} */
-  /* .container {
-    margin-top: 4%;
-    width: 95%;
-    height: 70px;
-    flex-direction: row;
+  .plot-chart {
+    width: 250px;
+    height: 250px;
+    margin-top: -35rem;
+    float: right;
   }
 
   .profile-container{
-    flex-direction: row;
-  }
-  .h1element{
-    font-size: 2rem;
-    margin: auto;
-    line-height: 40px;
-  }  */
-
-  /* .carouselContainer {
-    width: 46%;
-    margin: auto;
-    margin-top: 2rem;
-  }
-  .userPlotImage{
-    width: 100%;
-    height: 100%;
-    
-  }
-  .h4UserInfo{
-    font-size: 1rem;
-    width: 200px;
-  }
-  .imageProfile{
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-top: -2rem;
-  } */
-  /* .pieChart {
+    margin-top:0;
+    float: left;
     width: 40%;
-    height: 40%;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    height: 30vh;
+    margin-left: 5rem;
+    margin-bottom: 4rem;
   }
- */
+  .profile-user-info{
+    margin-top: 1rem;
+    height: 10%;
+  }
+  .right-container{
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer{
+    margin-top: 0;
+  } 
+}
+  
 
-
-/* //////////////////// */
-/* Breakpoint @ 390px */
-/* @media screen and (max-width: 390px) {
-
+ /* Breakpoint @ 390px */
+ @media screen and (max-width: 425px) {
   .main-container {
     justify-items: center;
-   flex-direction: column;
-
+    flex-direction: column;
+    margin: auto;
+    height: auto;
   }
   .title-container{
     border-radius: 15px;
     width: 90%;
-    height: auto;
     align-items: center;
     margin: auto;
-    margin-top: 5%;
-  }
-  .title-mylistings-button {
-    opacity: 0.8;
-    cursor: pointer;
-    font-family: var(--textFont);
-    font-size: 1.5rem;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .left-container {
-    margin-top: 2%;
-    
-    border: 3px #D0D5DD solid;
-    border-radius: 5px;
-    max-height: 20%;
-    width: 100%;
-    flex-direction: column; 
+  .title-user-img{
+    margin: auto;
+    width: 40px;
   }
-
-  .right-container-bottom {
-    border-radius: 5px;
-    margin-top: 14%;
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  
-  .title-container{
-    border-width: 3px;
-    width: 95%;
+  .title-buttons-container{
     margin: auto;
     margin-top: 1rem;
-    margin-left: .6rem;
-    height: 10%;
+    
+    
   }
-
-  .title-user-img{
-    width: 15%;
-    margin-left: 3%;
-
-
-  }
-  .right-container-top {
-    margin-top: 2%;
-    border-radius: 5px;
-    width: 100%;
-    margin-left: 18%;
-    flex-direction: column;
-  }
-  .right-container-bottom {
-    border-radius: 5px;
-    margin-top: 2%;
-    width: 100%;
-    margin-left: 18%;
-
-  }
-  
-  .title-container{
-    margin-top: 2%;
-    border-width: 3px;
-    margin-left: 18%;
-    width: 100%;
-    align-items: center;
-  }
-
-  .title-user-img{
-    width: 15%;
-    margin-left: 5%;
-
-  }
-
-  .title-user-name{
-    width: 100%;
-    height: 25%;
-    font-size: 1em;
-    margin-left: 2rem;
-    margin-top: 5rem;
-    height: 100%;
-
-  }
-
-  .title-buttons-container{  
-    margin: auto;
-    margin-top: 2rem;
-    /* width: 5%;
-    height: 5%; */
-    /* display: none;
-  } */
-
-  /* .title-mylistings-button {
-    border-radius: 15px;
-    opacity: 0.8;
+  .title-myListings-button, .title-myMessages-button{
     width: 80px;
-    cursor: pointer;
-    font-family: var(--textFont);
-    font-size: 1.5rem;
-    background-color: blue;
-    justify-items: center;
-    display: none;
-
-  } */
-  /* .profile-container{
-    display: flex;
-    margin-top: 0%;
-    flex-direction: column;
-    /* background-color: green; */
-    /* width: 100%;
-    height:auto;
-    border:none;
-    margin-bottom: 2rem;
-    line-height: 1px;
+    font-size: 0.7rem;
+    height: 30px;
+    margin:0;
   }
-  .profile{
-    min-width: 72%;
-    height: 100%;
-    margin-top: 2rem;
-    margin-bottom: 0rem;
-  } */
-  /* .plot-picture{
-    margin-top: 2rem;
-    width: 22rem;
-    height: 14rem;
+  .left-container {
+    border:none;
+    border-radius: 5px;
+    width: 100%;
+    flex-direction: column;
+    margin:auto;
+    margin-top: 0rem;
+    
+  }
+
+  .plot-picture{
+    width: 80%;
+    margin: auto;
   }
 
   .plot-chart {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     margin: auto;
     margin-top: 0rem;
     
-  }  */
-
-  /* .crop-table-container{
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    width: 100%;
-    height: 100%;
-    
   }
-  .logo{
-    width: 2rem;
-  } */
-/* } */ 
+
+  .profile-container{
+    margin-top:0;
+    width: 67%;
+    height: 30vh;
+  }
+  
+  .profile-user-info{
+    margin-top: 1rem;
+    height: 10%;
+  }
+  .right-container{
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
+
+
+/* //////////////////// */
+/* Breakpoint @ 390px */
+/* @media screen and (max-width: 390px) { */
+
+ 
+ /* }  */
 
 /* //////////////////// */
 /* Breakpoint @ 375px */
@@ -611,6 +493,7 @@ margin-left: 4.5%;
 
   .title-user-img{
     margin: auto;
+    width: 40px;
   }
   .title-buttons-container{
     margin: auto;
@@ -629,7 +512,7 @@ margin-left: 4.5%;
     width: 100%;
     flex-direction: column;
     margin:auto;
-    margin-top: rem;
+    margin-top: 0rem;
     
   }
 
@@ -639,8 +522,8 @@ margin-left: 4.5%;
   }
 
   .plot-chart {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
     margin: auto;
     margin-top: 0rem;
     
@@ -648,12 +531,19 @@ margin-left: 4.5%;
 
   .profile-container{
     margin-top:0;
-    width: 100%;
-    height: 30vh;
+    width: 66%;
+    height: 20vh;
   }
   .profile-user-info{
     margin-top: 1rem;
     height: 10%;
+  }
+
+  .profile-user-info > h4{
+    font-size: 1rem;
+  }
+  .profile-user-info > h1{
+    font-size: 1.5rem;
   }
   .right-container{
     width: auto;

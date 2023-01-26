@@ -6,10 +6,6 @@
     height: 50vh;
     margin-left: 0%;
     background-color: transparent;
-  
-
-
-
 }
 
 .crop-card {
@@ -27,8 +23,26 @@
     
 }
 
+@media screen and (max-width: 768px) {
+    .crop-table-container{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        margin-top: 14rem;
+        align-items: flex-end;
+      }
+    
+      .crop-card{
+        width: 100%;
+        height: 100%;
+      }
+      .footer{
+        margin-top:0rem;
+        height: 58px;
+      }
+}
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .crop-table-container{
         width: 100%;
         height: 100%;
@@ -45,6 +59,24 @@
         margin-top:0rem;
         height: 58px;
       }
+}
+
+
+
+@media screen and (max-width: 375px) {
+    .crop-table-container{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 2rem;
+        align-items: flex-end;
+      }
+    
+      .crop-card{
+        width: 100%;
+        height: 100%;
+      }
+      
 }
 
 .crop-card:hover {
