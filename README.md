@@ -2,7 +2,7 @@
 
 **[DEMO LINK](https://home-grown.vercel.app/)**
 
-[<img src="./home-grown/public/illustrations/logo.png" />](image.png)
+[<img src="./home-grown/public/brand-images/brand-banner.png" />](brand-banner.png)
 
 <br/>
 
@@ -30,15 +30,13 @@
 
 # **_Home_Grown_App_** 🍇🍎🍅🥕🌽🧑🏻‍🌾
 
-Welcome to Care-Full!
+Welcome to Home-Grown!
 
-This app was created as part of the School of Code bootcamp, a team of 6 animal lovers came together and began brainstorming what real world problem we wanted to solve. Soon we realised a common issue experienced amongst pet owners - remembering when specific symptoms began and tracking how many times a symptom has been experienced. This then led us onto talking about the difficulty of remembering when you need to administer medication and attend appointments. After lots of ideation and grand ideas, we pulled ourselves back to reality and came up with a viable product that we could plan and produce in only 4 weeks, this is the result.
+Our team at the School of Code bootcamp came together with the goal of addressing real-world issues that are interconnected and impact our society. Through brainstorming and discussion, we identified climate change, the cost of living, and a lack of community as significant problems. In response, we developed an app to empower individuals to take steps towards a more sustainable, self-sufficient, and community-oriented future. Though our app may not solve these complex issues, it aims to provide guidance and resources to individuals looking to make a positive impact in their communities.
 
-Problem statement:
-Having a sick pet is a stressful situation, on top of our already busy lives, this additional stress can make it difficult to remember the specific details of your pet's illness and their needs.
+Elevator Pitch:
 
-Solution:
-This app aims to alleviate some of the stress that comes with having a sick pet by providing the user with an easy way to track symptoms and medications and facilitate better and more accurate in person communication when visiting the vets.
+Are you looking to save money, eat more healthily, learn new skills and join a community? Home Grown connects you to your local food growing community whether you've got your own growing space or not! Find food friends, track your progress and gain access to our growing guide.
 
 **This README is for the front-end of the Care-Full app. If you would like to explore the back-end of the app please go to the [backend repository](https://github.com/SchoolOfCode/final-project_back-end-team-con-cat-enate-room-7)**
 
@@ -132,7 +130,7 @@ NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID={YOUR MEASUREMENT_ID}
 
 | Colour     | Hex                                                                    |
 | ---------- | ---------------------------------------------------------------------- |
-| Main White | ![#fbfbf9](https://via.placeholder.com/15/FBFBF9/FBFBF9.png) `#fbfbf9` |
+| Main White | ![#FBFBF9](https://via.placeholder.com/15/FBFBF9/FBFBF9.png) `#fbfbf9` |
 | DarkText   | ![#081402](https://via.placeholder.com/15/081402/081402.png)`#081402`  |
 | HighLight1 | ![#214e0b](https://via.placeholder.com/15/214e0b/214e0b.png) `#214e0b` |
 | LowLight   | ![#3f5416](https://via.placeholder.com/15/3f5416/3f5416.png) `#3f5416` |
