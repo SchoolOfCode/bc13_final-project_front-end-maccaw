@@ -94,8 +94,8 @@ export default function Dashboard() {
           {userData.plot_image ? (
             <Image src={plot} className={styles["plot-picture"]} />
           ) : (
-            <Image
-              src={userData["plot_image"]}
+            <img
+              src={newUserImages["plot_image"]}
               className={styles["plot-picture"]}
             />
           )}
