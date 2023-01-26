@@ -76,7 +76,7 @@ export const Carousel = () => {
       
       <div className={styles["card"]}>
       <div className={styles["reviewer-container"]}>
-      <img src="/illustrations/sheep.png" className={styles["profile-picture"]} />
+      <img src="/illustrations/sheep.png" className={styles["profile-picture"]} alt="sheep" />
       <h5 className={styles["reviewer-name"]}>Jessica Sheep</h5>
       </div>
           <div className={styles["middle"]}>
@@ -86,7 +86,7 @@ export const Carousel = () => {
        
       <div className={styles["card"]}>
       <div className={styles["reviewer-container"]}>
-      <img src="/illustrations/bunny.png" className={styles["profile-picture"]} />
+      <img src="/illustrations/bunny.png" className={styles["profile-picture"]} alt="bunny"/>
       <h5 className={styles["reviewer-name"]}>Mabel Babel</h5>
       </div>
           <div className={styles["middle"]}>
@@ -96,7 +96,7 @@ export const Carousel = () => {
 
       <div className={styles["card"]}>
       <div className={styles["reviewer-container"]}>
-      <img src="/illustrations/goat.png" className={styles["profile-picture"]} />
+      <img src="/illustrations/goat.png" className={styles["profile-picture"]} alt="goat"/>
       <h5 className={styles["reviewer-name"]}>Pippy Longsocks</h5>
       </div>
           <div className={styles["middle"]}>
@@ -106,7 +106,7 @@ export const Carousel = () => {
 
       <div className={styles["card"]}>
       <div className={styles["reviewer-container"]}>
-      <img src="/illustrations/fox.png" className={styles["profile-picture"]} />
+      <img src="/illustrations/fox.png" className={styles["profile-picture"]} alt="fox"/>
       <h5 className={styles["reviewer-name"]}>Jason Bourne</h5>
       </div>
           <div className={styles["middle"]}>
@@ -116,7 +116,7 @@ export const Carousel = () => {
 
       <div className={styles["card"]}>
       <div className={styles["reviewer-container"]}>
-      <img src="/illustrations/cow.png" className={styles["profile-picture"]} />
+      <img src="/illustrations/cow.png" className={styles["profile-picture"]}  alt="cow"/>
       <h5 className={styles["reviewer-name"]}>William Tudor</h5>
       </div>
           <div className={styles["middle"]}>
@@ -126,7 +126,7 @@ export const Carousel = () => {
 
       <div className={styles["card"]}>
       <div className={styles["reviewer-container"]}>
-      <img src="/illustrations/chicken.png" className={styles["profile-picture"]} />
+      <img src="/illustrations/chicken.png" className={styles["profile-picture"]} alt="chicken" />
       <h5 className={styles["reviewer-name"]}>Grace Kelley</h5>
       </div>
           <div className={styles["middle"]}>

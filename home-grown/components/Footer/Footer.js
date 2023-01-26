@@ -11,16 +11,18 @@ export default function Footer() {
       <Link
         className="youtube-icon"
         href="https://www.youtube.com/channel/UClkUASDfMSOhMKJIbe2tl7Q"
+        aria-label="link to youtube"
       >
        
-        <Image src={img} height={25} />
+        <Image alt="icon" src={img} height={25} />
       </Link>
       <Link
         className="youtube-icon"
         href="/faq"
+        aria-label="link to faq"
       >
       
-        <Image src={faq} height={25} />
+        <Image alt="icon" src={faq} height={25} />
       </Link>
     </footer>
   );
