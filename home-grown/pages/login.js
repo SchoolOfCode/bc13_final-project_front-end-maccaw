@@ -3,12 +3,12 @@ import Link from "next/link";
 import { useAuth } from "../context/AuthContext.js";
 import { useRouter } from "next/router";
 import styles from "../styles/Login.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const { login } = useAuth();
-  const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -16,22 +16,25 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      setErr("");
       setLoading(true);
       await login(emailRef.current.value, passwordRef.current.value);
       router.push("/dashboard");
-    } catch {
-      setErr("Failed to sign in");
+    } catch (error) {
+      if (error.message == "Firebase: Error (auth/wrong-password).") {
+        toast.error("Password is incorrect for this user");
+      } else if (error.message == "Firebase: Error (auth/user-not-found).") {
+        toast.error("This email has not been registered to a user");
+      }
     }
     setLoading(false);
   }
 
   return (
     <div className={styles["log-in-container"]}>
+      <Toaster />
       <div className={styles["glass-container"]}>
         <div className={styles["log-in-card"]}>
           <h1 className={styles.title}>Log In</h1>
-          {err && <h2>{err}</h2>}
           <form className={styles["form-container"]} onSubmit={handleSubmit}>
             <div className={styles["form-email-input"]}>
               <label className={styles["label"]}>Your Email:</label>
