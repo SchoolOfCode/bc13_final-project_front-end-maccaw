@@ -271,5 +271,16 @@
     .post-page-description{
       font-size: 0.7rem;
     }
-    
+
+    .input{
+      height: 100%;
+    }
+
+    .button{
+      font-size: 0.8rem;
+      height: 10%;
+      width: 70%;
+      padding: 0%;
+    }
+  
 }
