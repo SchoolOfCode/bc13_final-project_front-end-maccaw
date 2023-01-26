@@ -2,7 +2,7 @@
 
 **[DEMO LINK](https://home-grown.vercel.app/)**
 
-[<img src="./home-grown/public/brand-images/brand-banner.png" />](image.png)
+[<img src="./home-grown/public/brand-images/brand-banner.png" alt="banner" />](image.png)
 
 <br/>
 
@@ -38,7 +38,7 @@ Elevator Pitch:
 
 Are you looking to save money, eat more healthily, learn new skills and join a community? Home Grown connects you to your local food growing community whether you've got your own growing space or not! Find food friends, track your progress and gain access to our growing guide.
 
-**This README is for the front-end of the Care-Full app. If you would like to explore the back-end of the app please go to the [backend repository](https://github.com/SchoolOfCode/final-project_back-end-team-con-cat-enate-room-7)**
+**This README is for the front-end of the Home-Grown app. If you would like to explore the back-end of the app please go to the [backend repository](https://github.com/SchoolOfCode/bc13_final-project_back-end-maccaw.git)**
 
 <br/>
 
