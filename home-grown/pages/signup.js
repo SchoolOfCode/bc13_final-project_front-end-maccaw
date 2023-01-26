@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useAuth } from "../context/AuthContext.js";
 import { useRouter } from "next/router";
 import styles from "../styles/Signup.module.css";
+import toast, { Toaster } from "react-hot-toast";
 
 //object of icon urls, so that the url can be saved in the database -> set icon to be animalIcons[e.target.name]
 const animalIcons = {
@@ -25,7 +26,7 @@ export default function SignUp() {
 
   const [signUpForm, setSignUpFrom] = useState({
     firebase_id: "",
-    last_name: " ",
+    first_name: "",
     last_name: "",
     email: "",
     username: "",
@@ -58,16 +59,24 @@ export default function SignUp() {
     });
   }
 
-  //firebase registery of the user - submits the email and password to firbase
+  //firebase registery of the user - submits the email and password to firebase
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setErr("Passwords do not match");
+    if (!signUpForm.first_name) {
+      return toast.error("Please enter a first name");
+    } else if (!signUpForm.last_name) {
+      return toast.error("Please enter a last name");
+    } else if (!signUpForm.username) {
+      return toast.error("Please enter a username");
+    } else if (!signUpForm.profile_picture) {
+      return toast.error("Please choose a profile icon");
+    } else if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      setErr("Passwords do not match");
+      return toast.error("Passwords do not match");
     }
 
     try {
-      console.log("HELLO");
       setErr("");
       setLoading(true);
       const user = await signUp(
@@ -90,20 +99,37 @@ export default function SignUp() {
         }
       )
         .then((response) => response.json())
-        .then((response) => console.log(JSON.stringify(response)));
+        .then((response) => console.log(response));
 
       router.push("/dashboard");
-    } catch {
-      setErr("Failed to create an account");
+    } catch (error) {
+      const toastDuration = { duration: 4000 };
+      switch (error.message) {
+        case "Firebase: Error (auth/email-already-in-use).":
+          toast.error("Email already in use", toastDuration);
+          break;
+        case "Firebase: Password should be at least 6 characters (auth/weak-password).":
+          toast.error(
+            "Password should be at least 6 characters",
+            toastDuration
+          );
+          break;
+        case "Firebase: Error (auth/invalid-email).":
+          toast.error("Please enter a valid email", toastDuration);
+          break;
+        default:
+          console.log("default", error.message);
+      }
+      console.log(error, "hello");
     }
     setLoading(false);
   }
 
   return (
     <div className={styles["log-in-container"]}>
+      <Toaster />
       <div className={styles["glass-container"]}>
         <div className={styles["log-in-card"]}>
-          {err && <h2>{err}</h2>}
           <div className={styles["form-container"]}>
             <div className={styles["name-container"]}>
               <div className={styles["first-name"]}>

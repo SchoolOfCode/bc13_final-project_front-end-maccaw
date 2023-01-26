@@ -10,8 +10,11 @@ export default function Footer() {
       <p> Copyright © 2023 Home Grown </p>
       <Link
         className="youtube-icon"
+
         href="https://www.youtube.com/channel/UClkUASDfMSOhMKJIbe2tl7Q"
         aria-label="link to youtube"
+target="_blank"
+
       >
        
         <Image alt="icon" src={img} height={25} />

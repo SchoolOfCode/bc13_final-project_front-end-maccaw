@@ -2,19 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
+    margin-top: 1.8%;
     width: 50%;
     height: 50vh;
     margin-left: 0%;
     background-color: transparent;
-  
-
-
-
 }
 
 .crop-card {
     font-family: var(--textFont);
-    margin-top: 2%;
+    margin-top: 2.5%;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -25,8 +22,62 @@
     margin-left: 5%;
     border: 3px solid #F6873D;
     
+}
+
+@media screen and (max-width: 768px) {
+    .crop-table-container{
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        margin-top: 14rem;
+        align-items: flex-end;
+      }
+    
+      .crop-card{
+        width: 100%;
+        height: 100%;
+      }
+      .footer{
+        margin-top:0rem;
+        height: 58px;
+      }
+}
+
+@media screen and (max-width: 425px) {
+    .crop-table-container{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 2rem;
+        align-items: flex-end;
+      }
+    
+      .crop-card{
+        width: 100%;
+        height: 100%;
+      }
+      .footer{
+        margin-top:0rem;
+        height: 58px;
+      }
+}
 
 
+
+@media screen and (max-width: 375px) {
+    .crop-table-container{
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 2rem;
+        align-items: flex-end;
+      }
+    
+      .crop-card{
+        width: 100%;
+        height: 100%;
+      }
+      
 }
 
 .crop-card:hover {

@@ -122,7 +122,7 @@ footer {
 }
 
 
-/*
+
 .team-member{
   height: 30px;
   width: auto;
@@ -157,10 +157,6 @@ a:hover{
   margin: auto;
   
 }
-
-/*
-
-/* header */
 .navbar {
   height: 4rem;
   display: flex;
@@ -171,7 +167,6 @@ a:hover{
   z-index: 100;
   overflow-x: hidden;
 }
-
 .list-container {
   position: relative;
   width: 100%;
@@ -187,7 +182,6 @@ a:hover{
   gap: 5%;
   z-index: 100;
 }
-
 .bar {
   display: block;
   width: 25px;
@@ -196,18 +190,15 @@ a:hover{
   transition: all 0.3s ease-in-out;
   background-color: var(--mainWhite);
 }
-
 .hamburger {
   display: none;
   cursor: pointer;
 }
-
 .text {
   font-family: var(--textFont);
   color: var(--darkColour);
   text-decoration: none;
 }
-
 .logo {
   height: 100%;
   margin-left: 5%;
@@ -219,9 +210,7 @@ a:hover{
   }
   
   .navbar {
-
     background-color:var(--highLightOne);
-  
   }
   .text {
     font-family: var(--textFont);
@@ -243,16 +232,13 @@ a:hover{
     background-color: var(--highLightOne);
     gap: 10%;
   }
-
   .list-container.active {
     transform: translateX(0);
   }
-
   .list-container.notactive {
     display: none;
     transform: translateX(100%);
   }
-
   .hamburger {
     display: block;
     margin-right: 4vw;
@@ -273,6 +259,6 @@ a:hover{
   }
 
   footer{
-    margin-top: 2.6rem;
+    margin-top: 0rem;
   }
 }

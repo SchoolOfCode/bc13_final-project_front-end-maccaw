@@ -83,7 +83,7 @@ To run the front-end locally follow the steps below:
   git clone https://github.com/SchoolOfCode/bc13_final-project_front-end-maccaw
 ```
 
-2. Remember to navigate to the correct folder: final-project_front-end-team-con-cat-enate-room-7
+2. Remember to navigate to the correct folder: home-grown
 
 3. Install all necessary dependencies by running the following command in the terminal:
 
@@ -151,6 +151,11 @@ To run unit tests, run the following command
 
 ```bash
   npm run test
+```
+To run Cypress E2E tests, run the following command
+
+```bash
+  npm run cypress:open
 ```
 
 <br/>

@@ -17,7 +17,7 @@ export default function PlotChart({ userPosts }) {
           <h1 className={styles["add-plot-message"]}>
             Please add a plot and create a post to see crop analytics here
           </h1>
-          <button className={styles["button-one"]}> POST PLOT </button>
+          <button className={styles["button-one"]}>ADD PLOT</button>
         </div>
       );
     } else {

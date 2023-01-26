@@ -12,7 +12,7 @@ function CropTableCard({
     <div className={styles["crop-card"]}>
       <div className={styles["crop-name"]}>
         <p>{cropName}</p>
-        <img src={cropImage} />
+        <img className="crop-img" src={cropImage} />
       </div>
 
       <div className={styles["crop-season"]}>
