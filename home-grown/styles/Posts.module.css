@@ -14,7 +14,7 @@
 
 .post-container{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns:  minmax(0, 1fr) minmax(0, 1fr);
     width: 90%;
     padding: 20px;
     gap: 20px;
@@ -271,5 +271,16 @@
     .post-page-description{
       font-size: 0.7rem;
     }
-    
+
+    .input{
+      height: 100%;
+    }
+
+    .button{
+      font-size: 0.8rem;
+      height: 10%;
+      width: 70%;
+      padding: 0%;
+    }
+  
 }

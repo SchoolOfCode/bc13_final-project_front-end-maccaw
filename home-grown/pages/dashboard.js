@@ -71,7 +71,7 @@ export default function Dashboard() {
     setUserData(data.payload[0]);
     setIsLoading(false);
   }
-
+ console.log("USER DATA", userData)
   async function handleLogout() {
     setErr("");
 
@@ -94,8 +94,8 @@ export default function Dashboard() {
           {userData.plot_image ? (
             <Image src={plot} className={styles["plot-picture"]} />
           ) : (
-            <Image
-              src={userData["plot_image"]}
+            <img
+              src={newUserImages["plot_image"]}
               className={styles["plot-picture"]}
             />
           )}
@@ -104,7 +104,7 @@ export default function Dashboard() {
             userData= {userData}
           />
         </div>
-
+            
         <div className={styles["right-container"]}>
           <CropTableContainer
               className={styles["crop-table-container"]}

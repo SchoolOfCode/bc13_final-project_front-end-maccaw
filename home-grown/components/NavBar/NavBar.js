@@ -41,7 +41,9 @@ export default function NavBar() {
           <Link href="/listings" className="text" onClick={burgerHandler}>
             <li>Listings</li>
           </Link>
-
+          <Link href="/blog" className="text" onClick={burgerHandler}>
+            <li>Blog</li>
+          </Link>
           <Link href="/login" className="text" onClick={logOut}>
             <li>Log Out</li>
           </Link>
@@ -81,15 +83,16 @@ export default function NavBar() {
           <Link href="/listings" className="text" onClick={burgerHandler}>
             <li>Listings</li>
           </Link>
+          <Link href="/blog" className="text" onClick={burgerHandler}>
+            <li>Blog</li>
+          </Link>
           <Link href="/signup" className="text" onClick={burgerHandler}>
             <li>Register</li>
           </Link>
           <Link href="/login" className="text" onClick={burgerHandler}>
             <li>Log In</li>
           </Link>
-          <Link href="/login" className="text" onClick={burgerHandler}>
-            <li>Post</li>
-          </Link>
+        
           <Link href="/dashboard" className="text" onClick={burgerHandler}>
             <li>Dashboard</li>
           </Link>
