@@ -2,7 +2,7 @@
 
 **[DEMO LINK](https://home-grown.vercel.app/)**
 
-[<img src="./home-grown/public/brand-images/brand-banner.png" />](brand-banner.png)
+[<img src="./home-grown/public/brand-images/brand-banner.png" />](image.png)
 
 <br/>
 
