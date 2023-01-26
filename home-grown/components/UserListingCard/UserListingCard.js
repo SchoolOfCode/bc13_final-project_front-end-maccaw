@@ -138,7 +138,7 @@ export default function UserListingCard({ userPost, handleDelete }) {
             <option value="9">Strawberries</option>
             <option value="10">Raspberries</option>
           </select>
-          <p>Plot % used: {percentage_of_plot} </p>
+          <p>Plot % used: {percentage_of_plot*100}% </p>
         </div>
         <div className={styles["post-card-description"]}>
           <p hidden={edit}>Description: {description}</p>

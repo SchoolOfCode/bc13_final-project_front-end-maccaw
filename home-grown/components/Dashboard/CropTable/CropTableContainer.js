@@ -6,10 +6,14 @@ function CropTableContainer({userPosts}) {
    
    
    if(userPosts){
-    return ( 
-         <div className={styles["crop-table-container"]}>
-        {userPosts.map((element)=><CropTableCard cropName={element.crop_name} cropSeason = {element.crop_season} cropHarvestTime = {element.crop_harvest_time} cropImage={element.crop_image} cropType = {element.crop_type} cropDifficulty={element.crop_difficulty}/>)}
-         </div>);
+    if(userPosts.length === 0){
+    }else{
+        return ( 
+            <div className={styles["crop-table-container"]}>
+           {userPosts.map((element)=><CropTableCard cropName={element.crop_name} cropSeason = {element.crop_season} cropHarvestTime = {element.crop_harvest_time} cropImage={element.crop_image} cropType = {element.crop_type} cropDifficulty={element.crop_difficulty}/>)}
+            </div>);
+    }
+
          
    }
    else{
