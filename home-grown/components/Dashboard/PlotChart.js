@@ -12,7 +12,14 @@ export default function PlotChart({ userPosts }) {
     return <h1>...loading</h1>;
   } else {
     if (userPosts.length === 0) {
-      return <h1 className={styles["add-plot-message"]}>Please add a plot and create a post to see crop analytics here</h1>;
+      return (
+        <div className={styles["message-container"]}>
+          <h1 className={styles["add-plot-message"]}>
+            Please add a plot and create a post to see crop analytics here
+          </h1>
+          <button className={styles["button-one"]}> POST PLOT </button>
+        </div>
+      );
     } else {
       let labelsArray = userPosts.map((element) => element.crop_name);
       let dataArray = userPosts.map(

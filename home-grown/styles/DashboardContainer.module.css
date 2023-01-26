@@ -8,6 +8,40 @@
 
 }
 
+.message-container{
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5%;
+  height:100%;
+}
+
+.button-one,
+.button-two {
+  border-radius: 999px;
+  box-sizing: border-box;
+  font-family: var(--textFont);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+  border: 2px solid;
+  border-color: white;
+  padding: 8px 18px;
+  text-align: center;
+  font-size: 0.94rem;
+  font-weight: 600;
+  height: 55px;
+  width: 160px;
+}
+
+.button-one {
+  background: var(--highLightTwo);
+  box-shadow: var(--highLightOne) 0 10px 20px -10px;
+}
+
+
 .add-plot-message{
   align-self: center;
 justify-self: center;
