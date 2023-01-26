@@ -307,7 +307,7 @@ margin-left: 4.5%;
 }  */
  /* ////////////////// */
 /* Breakpoint @ 768px */
- @media screen and (max-width: 768px){
+ /* @media screen and (max-width: 768px){
  
   .title-user-img{
     width: 10%
@@ -387,7 +387,7 @@ margin-left: 4.5%;
     margin: 0;
     margin-top: 1rem;
   }
-}
+} */
   /* .container {
     margin-top: 4%;
     width: 95%;
@@ -602,7 +602,6 @@ margin-left: 4.5%;
   .title-container{
     border-radius: 15px;
     width: 90%;
-    height: 100px;
     align-items: center;
     margin: auto;
     margin-top: 0%;
@@ -615,8 +614,8 @@ margin-left: 4.5%;
   }
   .title-buttons-container{
     margin: auto;
-    margin-left: 0rem;
     margin-top: 1rem;
+    width: auto;
     
   }
   .title-myListings-button, .title-myMessages-button{
@@ -630,7 +629,7 @@ margin-left: 4.5%;
     width: 100%;
     flex-direction: column;
     margin:auto;
-    margin-top: 3rem;
+    margin-top: rem;
     
   }
 
@@ -648,28 +647,18 @@ margin-left: 4.5%;
   }
 
   .profile-container{
-    margin-top: 0;
-    width: 78%;
+    margin-top:0;
+    width: 100%;
+    height: 30vh;
+  }
+  .profile-user-info{
+    margin-top: 1rem;
+    height: 10%;
+  }
+  .right-container{
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
-  .crop-table-container{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-  }
-  
-  .right-container-top {
-    margin-top: 22%;
-    border-radius: 5px;
-    width: 100%;
-  }
-
-  .crop-card{
-    width: 100%;
-    height: 100%;
-  }
-
-  .footer{
-    margin-top: 0rem;
-  }
 }
