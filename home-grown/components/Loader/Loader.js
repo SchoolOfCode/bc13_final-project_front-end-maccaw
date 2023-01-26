@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const LOADERS = [
   ["🥬", "I’m kale-ing it a day."],
   ["🌽", "You’re a-maize-ing"],
-  ["🥕", "What’s a carrot’s favorite movie? The Carrot-tie Kid."],
+  ["🥕", "The Carrot-tie Kid."],
   ["🍆", "You make my heart skip a beet!"],
   ["🍅", " I love you from my head to-ma-toes!"],
   ["🍇", "Grape minds think alike."],
