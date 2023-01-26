@@ -191,15 +191,30 @@ margin-left: 4.5%;
 }
 
  @media screen and (max-width: 1024px) {
+  .title-container{
+    margin-left: 30%;
+    width: 64%;
+  }
   .title-user-img{
-    width: 10%;
+    width: 8%;
     height: auto;
     float : right;
     margin-left: 2rem;
   }
+  .title-myListings-button, .title-myMessages-button{
+    width:5.7rem;
+    font-size: .8rem;
+  }
+  .left-container{
+    margin-left: 1.5%;
+    width: 20rem;
+  }
+  .right-container{
+    margin-top: 0;
+  }
   .profile-container{
-    width: 47%;
-    height: 50vh;
+    width: 100%;
+    height: 40vh;
     margin-left: 0%;
     float: right;
   }
@@ -207,12 +222,15 @@ margin-left: 4.5%;
     margin-top: 2rem;
     font-size: 1.2rem;
   }
-  .container{
+  /* .container{
     margin-top: 2%;
     width: 85%;
     height: 70px;
+  } */
+  .crop-table-container{
+    width: 64%;
+    margin-left: -7%;
   }
-
   .h1element{
     font-size: 2em;
   }
@@ -225,7 +243,7 @@ margin-left: 4.5%;
   .pieChart{
     width: 17rem;
     height: 17rem;
-    margin-top: 0;
+    margin-top: 2rem;
     margin-left: 4.5rem;
     margin-bottom: 5rem;
   } 
@@ -387,9 +405,7 @@ margin-left: 4.5%;
     margin-top: 0;
   } 
 }
-  
-
- /* Breakpoint @ 390px */
+ /* Breakpoint @ 475px */
  @media screen and (max-width: 425px) {
   .main-container {
     justify-items: center;
@@ -406,16 +422,13 @@ margin-left: 4.5%;
     display: flex;
     flex-direction: column;
   }
-
   .title-user-img{
     margin: auto;
     width: 40px;
   }
   .title-buttons-container{
     margin: auto;
-    margin-top: 1rem;
-    
-    
+    margin-top: 1rem;   
   }
   .title-myListings-button, .title-myMessages-button{
     width: 80px;
@@ -461,16 +474,7 @@ margin-left: 4.5%;
     display: flex;
     flex-direction: column-reverse;
   }
-
 }
-
-
-/* //////////////////// */
-/* Breakpoint @ 390px */
-/* @media screen and (max-width: 390px) { */
-
- 
- /* }  */
 
 /* //////////////////// */
 /* Breakpoint @ 375px */
@@ -538,17 +542,10 @@ margin-left: 4.5%;
     margin-top: 1rem;
     height: 10%;
   }
-
-  .profile-user-info > h4{
-    font-size: 1rem;
-  }
-  .profile-user-info > h1{
-    font-size: 1.5rem;
-  }
   .right-container{
     width: auto;
     display: flex;
     flex-direction: column-reverse;
   }
-
+  
 }
