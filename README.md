@@ -152,6 +152,11 @@ To run unit tests, run the following command
 ```bash
   npm run test
 ```
+To run Cypress E2E tests, run the following command
+
+```bash
+  npm run cypress:open
+```
 
 <br/>
 
