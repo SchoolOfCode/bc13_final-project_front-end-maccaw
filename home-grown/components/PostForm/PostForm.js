@@ -56,6 +56,7 @@ export default function PostForm({
     percentageArray.push(Math.round(percent * 10) / 10);
     percent += 0.1;
   }
+  console.log("%", percentageArray)
 
   if (userPosts && currentUser) {
     return (
