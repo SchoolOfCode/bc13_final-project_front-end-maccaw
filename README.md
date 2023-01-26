@@ -2,7 +2,7 @@
 
 **[DEMO LINK](https://home-grown.vercel.app/)**
 
-[<img src="./home-grown/public/brand-images/brand-banner.png" alt="banner" />](image.png)
+[<img src="./home-grown/public/brand-images/Graphic Design (72 × 26in) (72 × 20in) (2).png" alt="banner" />](image.png)
 
 <br/>
 
