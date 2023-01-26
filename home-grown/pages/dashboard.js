@@ -10,8 +10,6 @@ import CropTableContainer from "../components/Dashboard/CropTable/CropTableConta
 import plot from "../public/illustrations/plot.jpg";
 import Loader from "../components/Loader/Loader";
 
-
-
 export default function Dashboard() {
   const [err, setErr] = useState("");
   const { currentUser, logout, isUserAuthenticated } = useAuth();
@@ -39,6 +37,7 @@ export default function Dashboard() {
   async function getPosts() {
     let firebase_id = currentUser.uid;
     let token = await currentUser.getIdToken();
+    console.log(token);
 
     const response = await fetch(
       ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`,
@@ -84,7 +83,7 @@ export default function Dashboard() {
   }
 
   if (isLoading) {
-    return <Loader/>;
+    return <Loader />;
   } else {
     return (
       <div className={styles["main-container"]}>
@@ -101,23 +100,19 @@ export default function Dashboard() {
           )}
           <Profile
             className={styles["profile-container"]}
-            userData= {userData}
+            userData={userData}
           />
         </div>
 
         <div className={styles["right-container"]}>
           <CropTableContainer
-              className={styles["crop-table-container"]}
-              userPosts={userPosts}/>
-    
-         <PlotChart userPosts={userPosts} />
-          </div>
+            className={styles["crop-table-container"]}
+            userPosts={userPosts}
+          />
 
-            
-          </div>
-      
-     
+          <PlotChart userPosts={userPosts} />
+        </div>
+      </div>
     );
   }
-
 }
