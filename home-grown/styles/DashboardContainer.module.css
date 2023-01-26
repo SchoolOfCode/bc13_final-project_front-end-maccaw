@@ -8,47 +8,6 @@
 
 }
 
-.message-container{
-  
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:5%;
-  height:100%;
-}
-
-.button-one,
-.button-two {
-  border-radius: 999px;
-  box-sizing: border-box;
-  font-family: var(--textFont);
-  color: #ffffff;
-  cursor: pointer;
-  opacity: 1;
-  border: 2px solid;
-  border-color: white;
-  padding: 8px 18px;
-  text-align: center;
-  font-size: 0.94rem;
-  font-weight: 600;
-  height: 55px;
-  width: 160px;
-}
-
-.button-one {
-  background: var(--highLightTwo);
-  box-shadow: var(--highLightOne) 0 10px 20px -10px;
-}
-
-
-.add-plot-message{
-  align-self: center;
-justify-self: center;
-font-family: "Happy Monkey";
-
-}
-
 .left-container {
     float: left;
       margin-left: 7.5%;
@@ -57,11 +16,12 @@ font-family: "Happy Monkey";
       background-color: transparent 0.9;
       border-radius: 20px;
       box-shadow: 0px 0px 10px #ccc;
-      margin-top: -5.75%;
+      margin-top: -5.5%;
       margin-right: 2.5%;
-      height: 73.5%;
+      height: 73.3%;
       backdrop-filter: blur(3px);
 }
+
 .right-container {
     display: grid;
     grid-template-columns: max-content(2, 1fr);
@@ -90,14 +50,13 @@ font-family: "Happy Monkey";
     width: 57.5%;
     height: 10%;
     border-radius: 20px;
-    backdrop-filter: blur(3px);
-
-  
+    backdrop-filter: blur(3px);  
 }
+
 
 .title-user-img {
 width: 5.5%;
-margin-left: 4.5%;
+margin-left: 4%;
 
 }
 
@@ -105,7 +64,7 @@ margin-left: 4.5%;
 .title-user-name {
   font-family: var(--titleFont);
     font-size: 22px;
-    margin-left: 3%;
+    margin-left: 2%;
     color: black;
     display: inline-block;
     overflow: hidden;
@@ -116,8 +75,6 @@ margin-left: 4.5%;
 .title-buttons-container {
   display: flex;
   margin-left: 15%;
-
-  
 }
 
 .title-myListings-button {
@@ -131,8 +88,7 @@ margin-left: 4.5%;
       font-size: 1.5rem;
       padding: .35rem;
       color: white;
-     
-
+  
 }
 
 .title-myMessages-button {
@@ -179,18 +135,19 @@ margin-left: 4.5%;
 
 .profile-user-name {
   display: flex;
-    justify-content: center;
-    font-size: 15px;
-    color: black;
+  justify-content: center;
+  font-size: 15px;
+  color: black;
+  border-bottom: 3px green solid;
 }
 
 .profile-user-info {
- 
-    display: block;
+      margin-top: 5%;
+      display: block;
       text-align: left;
-      line-height: 27px;
+      line-height: 38px;
       font-size: 17px;
-      height: 30%;
+      height: 40%;
       margin-bottom: 25%;
 
  
@@ -222,14 +179,456 @@ margin-left: 4.5%;
     justify-content: right;
     flex-direction: column;
     background-color: transparent;
-    width: 50%;
     margin-left: 50%;
     width: 50%;
     height: 50vh;
-    margin-top: -55%;
-    
+    margin-top: -55%; 
 
 }
+
+/* new user dashboard */
+
+.message-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+}
+
+.button-one,
+.button-two {
+  border-radius: 999px;
+  box-sizing: border-box;
+  font-family: var(--textFont);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+  border: 2px solid;
+  border-color: white;
+  padding: 8px 18px;
+  text-align: center;
+  font-size: 0.94rem;
+  font-weight: 600;
+  height: 55px;
+  width: 160px;
+}
+
+.button-one {
+  background: var(--highLightTwo);
+  box-shadow: var(--highLightOne) 0 10px 20px -10px;
+}
+
+
+.add-plot-message {
+  align-self: center;
+  justify-self: center;
+  font-family: "Happy Monkey";
+
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+.left-container {
+      
+    margin-left: 2%;
+      width: 30%;
+      margin-top: 3%;
+      margin-right: 2%;
+      height: 60%;
+  
+    }
+
+.right-container {
+  width: 64%;
+  height: 60%;
+  margin-top: 3%;
+
+}
+
+.title-container {
+  padding: 15px;
+  margin-left: 2%;
+  margin-top: 5%;
+  width: 96%;
+  height: 9%;
+
+}
+
+.title-user-img {
+  width: 8%;
+  margin-left: 2%;
+
+}
+
+.title-buttons-container {
+  margin-left: 20%;
+}
+
+.title-user-name {
+  font-size: 28px;
+
+}
+
+.profile-user-info {
+  margin-top: 15%;
+  font-size: 19px;
+  margin-bottom: 20%;
+
+}
+
+.profile-container {
+  margin-top: 13%;
+  height: 40%;
+  width: 90%;
+  margin-left: 5%;
+
+}
+
+.plot-picture {
+  margin-top: 15%;
+  height: 30%;
+}
+
+
+.plot-chart {
+  margin-left: 50%;
+  width: 55%;
+  height: 30vh;
+  margin-top: -120%;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 820px) {
+  .main-container {
+      height: 90vh;
+    
+    }
+
+.left-container {
+    margin-left: 2%;
+    width: 30%;
+    margin-top: 3%;
+    margin-right: 2%;
+    height: 55%;
+
+  }
+
+
+.right-container {
+      width: 63%;
+      height: 55%;
+      margin-top: 3%;
+     
+     
+  }
+
+
+.title-container {
+  padding: 15px;
+  margin-left: 2%;
+  margin-top: 5%;
+  width: 94.5%;
+  height: 9%;
+
+}
+
+.title-user-img {
+  width: 8%;
+  margin-left: 2%;
+
+}
+
+.title-user-name {
+  font-size: 20px;
+  margin-left: 2%;
+
+}
+
+.title-myListings-button {
+  width: 140px;
+  font-size: 20px;
+  padding: .35rem;
+  margin-right: 10px;
+
+ 
+}
+
+.title-myMessages-button {
+    width: 140px;
+    font-size: 20px;
+    padding: .35rem;
+    margin-right: 15px ;
+   
+ 
+  }
+
+.title-buttons-container {
+     margin-left: 20%;
+    }
+
+
+.plot-picture {
+  margin-top: 15%;
+  height: 30%;
+}
+
+.profile-user-info {
+  margin-top: 10%;
+  line-height: 38px;
+  font-size: 16px;
+  height: 40%;
+  margin-bottom: 25%;
+
+
+}
+
+.profile-container {
+  margin-top: 15%;
+  height: 40%;
+  width: 90%;
+  margin-left: 5%;
+
+}
+
+.plot-chart {
+  margin-left: 51%;
+  width: 54%;
+  height: 30vh;
+  margin-top: -100%;
+
+}
+
+}
+
+@media screen and (max-width: 768px) {
+
+.profile-user-info {
+    margin-top: 5%;
+    line-height: 36px;
+    font-size: 14px;
+    height: 60%;
+    margin-bottom: 10%;
+
+  }
+
+.profile-user-name {
+  font-size: 13px;
+}
+
+.title-user-name {
+  font-size: 16px;
+
+}
+
+
+
+}
+
+
+
+ @media screen and (max-width: 425px) {
+  
+   .main-container {
+    height: auto;
+    background-image: url('../public/illustrations/phone-wallpaper.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+    
+   
+   }
+
+   .title-container {
+    width: 90%;
+    margin: 0%;
+    margin-left: 5%;
+    flex-direction: column;
+    margin-top: 10%;
+    padding-top: 10px;
+    background-color: white;
+   
+   }
+
+   .title-user-img {
+     margin: auto;
+     width: 45px;
+     padding-bottom: 5px;
+   }
+
+   
+   .title-buttons-container {
+     margin: auto;
+     margin-top: 0.5rem;
+   }
+
+
+   .title-myListings-button,
+   .title-myMessages-button {
+     width: 100px;
+     font-size: 0.9rem;
+     font-weight: 500;
+     height: 35px;
+     margin: auto;
+   }
+
+
+
+   .left-container {
+     display: flex;
+     width: 90%;
+     flex-direction: column;
+     margin-left: 5%;
+     margin-top: 8%;
+     background-color :white;
+   
+   }
+
+
+
+   .plot-picture {
+     width: 80%;
+     margin-right: 5%;
+     
+   }
+
+    .profile-container {
+      margin-top: 8%;
+      margin-right: 5%;
+      width: 80%;
+      margin-bottom: 10%;
+    
+    }
+
+ .profile-user-info {
+   margin-top: 10%;
+   line-height: 35px;
+   margin-bottom: 10%;
+   
+ }
+
+.profile-user-name {
+  margin-top: 5%;
+
+}
+
+   .plot-chart {
+     width: 90%;
+     height: 35vh;
+     margin: auto;
+     margin-top: 5%;
+
+   }
+
+   .right-container {
+     width: 90%;
+     margin-left: 5%;
+     margin-top: 155%;
+     margin-bottom: 15%;
+     display: flex;
+     flex-direction: column-reverse;
+    background-color: white;
+   }
+ }
+
+ 
+ 
+
+@media screen and (max-width: 375px) {
+
+  .profile-container {
+    
+      margin-right: 5%;
+ 
+  
+    }
+
+
+  
+
+    .profile-user-info {
+      margin-top: 8%;
+      line-height: 32px;
+      font-size: 15px;
+    
+  
+    }
+  
+    .profile-user-name {
+      font-size: 13px;
+  
+    }
+  
+    .plot-chart {
+      width: 100%;
+      height: 38vh;
+  
+    }
+
+     .right-container {
+       margin-top: 160%;
+     }
+
+    }
+
+  
+@media screen and (max-width: 280px) {
+
+  .right-container {
+    margin-top: 170%;
+  }
+
+ 
+  }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
  @media screen and (max-width: 1024px) {
   .title-container{
@@ -289,303 +688,12 @@ margin-left: 4.5%;
 
    
  } 
-/* /////////////////// */
-/* Breakpoint @ 820px */
-/* @media screen and (max-width: 820px) {
 
-  .container{
-    margin-top: 12%;
-    width: 90%;
-    height: 50px;
-    flex-direction: column;
-   
-  }
-  .h1element{
-    font-size: 2.1em;
-    margin: auto;
-    line-height: 40px;
-  }
+ */
 
-  .buttonsContainer{  
-    margin: auto;
-    margin-top: 1.5rem;
-  } */
-  /* .carouselContainer {
-    width: 90%;
-    height: 30%;
-    margin-top: 23%;
-  }
-  .userPlotImage{
-    width: 100%;
-    height: 100%;
-    
-  }
-  
-  .mainContainer{
-    flex-direction: column;
-  }
-  .profileContainer{
-    display: flex;
-    margin-bottom: 2rem;
-    line-height: 1px;
-    justify-content: space-between;
-  } */
-  /* .profile{
-    min-width: 70%;
-    height: 100%;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    
-  }
-  .profileInformation{
-    margin-top: 2rem;
-  }
-  .h2UserDetails{
-    font-size: 1.5rem;
-   
-  }
-  .h4UserInfo{
-    font-size: 1rem;
-  }
-  .imageProfile{
-    /* margin: auto;
-    margin-top: 2rem; */
-    /* width: 4rem;
-    height: 4rem;
-    margin-top: 0;
-  }
-  .pieChart {
-    width: 80%;
-    height: 80%;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }  
-}  */
- /* ////////////////// */
-/* Breakpoint @ 768px */
- @media screen and (max-width: 768px){
-  .main-container {
-    justify-items: center;
-    flex-direction: column;
-    margin: auto;
-    height: auto;
-  }
-  .title-container{
-    border-radius: 15px;
-    width: 100%;
-    align-items: center;
-    margin: auto;
-    margin-top: 0%;
-    display: flex;
-    flex-direction: column;
-  }
-  .title-container{
-    flex-direction: row;
-    margin-top: 0;
-  }
 
-  .title-user-img{
-    margin: auto;
-    width: 7%;
-  }
-  .title-buttons-container{
-    margin: auto;
-    margin-top: 1rem;
-    width: auto;
-    
-  }
-  .title-myListings-button, .title-myMessages-button{
-    width: 90px;
-    font-size: 0.8rem;
-    height: 35px;
-    margin-left: 4rem;
-  }
-  .left-container {
-    border:none;
-    border-radius: 5px;
-    width: 100%;
-    flex-direction: column;
-    margin:auto;
-  }
 
-  .plot-picture{
-    width: 42%;
-    margin-left: 8%;
-    top: 0;
-   
-  }
 
-  .plot-chart {
-    width: 250px;
-    height: 250px;
-    margin-top: -35rem;
-    float: right;
-  }
 
-  .profile-container{
-    margin-top:0;
-    float: left;
-    width: 40%;
-    height: 30vh;
-    margin-left: 5rem;
-    margin-bottom: 4rem;
-  }
-  .profile-user-info{
-    margin-top: 1rem;
-    height: 10%;
-  }
-  .right-container{
-    width: auto;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  .footer{
-    margin-top: 0;
-  } 
-}
- /* Breakpoint @ 475px */
- @media screen and (max-width: 425px) {
-  .main-container {
-    justify-items: center;
-    flex-direction: column;
-    margin: auto;
-    height: auto;
-  }
-  .title-container{
-    border-radius: 15px;
-    width: 90%;
-    align-items: center;
-    margin: auto;
-    margin-top: 0%;
-    display: flex;
-    flex-direction: column;
-  }
-  .title-user-img{
-    margin: auto;
-    width: 40px;
-  }
-  .title-buttons-container{
-    margin: auto;
-    margin-top: 1rem;   
-  }
-  .title-myListings-button, .title-myMessages-button{
-    width: 80px;
-    font-size: 0.7rem;
-    height: 30px;
-    margin:0;
-  }
-  .left-container {
-    border:none;
-    border-radius: 5px;
-    width: 100%;
-    flex-direction: column;
-    margin:auto;
-    margin-top: 0rem;
-    
-  }
 
-  .plot-picture{
-    width: 80%;
-    margin: auto;
-  }
 
-  .plot-chart {
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    margin-top: 0rem;
-    
-  }
-
-  .profile-container{
-    margin-top:0;
-    width: 67%;
-    height: 30vh;
-  }
-  
-  .profile-user-info{
-    margin-top: 1rem;
-    height: 10%;
-  }
-  .right-container{
-    width: auto;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
-
-/* //////////////////// */
-/* Breakpoint @ 375px */
-@media screen and (max-width: 375px) {
-  .main-container {
-    justify-items: center;
-    flex-direction: column;
-    margin: auto;
-    height: auto;
-  }
-  .title-container{
-    border-radius: 15px;
-    width: 90%;
-    align-items: center;
-    margin: auto;
-    margin-top: 0%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .title-user-img{
-    margin: auto;
-    width: 40px;
-  }
-  .title-buttons-container{
-    margin: auto;
-    margin-top: 1rem;
-    width: auto;
-    
-  }
-  .title-myListings-button, .title-myMessages-button{
-    width: 80px;
-    font-size: 0.7rem;
-    height: 30px;
-  }
-  .left-container {
-    border:none;
-    border-radius: 5px;
-    width: 100%;
-    flex-direction: column;
-    margin:auto;
-    margin-top: 0rem;
-    
-  }
-
-  .plot-picture{
-    width: 80%;
-    margin: auto;
-  }
-
-  .plot-chart {
-    width: 300px;
-    height: 300px;
-    margin: auto;
-    margin-top: 0rem;
-    
-  }
-
-  .profile-container{
-    margin-top:0;
-    width: 66%;
-    height: 20vh;
-  }
-  .profile-user-info{
-    margin-top: 1rem;
-    height: 10%;
-  }
-  .right-container{
-    width: auto;
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  
-}
