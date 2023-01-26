@@ -106,21 +106,25 @@ h6 {
 
 footer {
   position: relative;
-
-  height: 9.3vh;
+  height: 3rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
+  align-items: center;
   background-color: var(--highLightOne);
   color: var(--mainWhite);
+  font-size: 18px;
+  justify-content: center;
   bottom: 0;
+ 
+}
+
+.youtube-icon {
+  margin-left: 10px;
   
 }
-.footer {
-  display: flex;
-  
-  gap: 20px;
-}
+
+/*
 .team-member{
   height: 30px;
   width: auto;
@@ -156,7 +160,7 @@ a:hover{
   
 }
 
-
+/*
 
 /* header */
 .navbar {
