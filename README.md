@@ -28,7 +28,7 @@
 
 <br />
 
-# **_Care-Full App_** 🏥🐈🐶🐇
+# **_Home_Grown_App_** 🍇🍎🍅🥕🌽🧑🏻‍🌾
 
 Welcome to Care-Full!
 
@@ -99,7 +99,7 @@ To run the front-end locally follow the steps below:
 https://firebase.google.com/
 
 5. create a .env.local file in the home-grown root folder and paste in these values from your firebase account.
-
+```bash
 NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY = {YOUR KEY}
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN={UTH_DOMAIN}
 NEXT_PUBLIC_FIREBASE_PROJECT_ID={YOUR PROJECT_ID}
@@ -107,7 +107,7 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET={YOUR STORAGE_BUCKET}
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID={YOUR MESSAGING_SENDER_ID}
 NEXT_PUBLIC_FIREBASE_APP_ID={YOUR FIREBASE_APP_ID}
 NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID={YOUR MEASUREMENT_ID}
-
+```
 6. Start the app using:
 
 ```bash
@@ -132,13 +132,13 @@ NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID={YOUR MEASUREMENT_ID}
 
 | Colour     | Hex                                                                    |
 | ---------- | ---------------------------------------------------------------------- |
-| Main White | ![#fbfbf9](https://via.placeholder.com/15/448FFF/fbfbf9.png) `#fbfbf9` |
-| DarkText   | ![#081402](https://via.placeholder.com/15/B2D1FF/081402.png)`#081402`  |
-| HighLight1 | ![#214e0b](https://via.placeholder.com/15/fff/214e0b.png) `#214e0b`    |
-| LowLight   | ![#3f5416](https://via.placeholder.com/15/448FFF/3f5416.png) `#3f5416` |
-| HighLight2 | ![#d34401](https://via.placeholder.com/15/B2D1FF/d34401.png)`#d34401`  |
-| HighLight3 | ![#faa613](https://via.placeholder.com/15/fff/faa613.png) `#faa613`    |
-| LightText  | ![#6d6d6d](https://via.placeholder.com/15/fff/6d6d6d.png) ` #6d6d6d`   |
+| Main White | ![#fbfbf9](https://via.placeholder.com/15/FBFBF9/FBFBF9.png) `#fbfbf9` |
+| DarkText   | ![#081402](https://via.placeholder.com/15/081402/081402.png)`#081402`  |
+| HighLight1 | ![#214e0b](https://via.placeholder.com/15/214e0b/214e0b.png) `#214e0b` |
+| LowLight   | ![#3f5416](https://via.placeholder.com/15/3f5416/3f5416.png) `#3f5416` |
+| HighLight2 | ![#d34401](https://via.placeholder.com/15/d34401/d34401.png)`#d34401`  |
+| HighLight3 | ![#faa613](https://via.placeholder.com/15/faa613/faa613.png) `#faa613` |
+| LightText  | ![#6d6d6d](https://via.placeholder.com/15/6d6d6d/6d6d6d.png) ` #6d6d6d`|
 
 
 <br/>
