@@ -29,7 +29,7 @@ export default function NavBar() {
   if (currentUser) {
     return (
       <nav className="navbar">
-        <img onClick={reloadPage} className="logo" src="icons/logo.png"/>
+        <img onClick={reloadPage} className="logo" src="icons/logo.png"  alt="homegrown logo" />
         <ul
           className={
             active ? "list-container active" : "list-container notactive"
@@ -70,7 +70,7 @@ export default function NavBar() {
       <nav className="navbar">
     
 
-        <img onClick={reloadPage} className="logo" src="icons/logo.png"/>
+        <img onClick={reloadPage} className="logo" src="icons/logo.png" alt="homegrown logo"/>
   
         <ul
           className={

@@ -1,17 +1,31 @@
 import Link from "next/link";
 import Image from "next/image";
 import img from "../../public/illustrations/youtube.png";
+import faq from '../../public/icons/FAQ.png'
 
 export default function Footer() {
   return (
     <footer className="footer">
+    
       <p> Copyright © 2023 Home Grown </p>
       <Link
         className="youtube-icon"
-        href="https://www.youtube.com/channel/UClkUASDfMSOhMKJIbe2tl7Q" target="_blank"
+
+        href="https://www.youtube.com/channel/UClkUASDfMSOhMKJIbe2tl7Q"
+        aria-label="link to youtube"
+target="_blank"
+
       >
-        {" "}
-        <Image src={img} height={25} />{" "}
+       
+        <Image alt="icon" src={img} height={25} />
+      </Link>
+      <Link
+        className="youtube-icon"
+        href="/faq"
+        aria-label="link to faq"
+      >
+      
+        <Image alt="icon" src={faq} height={25} />
       </Link>
     </footer>
   );
