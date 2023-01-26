@@ -615,6 +615,8 @@ margin-left: 4.5%;
   }
   .title-buttons-container{
     margin: auto;
+    margin-left: 0rem;
+    margin-top: 1rem;
     
   }
   .title-myListings-button, .title-myMessages-button{
@@ -625,18 +627,49 @@ margin-left: 4.5%;
   .left-container {
     border:none;
     border-radius: 5px;
-   
     width: 100%;
     flex-direction: column;
     margin:auto;
     margin-top: 3rem;
     
   }
+
+  .plot-picture{
+    width: 80%;
+    margin: auto;
+  }
+
+  .plot-chart {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 0rem;
+    
+  }
+
+  .profile-container{
+    margin-top: 0;
+    width: 78%;
+  }
+
+  .crop-table-container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
   
   .right-container-top {
     margin-top: 22%;
     border-radius: 5px;
     width: 100%;
-    
+  }
+
+  .crop-card{
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer{
+    margin-top: 0rem;
   }
 }
