@@ -1,0 +1,154 @@
+
+.page-container{
+    background-image: url("../public/illustrations/desktop-wallpaper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    height:calc(100vh - 10vh);
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    display: flex; 
+    height: 90%;
+    align-items: center;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2);
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .glass-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    height: 75%;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.66);
+    backdrop-filter: blur(6.3px);
+  }
+  
+ .left{
+
+    height: 100%;
+    width: 50%;
+ }
+  
+ .right{
+    margin: 20px;
+    font-family: var(--textFont);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+ }
+  
+  .title{
+    color: hsl(238, 29%, 16%);
+    font-family: var(--titleFont);
+    font-weight: 700;
+    
+    padding-bottom: 30px;
+  }
+  
+  .content{
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .content.show{
+    height: fit-content;
+  }
+  
+  .content.show .questions{ 
+    font-weight: 700;
+  }
+  
+  .questions{
+    padding: 20px 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: hsl(237, 12%, 33%);
+    font-size: 17px;
+    line-height: 1.5;
+  
+    cursor: pointer;
+  }
+  
+  .questions:is(:hover, :focus){
+    color: var(--soft-red);
+  }
+  
+  #arrow{
+    height: 30px;
+  }
+  .deg.off{ 
+    transition: .25s;
+  }
+  
+  .deg.on{ 
+    transition: .25s;
+    rotate: 180deg;
+  }
+  
+  .answers{
+    font-size: 16px;
+    line-height: 1.2;
+    word-spacing: 1.2;
+    font-family:var(--textFont);
+    color:  hsl(240, 6%, 50%);   
+   padding: 0 0 20px 0;
+  }
+/*   
+  .wrapper{
+    overflow: hidden;
+  }
+   */
+  .left-image{
+    height: 100%;
+  }
+
+  @media (max-width: 1200px) {
+    .left{
+        display: none;
+    }
+    .right{
+     
+        width: 90%;
+     }
+     .glass-container{
+      
+        width: 90%;
+      
+      }
+}
+ @media screen and (max-width:750px){
+    .glass-container{
+      
+        width: 90%;
+      
+      }
+      #arrow{
+        height: 20px;
+      }
+      .questions{
+        padding: 12px 0;
+        font-size: 12px;
+        line-height: 0.8;
+    
+      }
+      .answers{
+        font-size: 12px;
+      
+      }
+  } 
+ 

@@ -114,15 +114,13 @@ footer {
   background-color: var(--highLightOne);
   color: var(--mainWhite);
   font-size: 18px;
+  gap:15px;
   justify-content: center;
   bottom: 0;
+  font-family: var(--textFont);
  
 }
 
-.youtube-icon {
-  margin-left: 10px;
-  
-}
 
 /*
 .team-member{
