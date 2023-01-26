@@ -3,16 +3,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.description {
+/* .description {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} */
 
 .search-container {
   gap: 20px;
@@ -105,6 +105,21 @@
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
+.one-card-grow{
+  background-color: #ffffff;
+  display: flex;
+  height: auto;
+
+  box-sizing: border-box;
+  border-color: rgba(31, 24, 17, 0.282);
+  cursor: pointer;
+  font-family: var(--textFont);
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0, 0.5) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
 .user-info {
   background-color: #ffecd4;
   border-radius: 5px 0px 0px 5px;
@@ -125,6 +140,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.title-grow{
+  width: 100%;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 1; */
+  -webkit-box-orient: vertical;
+  overflow: visible;
+  /* text-overflow: ellipsis; */
+}
 .username{
   text-align: center;
 
@@ -142,10 +166,19 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.description-grow {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: visible;
+  height: auto;
+}
 
 .post-info {
   width: 90%;
   height: 100%;
+}
+.post-info:hover {
+  background-color: #48a71930;
 }
 
 .profile-img {

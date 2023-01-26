@@ -3,14 +3,6 @@ import styles from "../../styles/ListingContainer.module.css";
 import Loader from "../Loader/Loader"
 
 function ListingContainer({ search, posts, showEmailToast }) {
-  //fetch data from api
-  //save the data in a state
-  //map each entry of the array (in state) to a card
-  // add search ba
-  //create dropdown to search by location and onClick
-
-  //key data for cards = username, location, croptype, plotsize, description, user image, rating
-
   if (!posts) {
     return <Loader/>;
   } else {

@@ -129,10 +129,12 @@ footer {
   height: 30px;
   width: auto;
   font-size: 1rem;
+  
 }
+
 a{
   text-decoration: none;
-  color: #fbfbf9;
+  color: var(--mainWhite);
 }
 
 a:hover{
@@ -167,7 +169,7 @@ a:hover{
   width: 100%;
   justify-content: space-between;
   margin-bottom: 1rem;
-  background-color: var(--highLightOne);
+  background-color: var(--mainWhite);
   z-index: 100;
   overflow-x: hidden;
 }
@@ -183,7 +185,7 @@ a:hover{
   justify-content: center;
   justify-content: flex-end;
   margin-right: 5%;
-  color: var(--mainWhite);
+  color: var(--darkColour);
   gap: 5%;
   z-index: 100;
 }
@@ -203,17 +205,31 @@ a:hover{
 }
 
 .text {
-  color: var(--mainWhite);
+  font-family: var(--textFont);
+  color: var(--darkColour);
   text-decoration: none;
 }
 
 .logo {
-
   height: 100%;
   margin-left: 5%;
 }
 
 @media (max-width: 768px) {
+   .logo{
+    filter: invert(84%) sepia(100%) saturate(2%) hue-rotate(176deg) brightness(110%) contrast(101%);
+  }
+  
+  .navbar {
+
+    background-color:var(--highLightOne);
+  
+  }
+  .text {
+    font-family: var(--textFont);
+    color: var(--mainWhite);
+    text-decoration: none;
+  }
   .list-container {
     margin: 0;
     position: absolute;

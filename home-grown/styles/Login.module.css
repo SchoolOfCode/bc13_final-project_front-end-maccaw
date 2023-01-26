@@ -41,13 +41,13 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
 .form-container{
     width: 80%;
     height: 70%;
-    gap: 2vmin;
- 
-    
+    gap: 2vmin;   
 }
+
 .title{
   font-size: 4vmin;
 }
+
 .links{
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,6 @@ box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px
     width: 40%; 
     background-color: var(--highLightTwo);
     box-shadow:var(--highLightTwo) 0 10px 20px -10px;
-
   }
 
   .form-email-input, .form-password-input{

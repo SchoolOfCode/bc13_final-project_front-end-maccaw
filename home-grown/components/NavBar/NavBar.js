@@ -29,7 +29,7 @@ export default function NavBar() {
   if (currentUser) {
     return (
       <nav className="navbar">
-        <img className="logo" src="icons/logo_white.png"/>
+        <img onClick={reloadPage} className="logo" src="icons/logo.png"/>
         <ul
           className={
             active ? "list-container active" : "list-container notactive"
@@ -66,7 +66,10 @@ export default function NavBar() {
   } else {
     return (
       <nav className="navbar">
-        <div className="logo"></div>
+    
+
+        <img onClick={reloadPage} className="logo" src="icons/logo.png"/>
+  
         <ul
           className={
             active ? "list-container active" : "list-container notactive"
