@@ -25,13 +25,11 @@ const lista = [
     answer: '  Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.', 
   },
   {
-    question: 'How do I reset my password?',
-    answer: '  Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.', 
+    question: 'Do you have any tips for a beginner looking into growing their own food',
+    answer: '  You can find tips and guides in our blog page.', 
   },
-  {
-    question: 'How do I reset my password?',
-    answer: '  Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.', 
-  }
+  
+  
 ]
 
 export default function FAQ() {
