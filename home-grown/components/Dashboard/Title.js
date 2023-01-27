@@ -18,7 +18,9 @@ export const Title = ({ userData }) => {
       <button className={styles["title-myListings-button"]}> My Listings</button>
       </Link>
 
-      <a href="https://gmail.com">
+      <a href="https://gmail.com"  aria-label="link to Gmail"
+target="_blank">
+  
       <button className={styles["title-myMessages-button"]}> My Messages</button>
       </a>
 
