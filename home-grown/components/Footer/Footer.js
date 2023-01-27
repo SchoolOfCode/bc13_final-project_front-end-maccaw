@@ -11,7 +11,7 @@ export default function Footer() {
       <Link
         className="youtube-icon"
 
-        href="https://www.youtube.com/channel/UClkUASDfMSOhMKJIbe2tl7Q"
+        href="https://youtu.be/RSayQwds_84"
         aria-label="link to youtube"
 target="_blank"
 
