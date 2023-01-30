@@ -1,5 +1,5 @@
-describe("visits the home page and then navigates to the listings page", () => {
-  it("passes", () => {
+describe.only("listings page", () => {
+  it("Navigate to listings from homepage, search for crop & clear search input", () => {
     cy.visit("http://localhost:3000");
     cy.get('[href="/listings"] > li', { timeout: 10000 }).click();
 
@@ -15,19 +15,33 @@ describe("visits the home page and then navigates to the listings page", () => {
     cy.get(".ListingContainer_card-container__ZcLXt > :nth-child(1)").contains(
       "Strawberries"
     );
+    cy.get(".ListingContainer_clear-button__jewrU", { timeout: 10000 }).click();
+    cy.get(".ListingContainer_input-bar__ZDahT").should("have.value", "");
   });
-});
-
-describe("visit listings page, searches by post-code and then clears search", () => {
-  it("passes", () => {
-    cy.visit("http://localhost:3000/listings").wait(1000);
+  it("visit listings page, searches by post-code and contacts first post via form", () => {
+    cy.intercept(
+      "https://homegrown-backend.onrender.com/api/homegrown/public/posts"
+    ).as("listings");
+    cy.visit("http://localhost:3000/listings");
+    cy.wait("@listings");
     cy.get(".ListingContainer_input-bar__ZDahT")
-      .type("M")
-      .wait(1000)
+      .type("EX15")
       .get(".ListingContainer_search-button__IcPHz")
-      .click()
-      .wait(1000);
-    cy.get(".ListingContainer_clear-button__jewrU").click();
+      .click();
+    cy.get(":nth-child(1) > .ListingContainer_post-info__bKKAQ").contains(
+      "EX15"
+    );
+    cy.get(
+      ":nth-child(1) > .ListingContainer_post-info__bKKAQ > .ListingContainer_message-container__JVmJX > .PopUp_pop-up-icon__DXpyz"
+    ).click();
+    cy.get(".PopUp_pop-up__yWzYp").should("be.visible");
+    cy.get('[name="name"]').type("John Appleseed");
+    cy.get('[name="sender_email"]').type("will@gmail.com");
+    cy.get(".PopUp_input-textarea___R4Sf").type(
+      "Hello there, I'd like to take part!"
+    );
+    cy.get(".PopUp_button__057CT").click();
+    cy.get(".go2072408551").should("be.visible");
   });
 });
 
@@ -41,7 +55,10 @@ describe("visit homepage, navigates to log-in, inputs details. Then clicks forgo
     cy.get(".Login_form-password-input__XOMuN > .Login_input__r_1vS").type(
       "passrd"
     );
-    cy.get(".Login_button__ejJ5H").click().get("h2").should("be.visible");
+    cy.get(".Login_button__ejJ5H")
+      .click()
+      .get(".go2072408551")
+      .should("be.visible");
   });
 });
 
@@ -70,10 +87,13 @@ describe("logged in user flow", () => {
     cy.visit("http://localhost:3000/post", { timeout: 10000 });
     cy.get(
       ":nth-child(1) > .Posts_post-card-header__wDYS1 > .Posts_post-card-header-title__qZpUW"
-    ).should("contain", "Tomatoes");
+    ).should(
+      "contain",
+      "Experienced Gardener Wanted for Vegetable Garden Maintenance"
+    );
     cy.get(
       ":nth-child(1) > .Posts_post-info__mXvMe > .Posts_location-crop-plot-banner__Jp6Iu > :nth-child(2)"
-    ).should("contain", "Crop: Tomatoes");
+    ).should("contain", "Crop: White Mushrooms");
   });
   it("Clicks edit button and inputs & buttons render", () => {
     cy.visit("http://localhost:3000/post", { timeout: 10000 });

@@ -31,7 +31,7 @@ export default function Login() {
 
   return (
     <div className={styles["log-in-container"]}>
-      <Toaster />
+      <Toaster data-cy="toast-notification" />
       <div className={styles["glass-container"]}>
         <div className={styles["log-in-card"]}>
           <h1 className={styles.title}>Log In</h1>
