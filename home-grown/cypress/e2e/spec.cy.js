@@ -1,4 +1,4 @@
-describe.only("listings page", () => {
+describe("listings page", () => {
   it("Navigate to listings from homepage, search for crop & clear search input", () => {
     cy.visit("http://localhost:3000");
     cy.get('[href="/listings"] > li', { timeout: 10000 }).click();
