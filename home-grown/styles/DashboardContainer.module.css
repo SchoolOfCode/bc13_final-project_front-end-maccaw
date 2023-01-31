@@ -1,4 +1,5 @@
 .main-container {
+
   box-sizing: border-box;
   height: 100vh;
   background-image: url('/illustrations/dashboard-background.png');
@@ -9,6 +10,7 @@
 }
 
 .left-container {
+  
     float: left;
       margin-left: 7.5%;
       align-items: center;
@@ -118,7 +120,6 @@ margin-left: 4%;
 
     display: flex;
     flex-direction: column;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       background-color: white;
