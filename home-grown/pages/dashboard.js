@@ -37,7 +37,7 @@ export default function Dashboard() {
   async function getPosts() {
     let firebase_id = currentUser.uid;
     let token = await currentUser.getIdToken();
-    console.log(token);
+    // console.log(token);
 
     const response = await fetch(
       ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`,
@@ -66,11 +66,11 @@ export default function Dashboard() {
     );
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     setUserData(data.payload[0]);
     setIsLoading(false);
   }
- console.log("USER DATA", userData)
+  // console.log("USER DATA", userData);
   async function handleLogout() {
     setErr("");
 
@@ -103,7 +103,7 @@ export default function Dashboard() {
             userData={userData}
           />
         </div>
-            
+
         <div className={styles["right-container"]}>
           <CropTableContainer
             className={styles["crop-table-container"]}

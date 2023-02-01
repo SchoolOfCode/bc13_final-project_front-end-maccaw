@@ -6,7 +6,7 @@ import styles from "../../styles/DashboardContainer.module.css";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function PlotChart({ userPosts }) {
-  console.log("PIE CHART DATA", userPosts);
+  // console.log("PIE CHART DATA", userPosts);
 
   if (!userPosts) {
     return <h1>...loading</h1>;
@@ -33,7 +33,7 @@ export default function PlotChart({ userPosts }) {
 
       let percentageNotUsed = 100 - total;
 
-      console.log("DATA ARRAY", dataArray);
+      // console.log("DATA ARRAY", dataArray);
 
       if (percentageNotUsed !== 0) {
         dataArray.push(percentageNotUsed);
