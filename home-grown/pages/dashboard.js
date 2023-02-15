@@ -12,18 +12,19 @@ import Loader from "../components/Loader/Loader";
 import CreatePlotForm from "../components/Dashboard/CreatePlotForm/CreatePlotForm";
 
 export default function Dashboard() {
-  const [err, setErr] = useState("");
   const { currentUser, logout, isUserAuthenticated } = useAuth();
   const router = useRouter();
-  const [userData, setUserData] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-  const [userPosts, setUserPosts] = useState();
-  const [show, setShow] = useState(false);
   const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL;
+
   const newUserImages = {
     plot_image:
       "https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556011_PlbhKss0alfFmzNuqXdE3L0OfkHQ1rHH.jpg",
   };
+  const [err, setErr] = useState("");
+  const [userData, setUserData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  const [userPosts, setUserPosts] = useState();
+  const [show, setShow] = useState(false);
 
   if (!currentUser) {
     router.push("/login");
@@ -33,14 +34,37 @@ export default function Dashboard() {
     if (currentUser) {
       getData();
       getPosts();
+      console.log("useEffect");
     }
   }, []);
+
+  async function createPlot(plotSize, plotPostcode, plotImageUrl) {
+    let firebase_id = currentUser.uid;
+    let token = await currentUser.getIdToken();
+
+    const plotData = {
+      firebase_id: firebase_id,
+      plot_size: plotSize,
+      location: plotPostcode,
+      plot_image: plotImageUrl,
+    };
+
+    const response = await fetch(`${backendURL}/api/homegrown/plots`, {
+      method: "PATCH",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+      body: JSON.stringify(plotData),
+    });
+    router.reload(window.location.pathname);
+  }
 
   async function getPosts() {
     let firebase_id = currentUser.uid;
     let token = await currentUser.getIdToken();
     console.log(token);
-
     const response = await fetch(
       `${backendURL}/api/homegrown/posts/${firebase_id}`,
       {
@@ -68,11 +92,9 @@ export default function Dashboard() {
     );
 
     const data = await response.json();
-    console.log(data);
     setUserData(data.payload[0]);
     setIsLoading(false);
   }
-  console.log("USER DATA", userData);
   async function handleLogout() {
     setErr("");
 
@@ -127,7 +149,7 @@ export default function Dashboard() {
             {show && (
               <div className={styles["pop-up-background"]}>
                 <div className={styles["pop-up"]}>
-                  <CreatePlotForm setShow={setShow} />
+                  <CreatePlotForm setShow={setShow} createPlot={createPlot} />
                 </div>
               </div>
             )}

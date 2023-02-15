@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import styles from "../../../styles/CreatePlotForm.module.css";
 
-export default function CreatePlotForm({ setShow }) {
+export default function CreatePlotForm({ setShow, createPlot }) {
   const [plotSize, setPlotSize] = useState(null);
   const [plotPostcode, setPlotPostcode] = useState(null);
   const [plotImageUrl, setPlotImageUrl] = useState(null);
-
   function handleSubmit(e) {
     e.preventDefault();
     setShow(false);
-    console.log(plotImageUrl, plotPostcode, plotSize);
+    createPlot(plotSize, plotPostcode, plotImageUrl);
   }
   return (
     <div className={styles["form-container"]}>
