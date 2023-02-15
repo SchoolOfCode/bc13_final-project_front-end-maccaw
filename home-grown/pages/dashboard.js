@@ -70,7 +70,7 @@ export default function Dashboard() {
     setUserData(data.payload[0]);
     setIsLoading(false);
   }
- console.log("USER DATA", userData)
+  console.log("USER DATA", userData);
   async function handleLogout() {
     setErr("");
 
@@ -84,35 +84,40 @@ export default function Dashboard() {
 
   if (isLoading) {
     return <Loader />;
-  } else {
-    return (
-      <div className={styles["main-container"]}>
-        <Title userData={userData} />
+  }
+  return (
+    <div className={styles["main-container"]}>
+      <Title userData={userData} />
 
-        <div className={styles["left-container"]}>
-          {userData.plot_image ? (
-            <Image src={plot} className={styles["plot-picture"]} />
-          ) : (
-            <img
-              src={newUserImages["plot_image"]}
-              className={styles["plot-picture"]}
-            />
-          )}
-          <Profile
-            className={styles["profile-container"]}
-            userData={userData}
+      <div className={styles["left-container"]}>
+        {userData.plot_image ? (
+          <Image src={plot} className={styles["plot-picture"]} />
+        ) : (
+          <img
+            src={newUserImages["plot_image"]}
+            className={styles["plot-picture"]}
           />
-        </div>
-            
+        )}
+        <Profile className={styles["profile-container"]} userData={userData} />
+      </div>
+      {userData.plot_size ? (
         <div className={styles["right-container"]}>
           <CropTableContainer
             className={styles["crop-table-container"]}
             userPosts={userPosts}
           />
-
           <PlotChart userPosts={userPosts} />
         </div>
-      </div>
-    );
-  }
+      ) : (
+        <div className={styles["right-container"]}>
+          <div className={styles["message-container"]}>
+            <h1 className={styles["add-plot-message"]}>
+              Please add a plot and create a post to see crop analytics here
+            </h1>
+            <button className={styles["button-one"]}>ADD PLOT</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }

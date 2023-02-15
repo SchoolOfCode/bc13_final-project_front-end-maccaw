@@ -10,17 +10,8 @@ export default function PlotChart({ userPosts }) {
 
   if (!userPosts) {
     return <h1>...loading</h1>;
-  } else {
-    if (userPosts.length === 0) {
-      return (
-        <div className={styles["message-container"]}>
-          <h1 className={styles["add-plot-message"]}>
-            Please add a plot and create a post to see crop analytics here
-          </h1>
-          <button className={styles["button-one"]}>ADD PLOT</button>
-        </div>
-      );
-    } else {
+  }
+    
       let labelsArray = userPosts.map((element) => element.crop_name);
       let dataArray = userPosts.map(
         (element) => Number(element.percentage_of_plot) * 100
@@ -80,6 +71,5 @@ export default function PlotChart({ userPosts }) {
           <Pie data={data} />
         </div>
       );
-    }
-  }
+    
 }
