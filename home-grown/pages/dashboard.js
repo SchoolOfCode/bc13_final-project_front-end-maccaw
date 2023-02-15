@@ -9,6 +9,7 @@ import styles from "../styles/DashboardContainer.module.css";
 import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
 import plot from "../public/illustrations/plot.jpg";
 import Loader from "../components/Loader/Loader";
+import CreatePlotForm from "../components/Dashboard/CreatePlotForm/CreatePlotForm";
 
 export default function Dashboard() {
   const [err, setErr] = useState("");
@@ -17,7 +18,8 @@ export default function Dashboard() {
   const [userData, setUserData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [userPosts, setUserPosts] = useState();
-
+  const [show, setShow] = useState(false);
+  const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL;
   const newUserImages = {
     plot_image:
       "https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556011_PlbhKss0alfFmzNuqXdE3L0OfkHQ1rHH.jpg",
@@ -40,7 +42,7 @@ export default function Dashboard() {
     console.log(token);
 
     const response = await fetch(
-      ` https://homegrown-backend.onrender.com/api/homegrown/posts/${firebase_id}`,
+      `${backendURL}/api/homegrown/posts/${firebase_id}`,
       {
         headers: {
           Authorization: "Bearer " + token,
@@ -57,7 +59,7 @@ export default function Dashboard() {
     let token = await currentUser.getIdToken();
     let firebase_id = currentUser.uid;
     const response = await fetch(
-      ` https://homegrown-backend.onrender.com/api/homegrown/users/${firebase_id}`,
+      `${backendURL}/api/homegrown/users/${firebase_id}`,
       {
         headers: {
           Authorization: "Bearer " + token,
@@ -91,7 +93,7 @@ export default function Dashboard() {
 
       <div className={styles["left-container"]}>
         {userData.plot_image ? (
-          <Image src={plot} className={styles["plot-picture"]} />
+          <img src={userData.plot_image} className={styles["plot-picture"]} />
         ) : (
           <img
             src={newUserImages["plot_image"]}
@@ -114,7 +116,21 @@ export default function Dashboard() {
             <h1 className={styles["add-plot-message"]}>
               Please add a plot and create a post to see crop analytics here
             </h1>
-            <button className={styles["button-one"]}>ADD PLOT</button>
+            <button
+              className={styles["button-one"]}
+              onClick={() => {
+                setShow(!show);
+              }}
+            >
+              ADD PLOT
+            </button>
+            {show && (
+              <div className={styles["pop-up-background"]}>
+                <div className={styles["pop-up"]}>
+                  <CreatePlotForm setShow={setShow} />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}

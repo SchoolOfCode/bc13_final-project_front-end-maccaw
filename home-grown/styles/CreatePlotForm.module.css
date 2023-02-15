@@ -1,0 +1,43 @@
+.form-container, .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .header-container{
+    height: 12%;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid #aaa;
+   padding: 10px;
+  }
+  
+  .input, .input-textarea{
+    border-radius: 5px;
+    padding-left: 1vmin;
+    border: 1px solid #e6e6e6;
+  }
+  
+  .input:focus, .input-textarea:focus {
+    outline: none;
+  }
+  
+  
+  .close-icon{
+    height: 100%;
+  }
+  .input{
+    height: 5vmin;
+  }
+  
+  .input-textarea{
+    height: 15vmin;
+  }
+  
+  .label{
+    font-weight:200;
+    color: var(--lighterFontColor)
+  }

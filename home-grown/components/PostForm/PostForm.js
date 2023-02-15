@@ -8,6 +8,7 @@ export default function PostForm({
   setUserPosts,
   handleClose,
 }) {
+  console.log(userPosts, "userPosts");
   const title = useRef();
   const postcode = useRef();
   const crop = useRef();
@@ -56,7 +57,7 @@ export default function PostForm({
     percentageArray.push(Math.round(percent * 10) / 10);
     percent += 0.1;
   }
-  console.log("%", percentageArray)
+  console.log("%", percentageArray);
 
   if (userPosts && currentUser) {
     return (
@@ -64,7 +65,12 @@ export default function PostForm({
         <div className={styles["form-title-banner"]}>
           <div></div>
           <h2 className={styles["newPost-title"]}>NEW LISTING</h2>
-          <img className={styles["close-icon"]}src="/illustrations/close-icon.png" alt="cross for closing pop up" onClick={handleClose}/>
+          <img
+            className={styles["close-icon"]}
+            src="/illustrations/close-icon.png"
+            alt="cross for closing pop up"
+            onClick={handleClose}
+          />
         </div>
         <div className={styles["form"]}>
           {/* <img className="newPostImage" src={newPost} alt="logo" /> */}

@@ -12,11 +12,10 @@ function Listings() {
   const [search, setSearch] = useState("");
   const searchRef = useRef("Search by postcode or crop name");
   const [posts, setPosts] = useState(null);
+  const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   async function getPostData() {
-    const response = await fetch(
-      "https://homegrown-backend.onrender.com/api/homegrown/public/posts"
-    );
+    const response = await fetch(backendURL + "/api/homegrown/public/posts");
     const data = await response.json();
     setPosts(data.payload);
   }

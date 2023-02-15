@@ -15,6 +15,7 @@ export default function NewPost() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   if (!currentUser) {
     router.push("/login");
@@ -28,31 +29,25 @@ export default function NewPost() {
     const id = currentUser.uid;
     let token = await currentUser.getIdToken();
     console.log(token);
-    const response = await fetch(
-      `https://homegrown-backend.onrender.com/api/homegrown/posts/${id}`,
-      {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      }
-    );
+    const response = await fetch(`${backendURL}/api/homegrown/posts/${id}`, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
     const data = await response.json();
     setUserPosts(data.payload);
   }
 
   async function handleDelete(posts_id) {
     let token = await currentUser.getIdToken();
-    await fetch(
-      `https://homegrown-backend.onrender.com/api/homegrown/posts/${posts_id}`,
-      {
-        method: "DELETE",
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-          Authorization: "Bearer " + token,
-        },
-      }
-    );
+    await fetch(`${backendURL}/api/homegrown/posts/${posts_id}`, {
+      method: "DELETE",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    });
     let index = 0;
     for (let i = 0; i < userPosts.length; i++) {
       if (userPosts[i].posts_id === posts_id) {
@@ -72,15 +67,15 @@ export default function NewPost() {
       <div className={styles["post-page-container"]}>
         {/* <PostForm currentUser = {currentUser}  userPosts={userPosts} setUserPosts={setUserPosts}/> */}
         <p className={styles["post-page-description"]}>
-              Welcome to your listings page. Here you can add a new post, amend an existing post, or delete a current post.
-
-            </p>
+          Welcome to your listings page. Here you can add a new post, amend an
+          existing post, or delete a current post.
+        </p>
         <div className={styles["header-container"]}>
           <div></div>
           <h2>MY LISTINGS</h2>
           <div className={styles["new-post-icon-container"]}>
             <label>new post:</label>
-        
+
             <BoilerPlatePopup
               className={styles["new-post-icon"]}
               image="icons/create-new-post.png"
@@ -110,9 +105,8 @@ export default function NewPost() {
           })}
         </div>
       </div>
-      
     );
   } else {
-    return <Loader/>;
+    return <Loader />;
   }
 }
