@@ -9,7 +9,8 @@ import ContactForm from "../components/ContactForm/ContactForm";
 import Loader from "../components/Loader/Loader";
 
 export default function NewPost() {
-  const [userPosts, setUserPosts] = useState();
+  const [userPosts, setUserPosts] = useState(null);
+  const [userPlotData, setUserPlotData] = useState(null);
   const { currentUser } = useAuth();
   const router = useRouter();
   const [show, setShow] = useState(false);
@@ -23,12 +24,23 @@ export default function NewPost() {
 
   useEffect(() => {
     getPostData();
+    getUserPlot();
   }, []);
 
+  async function getUserPlot() {
+    const id = currentUser.uid;
+    let token = await currentUser.getIdToken();
+    const response = await fetch(`${backendURL}/api/homegrown/users/${id}`, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+    const data = await response.json();
+    setUserPlotData(data.payload);
+  }
   async function getPostData() {
     const id = currentUser.uid;
     let token = await currentUser.getIdToken();
-    console.log(token);
     const response = await fetch(`${backendURL}/api/homegrown/posts/${id}`, {
       headers: {
         Authorization: "Bearer " + token,
@@ -86,6 +98,7 @@ export default function NewPost() {
             >
               <PostForm
                 userPosts={userPosts}
+                userPlotData={userPlotData}
                 currentUser={currentUser}
                 handleClose={handleClose}
                 show={show}

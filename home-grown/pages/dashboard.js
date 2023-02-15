@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useAuth } from "../context/AuthContext";
 import { Title } from "../components/Dashboard/Title";
 import Profile from "../components/Dashboard/Profile";
-import Image from "next/image";
 import PlotChart from "../components/Dashboard/PlotChart";
 import styles from "../styles/DashboardContainer.module.css";
 import CropTableContainer from "../components/Dashboard/CropTable/CropTableContainer";
@@ -64,7 +63,6 @@ export default function Dashboard() {
   async function getPosts() {
     let firebase_id = currentUser.uid;
     let token = await currentUser.getIdToken();
-    console.log(token);
     const response = await fetch(
       `${backendURL}/api/homegrown/posts/${firebase_id}`,
       {

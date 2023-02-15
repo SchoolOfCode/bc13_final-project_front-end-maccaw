@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function PostForm({
   currentUser,
   userPosts,
-  setUserPosts,
+  userPlotData,
   handleClose,
 }) {
   console.log(userPosts, "userPosts");
@@ -17,12 +17,12 @@ export default function PostForm({
   const date = useRef();
   const form = useRef();
   const router = useRouter();
-
+  console.log(userPlotData, "plot");
   async function onClick(e) {
     e.preventDefault();
 
     let postData = {
-      plot_id: Number(userPosts[0].plot_id),
+      plot_id: Number(userPlotData[0].plot_id),
       firebase_id: currentUser.uid,
       title: title.current.value,
       crop_id: Number(crop.current.value),
@@ -59,7 +59,7 @@ export default function PostForm({
   }
   console.log("%", percentageArray);
 
-  if (userPosts && currentUser) {
+  if (userPlotData && currentUser) {
     return (
       <div className={styles["form-container"]}>
         <div className={styles["form-title-banner"]}>
@@ -96,7 +96,7 @@ export default function PostForm({
                   placeholder="Postcode"
                   maxLength="8"
                   required
-                  value={userPosts[0].location}
+                  value={userPlotData[0].location}
                   ref={postcode}
                 />
               </div>
