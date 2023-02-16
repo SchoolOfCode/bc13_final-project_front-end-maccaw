@@ -4,6 +4,7 @@
     gap: 10px;
     height: 100%;
     width: 100%;
+    font-family: var(--textFont);
   }
   
   .header-container{
@@ -15,9 +16,10 @@
    padding: 10px;
   }
   
-  .input, .input-textarea{
+  .input{
     border-radius: 5px;
     padding-left: 1vmin;
+    height: 8%;
     border: 1px solid #e6e6e6;
   }
   
@@ -40,4 +42,24 @@
   .label{
     font-weight:200;
     color: var(--lighterFontColor)
+  }
+
+  .create-plot-button{
+    align-self: center;
+    border-radius: 999px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-family: var(--textFont);
+    color: #FFFFFF;
+    cursor: pointer;
+    opacity: 1;
+    border: 2px solid;
+    border-color: white;
+    padding: 8px 18px;
+    text-align: center; 
+    font-size: 2vmin; 
+    height: 15%;
+    width: 30%; 
+    background-color: var(--highLightTwo);
+    box-shadow:var(--highLightTwo) 0 10px 20px -10px;
   }

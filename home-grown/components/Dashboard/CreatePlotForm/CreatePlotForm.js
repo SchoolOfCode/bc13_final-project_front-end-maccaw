@@ -22,9 +22,10 @@ export default function CreatePlotForm({ setShow, createPlot }) {
           src="/illustrations/close-icon.png"
         />
       </div>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <label>Plot Size:</label>
         <input
+        className={styles.input}
           type="number"
           placeholder="Enter the size of your plot in m2"
           onChange={(e) => {
@@ -33,6 +34,7 @@ export default function CreatePlotForm({ setShow, createPlot }) {
         />
         <label>Add the postcode of your plot:</label>
         <input
+        className={styles.input}
           placeholder="Enter your postcode"
           onChange={(e) => {
             setPlotPostcode(e.target.value);
@@ -40,12 +42,13 @@ export default function CreatePlotForm({ setShow, createPlot }) {
         />
         <label>Add a photo of your plot</label>
         <input
+        className={styles.input}
           placeholder="Enter your image URL"
           onChange={(e) => {
             setPlotImageUrl(e.target.value);
           }}
         />
-        <button type="submit">Add plot!</button>
+        <button className={styles["create-plot-button"]}type="submit">Add plot!</button>
       </form>
     </div>
   );

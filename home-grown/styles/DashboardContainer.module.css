@@ -25,9 +25,9 @@
 }
 
 .right-container {
-    display: grid;
-    grid-template-columns: max-content(2, 1fr);
+    display: flex;
     align-items: center;
+    justify-content: center;
     width: 57.5%;
     height: 60%;
     margin-top: 2%;
@@ -180,10 +180,8 @@ margin-left: 4%;
     justify-content: right;
     flex-direction: column;
     background-color: transparent;
-    margin-left: 50%;
     width: 50%;
     height: 50vh;
-    margin-top: -55%; 
 
 }
 
@@ -250,9 +248,8 @@ margin-left: 4%;
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   background-color: #ffffff;
   padding: 20px;
-  width: 60%;
-  min-width: 30%;
- height: 90%;
+  width: 50%;
+ height: 80%;
 }
 
 
